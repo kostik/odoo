@@ -453,6 +453,7 @@ ALL_LANGUAGES = {
         'ar_SY': u'Arabic / الْعَرَبيّة',
         'bg_BG': u'Bulgarian / български език',
         'bs_BA': u'Bosnian / bosanski jezik',
+        'my_MY': u'Burmese / မြန်မာဘာသာ',
         'ca_ES': u'Catalan / Català',
         'cs_CZ': u'Czech / Čeština',
         'da_DK': u'Danish / Dansk',
