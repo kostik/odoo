@@ -9,6 +9,10 @@ class hr_mis(models.Model):
 
     personal_number = fields.Char('Personal Number', required=True, help="Personal number in the MCD")
     other_name = fields.Char('Other Name')
+    distinctive_marks = fields.Char('Distinctive Marks')
+    height = fields.Integer('Height', help="cm")
+    #address_id = fields.many2one('res.partner', 'Current Address'),
+    #address_home_id = fields.many2one('res.partner', 'Permanent Address'),
 
 
     #     name = fields.Char()
