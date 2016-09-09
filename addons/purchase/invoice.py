@@ -49,7 +49,7 @@ class AccountInvoice(models.Model):
                 qty = line.qty_received - line.qty_invoiced
             if float_compare(qty, 0.0, precision_rounding=line.product_uom.rounding) <= 0:
                 qty = 0.0
-            taxes = line.taxes_id or line.product_id.supplier_taxes_id
+            taxes = line.taxes_id
             invoice_line_tax_ids = self.purchase_id.fiscal_position_id.map_tax(taxes)
             data = {
                 'purchase_line_id': line.id,
@@ -86,6 +86,22 @@ class AccountInvoice(models.Model):
         purchase_ids = self.invoice_line_ids.mapped('purchase_id')
         if purchase_ids:
             self.origin = ', '.join(purchase_ids.mapped('name'))
+
+    @api.onchange('partner_id', 'company_id')
+    def _onchange_partner_id(self):
+        res = super(AccountInvoice, self)._onchange_partner_id()
+        if not self.env.context.get('default_journal_id') and self.partner_id and self.currency_id and\
+                self.type in ['in_invoice', 'in_refund'] and\
+                self.currency_id != self.partner_id.property_purchase_currency_id:
+            journal_domain = [
+                ('type', '=', 'purchase'),
+                ('company_id', '=', self.company_id.id),
+                ('currency_id', '=', self.partner_id.property_purchase_currency_id.id),
+            ]
+            default_journal_id = self.env['account.journal'].search(journal_domain, limit=1)
+            if default_journal_id:
+                self.journal_id = default_journal_id
+        return res
 
     @api.model
     def invoice_line_move_line_get(self):
@@ -167,6 +183,6 @@ class AccountInvoiceLine(models.Model):
     """ Override AccountInvoice_line to add the link to the purchase order line it is related to"""
     _inherit = 'account.invoice.line'
 
-    purchase_line_id = fields.Many2one('purchase.order.line', 'Purchase Order Line', ondelete='set null', select=True, readonly=True)
+    purchase_line_id = fields.Many2one('purchase.order.line', 'Purchase Order Line', ondelete='set null', index=True, readonly=True)
     purchase_id = fields.Many2one('purchase.order', related='purchase_line_id.order_id', string='Purchase Order', store=False, readonly=True,
         help='Associated Purchase Order. Filled in automatically when a PO is chosen on the vendor bill.')

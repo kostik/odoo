@@ -181,7 +181,10 @@ class account_payment(models.Model):
     def _compute_payment_difference(self):
         if len(self.invoice_ids) == 0:
             return
-        self.payment_difference = self._compute_total_invoices_amount() - self.amount
+        if self.invoice_ids[0].type in ['in_invoice', 'out_refund']:
+            self.payment_difference = self.amount - self._compute_total_invoices_amount()
+        else:
+            self.payment_difference = self._compute_total_invoices_amount() - self.amount
 
     company_id = fields.Many2one(store=True)
 
@@ -264,7 +267,7 @@ class account_payment(models.Model):
         return {
             'name': _('Journal Items'),
             'view_type': 'form',
-            'view_mode': 'tree',
+            'view_mode': 'tree,form',
             'res_model': 'account.move.line',
             'view_id': False,
             'type': 'ir.actions.act_window',
@@ -286,6 +289,17 @@ class account_payment(models.Model):
     @api.multi
     def button_dummy(self):
         return True
+
+    @api.multi
+    def unreconcile(self):
+        """ Set back the payments in 'posted' or 'sent' state, without deleting the journal entries.
+            Called when cancelling a bank statement line linked to a pre-registered payment.
+        """
+        for payment in self:
+            if payment.payment_reference:
+                payment.write({'state': 'sent'})
+            else:
+                payment.write({'state': 'posted'})
 
     @api.multi
     def cancel(self):

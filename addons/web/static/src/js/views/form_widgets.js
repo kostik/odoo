@@ -455,7 +455,13 @@ var FieldCharDomain = common.AbstractField.extend(common.ReinitializeFieldMixin,
 
         if (this.get('value')) {
             var model = this.options.model || this.field_manager.get_field_value(this.options.model_field);
-            var domain = pyeval.eval('domain', this.get('value'));
+            try{
+                var domain = pyeval.eval('domain', this.get('value'));
+            }
+            catch(e){
+                this.do_warn(_t('Error: Bad domain'), _t('The domain is wrong.'));
+                return;
+            }
             var ds = new data.DataSetStatic(self, model, self.build_context());
             ds.call('search_count', [domain]).then(function (results) {
                 self.$('.o_count').text(results + _t(' selected records'));
@@ -472,6 +478,7 @@ var FieldCharDomain = common.AbstractField.extend(common.ReinitializeFieldMixin,
                 this.$('.o_debug_input').val(this.get('value'));
             }
         } else {
+            this.$('.o_form_input').val('');
             this.$('.o_count').text(_t('No selected record'));
             var $arrow = this.$('button span').detach();
             this.$('button').text(_('Select records ')).append($("<span/>").addClass('fa fa-arrow-right'));
@@ -1061,7 +1068,7 @@ var FieldRadio = common.AbstractField.extend(common.ReinitializeFieldMixin, {
     render_value: function () {
         var self = this;
         this.$el.toggleClass("oe_readonly", this.get('effective_readonly'));
-        this.$("input").filter(function () {return this.value == self.get_value();}).prop("checked", true);
+        this.$("input").prop("checked", false).filter(function () {return this.value == self.get_value();}).prop("checked", true);
         this.$(".oe_radio_readonly").text(this.get('value') ? this.get('value')[1] : "");
     }
 });

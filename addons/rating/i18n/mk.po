@@ -9,7 +9,7 @@ msgstr ""
 "Project-Id-Version: Odoo 9.0\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2015-09-07 14:41+0000\n"
-"PO-Revision-Date: 2016-05-06 11:46+0000\n"
+"PO-Revision-Date: 2016-08-12 14:50+0000\n"
 "Last-Translator: Aleksandar Vangelovski <aleksandarv@hbee.eu>\n"
 "Language-Team: Macedonian (http://www.transifex.com/odoo/odoo-9/language/mk/)\n"
 "MIME-Version: 1.0\n"
@@ -27,7 +27,7 @@ msgstr "Пристапи до токен за да ја подесиш оцен�
 #: model:ir.model.fields,help:rating.field_rating_rating_message_id
 msgid ""
 "Associated message when posting a review. Mainly used in website addons."
-msgstr ""
+msgstr "Дополнителна порака кога постирате рецензија. Главно користена во додатоци/адони на вебстрана."
 
 #. module: rating
 #: model:ir.model.fields,help:rating.field_rating_rating_partner_id
@@ -74,7 +74,7 @@ msgstr ""
 #. module: rating
 #: model:ir.model.fields,field_description:rating.field_rating_rating_feedback
 msgid "Feedback reason"
-msgstr ""
+msgstr "Причина на повратна информација"
 
 #. module: rating
 #: model:ir.ui.view,arch_db:rating.view_rating_rating_search
@@ -105,7 +105,7 @@ msgstr ""
 #: code:addons/rating/static/src/js/rating_common.js:28
 #, python-format
 msgid "I like it"
-msgstr ""
+msgstr "Ми се допаѓа"
 
 #. module: rating
 #. openerp-web
@@ -206,22 +206,22 @@ msgstr ""
 #. module: rating
 #: sql_constraint:rating.rating:0
 msgid "Rating should be between -1 to 10"
-msgstr ""
+msgstr "Оцената треба да биде од -1 до 10"
 
 #. module: rating
 #: model:ir.model.fields,help:rating.field_rating_rating_rating
 msgid "Rating value"
-msgstr ""
+msgstr "Вредност на оценување"
 
 #. module: rating
 #: model:ir.ui.view,arch_db:rating.view_rating_rating_search
 msgid "Ratings"
-msgstr ""
+msgstr "Оцени"
 
 #. module: rating
 #: model:ir.model.fields,help:rating.field_rating_rating_feedback
 msgid "Reason of the rating"
-msgstr ""
+msgstr "Причини за оценката"
 
 #. module: rating
 #: model:ir.ui.view,arch_db:rating.view_rating_rating_search
@@ -246,7 +246,7 @@ msgstr ""
 #. module: rating
 #: model:ir.ui.view,arch_db:rating.rating_external_page_view
 msgid "Sorry you have already voted !"
-msgstr ""
+msgstr "Извинете но веќе гласавте !"
 
 #. module: rating
 #: model:ir.ui.view,arch_db:rating.rating_external_page_view
@@ -256,17 +256,17 @@ msgstr ""
 #. module: rating
 #: model:ir.model.fields,help:rating.field_rating_rating_res_name
 msgid "The name of the rated ressource."
-msgstr ""
+msgstr "Името на оценетиот ресурс."
 
 #. module: rating
 #: model:ir.actions.act_window,help:rating.action_view_rating
 msgid "There is no rating for this object at the moment."
-msgstr ""
+msgstr "Нема оцена за овој објект во овој момент."
 
 #. module: rating
 #: model:ir.ui.view,arch_db:rating.view_rating_rating_search
 msgid "Unhappy"
-msgstr ""
+msgstr "Несреќен"
 
 #. module: rating
 #: model:ir.ui.view,arch_db:rating.view_rating_rating_search
@@ -282,4 +282,4 @@ msgstr ""
 #: code:addons/rating/models/rating.py:55
 #, python-format
 msgid "rated it"
-msgstr ""
+msgstr "оценете го"

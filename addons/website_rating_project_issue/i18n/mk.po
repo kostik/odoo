@@ -9,7 +9,7 @@ msgstr ""
 "Project-Id-Version: Odoo 9.0\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2015-09-07 14:41+0000\n"
-"PO-Revision-Date: 2016-05-06 11:46+0000\n"
+"PO-Revision-Date: 2016-08-12 14:51+0000\n"
 "Last-Translator: Aleksandar Vangelovski <aleksandarv@hbee.eu>\n"
 "Language-Team: Macedonian (http://www.transifex.com/odoo/odoo-9/language/mk/)\n"
 "MIME-Version: 1.0\n"
@@ -51,12 +51,12 @@ msgstr ""
 #. module: website_rating_project_issue
 #: model:ir.ui.view,arch_db:website_rating_project_issue.project_rating_page
 msgid "Last 3 months"
-msgstr ""
+msgstr "Последни 3 месеци"
 
 #. module: website_rating_project_issue
 #: model:ir.ui.view,arch_db:website_rating_project_issue.project_rating_page
 msgid "Last 30 days"
-msgstr ""
+msgstr "Последни 30 дена"
 
 #. module: website_rating_project_issue
 #: model:ir.ui.view,arch_db:website_rating_project_issue.project_rating_page
@@ -71,7 +71,7 @@ msgstr ""
 #. module: website_rating_project_issue
 #: model:ir.ui.view,arch_db:website_rating_project_issue.project_rating_data
 msgid "Normal Feedback"
-msgstr ""
+msgstr "Нормална повратна информација"
 
 #. module: website_rating_project_issue
 #: model:ir.model,name:website_rating_project_issue.model_project_project
@@ -86,7 +86,7 @@ msgstr "Проект на клиентска сатисфакција"
 #. module: website_rating_project_issue
 #: model:ir.ui.view,arch_db:website_rating_project_issue.index
 msgid "Project Satisfaction"
-msgstr ""
+msgstr "Задоволство од проект"
 
 #. module: website_rating_project_issue
 #: model:ir.ui.view,arch_db:website_rating_project_issue.index

@@ -9,7 +9,7 @@ msgstr ""
 "Project-Id-Version: Odoo 9.0\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2016-01-20 13:58+0000\n"
-"PO-Revision-Date: 2016-04-21 14:08+0000\n"
+"PO-Revision-Date: 2016-08-09 14:10+0000\n"
 "Last-Translator: Aleksandar Vangelovski <aleksandarv@hbee.eu>\n"
 "Language-Team: Macedonian (http://www.transifex.com/odoo/odoo-9/language/mk/)\n"
 "MIME-Version: 1.0\n"
@@ -416,7 +416,7 @@ msgstr ""
 #: model:ir.ui.view,arch_db:calendar.view_calendar_event_form
 #: model:ir.ui.view,arch_db:calendar.view_calendar_event_form_popup
 msgid "<span> hours</span>"
-msgstr ""
+msgstr "<span> часови</span>"
 
 #. module: calendar
 #: code:addons/calendar/calendar.py:1613
@@ -550,7 +550,7 @@ msgstr "Кликнете овде за да ја ажурирате само о�
 #. module: calendar
 #: model:ir.actions.act_window,help:calendar.action_calendar_event
 msgid "Click to schedule a new meeting."
-msgstr ""
+msgstr "Кликнете да договорите нов состанок."
 
 #. module: calendar
 #: model:ir.model.fields,field_description:calendar.field_calendar_event_color_partner_id
@@ -1093,7 +1093,7 @@ msgstr "Во ред"
 #. module: calendar
 #: selection:calendar.event,class:0
 msgid "Only internal users"
-msgstr ""
+msgstr "Само внатрешни корисници"
 
 #. module: calendar
 #: selection:calendar.event,class:0
