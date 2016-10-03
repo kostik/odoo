@@ -75,9 +75,13 @@
                                     <group string="Birth">
                                         <field name="birthday"/>
                                     </group>
+                                    <group string="Height">
+                                        <field name="height" widget="imperial_length"/>
+                                    </group>
+
                                 </group>
                             </page>
-                            <page string="HR Settings1" groups="base.group_hr_user">
+                            <page string="HR Settings" groups="base.group_hr_user">
                                 <group>
                                     <group string='Status' name="active_group">
                                         <field name="company_id" groups="base.group_multi_company"
