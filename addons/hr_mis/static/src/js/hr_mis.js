@@ -15,7 +15,6 @@ odoo.define('web.web_widget_imperial_length', function (require) {
         init: function () {
             this._super.apply(this, arguments);
             this.set("value", "");
-            console.log("init");
         },
         start: function () {
             this.on("change:effective_readonly", this, function () {
@@ -36,7 +35,6 @@ odoo.define('web.web_widget_imperial_length', function (require) {
         },
 
         display_field: function () {
-            console.log("display");
             var self = this;
             this.$el.html(QWeb.render("FieldChar", {widget: this}));
             if (!this.get("effective_readonly")) {
@@ -47,15 +45,13 @@ odoo.define('web.web_widget_imperial_length', function (require) {
         },
         render_value: function () {
             if (this.get("effective_readonly")) {
-                console.log("render readonly");
                 var val = this.get("value");
                 var feet = val / 30.48;
                 this.$el.text(Math.floor(feet) + " ft " + Math.round((feet % 1) * 120) / 10 + " in");
             } else {
-                console.log("render!!");
                 this.$("input").val(this.get("value"));
             }
-        },
+        }
     });
 
     core.form_widget_registry.add('imperial_length', ImperialLength);
