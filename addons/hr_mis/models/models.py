@@ -54,6 +54,8 @@ class hr_mis(models.Model):
     identification_id = fields.Char(string="NRC Number", help="1-15 characters", size=15)
     qualification = fields.Char("Qualification")
 
+    place_of_birth_id = fields.Many2one("hr.birth_place", "Place of birth")
+
     #address_id = fields.many2one('res.partner', 'Current Address'),
     #address_home_id = fields.many2one('res.partner', 'Permanent Address'),
 
@@ -67,6 +69,13 @@ class hr_mis(models.Model):
     #     def _value_pc(self):
     #         self.value2 = float(self.value) / 100
 
+
+class birth_place(models.Model):
+    """
+    http://redmine.kostik.net/redmine/issues/406
+    """
+    _name = 'hr.birth_place'
+    name = fields.Char("Birth place", required=True)
 
 class hr_salary_rate(models.Model):
     """
