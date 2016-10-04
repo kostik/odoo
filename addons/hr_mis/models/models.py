@@ -1,6 +1,33 @@
 # -*- coding: utf-8 -*-
 from openerp import models, fields, _
 
+RACE_CHOICES = [
+    (1, "Kachin"),
+    (2, "Kayah"),
+    (3, "Kayin"),
+    (4, "Chin"),
+    (5, "Bamar"),
+    (6, "Mon"),
+    (7, "Rakhine"),
+    (8, "Shan"),
+    (9, "Other Race"),
+    (10, "Not stated")
+]
+
+RELIGION_CHOICES = [
+    (1, "Buddhist"),
+    (2, "Islam"),
+    (3, "Christian"),
+    (4, "Hindu"),
+    (5, "Animist"),
+    (6, "Confucion"),
+    (7, "Sikh"),
+    (8, "Jew"),
+    (9, "Other Religion"),
+    (10, "Not Stated")
+]
+
+
 class hr_mis(models.Model):
     """
     From 1: http://redmine.kostik.net/redmine/issues/401
@@ -15,39 +42,8 @@ class hr_mis(models.Model):
     height = fields.Integer('Height', help="cm", default=0)    # http://redmine.kostik.net/redmine/issues/409
     weight = fields.Integer('Weight', help="lbs", default=0)   # http://redmine.kostik.net/redmine/issues/409
 
-    race = fields.Selection(
-        [
-            (1, "Kachin"),
-            (2, "Kayah"),
-            (3, "Kayin"),
-            (4, "Chin"),
-            (5, "Bamar"),
-            (6, "Mon"),
-            (7, "Rakhine"),
-            (8, "Shan"),
-            (9, "Other Race"),
-            (10, "Not stated")
-        ],
-        string="Race",
-        default=10
-    )
-
-    religion = fields.Selection(
-        [
-            (1, "Buddhist"),
-            (2, "Islam"),
-            (3, "Christian"),
-            (4, "Hindu"),
-            (5, "Animist"),
-            (6, "Confucion"),
-            (7, "Sikh"),
-            (8, "Jew"),
-            (9, "Other Religion"),
-            (10, "Not Stated")
-        ],
-        string="Religion",
-        default=10
-    )
+    race = fields.Selection(RACE_CHOICES, string="Race", default=10)
+    religion = fields.Selection(RELIGION_CHOICES, string="Religion", default=10)
 
     salary_rate_id = fields.Many2one("hr.salary_rate", "Salary rate")
 
@@ -62,6 +58,8 @@ class hr_mis(models.Model):
     previous_position_and_place = fields.Char("Previous position abd place")
     military_record_ids = fields.One2many('hr.military_record', 'employee_id', string="Military records")
     distinction = fields.Text("Distinction, Certification")
+    fathers_name = fields.Char("Father's name")
+    relative_ids  = fields.One2many('hr.relative', 'employee_id', string="Relatives")
 
     #address_id = fields.many2one('res.partner', 'Current Address'),
     #address_home_id = fields.many2one('res.partner', 'Permanent Address'),
@@ -121,4 +119,56 @@ class hr_military_record(models.Model):
 
     pension = fields.Integer("Pension")
 
+    employee_id = fields.Many2one('hr.employee', ondelete='cascade', string="Employee")
+
+
+class hr_relative(models.Model):
+    """
+    Staff's father name	U Pyu
+    Father’s Race/Religion	Burma/Buddhist
+    Father’s Job	Farmer
+    Father’s Address	No.24, Botahtaung Street, Botahtaung Township
+    Staff's mother name	Daw Wah
+    Mother’s Race/Religion	Burma/Buddhist
+    Mother’s Job	Nil
+    Mother’s Address	Same with father
+    Name of Brother & Sisters, Their Job and Their Address	Nil
+    Wife/Spouse Name	Nil
+    Wife/Spouse Race/Religion	Nil
+    Job title of Wife/Spouse	Nil
+    Wife/Spouse Address	Nil
+    Wife/Spouse's Father Name	Nil
+    Wife/Spouse’s father Race/Religion	Nil
+    Wife/Spouse’s father Job	Nil
+    Address of Wife/Spouse's Father	Nil
+    Wife/Spouse's Mother Name	Nil
+    Wife/Spouse’s mother Race/Religion	Nil
+    Wife/Spouse’s mother Job	Nil
+    Address of Wife/Spouse's Mother	Nil
+    Wife/Spouse’s brother/sister Name	Nil
+    Wife/Spouse’s brother/sister Race/Religion	Nil
+    Wife/Spouse’s brother/sister Job	Nil
+    Staff’s Son and Daughters Nil
+    (a) Name, Birthdate, NRC
+    (b) Job/Address
+    """
+
+    _name = 'hr.relative'
+    name = fields.Selection(
+        [
+            ("Father", "Father"),
+            ("Mother", "Mother"),
+            ("Spouse", "Spouse"),
+            ("Spouse's Father", "Spouse's Father"),
+            ("Spouse's Mother", "Spouse's Mother"),
+            ("Child", "Child"),
+            ("Sibling", "Sibling")
+        ], string="Relative", required=True)
+
+    relative_name = fields.Char("Name")
+    race = fields.Selection(RACE_CHOICES, string="Race", default=10)
+    religion = fields.Selection(RELIGION_CHOICES, string="Religion", default=10)
+    occupation = fields.Char("Occupation")
+    address = fields.Text("Address")
+    note = fields.Char("Note")
     employee_id = fields.Many2one('hr.employee', ondelete='cascade', string="Employee")

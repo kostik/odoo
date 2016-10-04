@@ -62,9 +62,20 @@
                                         <field name="date_started" placeholder="as civil staff"/>
                                         <field name="military_record_ids"/>
                                         <field name="distinction"/>
-
                                     </group>
                                 </group>
+
+                                <group string="Family">
+                                    <tree>
+                                        <field name="relative_ids" string="">
+                                            <tree>
+                                                <field name="name"/>
+                                                <field name="relative_name"/>
+                                            </tree>
+                                        </field>
+                                    </tree>
+                                </group>
+
                                 <field name="notes" placeholder="Other Information ..." colspan="4"/>
                             <!--</page>-->
                             <!--<page string="Personal Information1" groups="base.group_hr_user">-->
