@@ -65,7 +65,7 @@ class hr_mis(models.Model):
     # Activity,Rank and Duties for Political in Student life http://redmine.kostik.net/redmine/issues/419
     # Supporter Name (Headmaster, Administrator,Police Officer,Military Officer’s Name, Address (Full) http://redmine.kostik.net/redmine/issues/420
     hobby_ids = fields.Many2many('hr.hobby')
-    # Friends list who working in Military,Police and Political and their Name, Position,Address
+    military_colleague_ids = fields.Many2many('hr.military_colleague') # Friends list who working in Military,Police and Political and their Name, Position,Address
 
     club_record_ids = fields.One2many('hr.club_record', 'employee_id', string="Club and Organizations")
 
@@ -184,3 +184,10 @@ class hr_club_record(models.Model):
 class hr_hobby(models.Model):
     _name = "hr.hobby"
     name = fields.Char("Hobby")
+
+
+class military_colleague(models.Model):
+    _name = "hr.military_colleague"
+    name = fields.Char("Name")
+    position = fields.Char("Position")
+    address = fields.Text("Address")

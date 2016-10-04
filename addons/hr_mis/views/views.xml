@@ -98,11 +98,16 @@
                                                 <field name="relative_name"/>
                                             </tree>
                                         </field>
-
                                     <field name="club_record_ids" string="Club and Organizations">
                                         <tree>
                                             <field name="name"/>
                                             <field name="club_id"/>
+                                        </tree>
+                                    </field>
+                                    <field name="military_colleague_ids" string="Military colleagues">
+                                        <tree>
+                                            <field name="name"/>
+                                            <field name="position"/>
                                         </tree>
                                     </field>
                                     <field name="hobby_ids" string="Hobbies" widget="many2many_tags"
