@@ -61,6 +61,7 @@ class hr_mis(models.Model):
     # Supporter for the jobs http://redmine.kostik.net/redmine/issues/417
     previous_position_and_place = fields.Char("Previous position abd place")
     military_record_ids = fields.One2many('hr.military_record', 'employee_id', string="Military records")
+    distinction = fields.Text("Distinction, Certification")
 
     #address_id = fields.many2one('res.partner', 'Current Address'),
     #address_home_id = fields.many2one('res.partner', 'Permanent Address'),

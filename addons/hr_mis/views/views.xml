@@ -61,6 +61,7 @@
                                         <field name="position_name_at_start" placeholder="started as civil staff"/>
                                         <field name="date_started" placeholder="as civil staff"/>
                                         <field name="military_record_ids"/>
+                                        <field name="distinction"/>
 
                                     </group>
                                 </group>
