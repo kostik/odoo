@@ -43,8 +43,8 @@ class hr_mis(models.Model):
                             default=None)  # http://redmine.kostik.net/redmine/issues/407
     eyes = fields.Selection([("Black", "Black"), ("Brown", "Brown"), ("Blue", "Blue"), ("Other", "Other")],
                             string="Eyes", default=None)  # http://redmine.kostik.net/redmine/issues/408
-    height = fields.Integer('Height', help="cm")    # http://redmine.kostik.net/redmine/issues/409
-    weight = fields.Integer('Weight', help="lbs")   # http://redmine.kostik.net/redmine/issues/409
+    height = fields.Integer('Height', help="cm")  # http://redmine.kostik.net/redmine/issues/409
+    weight = fields.Integer('Weight', help="lbs")  # http://redmine.kostik.net/redmine/issues/409
 
     race = fields.Selection(RACE_CHOICES, string="Race", default=10)
     religion = fields.Selection(RELIGION_CHOICES, string="Religion", default=10)
@@ -71,7 +71,8 @@ class hr_mis(models.Model):
     # Activity,Rank and Duties for Political in Student life http://redmine.kostik.net/redmine/issues/419
     # Supporter Name (Headmaster, Administrator,Police Officer,Military Officer’s Name, Address (Full) http://redmine.kostik.net/redmine/issues/420
     hobby_ids = fields.Many2many('hr.hobby')
-    military_colleague_ids = fields.Many2many('hr.military_colleague') # Friends list who working in Military,Police and Political and their Name, Position,Address
+    military_colleague_ids = fields.Many2many(
+        'hr.military_colleague')  # Friends list who working in Military,Police and Political and their Name, Position,Address
 
     club_record_ids = fields.One2many('hr.club_record', 'employee_id', string="Club and Organizations")
 
@@ -85,6 +86,7 @@ class hr_birth_place(models.Model):
     _name = 'hr.birth_place'
     name = fields.Char("Birth place", required=True)
 
+
 class hr_salary_rate(models.Model):
     """
     http://redmine.kostik.net/redmine/issues/403
@@ -97,10 +99,9 @@ class hr_salary_rate(models.Model):
     salary_step = fields.Integer("step")
     salary_to = fields.Integer("to")
 
-
     def compute_name(self):
         try:
-            self.name = '{}:{}-{}-{}'.format(self.position, self.salary_from, self.salary_step,self.salary_to)
+            self.name = '{}:{}-{}-{}'.format(self.position, self.salary_from, self.salary_step, self.salary_to)
         except ValueError:
             self.name = '***'
 
