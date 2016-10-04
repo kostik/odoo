@@ -57,6 +57,8 @@
                                         <field name="job_id"/>
                                         <field name="parent_id"/>
                                         <field name="coach_id"/>
+                                        <field name="salary_rate_id"/>
+                                        <field name="qualification"/>
                                     </group>
                                 </group>
                                 <field name="notes" placeholder="Other Information ..." colspan="4"/>
@@ -65,8 +67,10 @@
                                 <group>
                                     <group string="Citizenship &amp; Other Information">
                                         <field name="country_id" options='{"no_open": True, "no_create": True}'/>
-                                        <field name="identification_id" groups="base.group_hr_user"/>
+                                        <field name="identification_id" groups="base.group_hr_user" string="NRC Number"/>
                                         <field name="passport_id" groups="base.group_hr_user"/>
+                                        <field name="race" />
+                                        <field name="religion" />
                                     </group>
                                     <group string="Status">
                                         <field name="gender"/>
