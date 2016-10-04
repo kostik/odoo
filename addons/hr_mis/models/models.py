@@ -75,6 +75,8 @@ class hr_mis(models.Model):
 
     club_record_ids = fields.One2many('hr.club_record', 'employee_id', string="Club and Organizations")
 
+    form2_id = fields.One2many('hr.form2', 'employee_id', string="Form 2")
+
 
 class hr_birth_place(models.Model):
     """
@@ -88,11 +90,19 @@ class hr_salary_rate(models.Model):
     http://redmine.kostik.net/redmine/issues/403
     """
     _name = 'hr.salary_rate'
-    name = fields.Char("Position", required=True)
+    name = fields.Char("Name", compute='compute_name')
 
+    position = fields.Char("Position", required=True)
     salary_from = fields.Integer("from", required=True)
     salary_step = fields.Integer("step")
     salary_to = fields.Integer("to")
+
+
+    def compute_name(self):
+        try:
+            self.name = '{}:{}-{}-{}'.format(self.position, self.salary_from, self.salary_step,self.salary_to)
+        except ValueError:
+            self.name = '***'
 
 
 class hr_military_record(models.Model):
@@ -198,3 +208,19 @@ class hr_military_colleague(models.Model):
     position = fields.Char("Position")
     address = fields.Text("Address")
 
+
+class hr_form2(models.Model):
+    _name = "hr.form2"
+    name = fields.Char("Name", compute="compute_name")
+    position = fields.Char("Position")
+    order_number = fields.Char("Order #")
+    order_date = fields.Date("Order date")
+    date = fields.Date("Effective date")
+    employee_id = fields.Many2one('hr.employee', ondelete='cascade', string="Employee")
+    salary_rate_id = fields.Many2one("hr.salary_rate", "Salary rate")
+
+    def compute_name(self):
+        try:
+            self.name = '{}/{}'.format(self.position, self.date)
+        except ValueError:
+            self.name = '***'
