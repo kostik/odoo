@@ -56,9 +56,11 @@
                                         <field name="department_id" on_change="onchange_department_id(department_id)"/>
                                         <field name="job_id"/>
                                         <field name="parent_id"/>
-                                        <field name="coach_id"/>
+                                        <!--<field name="coach_id"/>-->
                                         <field name="salary_rate_id"/>
-                                        <field name="qualification"/>
+                                        <field name="position_name_at_start" placeholder="started as civil staff"/>
+                                        <field name="date_started" placeholder="as civil staff"/>
+
                                     </group>
                                 </group>
                                 <field name="notes" placeholder="Other Information ..." colspan="4"/>

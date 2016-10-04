@@ -55,6 +55,10 @@ class hr_mis(models.Model):
     qualification = fields.Char("Qualification")
 
     place_of_birth_id = fields.Many2one("hr.birth_place", "Place of birth")
+    position_name_at_start = fields.Char("Position started", help="Position started as civil staff")
+    date_started = fields.Date("Date started", help="Date started as civil staff")
+
+    # Supporter for the jobs http://redmine.kostik.net/redmine/issues/417
 
     #address_id = fields.many2one('res.partner', 'Current Address'),
     #address_home_id = fields.many2one('res.partner', 'Permanent Address'),
