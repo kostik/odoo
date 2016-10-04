@@ -39,8 +39,12 @@ class hr_mis(models.Model):
     other_name = fields.Char('Other Name')
     distinctive_marks = fields.Char('Distinctive Marks')
 
-    height = fields.Integer('Height', help="cm", default=0)    # http://redmine.kostik.net/redmine/issues/409
-    weight = fields.Integer('Weight', help="lbs", default=0)   # http://redmine.kostik.net/redmine/issues/409
+    hair = fields.Selection([("Black", "Black"), ("Brown", "Brown"), ("Other", "Other")], string="Hair",
+                            default=None)  # http://redmine.kostik.net/redmine/issues/407
+    eyes = fields.Selection([("Black", "Black"), ("Brown", "Brown"), ("Blue", "Blue"), ("Other", "Other")],
+                            string="Eyes", default=None)  # http://redmine.kostik.net/redmine/issues/408
+    height = fields.Integer('Height', help="cm")    # http://redmine.kostik.net/redmine/issues/409
+    weight = fields.Integer('Weight', help="lbs")   # http://redmine.kostik.net/redmine/issues/409
 
     race = fields.Selection(RACE_CHOICES, string="Race", default=10)
     religion = fields.Selection(RELIGION_CHOICES, string="Religion", default=10)
@@ -59,6 +63,8 @@ class hr_mis(models.Model):
     previous_position_and_place = fields.Char("Previous position abd place")
     military_record_ids = fields.One2many('hr.military_record', 'employee_id', string="Military records")
     distinction = fields.Text("Distinction, Certification")
+    criminal_records = fields.Text("Criminal records")
+
     fathers_name = fields.Char("Father's name")
     relative_ids = fields.One2many('hr.relative', 'employee_id', string="Relatives")
 
@@ -186,8 +192,9 @@ class hr_hobby(models.Model):
     name = fields.Char("Hobby")
 
 
-class military_colleague(models.Model):
+class hr_military_colleague(models.Model):
     _name = "hr.military_colleague"
     name = fields.Char("Name")
     position = fields.Char("Position")
     address = fields.Text("Address")
+

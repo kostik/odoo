@@ -62,6 +62,7 @@
                                         <field name="date_started" placeholder="as civil staff"/>
                                         <field name="military_record_ids"/>
                                         <field name="distinction"/>
+                                        <field name="criminal_records"/>
                                     </group>
                                 </group>
 
@@ -85,7 +86,9 @@
                                         <field name="birthday"/>
                                         <field name="place_of_birth_id"/>
                                     </group>
-                                    <group string="Height/Weight">
+                                    <group>
+                                        <field name="hair"/>
+                                        <field name="eyes"/>
                                         <field name="height" placeholder="cm" widget="imperial_length"/>
                                         <field name="weight" placeholder="lbs"/>
                                     </group>
