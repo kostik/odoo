@@ -59,6 +59,8 @@ class hr_mis(models.Model):
     date_started = fields.Date("Date started", help="Date started as civil staff")
 
     # Supporter for the jobs http://redmine.kostik.net/redmine/issues/417
+    previous_position_and_place = fields.Char("Previous position abd place")
+    military_record_ids = fields.One2many('hr.military_record', 'employee_id', string="Military records")
 
     #address_id = fields.many2one('res.partner', 'Current Address'),
     #address_home_id = fields.many2one('res.partner', 'Permanent Address'),
@@ -74,7 +76,7 @@ class hr_mis(models.Model):
     #         self.value2 = float(self.value) / 100
 
 
-class birth_place(models.Model):
+class hr_birth_place(models.Model):
     """
     http://redmine.kostik.net/redmine/issues/406
     """
@@ -91,3 +93,31 @@ class hr_salary_rate(models.Model):
     salary_from = fields.Integer("from", required=True)
     salary_step = fields.Integer("step")
     salary_to = fields.Integer("to")
+
+
+class hr_military_record(models.Model):
+    """
+     If you work in Military before
+     (a)Personal ID
+     (b)Date of Joining and leaving from there.
+     (c)Reason for leaving
+     (d)Military Army name that you worked
+     (e)Summary when working in Military
+     (f)Pension Salary
+
+
+    """
+
+    _name = 'hr.military_record'
+    name = fields.Char("Personal ID", required=True)
+
+    date_joined = fields.Date("Date joined", required=True)
+    date_resigned = fields.Date("Date resigned", required=True)
+    reason_for_leaving = fields.Char("Resign reason")
+
+    division = fields.Char("Division(s)", required=True)
+    summary = fields.Text("Career Summary")
+
+    pension = fields.Integer("Pension")
+
+    employee_id = fields.Many2one('hr.employee', ondelete='cascade', string="Employee")
