@@ -66,15 +66,16 @@
                                 </group>
 
                                 <field name="notes" placeholder="Other Information ..." colspan="4"/>
-                            <!--</page>-->
-                            <!--<page string="Personal Information1" groups="base.group_hr_user">-->
+                                <!--</page>-->
+                                <!--<page string="Personal Information1" groups="base.group_hr_user">-->
                                 <group>
                                     <group string="Citizenship &amp; Other Information">
                                         <field name="country_id" options='{"no_open": True, "no_create": True}'/>
-                                        <field name="identification_id" groups="base.group_hr_user" string="NRC Number"/>
+                                        <field name="identification_id" groups="base.group_hr_user"
+                                               string="NRC Number"/>
                                         <field name="passport_id" groups="base.group_hr_user"/>
-                                        <field name="race" />
-                                        <field name="religion" />
+                                        <field name="race"/>
+                                        <field name="religion"/>
                                     </group>
                                     <group string="Status">
                                         <field name="gender"/>
@@ -90,16 +91,24 @@
                                     </group>
 
                                 </group>
-                                <group string="Family">
-                                    <tree>
-                                        <field name="relative_ids" string="">
+                                <group>
+                                    <field name="relative_ids">
                                             <tree>
                                                 <field name="name"/>
                                                 <field name="relative_name"/>
                                             </tree>
                                         </field>
-                                    </tree>
+
+                                    <field name="club_record_ids" string="Club and Organizations">
+                                        <tree>
+                                            <field name="name"/>
+                                            <field name="club_id"/>
+                                        </tree>
+                                    </field>
+                                    <field name="hobby_ids" string="Hobbies" widget="many2many_tags"
+                                           placeholder="e.g. Amateur Radio, Acting, Baton Twirling, Board Games, Calligraphy, Candle Making, Computer Programming, Coffee Roasting..."/>
                                 </group>
+
 
                             </page>
                             <page string="HR Settings" groups="base.group_hr_user">

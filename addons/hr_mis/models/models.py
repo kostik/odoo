@@ -55,24 +55,19 @@ class hr_mis(models.Model):
     date_started = fields.Date("Date started", help="Date started as civil staff")
 
     # Supporter for the jobs http://redmine.kostik.net/redmine/issues/417
+
     previous_position_and_place = fields.Char("Previous position abd place")
     military_record_ids = fields.One2many('hr.military_record', 'employee_id', string="Military records")
     distinction = fields.Text("Distinction, Certification")
     fathers_name = fields.Char("Father's name")
-    relative_ids  = fields.One2many('hr.relative', 'employee_id', string="Relatives")
+    relative_ids = fields.One2many('hr.relative', 'employee_id', string="Relatives")
 
-    #address_id = fields.many2one('res.partner', 'Current Address'),
-    #address_home_id = fields.many2one('res.partner', 'Permanent Address'),
+    # Activity,Rank and Duties for Political in Student life http://redmine.kostik.net/redmine/issues/419
+    # Supporter Name (Headmaster, Administrator,Police Officer,Military Officer’s Name, Address (Full) http://redmine.kostik.net/redmine/issues/420
+    hobby_ids = fields.Many2many('hr.hobby')
+    # Friends list who working in Military,Police and Political and their Name, Position,Address
 
-
-    #     name = fields.Char()
-    #     value = fields.Integer()
-    #     value2 = fields.Float(compute="_value_pc", store=True)
-    #     description = fields.Text()
-    #
-    #     @api.depends('value')
-    #     def _value_pc(self):
-    #         self.value2 = float(self.value) / 100
+    club_record_ids = fields.One2many('hr.club_record', 'employee_id', string="Club and Organizations")
 
 
 class hr_birth_place(models.Model):
@@ -172,3 +167,20 @@ class hr_relative(models.Model):
     address = fields.Text("Address")
     note = fields.Char("Note")
     employee_id = fields.Many2one('hr.employee', ondelete='cascade', string="Employee")
+
+
+class hr_club(models.Model):
+    _name = "hr.club"
+    name = fields.Char("Name")
+
+
+class hr_club_record(models.Model):
+    _name = "hr.club_record"
+    name = fields.Char("Rank")
+    club_id = fields.Many2one("hr.club", ondelete='cascade', string="Club")
+    employee_id = fields.Many2one('hr.employee', ondelete='cascade', string="Employee")
+
+
+class hr_hobby(models.Model):
+    _name = "hr.hobby"
+    name = fields.Char("Hobby")
