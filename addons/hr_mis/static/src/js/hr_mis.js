@@ -47,7 +47,7 @@ odoo.define('web.web_widget_imperial_length', function (require) {
             if (this.get("effective_readonly")) {
                 var val = this.get("value");
                 var feet = val / 30.48;
-                this.$el.text(Math.floor(feet) + " ft " + Math.round((feet % 1) * 120) / 10 + " in");
+                this.$el.text(val + " cm (" + Math.floor(feet) + " ft " + Math.round((feet % 1) * 120) / 10 + " in)");
             } else {
                 this.$("input").val(this.get("value"));
             }

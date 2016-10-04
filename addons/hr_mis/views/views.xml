@@ -75,8 +75,9 @@
                                     <group string="Birth">
                                         <field name="birthday"/>
                                     </group>
-                                    <group string="Height">
-                                        <field name="height" widget="imperial_length"/>
+                                    <group string="Height/Weight">
+                                        <field name="height" placeholder="cm" widget="imperial_length"/>
+                                        <field name="weight" placeholder="lbs"/>
                                     </group>
 
                                 </group>
