@@ -84,6 +84,8 @@ class hr_mis(models.Model):
     form3_id = fields.One2many('hr.form3', 'employee_id', string="Form 3")
     form4_id = fields.One2many('hr.form4', 'employee_id', string="Form 4")
     form5_id = fields.One2many('hr.form5', 'employee_id', string="Form 5")
+    form7_id = fields.One2many('hr.form7', 'employee_id', string="Form 7")
+    form8_id = fields.One2many('hr.form8', 'employee_id', string="Form 8")
 
 
 class hr_birth_place(models.Model):
@@ -306,6 +308,33 @@ class hr_form5(models.Model):
     name = fields.Char("Class")
     date_from = fields.Date("From")
     date_to = fields.Date("To")
-    employee_id = fields.Many2one('hr.employee', ondelete='cascade', string="Employee")
-    educational_institution_id = fields.Many2one("hr.educational_institution", string="Educational institution")
+    employee_id = fields.Many2one('hr.employee', ondelete='cascade', string="Employee", requied=True)
+    educational_institution_id = fields.Many2one("hr.educational_institution", string="Educational institution", requied=True)
 
+
+class hr_form7(models.Model):
+    """
+    http://redmine.kostik.net/redmine/issues/366
+    """
+    _name = "hr.form7"
+    name = fields.Char("Reason", requied=True)
+    date_from = fields.Date("From")
+    date_to = fields.Date("To")
+    employee_id = fields.Many2one('hr.employee', ondelete='cascade', string="Employee", requied=True)
+    country_id = fields.Many2one("res.country", requied=True)
+
+
+    image = fields.Binary('Attachment')
+    image_filename = fields.Char("Attachment filename")
+
+
+class hr_form8(models.Model):
+    """
+    http://redmine.kostik.net/redmine/issues/367
+    """
+    _name = "hr.form8"
+    name = fields.Char("Description & Remarks", requied=True)
+    employee_id = fields.Many2one('hr.employee', ondelete='cascade', string="Employee", requied=True)
+
+    image = fields.Binary('Attachment')
+    image_filename = fields.Char("Attachment filename")
