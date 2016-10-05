@@ -53,6 +53,25 @@
             </field>
         </record>
 
+        <record id="view_form_hr_form_5" model="ir.ui.view">
+            <field name="name">hr.form5.form</field>
+            <field name="model">hr.form5</field>
+            <field name="arch" type="xml">
+                <form>
+                    <sheet>
+                        <group>
+                            <field name="employee_id"/>
+                            <field name="name"/>
+                            <field name="educational_institution_id" string="Educational institution"/>
+
+                            <field name="date_from"/>
+                            <field name="date_to"/>
+                        </group>
+                    </sheet>
+                </form>
+            </field>
+        </record>
+
 
         <!-- Employee -->
         <record id="view_employee_form" model="ir.ui.view">
@@ -225,6 +244,20 @@
 
                                             <field name="qualification"/>
                                             <field widget="binary" name="image" filename="image_filename"/>
+                                        </tree>
+                                    </field>
+                                </group>
+                            </page>
+
+                            <page string="Form 5" groups="base.group_hr_user">
+                                <group string="Education records">
+                                    <field name="form5_id" context="{'default_employee_id': context.get('active_id')}"
+                                           nolabel="1">
+                                        <tree>
+                                            <field name="educational_institution_id"/>
+                                            <field name="name"/>
+                                            <field name="date_from"/>
+                                            <field name="date_to"/>
                                         </tree>
                                     </field>
                                 </group>

@@ -1,4 +1,5 @@
 # -*- coding: utf-8 -*-
+from openerp import api
 from openerp import models, fields, _
 
 RACE_CHOICES = [
@@ -82,6 +83,7 @@ class hr_mis(models.Model):
     form2_id = fields.One2many('hr.form2', 'employee_id', string="Form 2")
     form3_id = fields.One2many('hr.form3', 'employee_id', string="Form 3")
     form4_id = fields.One2many('hr.form4', 'employee_id', string="Form 4")
+    form5_id = fields.One2many('hr.form5', 'employee_id', string="Form 5")
 
 
 class hr_birth_place(models.Model):
@@ -256,7 +258,7 @@ class hr_form3(models.Model):
 
     def compute_name(self):
         try:
-            self.name = '"Order #"{} @ {}'.format(self.order_number, self.order_date)
+            self.name = '"Order #{} @ {}'.format(self.order_number, self.order_date)
         except ValueError:
             self.name = '***'
 
@@ -278,3 +280,32 @@ class hr_form4(models.Model):
 
     image = fields.Binary('Attachment')
     image_filename = fields.Char("Attachment filename")
+
+
+class hr_educational_institution(models.Model):
+    """
+    http://redmine.kostik.net/redmine/issues/364
+    """
+    _name = "hr.educational_institution"
+    name = fields.Char("Name", compute="compute_name")
+    educational_institution = fields.Char("Educational institution", requied=True)
+    location = fields.Char("Location", requied=True)
+
+    def compute_name(self):
+        try:
+            self.name = '{} @ {}'.format(self.educational_institution, self.location)
+        except ValueError:
+            self.name = '***'
+
+
+class hr_form5(models.Model):
+    """
+    http://redmine.kostik.net/redmine/issues/364
+    """
+    _name = "hr.form5"
+    name = fields.Char("Class")
+    date_from = fields.Date("From")
+    date_to = fields.Date("To")
+    employee_id = fields.Many2one('hr.employee', ondelete='cascade', string="Employee")
+    educational_institution_id = fields.Many2one("hr.educational_institution", string="Educational institution")
+
