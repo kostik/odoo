@@ -81,6 +81,7 @@ class hr_mis(models.Model):
 
     form2_id = fields.One2many('hr.form2', 'employee_id', string="Form 2")
     form3_id = fields.One2many('hr.form3', 'employee_id', string="Form 3")
+    form4_id = fields.One2many('hr.form4', 'employee_id', string="Form 4")
 
 
 class hr_birth_place(models.Model):
@@ -259,5 +260,21 @@ class hr_form3(models.Model):
         except ValueError:
             self.name = '***'
 
-    image = fields.Binary('Image', required=True)
-    image_filename = fields.Char("Image Filename")
+    image = fields.Binary('Attachment')
+    image_filename = fields.Char("Attachment filename")
+
+
+class hr_form3(models.Model):
+    """
+    http://redmine.kostik.net/redmine/issues/363
+    """
+    _name = "hr.form4"
+    name = fields.Char("Training")
+    local = fields.Selection([("Local", "Local"), ("Foreign", "Foreign")], string="Place",
+                            default=None)
+    duration = fields.Char("Duration")
+    qualification = fields.Char("Qualification")
+    employee_id = fields.Many2one('hr.employee', ondelete='cascade', string="Employee")
+
+    image = fields.Binary('Attachment')
+    image_filename = fields.Char("Attachment filename")
