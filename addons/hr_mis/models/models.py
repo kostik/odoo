@@ -264,7 +264,7 @@ class hr_form3(models.Model):
     image_filename = fields.Char("Attachment filename")
 
 
-class hr_form3(models.Model):
+class hr_form4(models.Model):
     """
     http://redmine.kostik.net/redmine/issues/363
     """
