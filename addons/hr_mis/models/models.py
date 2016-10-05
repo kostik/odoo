@@ -68,8 +68,11 @@ class hr_mis(models.Model):
     fathers_name = fields.Char("Father's name")
     relative_ids = fields.One2many('hr.relative', 'employee_id', string="Relatives")
 
-    # Activity,Rank and Duties for Political in Student life http://redmine.kostik.net/redmine/issues/419
-    # Supporter Name (Headmaster, Administrator,Police Officer,Military Officer’s Name, Address (Full) http://redmine.kostik.net/redmine/issues/420
+    political_activity = fields.Text(
+        "Political Activity")  # Activity,Rank and Duties for Political in Student life http://redmine.kostik.net/redmine/issues/419
+
+    recommender_ids = fields.Many2many('hr.recommender',
+                                       string="Recommender")  # Supporter Name (Headmaster, Administrator,Police Officer,Military Officer’s Name, Address (Full) http://redmine.kostik.net/redmine/issues/420
     hobby_ids = fields.Many2many('hr.hobby')
     military_colleague_ids = fields.Many2many(
         'hr.military_colleague')  # Friends list who working in Military,Police and Political and their Name, Position,Address
@@ -77,6 +80,7 @@ class hr_mis(models.Model):
     club_record_ids = fields.One2many('hr.club_record', 'employee_id', string="Club and Organizations")
 
     form2_id = fields.One2many('hr.form2', 'employee_id', string="Form 2")
+    form3_id = fields.One2many('hr.form3', 'employee_id', string="Form 3")
 
 
 class hr_birth_place(models.Model):
@@ -188,40 +192,72 @@ class hr_relative(models.Model):
 
 class hr_club(models.Model):
     _name = "hr.club"
-    name = fields.Char("Name")
+    name = fields.Char("Name", required=True)
 
 
 class hr_club_record(models.Model):
     _name = "hr.club_record"
-    name = fields.Char("Rank")
+    name = fields.Char("Rank", required=True)
     club_id = fields.Many2one("hr.club", ondelete='cascade', string="Club")
     employee_id = fields.Many2one('hr.employee', ondelete='cascade', string="Employee")
 
 
 class hr_hobby(models.Model):
     _name = "hr.hobby"
-    name = fields.Char("Hobby")
+    name = fields.Char("Hobby", required=True)
 
 
 class hr_military_colleague(models.Model):
     _name = "hr.military_colleague"
-    name = fields.Char("Name")
+    name = fields.Char("Name", required=True)
+    position = fields.Char("Position")
+    address = fields.Text("Address")
+
+
+class hr_recommender(models.Model):  # http://redmine.kostik.net/redmine/issues/417
+    _name = "hr.recommender"
+    name = fields.Char("Name", required=True)
     position = fields.Char("Position")
     address = fields.Text("Address")
 
 
 class hr_form2(models.Model):
+    """
+    http://redmine.kostik.net/redmine/issues/361
+    """
     _name = "hr.form2"
     name = fields.Char("Name", compute="compute_name")
-    position = fields.Char("Position")
+    position = fields.Char("Position", required=True)
     order_number = fields.Char("Order #")
     order_date = fields.Date("Order date")
-    date = fields.Date("Effective date")
+    date = fields.Date("Effective date", required=True)
     employee_id = fields.Many2one('hr.employee', ondelete='cascade', string="Employee")
     salary_rate_id = fields.Many2one("hr.salary_rate", "Salary rate")
 
     def compute_name(self):
         try:
-            self.name = '{}/{}'.format(self.position, self.date)
+            self.name = '{} @ {}'.format(self.position, self.date)
         except ValueError:
             self.name = '***'
+
+
+class hr_form3(models.Model):
+    """
+    http://redmine.kostik.net/redmine/issues/362
+    """
+    _name = "hr.form3"
+    name = fields.Char("Name", compute="compute_name")
+    order_number = fields.Char("Order #", required=True)
+    order_date = fields.Date("Order date", required=True)
+    employee_id = fields.Many2one('hr.employee', ondelete='cascade', string="Employee")
+    summary = fields.Text("Summary")
+    status = fields.Text("Status")
+
+    def compute_name(self):
+        try:
+            self.name = '"Order #"{} @ {}'.format(self.order_number, self.order_date)
+        except ValueError:
+            self.name = '***'
+
+    image = fields.Binary('Image', required=True)
+    image_filename = fields.Char("Image Filename")

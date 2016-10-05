@@ -1,6 +1,31 @@
 <?xml version="1.0" encoding="utf-8"?>
 <openerp>
     <data>
+        <record id="view_form_hr_form_3" model="ir.ui.view">
+            <field name="name">hr.form3.form</field>
+            <field name="model">hr.form3</field>
+            <field name="arch" type="xml">
+                <form>
+                    <sheet>
+                        <group name="group_top">
+                            <group name="group_left">
+                                <field name="employee_id"/>
+
+                                <field name="order_number"/>
+                                <field name="order_date"/>
+
+                                <field name="summary"/>
+                                <field name="status"/>
+                            </group>
+                            <group name="group_right">
+                                <field name="image_filename" invisible="1"/>
+                                <field widget="binary" name="image" filename="image_filename"/>
+                            </group>
+                        </group>
+                    </sheet>
+                </form>
+            </field>
+        </record>
         <!-- Employee -->
         <record id="view_employee_form" model="ir.ui.view">
             <field name="name">hr.employee.form</field>
@@ -116,6 +141,16 @@
                                             <field name="position"/>
                                         </tree>
                                     </field>
+
+                                    <field name="political_activity"/>
+
+                                    <field name="recommender_ids" string="Recommender">
+                                        <tree>
+                                            <field name="name"/>
+                                            <field name="position"/>
+                                        </tree>
+                                    </field>
+
                                     <field name="hobby_ids" string="Hobbies" widget="many2many_tags"
                                            placeholder="e.g. Amateur Radio, Acting, Baton Twirling, Board Games, Calligraphy, Candle Making, Computer Programming, Coffee Roasting..."/>
                                 </group>
@@ -132,8 +167,16 @@
                                         <field name="salary_rate_id"/>
                                     </tree>
                                 </field>
-
                             </page>
+                            <page string="Form 3" groups="base.group_hr_user">
+                                <field name="form3_id" context="{'default_employee_id': context.get('active_id')}">
+                                    <tree>
+                                        <field name="order_number"/>
+                                        <field name="order_date"/>
+                                    </tree>
+                                </field>
+                            </page>
+
                             <page string="HR Settings" groups="base.group_hr_user">
                                 <group>
                                     <group string='Status' name="active_group">
@@ -154,6 +197,7 @@
                 </form>
             </field>
         </record>
+
 
     </data>
 </openerp>
