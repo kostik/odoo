@@ -3,7 +3,7 @@ msgstr ""
 "Project-Id-Version: Odoo Server 9.0\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2015-09-18 08:11+0000\n"
-"PO-Revision-Date: 2016-08-03 14:41+0000\n"
+"PO-Revision-Date: 2016-09-09 11:48+0000\n"
 "Last-Translator: Pyae Sone <gipsyhnh@gmail.com>\n"
 "Language-Team: Burmese "
 "<http://weblate.kostik.net/projects/erp/hr_recruitment/my/>\n"
@@ -815,7 +815,7 @@ msgstr "အမျိုးသမီး"
 #. module: hr_recruitment
 #: model:ir.ui.view,arch_db:hr_recruitment.view_crm_case_jobs_filter
 msgid "Filter and view on next actions and date"
-msgstr ""
+msgstr "နောက်လှုပ်ဆောင်မှုနှင့်ရက်စွဲပေါ်တွင် စစ်ထုတ်၊ ကြည့်ရှုမည်"
 
 #. module: hr_recruitment
 #: model:hr.recruitment.stage,name:hr_recruitment.stage_job2
@@ -980,7 +980,7 @@ msgstr "အင်တာဗျူးပုံစံ"
 #. module: hr_recruitment
 #: model:ir.model.fields,field_description:hr_recruitment.field_hr_applicant_message_is_follower
 msgid "Is Follower"
-msgstr ""
+msgstr "သည်နောက်လိုက်သူဖြစ်သည်"
 
 #. module: hr_recruitment
 #: model:ir.ui.view,arch_db:hr_recruitment.crm_case_form_view_job
@@ -1269,12 +1269,12 @@ msgstr "တွဲထားမှုများအရေအတွက်"
 #. module: hr_recruitment
 #: model:ir.model.fields,help:hr_recruitment.field_hr_recruitment_report_delay_close
 msgid "Number of Days to close the project issue"
-msgstr ""
+msgstr "ပရောဂျက်ကိစ္စများကိုပိတ်ရန်ကျန်ရှိသောရက်အရေအတွက်"
 
 #. module: hr_recruitment
 #: model:ir.model.fields,help:hr_recruitment.field_hr_applicant_message_needaction_counter
 msgid "Number of messages which requires an action"
-msgstr ""
+msgstr "လှုပ်ဆောင်မှုလိုအပ်သောမတ်စေ့အရေအတွက်"
 
 #. module: hr_recruitment
 #: model:ir.model.fields,help:hr_recruitment.field_hr_applicant_message_unread_counter
@@ -1286,6 +1286,11 @@ msgstr "မဖတ်ရသေးသောစာများအရေအတွက
 msgid "Odoo helps you track applicants in the recruitment\n"
 "                process and follow up all operations: meetings, interviews, etc."
 msgstr ""
+"ကျွန်ုပ်တို့မှ အလုပ်ခေါ်ယူခြင်းတွင် လျှောက်ထားသူများအား လိုက်လံကြည့်ရှုရန် "
+"ကူညီပေးပါသည်\n"
+"                "
+"လှုပ်ဆောင်မှုများ၊အစည်းအဝေးများ၊အင်တာဗျူးများအားလုံးစသည်တို့ကို "
+"ပြုလုပ်လှုပ်ဆောင်ခြင်းတို့ဖြစ်သည်."
 
 #. module: hr_recruitment
 #: model:ir.actions.act_window,help:hr_recruitment.crm_case_categ0_act_job
@@ -1321,7 +1326,7 @@ msgstr "ပိုင်ရှင်"
 #. module: hr_recruitment
 #: model:ir.model.fields,field_description:hr_recruitment.field_hr_job_alias_parent_model_id
 msgid "Parent Model"
-msgstr ""
+msgstr "မူလမော်ဒယ်"
 
 #. module: hr_recruitment
 #: model:ir.model.fields,field_description:hr_recruitment.field_hr_job_alias_parent_thread_id
@@ -1365,7 +1370,7 @@ msgstr "အင်တာဗျူးမှတ်တမ်းများကို
 #. module: hr_recruitment
 #: model:ir.model.fields,field_description:hr_recruitment.field_hr_applicant_probability
 msgid "Probability"
-msgstr ""
+msgstr "ဖြစ်နိုင်ချေ"
 
 #. module: hr_recruitment
 #: model:ir.model.fields,field_description:hr_recruitment.field_hr_applicant_salary_proposed
@@ -1385,7 +1390,7 @@ msgstr "အရေးကြီးသည်များကိုအမှတ်ပ
 #. module: hr_recruitment
 #: model:ir.model.fields,field_description:hr_recruitment.field_hr_job_alias_force_thread_id
 msgid "Record Thread ID"
-msgstr ""
+msgstr "မှတ်တမ်း ထရက်အိုင်ဒီ"
 
 #. module: hr_recruitment
 #: model:ir.ui.menu,name:hr_recruitment.menu_hr_recruitment_root
@@ -1412,7 +1417,7 @@ msgstr ""
 #. module: hr_recruitment
 #: model:ir.ui.view,arch_db:hr_recruitment.view_hr_job_kanban
 msgid "Recruitment Done"
-msgstr ""
+msgstr "အလုပ်ခေါ်ယူမှုပြီးခဲ့ပြီ"
 
 #. module: hr_recruitment
 #: model:survey.survey,title:hr_recruitment.recruitment_form
@@ -1432,12 +1437,12 @@ msgstr "အလုပ်ခေါ်ယူမှုများ"
 #. module: hr_recruitment
 #: model:ir.model,name:hr_recruitment.model_hr_recruitment_report
 msgid "Recruitments Statistics"
-msgstr ""
+msgstr "အလုပ်ခေါ်ယူမှုအခြေအနေ"
 
 #. module: hr_recruitment
 #: model:ir.model.fields,field_description:hr_recruitment.field_hr_applicant_reference
 msgid "Referred By"
-msgstr ""
+msgstr "ညွှန်းဆိုသူ"
 
 #. module: hr_recruitment
 #: model:ir.ui.view,arch_db:hr_recruitment.crm_case_form_view_job
@@ -1501,7 +1506,7 @@ msgstr "လေျှာက်ထားသူမှမေျှာ်မှန်
 #. module: hr_recruitment
 #: model:ir.model.fields,help:hr_recruitment.field_hr_applicant_salary_expected_extra
 msgid "Salary Expected by Applicant, extra advantages"
-msgstr ""
+msgstr "လျှောက်ထားသူမှ မျှော်မှန်းသောလစာ၊ နောက်ထပ်ခံစားခွင့်များ"
 
 #. module: hr_recruitment
 #: model:ir.model.fields,field_description:hr_recruitment.field_hr_recruitment_report_salary_prop
@@ -1511,12 +1516,12 @@ msgstr "တင်ပြထားသောလစာ"
 #. module: hr_recruitment
 #: model:ir.model.fields,help:hr_recruitment.field_hr_applicant_salary_proposed
 msgid "Salary Proposed by the Organisation"
-msgstr ""
+msgstr "အဖွဲ့အစည်းမှ ကမ်းလမ်းထားသောလစာ"
 
 #. module: hr_recruitment
 #: model:ir.model.fields,help:hr_recruitment.field_hr_applicant_salary_proposed_extra
 msgid "Salary Proposed by the Organisation, extra advantages"
-msgstr ""
+msgstr "အဖွဲ့အစည်းမှ ကမ်းလမ်းထားသောလစာ၊ နောက်ထပ် အကျိုးခံစားခွင့်များ"
 
 #. module: hr_recruitment
 #: model:ir.ui.view,arch_db:hr_recruitment.hr_kanban_view_applicant
@@ -1536,7 +1541,7 @@ msgstr "လေျှာက်ထားသူများကိုရှာမည
 #. module: hr_recruitment
 #: model:ir.actions.act_window,help:hr_recruitment.hr_applicant_resumes
 msgid "Search through resumes and motivation letters."
-msgstr ""
+msgstr "ကိုယ်ရေးအကျဉ်းနှင့် စာများတွင်ရှာမည်."
 
 #. module: hr_recruitment
 #: model:hr.recruitment.stage,name:hr_recruitment.stage_job3
@@ -1547,7 +1552,7 @@ msgstr "ဒုတိယအင်တာဗျူး"
 #: model:ir.model.fields,field_description:hr_recruitment.field_hr_recruitment_degree_sequence
 #: model:ir.model.fields,field_description:hr_recruitment.field_hr_recruitment_stage_sequence
 msgid "Sequence"
-msgstr ""
+msgstr "စီကွမ့်"
 
 #. module: hr_recruitment
 #: model:ir.ui.menu,name:hr_recruitment.menu_hr_recruitment_global_settings
@@ -1558,7 +1563,7 @@ msgstr "အပြင်အဆင်"
 #. module: hr_recruitment
 #: model:survey.label,value:hr_recruitment.rcol_3_1_2
 msgid "Somewhat important"
-msgstr ""
+msgstr "အရေးကြီးသောတစ်စုံတစ်ခု"
 
 #. module: hr_recruitment
 #: model:ir.model.fields,field_description:hr_recruitment.field_hr_applicant_source_id
@@ -1582,7 +1587,7 @@ msgstr "လေျှာက်ထားသူ၏ရင်းမြစ်"
 #: model:ir.ui.menu,name:hr_recruitment.menu_hr_recruitment_source
 #: model:ir.ui.view,arch_db:hr_recruitment.hr_recruitment_source_tree
 msgid "Sources of Applicants"
-msgstr ""
+msgstr "လျှောက်သောသူ၏ရင်းမြစ်များ"
 
 #. module: hr_recruitment
 #: model:ir.ui.view,arch_db:hr_recruitment.hr_job_survey
@@ -1658,17 +1663,17 @@ msgstr "အကြောင်းအရာ၊လေျှာက်ထာသူအ
 #. module: hr_recruitment
 #: model:ir.model.fields,field_description:hr_recruitment.field_hr_applicant_survey
 msgid "Survey"
-msgstr ""
+msgstr "စစ်တမ်းကောက်ယူခြင်း"
 
 #. module: hr_recruitment
 #: sql_constraint:hr.applicant.category:0
 msgid "Tag name already exists !"
-msgstr ""
+msgstr "တက်ခ်အမည်သည်ရှိပြီးသားပါ!"
 
 #. module: hr_recruitment
 #: model:ir.model.fields,field_description:hr_recruitment.field_hr_applicant_categ_ids
 msgid "Tags"
-msgstr ""
+msgstr "တက်ခ်များ"
 
 #. module: hr_recruitment
 #: model:survey.question,validation_error_msg:hr_recruitment.recruitment_1_1
@@ -1695,7 +1700,7 @@ msgstr ""
 #. module: hr_recruitment
 #: sql_constraint:hr.recruitment.degree:0
 msgid "The name of the Degree of Recruitment must be unique!"
-msgstr ""
+msgstr "အလုပ်ခေါ်ယူခြင်း၏ဘွဲ့အမည်မှာ မတူရပါ!"
 
 #. module: hr_recruitment
 #: model:ir.model.fields,help:hr_recruitment.field_hr_job_alias_name
