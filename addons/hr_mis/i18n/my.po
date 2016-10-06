@@ -1,0 +1,996 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# 	* hr_mis
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 9.0c\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2016-10-06 10:32+0100\n"
+"PO-Revision-Date: 2016-10-06 10:32+0100\n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+"X-Generator: Poedit 1.8.9\n"
+"Last-Translator: \n"
+"Language: my\n"
+
+#. module: hr_mis
+#: model:ir.ui.view,arch_db:hr_mis.view_employee_form
+msgid "Activity"
+msgstr ""
+
+#. module: hr_mis
+#: model:ir.model.fields,field_description:hr_mis.field_hr_military_colleague_address
+#: model:ir.model.fields,field_description:hr_mis.field_hr_recommender_address
+#: model:ir.model.fields,field_description:hr_mis.field_hr_relative_address
+msgid "Address"
+msgstr ""
+
+#. module: hr_mis
+#: selection:hr.employee,religion:0 selection:hr.relative,religion:0
+msgid "Animist"
+msgstr ""
+
+#. module: hr_mis
+#: model:ir.model.fields,field_description:hr_mis.field_hr_form3_image
+#: model:ir.model.fields,field_description:hr_mis.field_hr_form4_image
+#: model:ir.model.fields,field_description:hr_mis.field_hr_form6_image
+#: model:ir.model.fields,field_description:hr_mis.field_hr_form7_image
+#: model:ir.model.fields,field_description:hr_mis.field_hr_form8_image
+msgid "Attachment"
+msgstr ""
+
+#. module: hr_mis
+#: model:ir.model.fields,field_description:hr_mis.field_hr_form3_image_filename
+#: model:ir.model.fields,field_description:hr_mis.field_hr_form4_image_filename
+#: model:ir.model.fields,field_description:hr_mis.field_hr_form6_image_filename
+#: model:ir.model.fields,field_description:hr_mis.field_hr_form7_image_filename
+#: model:ir.model.fields,field_description:hr_mis.field_hr_form8_image_filename
+msgid "Attachment filename"
+msgstr ""
+
+#. module: hr_mis
+#: selection:hr.employee,race:0 selection:hr.relative,race:0
+msgid "Bamar"
+msgstr ""
+
+#. module: hr_mis
+#: model:ir.ui.view,arch_db:hr_mis.view_employee_form
+msgid "Birth"
+msgstr ""
+
+#. module: hr_mis
+#: model:ir.model.fields,field_description:hr_mis.field_hr_birth_place_name
+msgid "Birth place"
+msgstr ""
+
+#. module: hr_mis
+#: selection:hr.employee,eyes:0 selection:hr.employee,hair:0
+msgid "Black"
+msgstr ""
+
+#. module: hr_mis
+#: selection:hr.employee,eyes:0
+msgid "Blue"
+msgstr ""
+
+#. module: hr_mis
+#: selection:hr.employee,eyes:0 selection:hr.employee,hair:0
+msgid "Brown"
+msgstr ""
+
+#. module: hr_mis
+#: selection:hr.employee,religion:0 selection:hr.relative,religion:0
+msgid "Buddhist"
+msgstr ""
+
+#. module: hr_mis
+#: model:ir.model.fields,field_description:hr_mis.field_hr_military_record_summary
+msgid "Career Summary"
+msgstr ""
+
+#. module: hr_mis
+#: selection:hr.relative,name:0
+msgid "Child"
+msgstr ""
+
+#. module: hr_mis
+#: selection:hr.employee,race:0 selection:hr.relative,race:0
+msgid "Chin"
+msgstr ""
+
+#. module: hr_mis
+#: selection:hr.employee,religion:0 selection:hr.relative,religion:0
+msgid "Christian"
+msgstr ""
+
+#. module: hr_mis
+#: model:ir.ui.view,arch_db:hr_mis.view_employee_form
+msgid "Citizenship & Other Information"
+msgstr ""
+
+#. module: hr_mis
+#: model:ir.ui.view,arch_db:hr_mis.view_employee_form
+msgid "Civil service"
+msgstr ""
+
+#. module: hr_mis
+#: model:ir.model.fields,field_description:hr_mis.field_hr_form5_name
+msgid "Class"
+msgstr ""
+
+#. module: hr_mis
+#: model:ir.model.fields,field_description:hr_mis.field_hr_club_record_club_id
+msgid "Club"
+msgstr ""
+
+#. module: hr_mis
+#: model:ir.model.fields,field_description:hr_mis.field_hr_employee_club_record_ids
+#: model:ir.ui.view,arch_db:hr_mis.view_employee_form
+msgid "Club and Organizations"
+msgstr ""
+
+#. module: hr_mis
+#: selection:hr.employee,religion:0 selection:hr.relative,religion:0
+msgid "Confucion"
+msgstr ""
+
+#. module: hr_mis
+#: model:ir.ui.view,arch_db:hr_mis.view_employee_form
+msgid "Contact Information"
+msgstr ""
+
+#. module: hr_mis
+#: model:ir.model.fields,field_description:hr_mis.field_hr_form7_country_id
+msgid "Country id"
+msgstr ""
+
+#. module: hr_mis
+#: model:ir.model.fields,field_description:hr_mis.field_hr_birth_place_create_uid
+#: model:ir.model.fields,field_description:hr_mis.field_hr_club_create_uid
+#: model:ir.model.fields,field_description:hr_mis.field_hr_educational_institution_create_uid
+#: model:ir.model.fields,field_description:hr_mis.field_hr_external_department_create_uid
+#: model:ir.model.fields,field_description:hr_mis.field_hr_form2_create_uid
+#: model:ir.model.fields,field_description:hr_mis.field_hr_form3_create_uid
+#: model:ir.model.fields,field_description:hr_mis.field_hr_form4_create_uid
+#: model:ir.model.fields,field_description:hr_mis.field_hr_form5_create_uid
+#: model:ir.model.fields,field_description:hr_mis.field_hr_form6_create_uid
+#: model:ir.model.fields,field_description:hr_mis.field_hr_form7_create_uid
+#: model:ir.model.fields,field_description:hr_mis.field_hr_form8_create_uid
+#: model:ir.model.fields,field_description:hr_mis.field_hr_hobby_create_uid
+#: model:ir.model.fields,field_description:hr_mis.field_hr_military_colleague_create_uid
+#: model:ir.model.fields,field_description:hr_mis.field_hr_military_record_create_uid
+#: model:ir.model.fields,field_description:hr_mis.field_hr_recommender_create_uid
+#: model:ir.model.fields,field_description:hr_mis.field_hr_relative_create_uid
+#: model:ir.model.fields,field_description:hr_mis.field_hr_salary_rate_create_uid
+msgid "Created by"
+msgstr ""
+
+#. module: hr_mis
+#: model:ir.model.fields,field_description:hr_mis.field_hr_birth_place_create_date
+#: model:ir.model.fields,field_description:hr_mis.field_hr_club_create_date
+#: model:ir.model.fields,field_description:hr_mis.field_hr_educational_institution_create_date
+#: model:ir.model.fields,field_description:hr_mis.field_hr_external_department_create_date
+#: model:ir.model.fields,field_description:hr_mis.field_hr_form2_create_date
+#: model:ir.model.fields,field_description:hr_mis.field_hr_form3_create_date
+#: model:ir.model.fields,field_description:hr_mis.field_hr_form4_create_date
+#: model:ir.model.fields,field_description:hr_mis.field_hr_form5_create_date
+#: model:ir.model.fields,field_description:hr_mis.field_hr_form6_create_date
+#: model:ir.model.fields,field_description:hr_mis.field_hr_form7_create_date
+#: model:ir.model.fields,field_description:hr_mis.field_hr_form8_create_date
+#: model:ir.model.fields,field_description:hr_mis.field_hr_hobby_create_date
+#: model:ir.model.fields,field_description:hr_mis.field_hr_military_colleague_create_date
+#: model:ir.model.fields,field_description:hr_mis.field_hr_military_record_create_date
+#: model:ir.model.fields,field_description:hr_mis.field_hr_recommender_create_date
+#: model:ir.model.fields,field_description:hr_mis.field_hr_relative_create_date
+#: model:ir.model.fields,field_description:hr_mis.field_hr_salary_rate_create_date
+msgid "Created on"
+msgstr ""
+
+#. module: hr_mis
+#: model:ir.model.fields,field_description:hr_mis.field_hr_employee_criminal_records
+msgid "Criminal records"
+msgstr ""
+
+#. module: hr_mis
+#: model:ir.ui.view,arch_db:hr_mis.view_employee_form
+msgid "Current Address"
+msgstr ""
+
+#. module: hr_mis
+#: model:ir.model.fields,field_description:hr_mis.field_hr_military_record_date_joined
+msgid "Date joined"
+msgstr ""
+
+#. module: hr_mis
+#: model:ir.model.fields,field_description:hr_mis.field_hr_military_record_date_resigned
+msgid "Date resigned"
+msgstr ""
+
+#. module: hr_mis
+#: model:ir.model.fields,field_description:hr_mis.field_hr_employee_date_started
+msgid "Date started"
+msgstr ""
+
+#. module: hr_mis
+#: model:ir.model.fields,help:hr_mis.field_hr_employee_date_started
+msgid "Date started as civil staff"
+msgstr ""
+
+#. module: hr_mis
+#: model:ir.model.fields,field_description:hr_mis.field_hr_external_department_external_department
+#: model:ir.model.fields,field_description:hr_mis.field_hr_form6_external_department_id
+msgid "Department"
+msgstr ""
+
+#. module: hr_mis
+#: model:ir.model.fields,field_description:hr_mis.field_hr_form8_name
+msgid "Description & Remarks"
+msgstr ""
+
+#. module: hr_mis
+#: model:ir.ui.view,arch_db:hr_mis.view_employee_form
+msgid "Disciplinary Records"
+msgstr ""
+
+#. module: hr_mis
+#: model:ir.model.fields,field_description:hr_mis.field_hr_birth_place_display_name
+#: model:ir.model.fields,field_description:hr_mis.field_hr_club_display_name
+#: model:ir.model.fields,field_description:hr_mis.field_hr_club_record_display_name
+#: model:ir.model.fields,field_description:hr_mis.field_hr_educational_institution_display_name
+#: model:ir.model.fields,field_description:hr_mis.field_hr_external_department_display_name
+#: model:ir.model.fields,field_description:hr_mis.field_hr_form2_display_name
+#: model:ir.model.fields,field_description:hr_mis.field_hr_form3_display_name
+#: model:ir.model.fields,field_description:hr_mis.field_hr_form4_display_name
+#: model:ir.model.fields,field_description:hr_mis.field_hr_form5_display_name
+#: model:ir.model.fields,field_description:hr_mis.field_hr_form6_display_name
+#: model:ir.model.fields,field_description:hr_mis.field_hr_form7_display_name
+#: model:ir.model.fields,field_description:hr_mis.field_hr_form8_display_name
+#: model:ir.model.fields,field_description:hr_mis.field_hr_hobby_display_name
+#: model:ir.model.fields,field_description:hr_mis.field_hr_military_colleague_display_name
+#: model:ir.model.fields,field_description:hr_mis.field_hr_military_record_display_name
+#: model:ir.model.fields,field_description:hr_mis.field_hr_recommender_display_name
+#: model:ir.model.fields,field_description:hr_mis.field_hr_relative_display_name
+#: model:ir.model.fields,field_description:hr_mis.field_hr_salary_rate_display_name
+msgid "Display Name"
+msgstr ""
+
+#. module: hr_mis
+#: model:ir.model.fields,field_description:hr_mis.field_hr_employee_distinction
+msgid "Distinction, Certification"
+msgstr ""
+
+#. module: hr_mis
+#: model:ir.model.fields,field_description:hr_mis.field_hr_employee_distinctive_marks
+msgid "Distinctive Marks"
+msgstr ""
+
+#. module: hr_mis
+#: model:ir.model.fields,field_description:hr_mis.field_hr_military_record_division
+msgid "Division(s)"
+msgstr ""
+
+#. module: hr_mis
+#: model:ir.model.fields,field_description:hr_mis.field_hr_form4_duration
+msgid "Duration"
+msgstr ""
+
+#. module: hr_mis
+#: model:ir.ui.view,arch_db:hr_mis.view_employee_form
+msgid "Education records"
+msgstr ""
+
+#. module: hr_mis
+#: model:ir.model.fields,field_description:hr_mis.field_hr_educational_institution_educational_institution
+#: model:ir.model.fields,field_description:hr_mis.field_hr_form5_educational_institution_id
+#: model:ir.ui.view,arch_db:hr_mis.view_form_hr_form_5
+msgid "Educational institution"
+msgstr ""
+
+#. module: hr_mis
+#: model:ir.model.fields,field_description:hr_mis.field_hr_form2_date
+msgid "Effective date"
+msgstr ""
+
+#. module: hr_mis
+#: model:ir.model,name:hr_mis.model_hr_employee
+#: model:ir.model.fields,field_description:hr_mis.field_hr_club_record_employee_id
+#: model:ir.model.fields,field_description:hr_mis.field_hr_form2_employee_id
+#: model:ir.model.fields,field_description:hr_mis.field_hr_form3_employee_id
+#: model:ir.model.fields,field_description:hr_mis.field_hr_form4_employee_id
+#: model:ir.model.fields,field_description:hr_mis.field_hr_form5_employee_id
+#: model:ir.model.fields,field_description:hr_mis.field_hr_form6_employee_id
+#: model:ir.model.fields,field_description:hr_mis.field_hr_form7_employee_id
+#: model:ir.model.fields,field_description:hr_mis.field_hr_form8_employee_id
+#: model:ir.model.fields,field_description:hr_mis.field_hr_military_record_employee_id
+#: model:ir.model.fields,field_description:hr_mis.field_hr_relative_employee_id
+#: model:ir.ui.view,arch_db:hr_mis.view_employee_form
+msgid "Employee"
+msgstr ""
+
+#. module: hr_mis
+#: model:ir.ui.view,arch_db:hr_mis.view_employee_form
+msgid "Employee's Name"
+msgstr ""
+
+#. module: hr_mis
+#: model:ir.ui.view,arch_db:hr_mis.view_employee_form
+msgid "Employment history"
+msgstr ""
+
+#. module: hr_mis
+#: model:ir.model.fields,field_description:hr_mis.field_hr_employee_eyes
+msgid "Eyes"
+msgstr ""
+
+#. module: hr_mis
+#: selection:hr.relative,name:0
+msgid "Father"
+msgstr ""
+
+#. module: hr_mis
+#: model:ir.model.fields,field_description:hr_mis.field_hr_employee_fathers_name
+msgid "Father's name"
+msgstr ""
+
+#. module: hr_mis
+#: selection:hr.form4,local:0
+msgid "Foreign"
+msgstr ""
+
+#. module: hr_mis
+#: model:ir.ui.view,arch_db:hr_mis.view_employee_form
+msgid "Foreign trips"
+msgstr ""
+
+#. module: hr_mis
+#: model:ir.ui.view,arch_db:hr_mis.view_employee_form
+msgid "Form 1"
+msgstr ""
+
+#. module: hr_mis
+#: model:ir.model.fields,field_description:hr_mis.field_hr_employee_form2_id
+#: model:ir.ui.view,arch_db:hr_mis.view_employee_form
+msgid "Form 2"
+msgstr ""
+
+#. module: hr_mis
+#: model:ir.model.fields,field_description:hr_mis.field_hr_employee_form3_id
+#: model:ir.ui.view,arch_db:hr_mis.view_employee_form
+msgid "Form 3"
+msgstr ""
+
+#. module: hr_mis
+#: model:ir.model.fields,field_description:hr_mis.field_hr_employee_form4_id
+#: model:ir.ui.view,arch_db:hr_mis.view_employee_form
+msgid "Form 4"
+msgstr ""
+
+#. module: hr_mis
+#: model:ir.model.fields,field_description:hr_mis.field_hr_employee_form5_id
+#: model:ir.ui.view,arch_db:hr_mis.view_employee_form
+msgid "Form 5"
+msgstr ""
+
+#. module: hr_mis
+#: model:ir.model.fields,field_description:hr_mis.field_hr_employee_form6_id
+#: model:ir.ui.view,arch_db:hr_mis.view_employee_form
+msgid "Form 6"
+msgstr ""
+
+#. module: hr_mis
+#: model:ir.model.fields,field_description:hr_mis.field_hr_employee_form7_id
+#: model:ir.ui.view,arch_db:hr_mis.view_employee_form
+msgid "Form 7"
+msgstr ""
+
+#. module: hr_mis
+#: model:ir.model.fields,field_description:hr_mis.field_hr_employee_form8_id
+#: model:ir.ui.view,arch_db:hr_mis.view_employee_form
+msgid "Form 8"
+msgstr ""
+
+#. module: hr_mis
+#: model:ir.model.fields,field_description:hr_mis.field_hr_form5_date_from
+#: model:ir.model.fields,field_description:hr_mis.field_hr_form6_date_from
+#: model:ir.model.fields,field_description:hr_mis.field_hr_form7_date_from
+msgid "From"
+msgstr ""
+
+#. module: hr_mis
+#: model:ir.ui.view,arch_db:hr_mis.view_employee_form
+msgid "HR Settings"
+msgstr ""
+
+#. module: hr_mis
+#: model:ir.model.fields,field_description:hr_mis.field_hr_employee_hair
+msgid "Hair"
+msgstr ""
+
+#. module: hr_mis
+#: model:ir.model.fields,field_description:hr_mis.field_hr_employee_height
+msgid "Height"
+msgstr ""
+
+#. module: hr_mis
+#: selection:hr.employee,religion:0 selection:hr.relative,religion:0
+msgid "Hindu"
+msgstr ""
+
+#. module: hr_mis
+#: model:ir.ui.view,arch_db:hr_mis.view_employee_form
+msgid "Hobbies"
+msgstr ""
+
+#. module: hr_mis
+#: model:ir.model.fields,field_description:hr_mis.field_hr_hobby_name
+msgid "Hobby"
+msgstr ""
+
+#. module: hr_mis
+#: model:ir.model.fields,field_description:hr_mis.field_hr_employee_hobby_ids
+msgid "Hobby ids"
+msgstr ""
+
+#. module: hr_mis
+#: model:ir.model.fields,field_description:hr_mis.field_hr_birth_place_id
+#: model:ir.model.fields,field_description:hr_mis.field_hr_club_id
+#: model:ir.model.fields,field_description:hr_mis.field_hr_educational_institution_id
+#: model:ir.model.fields,field_description:hr_mis.field_hr_external_department_id
+#: model:ir.model.fields,field_description:hr_mis.field_hr_form2_id
+#: model:ir.model.fields,field_description:hr_mis.field_hr_form3_id
+#: model:ir.model.fields,field_description:hr_mis.field_hr_form4_id
+#: model:ir.model.fields,field_description:hr_mis.field_hr_form5_id
+#: model:ir.model.fields,field_description:hr_mis.field_hr_form6_id
+#: model:ir.model.fields,field_description:hr_mis.field_hr_form7_id
+#: model:ir.model.fields,field_description:hr_mis.field_hr_form8_id
+#: model:ir.model.fields,field_description:hr_mis.field_hr_hobby_id
+#: model:ir.model.fields,field_description:hr_mis.field_hr_military_colleague_id
+#: model:ir.model.fields,field_description:hr_mis.field_hr_military_record_id
+#: model:ir.model.fields,field_description:hr_mis.field_hr_recommender_id
+#: model:ir.model.fields,field_description:hr_mis.field_hr_relative_id
+#: model:ir.model.fields,field_description:hr_mis.field_hr_salary_rate_id
+msgid "ID"
+msgstr ""
+
+#. module: hr_mis
+#: selection:hr.employee,religion:0 selection:hr.relative,religion:0
+msgid "Islam"
+msgstr ""
+
+#. module: hr_mis
+#: selection:hr.employee,religion:0 selection:hr.relative,religion:0
+msgid "Jew"
+msgstr ""
+
+#. module: hr_mis
+#: selection:hr.employee,race:0 selection:hr.relative,race:0
+msgid "Kachin"
+msgstr ""
+
+#. module: hr_mis
+#: selection:hr.employee,race:0 selection:hr.relative,race:0
+msgid "Kayah"
+msgstr ""
+
+#. module: hr_mis
+#: selection:hr.employee,race:0 selection:hr.relative,race:0
+msgid "Kayin"
+msgstr ""
+
+#. module: hr_mis
+#: model:ir.model.fields,field_description:hr_mis.field_hr_birth_place___last_update
+#: model:ir.model.fields,field_description:hr_mis.field_hr_club___last_update
+#: model:ir.model.fields,field_description:hr_mis.field_hr_club_record___last_update
+#: model:ir.model.fields,field_description:hr_mis.field_hr_educational_institution___last_update
+#: model:ir.model.fields,field_description:hr_mis.field_hr_external_department___last_update
+#: model:ir.model.fields,field_description:hr_mis.field_hr_form2___last_update
+#: model:ir.model.fields,field_description:hr_mis.field_hr_form3___last_update
+#: model:ir.model.fields,field_description:hr_mis.field_hr_form4___last_update
+#: model:ir.model.fields,field_description:hr_mis.field_hr_form5___last_update
+#: model:ir.model.fields,field_description:hr_mis.field_hr_form6___last_update
+#: model:ir.model.fields,field_description:hr_mis.field_hr_form7___last_update
+#: model:ir.model.fields,field_description:hr_mis.field_hr_form8___last_update
+#: model:ir.model.fields,field_description:hr_mis.field_hr_hobby___last_update
+#: model:ir.model.fields,field_description:hr_mis.field_hr_military_colleague___last_update
+#: model:ir.model.fields,field_description:hr_mis.field_hr_military_record___last_update
+#: model:ir.model.fields,field_description:hr_mis.field_hr_recommender___last_update
+#: model:ir.model.fields,field_description:hr_mis.field_hr_relative___last_update
+#: model:ir.model.fields,field_description:hr_mis.field_hr_salary_rate___last_update
+msgid "Last Modified on"
+msgstr ""
+
+#. module: hr_mis
+#: model:ir.model.fields,field_description:hr_mis.field_hr_birth_place_write_uid
+#: model:ir.model.fields,field_description:hr_mis.field_hr_club_write_uid
+#: model:ir.model.fields,field_description:hr_mis.field_hr_educational_institution_write_uid
+#: model:ir.model.fields,field_description:hr_mis.field_hr_external_department_write_uid
+#: model:ir.model.fields,field_description:hr_mis.field_hr_form2_write_uid
+#: model:ir.model.fields,field_description:hr_mis.field_hr_form3_write_uid
+#: model:ir.model.fields,field_description:hr_mis.field_hr_form4_write_uid
+#: model:ir.model.fields,field_description:hr_mis.field_hr_form5_write_uid
+#: model:ir.model.fields,field_description:hr_mis.field_hr_form6_write_uid
+#: model:ir.model.fields,field_description:hr_mis.field_hr_form7_write_uid
+#: model:ir.model.fields,field_description:hr_mis.field_hr_form8_write_uid
+#: model:ir.model.fields,field_description:hr_mis.field_hr_hobby_write_uid
+#: model:ir.model.fields,field_description:hr_mis.field_hr_military_colleague_write_uid
+#: model:ir.model.fields,field_description:hr_mis.field_hr_military_record_write_uid
+#: model:ir.model.fields,field_description:hr_mis.field_hr_recommender_write_uid
+#: model:ir.model.fields,field_description:hr_mis.field_hr_relative_write_uid
+#: model:ir.model.fields,field_description:hr_mis.field_hr_salary_rate_write_uid
+msgid "Last Updated by"
+msgstr ""
+
+#. module: hr_mis
+#: model:ir.model.fields,field_description:hr_mis.field_hr_birth_place_write_date
+#: model:ir.model.fields,field_description:hr_mis.field_hr_club_write_date
+#: model:ir.model.fields,field_description:hr_mis.field_hr_educational_institution_write_date
+#: model:ir.model.fields,field_description:hr_mis.field_hr_external_department_write_date
+#: model:ir.model.fields,field_description:hr_mis.field_hr_form2_write_date
+#: model:ir.model.fields,field_description:hr_mis.field_hr_form3_write_date
+#: model:ir.model.fields,field_description:hr_mis.field_hr_form4_write_date
+#: model:ir.model.fields,field_description:hr_mis.field_hr_form5_write_date
+#: model:ir.model.fields,field_description:hr_mis.field_hr_form6_write_date
+#: model:ir.model.fields,field_description:hr_mis.field_hr_form7_write_date
+#: model:ir.model.fields,field_description:hr_mis.field_hr_form8_write_date
+#: model:ir.model.fields,field_description:hr_mis.field_hr_hobby_write_date
+#: model:ir.model.fields,field_description:hr_mis.field_hr_military_colleague_write_date
+#: model:ir.model.fields,field_description:hr_mis.field_hr_military_record_write_date
+#: model:ir.model.fields,field_description:hr_mis.field_hr_recommender_write_date
+#: model:ir.model.fields,field_description:hr_mis.field_hr_relative_write_date
+#: model:ir.model.fields,field_description:hr_mis.field_hr_salary_rate_write_date
+msgid "Last Updated on"
+msgstr ""
+
+#. module: hr_mis
+#: selection:hr.form4,local:0
+msgid "Local"
+msgstr ""
+
+#. module: hr_mis
+#: model:ir.model.fields,field_description:hr_mis.field_hr_educational_institution_location
+#: model:ir.model.fields,field_description:hr_mis.field_hr_external_department_location
+msgid "Location"
+msgstr ""
+
+#. module: hr_mis
+#: model:ir.model.fields,field_description:hr_mis.field_hr_employee_military_colleague_ids
+msgid "Military colleague ids"
+msgstr ""
+
+#. module: hr_mis
+#: model:ir.ui.view,arch_db:hr_mis.view_employee_form
+msgid "Military colleagues"
+msgstr ""
+
+#. module: hr_mis
+#: model:ir.model.fields,field_description:hr_mis.field_hr_employee_military_record_ids
+msgid "Military records"
+msgstr ""
+
+#. module: hr_mis
+#: selection:hr.employee,race:0 selection:hr.relative,race:0
+msgid "Mon"
+msgstr ""
+
+#. module: hr_mis
+#: selection:hr.relative,name:0
+msgid "Mother"
+msgstr ""
+
+#. module: hr_mis
+#: model:ir.ui.view,arch_db:hr_mis.view_employee_form
+msgid "NRC Number"
+msgstr ""
+
+#. module: hr_mis
+#: model:ir.model.fields,field_description:hr_mis.field_hr_club_name
+#: model:ir.model.fields,field_description:hr_mis.field_hr_educational_institution_name
+#: model:ir.model.fields,field_description:hr_mis.field_hr_external_department_name
+#: model:ir.model.fields,field_description:hr_mis.field_hr_form2_name
+#: model:ir.model.fields,field_description:hr_mis.field_hr_form3_name
+#: model:ir.model.fields,field_description:hr_mis.field_hr_military_colleague_name
+#: model:ir.model.fields,field_description:hr_mis.field_hr_recommender_name
+#: model:ir.model.fields,field_description:hr_mis.field_hr_relative_relative_name
+#: model:ir.model.fields,field_description:hr_mis.field_hr_salary_rate_name
+msgid "Name"
+msgstr ""
+
+#. module: hr_mis
+#: selection:hr.employee,religion:0 selection:hr.relative,religion:0
+msgid "Not Stated"
+msgstr ""
+
+#. module: hr_mis
+#: selection:hr.employee,race:0 selection:hr.relative,race:0
+msgid "Not stated"
+msgstr ""
+
+#. module: hr_mis
+#: model:ir.model.fields,field_description:hr_mis.field_hr_relative_note
+msgid "Note"
+msgstr ""
+
+#. module: hr_mis
+#: model:ir.model.fields,field_description:hr_mis.field_hr_relative_occupation
+msgid "Occupation"
+msgstr ""
+
+#. module: hr_mis
+#: model:ir.model.fields,field_description:hr_mis.field_hr_form2_order_number
+#: model:ir.model.fields,field_description:hr_mis.field_hr_form3_order_number
+msgid "Order #"
+msgstr ""
+
+#. module: hr_mis
+#: model:ir.model.fields,field_description:hr_mis.field_hr_form2_order_date
+#: model:ir.model.fields,field_description:hr_mis.field_hr_form3_order_date
+msgid "Order date"
+msgstr ""
+
+#. module: hr_mis
+#: selection:hr.employee,eyes:0 selection:hr.employee,hair:0
+msgid "Other"
+msgstr ""
+
+#. module: hr_mis
+#: model:ir.ui.view,arch_db:hr_mis.view_employee_form
+msgid "Other Information ..."
+msgstr ""
+
+#. module: hr_mis
+#: model:ir.model.fields,field_description:hr_mis.field_hr_employee_other_name
+#: model:ir.ui.view,arch_db:hr_mis.view_employee_form
+msgid "Other Name"
+msgstr ""
+
+#. module: hr_mis
+#: selection:hr.employee,race:0 selection:hr.relative,race:0
+msgid "Other Race"
+msgstr ""
+
+#. module: hr_mis
+#: selection:hr.employee,religion:0 selection:hr.relative,religion:0
+msgid "Other Religion"
+msgstr ""
+
+#. module: hr_mis
+#: model:ir.model.fields,field_description:hr_mis.field_hr_military_record_pension
+msgid "Pension"
+msgstr ""
+
+#. module: hr_mis
+#: model:ir.ui.view,arch_db:hr_mis.view_employee_form
+msgid "Permanent Address"
+msgstr ""
+
+#. module: hr_mis
+#: model:ir.model.fields,field_description:hr_mis.field_hr_military_record_name
+msgid "Personal ID"
+msgstr ""
+
+#. module: hr_mis
+#: model:ir.model.fields,field_description:hr_mis.field_hr_employee_personal_number
+#: model:ir.ui.view,arch_db:hr_mis.view_employee_form
+msgid "Personal Number"
+msgstr ""
+
+#. module: hr_mis
+#: model:ir.model.fields,help:hr_mis.field_hr_employee_personal_number
+msgid "Personal number in the MCD"
+msgstr ""
+
+#. module: hr_mis
+#: model:ir.model.fields,field_description:hr_mis.field_hr_form4_local
+msgid "Place"
+msgstr ""
+
+#. module: hr_mis
+#: model:ir.model.fields,field_description:hr_mis.field_hr_employee_place_of_birth_id
+msgid "Place of birth"
+msgstr ""
+
+#. module: hr_mis
+#: model:ir.model.fields,field_description:hr_mis.field_hr_employee_political_activity
+msgid "Political Activity"
+msgstr ""
+
+#. module: hr_mis
+#: model:ir.model.fields,field_description:hr_mis.field_hr_form2_position
+#: model:ir.model.fields,field_description:hr_mis.field_hr_form6_name
+#: model:ir.model.fields,field_description:hr_mis.field_hr_military_colleague_position
+#: model:ir.model.fields,field_description:hr_mis.field_hr_recommender_position
+#: model:ir.model.fields,field_description:hr_mis.field_hr_salary_rate_position
+#: model:ir.ui.view,arch_db:hr_mis.view_employee_form
+msgid "Position"
+msgstr ""
+
+#. module: hr_mis
+#: model:ir.model.fields,field_description:hr_mis.field_hr_employee_position_name_at_start
+msgid "Position started"
+msgstr ""
+
+#. module: hr_mis
+#: model:ir.model.fields,help:hr_mis.field_hr_employee_position_name_at_start
+msgid "Position started as civil staff"
+msgstr ""
+
+#. module: hr_mis
+#: model:ir.model.fields,field_description:hr_mis.field_hr_employee_previous_position_and_place
+msgid "Previous position abd place"
+msgstr ""
+
+#. module: hr_mis
+#: model:ir.model.fields,field_description:hr_mis.field_hr_employee_qualification
+#: model:ir.model.fields,field_description:hr_mis.field_hr_form4_qualification
+msgid "Qualification"
+msgstr ""
+
+#. module: hr_mis
+#: model:ir.model.fields,field_description:hr_mis.field_hr_employee_race
+#: model:ir.model.fields,field_description:hr_mis.field_hr_relative_race
+msgid "Race"
+msgstr ""
+
+#. module: hr_mis
+#: selection:hr.employee,race:0 selection:hr.relative,race:0
+msgid "Rakhine"
+msgstr ""
+
+#. module: hr_mis
+#: model:ir.model.fields,field_description:hr_mis.field_hr_club_record_name
+msgid "Rank"
+msgstr ""
+
+#. module: hr_mis
+#: model:ir.model.fields,field_description:hr_mis.field_hr_form7_name
+msgid "Reason"
+msgstr ""
+
+#. module: hr_mis
+#: model:ir.model.fields,field_description:hr_mis.field_hr_employee_recommender_ids
+#: model:ir.ui.view,arch_db:hr_mis.view_employee_form
+msgid "Recommender"
+msgstr ""
+
+#. module: hr_mis
+#: model:ir.ui.view,arch_db:hr_mis.view_employee_form
+msgid "Related User"
+msgstr ""
+
+#. module: hr_mis
+#: model:ir.model.fields,field_description:hr_mis.field_hr_relative_name
+msgid "Relative"
+msgstr ""
+
+#. module: hr_mis
+#: model:ir.model.fields,field_description:hr_mis.field_hr_employee_relative_ids
+msgid "Relatives"
+msgstr ""
+
+#. module: hr_mis
+#: model:ir.model.fields,field_description:hr_mis.field_hr_employee_religion
+#: model:ir.model.fields,field_description:hr_mis.field_hr_relative_religion
+msgid "Religion"
+msgstr ""
+
+#. module: hr_mis
+#: model:ir.model.fields,field_description:hr_mis.field_hr_military_record_reason_for_leaving
+msgid "Resign reason"
+msgstr ""
+
+#. module: hr_mis
+#: model:ir.model.fields,field_description:hr_mis.field_hr_employee_salary_rate_id
+#: model:ir.model.fields,field_description:hr_mis.field_hr_form2_salary_rate_id
+msgid "Salary rate"
+msgstr ""
+
+#. module: hr_mis
+#: selection:hr.employee,race:0 selection:hr.relative,race:0
+msgid "Shan"
+msgstr ""
+
+#. module: hr_mis
+#: selection:hr.relative,name:0
+msgid "Sibling"
+msgstr ""
+
+#. module: hr_mis
+#: selection:hr.employee,religion:0 selection:hr.relative,religion:0
+msgid "Sikh"
+msgstr ""
+
+#. module: hr_mis
+#: selection:hr.relative,name:0
+msgid "Spouse"
+msgstr ""
+
+#. module: hr_mis
+#: selection:hr.relative,name:0
+msgid "Spouse's Father"
+msgstr ""
+
+#. module: hr_mis
+#: selection:hr.relative,name:0
+msgid "Spouse's Mother"
+msgstr ""
+
+#. module: hr_mis
+#: model:ir.model.fields,field_description:hr_mis.field_hr_form3_status
+#: model:ir.ui.view,arch_db:hr_mis.view_employee_form
+msgid "Status"
+msgstr ""
+
+#. module: hr_mis
+#: model:ir.model.fields,field_description:hr_mis.field_hr_form3_summary
+msgid "Summary"
+msgstr ""
+
+#. module: hr_mis
+#: model:ir.model.fields,field_description:hr_mis.field_hr_form5_date_to
+#: model:ir.model.fields,field_description:hr_mis.field_hr_form6_date_to
+#: model:ir.model.fields,field_description:hr_mis.field_hr_form7_date_to
+msgid "To"
+msgstr ""
+
+#. module: hr_mis
+#: model:ir.model.fields,field_description:hr_mis.field_hr_form4_name
+msgid "Training"
+msgstr ""
+
+#. module: hr_mis
+#: model:ir.ui.view,arch_db:hr_mis.view_employee_form
+msgid "Training records"
+msgstr ""
+
+#. module: hr_mis
+#: model:ir.model.fields,field_description:hr_mis.field_hr_employee_weight
+msgid "Weight"
+msgstr ""
+
+#. module: hr_mis
+#: model:ir.ui.view,arch_db:hr_mis.view_employee_form
+msgid "as civil staff"
+msgstr ""
+
+#. module: hr_mis
+#: model:ir.model.fields,help:hr_mis.field_hr_employee_height
+#: model:ir.ui.view,arch_db:hr_mis.view_employee_form
+msgid "cm"
+msgstr ""
+
+#. module: hr_mis
+#: model:ir.ui.view,arch_db:hr_mis.view_employee_form
+msgid ""
+"e.g. Amateur Radio, Acting, Baton Twirling, Board Games, Calligraphy, Candle "
+"Making, Computer Programming, Coffee Roasting..."
+msgstr ""
+
+#. module: hr_mis
+#: model:ir.ui.view,arch_db:hr_mis.view_employee_form
+msgid "e.g. Part Time"
+msgstr ""
+
+#. module: hr_mis
+#: model:ir.model.fields,field_description:hr_mis.field_hr_salary_rate_salary_from
+msgid "from"
+msgstr ""
+
+#. module: hr_mis
+#: model:ir.model,name:hr_mis.model_hr_birth_place
+msgid "hr.birth_place"
+msgstr ""
+
+#. module: hr_mis
+#: model:ir.model,name:hr_mis.model_hr_club
+msgid "hr.club"
+msgstr ""
+
+#. module: hr_mis
+#: model:ir.model,name:hr_mis.model_hr_club_record
+msgid "hr.club_record"
+msgstr ""
+
+#. module: hr_mis
+#: model:ir.model,name:hr_mis.model_hr_educational_institution
+msgid "hr.educational_institution"
+msgstr ""
+
+#. module: hr_mis
+#: model:ir.model,name:hr_mis.model_hr_external_department
+msgid "hr.external_department"
+msgstr ""
+
+#. module: hr_mis
+#: model:ir.model,name:hr_mis.model_hr_form2
+msgid "hr.form2"
+msgstr ""
+
+#. module: hr_mis
+#: model:ir.model,name:hr_mis.model_hr_form3
+msgid "hr.form3"
+msgstr ""
+
+#. module: hr_mis
+#: model:ir.model,name:hr_mis.model_hr_form4
+msgid "hr.form4"
+msgstr ""
+
+#. module: hr_mis
+#: model:ir.model,name:hr_mis.model_hr_form5
+msgid "hr.form5"
+msgstr ""
+
+#. module: hr_mis
+#: model:ir.model,name:hr_mis.model_hr_form6
+msgid "hr.form6"
+msgstr ""
+
+#. module: hr_mis
+#: model:ir.model,name:hr_mis.model_hr_form7
+msgid "hr.form7"
+msgstr ""
+
+#. module: hr_mis
+#: model:ir.model,name:hr_mis.model_hr_form8
+msgid "hr.form8"
+msgstr ""
+
+#. module: hr_mis
+#: model:ir.model,name:hr_mis.model_hr_from2
+msgid "hr.from2"
+msgstr ""
+
+#. module: hr_mis
+#: model:ir.model,name:hr_mis.model_hr_hobby
+msgid "hr.hobby"
+msgstr ""
+
+#. module: hr_mis
+#: model:ir.model,name:hr_mis.model_hr_military_colleague
+msgid "hr.military_colleague"
+msgstr ""
+
+#. module: hr_mis
+#: model:ir.model,name:hr_mis.model_hr_military_record
+msgid "hr.military_record"
+msgstr ""
+
+#. module: hr_mis
+#: model:ir.model,name:hr_mis.model_hr_recommender
+msgid "hr.recommender"
+msgstr ""
+
+#. module: hr_mis
+#: model:ir.model,name:hr_mis.model_hr_relative
+msgid "hr.relative"
+msgstr ""
+
+#. module: hr_mis
+#: model:ir.model,name:hr_mis.model_hr_salary_rate
+msgid "hr.salary_rate"
+msgstr ""
+
+#. module: hr_mis
+#: model:ir.model.fields,help:hr_mis.field_hr_employee_weight
+#: model:ir.ui.view,arch_db:hr_mis.view_employee_form
+msgid "lbs"
+msgstr ""
+
+#. module: hr_mis
+#: model:ir.ui.view,arch_db:hr_mis.view_employee_form
+msgid "started as civil staff"
+msgstr ""
+
+#. module: hr_mis
+#: model:ir.model.fields,field_description:hr_mis.field_hr_salary_rate_salary_step
+msgid "step"
+msgstr ""
+
+#. module: hr_mis
+#: model:ir.model.fields,field_description:hr_mis.field_hr_salary_rate_salary_to
+msgid "to"
+msgstr ""
