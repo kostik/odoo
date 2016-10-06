@@ -84,6 +84,7 @@ class hr_mis(models.Model):
     form3_id = fields.One2many('hr.form3', 'employee_id', string="Form 3")
     form4_id = fields.One2many('hr.form4', 'employee_id', string="Form 4")
     form5_id = fields.One2many('hr.form5', 'employee_id', string="Form 5")
+    form6_id = fields.One2many('hr.form6', 'employee_id', string="Form 6")
     form7_id = fields.One2many('hr.form7', 'employee_id', string="Form 7")
     form8_id = fields.One2many('hr.form8', 'employee_id', string="Form 8")
 
@@ -300,6 +301,22 @@ class hr_educational_institution(models.Model):
             self.name = '***'
 
 
+class hr_external_department(models.Model):
+    """
+    http://redmine.kostik.net/redmine/issues/365
+    """
+    _name = "hr.external_department"
+    name = fields.Char("Name", compute="compute_name")
+    external_department = fields.Char("Department", requied=True)
+    location = fields.Char("Location", requied=True)
+
+    def compute_name(self):
+        try:
+            self.name = '{} @ {}'.format(self.external_department, self.location)
+        except ValueError:
+            self.name = '***'
+
+
 class hr_form5(models.Model):
     """
     http://redmine.kostik.net/redmine/issues/364
@@ -310,6 +327,22 @@ class hr_form5(models.Model):
     date_to = fields.Date("To")
     employee_id = fields.Many2one('hr.employee', ondelete='cascade', string="Employee", requied=True)
     educational_institution_id = fields.Many2one("hr.educational_institution", string="Educational institution", requied=True)
+
+
+class hr_form6(models.Model):
+    """
+    http://redmine.kostik.net/redmine/issues/365
+    """
+    _name = "hr.form6"
+    name = fields.Char("Position", requied=True)
+
+    external_department_id = fields.Many2one("hr.external_department", string="Department", requied=True)
+    date_from = fields.Date("From")
+    date_to = fields.Date("To")
+    employee_id = fields.Many2one('hr.employee', ondelete='cascade', string="Employee", requied=True)
+
+    image = fields.Binary('Attachment')
+    image_filename = fields.Char("Attachment filename")
 
 
 class hr_form7(models.Model):

@@ -72,6 +72,30 @@
             </field>
         </record>
 
+        <record id="view_form_hr_form_6" model="ir.ui.view">
+            <field name="name">hr.form6.form</field>
+            <field name="model">hr.form6</field>
+            <field name="arch" type="xml">
+                <form>
+                    <sheet>
+                        <group name="group_top">
+                            <group name="group_left">
+                                <field name="employee_id"/>
+                                <field name="external_department_id"/>
+                                <field name="name"/>
+                                <field name="date_from"/>
+                                <field name="date_to"/>
+                            </group>
+                            <group name="group_right">
+                                <field name="image_filename" invisible="1"/>
+                                <field widget="binary" name="image" filename="image_filename"/>
+                            </group>
+                        </group>
+                    </sheet>
+                </form>
+            </field>
+        </record>
+
         <record id="view_form_hr_form_7" model="ir.ui.view">
             <field name="name">hr.form7.form</field>
             <field name="model">hr.form7</field>
@@ -306,6 +330,21 @@
                                             <field name="name"/>
                                             <field name="date_from"/>
                                             <field name="date_to"/>
+                                        </tree>
+                                    </field>
+                                </group>
+                            </page>
+
+                            <page string="Form 6" groups="base.group_hr_user">
+                                <group string="Employment history">
+                                    <field name="form6_id" context="{'default_employee_id': context.get('active_id')}"
+                                           nolabel="1">
+                                        <tree>
+                                            <field name="external_department_id"/>
+                                            <field name="name"/>
+                                            <field name="date_from"/>
+                                            <field name="date_to"/>
+                                            <field widget="binary" name="image" filename="image_filename"/>
                                         </tree>
                                     </field>
                                 </group>
