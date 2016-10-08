@@ -7,14 +7,15 @@ msgstr ""
 "Project-Id-Version: Odoo Server 9.0c\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2016-01-15 10:41+0000\n"
-"PO-Revision-Date: 2016-01-15 10:41+0000\n"
-"Last-Translator: Automatically generated\n"
-"Language-Team: none\n"
+"PO-Revision-Date: 2016-10-08 10:30+0000\n"
+"Last-Translator: Pyae Sone <gipsyhnh@gmail.com>\n"
+"Language-Team: Burmese <http://weblate.kostik.net/projects/erp/hr/my/>\n"
 "Language: my\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: \n"
 "Plural-Forms: nplurals=1; plural=0;\n"
+"X-Generator: Weblate 2.7-dev\n"
 
 #. module: hr
 #: code:addons/hr/hr.py:119
@@ -151,7 +152,7 @@ msgstr ""
 #. module: hr
 #: model:ir.ui.view,arch_db:hr.view_employee_form
 msgid "Birth"
-msgstr ""
+msgstr "မွေးနေ့"
 
 #. module: hr
 #: model:hr.job,name:hr.job_ceo
@@ -171,7 +172,7 @@ msgstr ""
 #. module: hr
 #: model:ir.ui.view,arch_db:hr.view_employee_form
 msgid "Citizenship & Other Information"
-msgstr ""
+msgstr "နိုင်ငံသားနှင့် တခြားအချက်အလက်များ"
 
 #. module: hr
 #: model:ir.model.fields,field_description:hr.field_hr_employee_city
@@ -260,7 +261,7 @@ msgstr ""
 #. module: hr
 #: model:ir.ui.view,arch_db:hr.view_employee_form
 msgid "Contact Information"
-msgstr ""
+msgstr "ဆက်သွယ်ရန်အချက်အလက်"
 
 #. module: hr
 #: model:hr.job,website_description:hr.job_cto
@@ -280,7 +281,7 @@ msgstr ""
 #: model:ir.model.fields,field_description:hr.field_hr_employee_create_uid
 #: model:ir.model.fields,field_description:hr.field_hr_job_create_uid
 msgid "Created by"
-msgstr ""
+msgstr "ဖန်တီးခဲ့သူမှာ"
 
 #. module: hr
 #: model:ir.model.fields,field_description:hr.field_hr_department_create_date
@@ -288,7 +289,7 @@ msgstr ""
 #: model:ir.model.fields,field_description:hr.field_hr_employee_create_date
 #: model:ir.model.fields,field_description:hr.field_hr_job_create_date
 msgid "Created on"
-msgstr ""
+msgstr "ဖန်တီးခဲ့ချိန်မှာ"
 
 #. module: hr
 #: model:ir.model.fields,field_description:hr.field_hr_job_no_of_employee
@@ -331,7 +332,7 @@ msgstr ""
 #: model:ir.ui.view,arch_db:hr.view_employee_filter
 #: model:ir.ui.view,arch_db:hr.view_job_filter
 msgid "Department"
-msgstr ""
+msgstr "ဌာန"
 
 #. module: hr
 #: model:ir.model.fields,field_description:hr.field_hr_department_name
@@ -351,7 +352,7 @@ msgstr ""
 #: model:ir.model.fields,field_description:hr.field_hr_employee_display_name
 #: model:ir.model.fields,field_description:hr.field_hr_job_display_name
 msgid "Display Name"
-msgstr ""
+msgstr "ဖော်ပြပါအမည်"
 
 #. module: hr
 #: selection:hr.employee,marital:0
@@ -367,7 +368,7 @@ msgstr ""
 #: model:ir.model,name:hr.model_hr_employee
 #: model:ir.ui.view,arch_db:hr.view_employee_form
 msgid "Employee"
-msgstr ""
+msgstr "ဝန်ထမ်း"
 
 #. module: hr
 #: model:ir.model,name:hr.model_hr_employee_category
@@ -394,7 +395,7 @@ msgstr ""
 #. module: hr
 #: model:ir.ui.view,arch_db:hr.view_employee_form
 msgid "Employee's Name"
-msgstr ""
+msgstr "ဝန်ထမ်းအမည်"
 
 #. module: hr
 #: model:ir.actions.act_window,name:hr.act_employee_from_department
@@ -542,7 +543,7 @@ msgstr ""
 #. module: hr
 #: model:ir.ui.view,arch_db:hr.view_employee_form
 msgid "HR Settings"
-msgstr ""
+msgstr "HR ပြင်ဆင်ရန်"
 
 #. module: hr
 #: model:hr.job,website_description:hr.job_consultant
@@ -590,7 +591,7 @@ msgstr ""
 #: model:ir.model.fields,field_description:hr.field_hr_employee_id
 #: model:ir.model.fields,field_description:hr.field_hr_job_id
 msgid "ID"
-msgstr ""
+msgstr "အိုင်ဒီ"
 
 #. module: hr
 #: model:ir.model.fields,field_description:hr.field_hr_employee_identification_id
@@ -721,7 +722,7 @@ msgstr ""
 #: model:ir.model.fields,field_description:hr.field_hr_employee_category___last_update
 #: model:ir.model.fields,field_description:hr.field_hr_job___last_update
 msgid "Last Modified on"
-msgstr ""
+msgstr "နောက်ဆုံးပြင်ခဲ့သည့်အချိန်မှာ"
 
 #. module: hr
 #: model:ir.model.fields,field_description:hr.field_res_users_last_website_so_id
@@ -734,14 +735,14 @@ msgstr ""
 #: model:ir.model.fields,field_description:hr.field_hr_employee_write_uid
 #: model:ir.model.fields,field_description:hr.field_hr_job_write_uid
 msgid "Last Updated by"
-msgstr ""
+msgstr "နောက်ဆုံးအသစ်မွမ်းမံခဲ့သည်မှာ"
 
 #. module: hr
 #: model:ir.model.fields,field_description:hr.field_hr_department_write_date
 #: model:ir.model.fields,field_description:hr.field_hr_employee_category_write_date
 #: model:ir.model.fields,field_description:hr.field_hr_employee_write_date
 msgid "Last Updated on"
-msgstr ""
+msgstr "နောက်ဆုံးအသစ်မွမ်းမံခဲ့သည်မှာ"
 
 #. module: hr
 #: model:ir.model.fields,field_description:hr.field_hr_employee_last_login
@@ -851,7 +852,7 @@ msgstr ""
 #: model:ir.model.fields,field_description:hr.field_hr_employee_name
 #: model:ir.model.fields,field_description:hr.field_hr_employee_name_related
 msgid "Name"
-msgstr ""
+msgstr "အမည်"
 
 #. module: hr
 #: model:ir.model.fields,field_description:hr.field_hr_employee_country_id
@@ -872,7 +873,7 @@ msgstr ""
 #. module: hr
 #: model:ir.model.fields,field_description:hr.field_hr_department_note
 msgid "Note"
-msgstr ""
+msgstr "မှတ်ချက်"
 
 #. module: hr
 #: model:ir.model.fields,field_description:hr.field_hr_employee_notes
@@ -930,12 +931,12 @@ msgstr ""
 #. module: hr
 #: selection:hr.employee,gender:0
 msgid "Other"
-msgstr ""
+msgstr "တခြား"
 
 #. module: hr
 #: model:ir.ui.view,arch_db:hr.view_employee_form
 msgid "Other Information ..."
-msgstr ""
+msgstr "တခြားအချက်အလက်.."
 
 #. module: hr
 #: model:hr.job,website_description:hr.job_ceo
@@ -987,7 +988,7 @@ msgstr ""
 #. module: hr
 #: model:ir.ui.view,arch_db:hr.view_employee_form
 msgid "Position"
-msgstr ""
+msgstr "ရာထူး"
 
 #. module: hr
 #: model:hr.job,website_description:hr.job_cto
@@ -1024,7 +1025,7 @@ msgstr ""
 #. module: hr
 #: model:ir.ui.view,arch_db:hr.view_employee_form
 msgid "Related User"
-msgstr ""
+msgstr "သက်ဆိုင်သောအသုံးပြုသူ"
 
 #. module: hr
 #: model:ir.model.fields,field_description:hr.field_res_users_employee_ids
@@ -1135,7 +1136,7 @@ msgstr ""
 #: model:ir.ui.view,arch_db:hr.view_employee_form
 #: model:ir.ui.view,arch_db:hr.view_job_filter
 msgid "Status"
-msgstr ""
+msgstr "ညီအစ်ကို မောင်နှမများ"
 
 #. module: hr
 #: model:ir.ui.view,arch_db:hr.view_hr_job_form
@@ -1519,4 +1520,4 @@ msgstr ""
 #. module: hr
 #: model:ir.ui.view,arch_db:hr.view_employee_form
 msgid "e.g. Part Time"
-msgstr ""
+msgstr "ဥပမာ - အချိန်ပိုင်း"
