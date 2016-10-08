@@ -3,7 +3,7 @@ msgstr ""
 "Project-Id-Version: Odoo Server 9.0\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2015-09-18 08:11+0000\n"
-"PO-Revision-Date: 2016-09-09 11:47+0000\n"
+"PO-Revision-Date: 2016-10-08 10:30+0000\n"
 "Last-Translator: Pyae Sone <gipsyhnh@gmail.com>\n"
 "Language-Team: Burmese <http://weblate.kostik.net/projects/erp/base/my/>\n"
 "Language: my\n"
@@ -4971,7 +4971,7 @@ msgstr "လှုပ်ရှားမှုများ"
 #: model:ir.ui.view,arch_db:base.view_workflow_activity_form
 #: model:ir.ui.view,arch_db:base.view_workflow_activity_tree
 msgid "Activity"
-msgstr "လှုပ်ဆောင်မှုများ"
+msgstr "လှုပ်ရှားမှုများ"
 
 #. module: base
 #: model:ir.module.module,summary:base.module_website_sale_delivery
@@ -5469,7 +5469,7 @@ msgstr ""
 #. module: base
 #: model:ir.ui.view,arch_db:base.view_attachment_search
 msgid "Attachment"
-msgstr "တွဲမည်"
+msgstr "ဖိုင်တွဲရန်"
 
 #. module: base
 #: model:ir.model.fields,field_description:base.field_ir_attachment_name
@@ -10559,7 +10559,7 @@ msgstr ""
 #: model:ir.model.fields,field_description:base.field_wkf_triggers___last_update
 #: model:ir.model.fields,field_description:base.field_wkf_workitem___last_update
 msgid "Last Modified on"
-msgstr "နောက်ဆုံးပြင်ဆင်ခဲ့သည်မှာ"
+msgstr "နောက်ဆုံးပြင်ခဲ့သည့်အချိန်မှာ"
 
 #. module: base
 #: model:ir.model.fields,field_description:base.field_base_language_export_write_uid
@@ -10632,7 +10632,7 @@ msgstr "နောက်ဆုံးပြင်ဆင်ခဲ့သည်မှ
 #: model:ir.model.fields,field_description:base.field_wkf_transition_write_uid
 #: model:ir.model.fields,field_description:base.field_wkf_write_uid
 msgid "Last Updated by"
-msgstr "နောက်ဆုံးအသစ်မွမ်းမံမှုဖြင့်"
+msgstr "နောက်ဆုံးအသစ်မွမ်းမံခဲ့သည်မှာ"
 
 #. module: base
 #: model:ir.model.fields,field_description:base.field_base_language_export_write_date
@@ -10704,7 +10704,7 @@ msgstr "နောက်ဆုံးအသစ်မွမ်းမံမှုဖ
 #: model:ir.model.fields,field_description:base.field_wkf_transition_write_date
 #: model:ir.model.fields,field_description:base.field_wkf_write_date
 msgid "Last Updated on"
-msgstr "နောက်ဆုံးအသစ်မွမ်းမံမှု"
+msgstr "နောက်ဆုံးအသစ်မွမ်းမံခဲ့သည်မှာ"
 
 #. module: base
 #: model:ir.model.fields,field_description:base.field_ir_module_module_installed_version
@@ -14686,7 +14686,7 @@ msgstr "ပြည်နယ်များ"
 #: model:ir.model.fields,field_description:base.field_wkf_workitem_state
 #: model:ir.ui.view,arch_db:base.view_workflow_workitem_search
 msgid "Status"
-msgstr "အခြေအနေ"
+msgstr "ညီအစ်ကို မောင်နှမများ"
 
 #. module: base
 #: model:ir.model.fields,field_description:base.field_ir_sequence_number_increment
@@ -14822,7 +14822,7 @@ msgstr ""
 #. module: base
 #: model:ir.model.fields,field_description:base.field_ir_module_module_summary
 msgid "Summary"
-msgstr "အကျဥ်းချုပ်"
+msgstr "အကျဉ်းချုပ်"
 
 #. module: base
 #: model:ir.model.fields,field_description:base.field_ir_act_client_params
