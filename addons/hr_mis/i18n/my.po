@@ -7,32 +7,32 @@ msgstr ""
 "Project-Id-Version: Odoo Server 9.0c\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2016-10-06 10:32+0100\n"
-"PO-Revision-Date: 2016-10-06 10:32+0100\n"
-"Language-Team: \n"
+"PO-Revision-Date: 2016-10-08 10:32+0000\n"
+"Last-Translator: Pyae Sone <gipsyhnh@gmail.com>\n"
+"Language-Team: Burmese <http://weblate.kostik.net/projects/erp/hr_mis/my/>\n"
+"Language: my\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
-"X-Generator: Poedit 1.8.9\n"
-"Last-Translator: \n"
-"Language: my\n"
+"X-Generator: Weblate 2.7-dev\n"
 
 #. module: hr_mis
 #: model:ir.ui.view,arch_db:hr_mis.view_employee_form
 msgid "Activity"
-msgstr ""
+msgstr "လှုပ်ရှားမှုများ"
 
 #. module: hr_mis
 #: model:ir.model.fields,field_description:hr_mis.field_hr_military_colleague_address
 #: model:ir.model.fields,field_description:hr_mis.field_hr_recommender_address
 #: model:ir.model.fields,field_description:hr_mis.field_hr_relative_address
 msgid "Address"
-msgstr ""
+msgstr "လိပ်စာ"
 
 #. module: hr_mis
 #: selection:hr.employee,religion:0 selection:hr.relative,religion:0
 msgid "Animist"
-msgstr ""
+msgstr "နတ်ကိုးကွယ်သည့်ဘာသာ"
 
 #. module: hr_mis
 #: model:ir.model.fields,field_description:hr_mis.field_hr_form3_image
@@ -41,7 +41,7 @@ msgstr ""
 #: model:ir.model.fields,field_description:hr_mis.field_hr_form7_image
 #: model:ir.model.fields,field_description:hr_mis.field_hr_form8_image
 msgid "Attachment"
-msgstr ""
+msgstr "ဖိုင်တွဲရန်"
 
 #. module: hr_mis
 #: model:ir.model.fields,field_description:hr_mis.field_hr_form3_image_filename
@@ -50,103 +50,103 @@ msgstr ""
 #: model:ir.model.fields,field_description:hr_mis.field_hr_form7_image_filename
 #: model:ir.model.fields,field_description:hr_mis.field_hr_form8_image_filename
 msgid "Attachment filename"
-msgstr ""
+msgstr "တွဲမည့်ဖိုင်အမည်"
 
 #. module: hr_mis
 #: selection:hr.employee,race:0 selection:hr.relative,race:0
 msgid "Bamar"
-msgstr ""
+msgstr "ဗမာ"
 
 #. module: hr_mis
 #: model:ir.ui.view,arch_db:hr_mis.view_employee_form
 msgid "Birth"
-msgstr ""
+msgstr "မွေးနေ့"
 
 #. module: hr_mis
 #: model:ir.model.fields,field_description:hr_mis.field_hr_birth_place_name
 msgid "Birth place"
-msgstr ""
+msgstr "မွေးရပ်"
 
 #. module: hr_mis
 #: selection:hr.employee,eyes:0 selection:hr.employee,hair:0
 msgid "Black"
-msgstr ""
+msgstr "အမည်း"
 
 #. module: hr_mis
 #: selection:hr.employee,eyes:0
 msgid "Blue"
-msgstr ""
+msgstr "အပြာ"
 
 #. module: hr_mis
 #: selection:hr.employee,eyes:0 selection:hr.employee,hair:0
 msgid "Brown"
-msgstr ""
+msgstr "အညို"
 
 #. module: hr_mis
 #: selection:hr.employee,religion:0 selection:hr.relative,religion:0
 msgid "Buddhist"
-msgstr ""
+msgstr "ဗုဒ္ဓဘာသာ"
 
 #. module: hr_mis
 #: model:ir.model.fields,field_description:hr_mis.field_hr_military_record_summary
 msgid "Career Summary"
-msgstr ""
+msgstr "အလုပ်အကိုင်အကျဉ်းချုပ်"
 
 #. module: hr_mis
 #: selection:hr.relative,name:0
 msgid "Child"
-msgstr ""
+msgstr "ကလေး"
 
 #. module: hr_mis
 #: selection:hr.employee,race:0 selection:hr.relative,race:0
 msgid "Chin"
-msgstr ""
+msgstr "ချင်း"
 
 #. module: hr_mis
 #: selection:hr.employee,religion:0 selection:hr.relative,religion:0
 msgid "Christian"
-msgstr ""
+msgstr "ခရစ်ယာန်ဘာသာ"
 
 #. module: hr_mis
 #: model:ir.ui.view,arch_db:hr_mis.view_employee_form
 msgid "Citizenship & Other Information"
-msgstr ""
+msgstr "နိုင်ငံသားနှင့် တခြားအချက်အလက်များ"
 
 #. module: hr_mis
 #: model:ir.ui.view,arch_db:hr_mis.view_employee_form
 msgid "Civil service"
-msgstr ""
+msgstr "ဝန်ထမ်း"
 
 #. module: hr_mis
 #: model:ir.model.fields,field_description:hr_mis.field_hr_form5_name
 msgid "Class"
-msgstr ""
+msgstr "အတန်း"
 
 #. module: hr_mis
 #: model:ir.model.fields,field_description:hr_mis.field_hr_club_record_club_id
 msgid "Club"
-msgstr ""
+msgstr "ကလပ်"
 
 #. module: hr_mis
 #: model:ir.model.fields,field_description:hr_mis.field_hr_employee_club_record_ids
 #: model:ir.ui.view,arch_db:hr_mis.view_employee_form
 msgid "Club and Organizations"
-msgstr ""
+msgstr "ပါဝင်သောအသင်း၊အဖွဲ့အစည်း၊ရုံး၊ကလပ်"
 
 #. module: hr_mis
 #: selection:hr.employee,religion:0 selection:hr.relative,religion:0
 msgid "Confucion"
-msgstr ""
+msgstr "ကွန်ဖြူးရှပ်ဘာသာ"
 
 #. module: hr_mis
 #: model:ir.ui.view,arch_db:hr_mis.view_employee_form
 msgid "Contact Information"
-msgstr ""
+msgstr "ဆက်သွယ်ရန်အချက်အလက်"
 
 #. module: hr_mis
 #: model:ir.model.fields,field_description:hr_mis.field_hr_form7_country_id
 msgid "Country id"
-msgstr ""
+msgstr "နိုင်ငံ အိုင်ဒီ"
 
 #. module: hr_mis
 #: model:ir.model.fields,field_description:hr_mis.field_hr_birth_place_create_uid
@@ -167,7 +167,7 @@ msgstr ""
 #: model:ir.model.fields,field_description:hr_mis.field_hr_relative_create_uid
 #: model:ir.model.fields,field_description:hr_mis.field_hr_salary_rate_create_uid
 msgid "Created by"
-msgstr ""
+msgstr "ဖန်တီးခဲ့သူမှာ"
 
 #. module: hr_mis
 #: model:ir.model.fields,field_description:hr_mis.field_hr_birth_place_create_date
@@ -188,53 +188,53 @@ msgstr ""
 #: model:ir.model.fields,field_description:hr_mis.field_hr_relative_create_date
 #: model:ir.model.fields,field_description:hr_mis.field_hr_salary_rate_create_date
 msgid "Created on"
-msgstr ""
+msgstr "ဖန်တီးခဲ့ချိန်မှာ"
 
 #. module: hr_mis
 #: model:ir.model.fields,field_description:hr_mis.field_hr_employee_criminal_records
 msgid "Criminal records"
-msgstr ""
+msgstr "ဝန်ထမ်း၏ထူခြားဖြစ်စဉ်"
 
 #. module: hr_mis
 #: model:ir.ui.view,arch_db:hr_mis.view_employee_form
 msgid "Current Address"
-msgstr ""
+msgstr "လက်ရှိနေရပ်လိပ်စာ"
 
 #. module: hr_mis
 #: model:ir.model.fields,field_description:hr_mis.field_hr_military_record_date_joined
 msgid "Date joined"
-msgstr ""
+msgstr "စတင်ဝင်ရောက်သောရက်စွဲ"
 
 #. module: hr_mis
 #: model:ir.model.fields,field_description:hr_mis.field_hr_military_record_date_resigned
 msgid "Date resigned"
-msgstr ""
+msgstr "နှုတ်ထွက်ခဲ့သောရက်စွဲ"
 
 #. module: hr_mis
 #: model:ir.model.fields,field_description:hr_mis.field_hr_employee_date_started
 msgid "Date started"
-msgstr ""
+msgstr "စတင်ဝင်ရောက်သည့်နေ့"
 
 #. module: hr_mis
 #: model:ir.model.fields,help:hr_mis.field_hr_employee_date_started
 msgid "Date started as civil staff"
-msgstr ""
+msgstr "ဝန်ထမ်းအဖြစ်စတင်ဝင်ရောက်သောရက်"
 
 #. module: hr_mis
 #: model:ir.model.fields,field_description:hr_mis.field_hr_external_department_external_department
 #: model:ir.model.fields,field_description:hr_mis.field_hr_form6_external_department_id
 msgid "Department"
-msgstr ""
+msgstr "ဌာန"
 
 #. module: hr_mis
 #: model:ir.model.fields,field_description:hr_mis.field_hr_form8_name
 msgid "Description & Remarks"
-msgstr ""
+msgstr "အကြောင်းအရာနှင့်မှတ်ချက်"
 
 #. module: hr_mis
 #: model:ir.ui.view,arch_db:hr_mis.view_employee_form
 msgid "Disciplinary Records"
-msgstr ""
+msgstr "ဝန်ထမ်းစည်းကမ်း"
 
 #. module: hr_mis
 #: model:ir.model.fields,field_description:hr_mis.field_hr_birth_place_display_name
@@ -256,44 +256,44 @@ msgstr ""
 #: model:ir.model.fields,field_description:hr_mis.field_hr_relative_display_name
 #: model:ir.model.fields,field_description:hr_mis.field_hr_salary_rate_display_name
 msgid "Display Name"
-msgstr ""
+msgstr "ဖော်ပြပါအမည်"
 
 #. module: hr_mis
 #: model:ir.model.fields,field_description:hr_mis.field_hr_employee_distinction
 msgid "Distinction, Certification"
-msgstr ""
+msgstr "ဘွဲ့ထူး၊ဂုဏ်ထူးများ"
 
 #. module: hr_mis
 #: model:ir.model.fields,field_description:hr_mis.field_hr_employee_distinctive_marks
 msgid "Distinctive Marks"
-msgstr ""
+msgstr "ထင်ရှားသောအမှတ်အသား"
 
 #. module: hr_mis
 #: model:ir.model.fields,field_description:hr_mis.field_hr_military_record_division
 msgid "Division(s)"
-msgstr ""
+msgstr "အမှုထမ်းခဲ့သောတပ်များ"
 
 #. module: hr_mis
 #: model:ir.model.fields,field_description:hr_mis.field_hr_form4_duration
 msgid "Duration"
-msgstr ""
+msgstr "သင်တန်းကာလ"
 
 #. module: hr_mis
 #: model:ir.ui.view,arch_db:hr_mis.view_employee_form
 msgid "Education records"
-msgstr ""
+msgstr "ပညာအရည်အချင်း"
 
 #. module: hr_mis
 #: model:ir.model.fields,field_description:hr_mis.field_hr_educational_institution_educational_institution
 #: model:ir.model.fields,field_description:hr_mis.field_hr_form5_educational_institution_id
 #: model:ir.ui.view,arch_db:hr_mis.view_form_hr_form_5
 msgid "Educational institution"
-msgstr ""
+msgstr "ကျောင်း၊တက္ကသိုလ်"
 
 #. module: hr_mis
 #: model:ir.model.fields,field_description:hr_mis.field_hr_form2_date
 msgid "Effective date"
-msgstr ""
+msgstr "ခန့်ထားသည့်ရက်စွဲ"
 
 #. module: hr_mis
 #: model:ir.model,name:hr_mis.model_hr_employee
@@ -309,131 +309,131 @@ msgstr ""
 #: model:ir.model.fields,field_description:hr_mis.field_hr_relative_employee_id
 #: model:ir.ui.view,arch_db:hr_mis.view_employee_form
 msgid "Employee"
-msgstr ""
+msgstr "ဝန်ထမ်း"
 
 #. module: hr_mis
 #: model:ir.ui.view,arch_db:hr_mis.view_employee_form
 msgid "Employee's Name"
-msgstr ""
+msgstr "ဝန်ထမ်းအမည်"
 
 #. module: hr_mis
 #: model:ir.ui.view,arch_db:hr_mis.view_employee_form
 msgid "Employment history"
-msgstr ""
+msgstr "ဝန်ထမ်းမှတ်တမ်း"
 
 #. module: hr_mis
 #: model:ir.model.fields,field_description:hr_mis.field_hr_employee_eyes
 msgid "Eyes"
-msgstr ""
+msgstr "မျက်စိအရောင်"
 
 #. module: hr_mis
 #: selection:hr.relative,name:0
 msgid "Father"
-msgstr ""
+msgstr "အဘ"
 
 #. module: hr_mis
 #: model:ir.model.fields,field_description:hr_mis.field_hr_employee_fathers_name
 msgid "Father's name"
-msgstr ""
+msgstr "အဘအမည်"
 
 #. module: hr_mis
 #: selection:hr.form4,local:0
 msgid "Foreign"
-msgstr ""
+msgstr "ပြည်ပ"
 
 #. module: hr_mis
 #: model:ir.ui.view,arch_db:hr_mis.view_employee_form
 msgid "Foreign trips"
-msgstr ""
+msgstr "ပြည်ပခရီးစဉ်များ"
 
 #. module: hr_mis
 #: model:ir.ui.view,arch_db:hr_mis.view_employee_form
 msgid "Form 1"
-msgstr ""
+msgstr "ပုံစံ (၁)"
 
 #. module: hr_mis
 #: model:ir.model.fields,field_description:hr_mis.field_hr_employee_form2_id
 #: model:ir.ui.view,arch_db:hr_mis.view_employee_form
 msgid "Form 2"
-msgstr ""
+msgstr "ပုံစံ (၂)"
 
 #. module: hr_mis
 #: model:ir.model.fields,field_description:hr_mis.field_hr_employee_form3_id
 #: model:ir.ui.view,arch_db:hr_mis.view_employee_form
 msgid "Form 3"
-msgstr ""
+msgstr "ပုံစံ (၃)"
 
 #. module: hr_mis
 #: model:ir.model.fields,field_description:hr_mis.field_hr_employee_form4_id
 #: model:ir.ui.view,arch_db:hr_mis.view_employee_form
 msgid "Form 4"
-msgstr ""
+msgstr "ပုံစံ (၄)"
 
 #. module: hr_mis
 #: model:ir.model.fields,field_description:hr_mis.field_hr_employee_form5_id
 #: model:ir.ui.view,arch_db:hr_mis.view_employee_form
 msgid "Form 5"
-msgstr ""
+msgstr "ပုံစံ (၅)"
 
 #. module: hr_mis
 #: model:ir.model.fields,field_description:hr_mis.field_hr_employee_form6_id
 #: model:ir.ui.view,arch_db:hr_mis.view_employee_form
 msgid "Form 6"
-msgstr ""
+msgstr "ပုံစံ (၆)"
 
 #. module: hr_mis
 #: model:ir.model.fields,field_description:hr_mis.field_hr_employee_form7_id
 #: model:ir.ui.view,arch_db:hr_mis.view_employee_form
 msgid "Form 7"
-msgstr ""
+msgstr "ပုံစံ (၇)"
 
 #. module: hr_mis
 #: model:ir.model.fields,field_description:hr_mis.field_hr_employee_form8_id
 #: model:ir.ui.view,arch_db:hr_mis.view_employee_form
 msgid "Form 8"
-msgstr ""
+msgstr "ပုံစံ (၈)"
 
 #. module: hr_mis
 #: model:ir.model.fields,field_description:hr_mis.field_hr_form5_date_from
 #: model:ir.model.fields,field_description:hr_mis.field_hr_form6_date_from
 #: model:ir.model.fields,field_description:hr_mis.field_hr_form7_date_from
 msgid "From"
-msgstr ""
+msgstr "မှ"
 
 #. module: hr_mis
 #: model:ir.ui.view,arch_db:hr_mis.view_employee_form
 msgid "HR Settings"
-msgstr ""
+msgstr "HR ပြင်ဆင်ရန်"
 
 #. module: hr_mis
 #: model:ir.model.fields,field_description:hr_mis.field_hr_employee_hair
 msgid "Hair"
-msgstr ""
+msgstr "ဆံပင်အရောင်"
 
 #. module: hr_mis
 #: model:ir.model.fields,field_description:hr_mis.field_hr_employee_height
 msgid "Height"
-msgstr ""
+msgstr "အရပ်"
 
 #. module: hr_mis
 #: selection:hr.employee,religion:0 selection:hr.relative,religion:0
 msgid "Hindu"
-msgstr ""
+msgstr "ဟိန္ဒူ"
 
 #. module: hr_mis
 #: model:ir.ui.view,arch_db:hr_mis.view_employee_form
 msgid "Hobbies"
-msgstr ""
+msgstr "ဝါသနာမ်ား"
 
 #. module: hr_mis
 #: model:ir.model.fields,field_description:hr_mis.field_hr_hobby_name
 msgid "Hobby"
-msgstr ""
+msgstr "ဝါသနာ"
 
 #. module: hr_mis
 #: model:ir.model.fields,field_description:hr_mis.field_hr_employee_hobby_ids
 msgid "Hobby ids"
-msgstr ""
+msgstr "ဝါသနာအိုင်ဒီ"
 
 #. module: hr_mis
 #: model:ir.model.fields,field_description:hr_mis.field_hr_birth_place_id
@@ -454,32 +454,32 @@ msgstr ""
 #: model:ir.model.fields,field_description:hr_mis.field_hr_relative_id
 #: model:ir.model.fields,field_description:hr_mis.field_hr_salary_rate_id
 msgid "ID"
-msgstr ""
+msgstr "အိုင်ဒီ"
 
 #. module: hr_mis
 #: selection:hr.employee,religion:0 selection:hr.relative,religion:0
 msgid "Islam"
-msgstr ""
+msgstr "အစ္စလမ်ဘာသာ"
 
 #. module: hr_mis
 #: selection:hr.employee,religion:0 selection:hr.relative,religion:0
 msgid "Jew"
-msgstr ""
+msgstr "ဂျူးဘာသာ"
 
 #. module: hr_mis
 #: selection:hr.employee,race:0 selection:hr.relative,race:0
 msgid "Kachin"
-msgstr ""
+msgstr "ကချင်"
 
 #. module: hr_mis
 #: selection:hr.employee,race:0 selection:hr.relative,race:0
 msgid "Kayah"
-msgstr ""
+msgstr "ကယား"
 
 #. module: hr_mis
 #: selection:hr.employee,race:0 selection:hr.relative,race:0
 msgid "Kayin"
-msgstr ""
+msgstr "ကရင်"
 
 #. module: hr_mis
 #: model:ir.model.fields,field_description:hr_mis.field_hr_birth_place___last_update
@@ -501,7 +501,7 @@ msgstr ""
 #: model:ir.model.fields,field_description:hr_mis.field_hr_relative___last_update
 #: model:ir.model.fields,field_description:hr_mis.field_hr_salary_rate___last_update
 msgid "Last Modified on"
-msgstr ""
+msgstr "နောက်ဆုံးပြင်ခဲ့သည့်အချိန်မှာ"
 
 #. module: hr_mis
 #: model:ir.model.fields,field_description:hr_mis.field_hr_birth_place_write_uid
@@ -522,7 +522,7 @@ msgstr ""
 #: model:ir.model.fields,field_description:hr_mis.field_hr_relative_write_uid
 #: model:ir.model.fields,field_description:hr_mis.field_hr_salary_rate_write_uid
 msgid "Last Updated by"
-msgstr ""
+msgstr "နောက်ဆုံးအသစ်မွမ်းမံခဲ့သည်မှာ"
 
 #. module: hr_mis
 #: model:ir.model.fields,field_description:hr_mis.field_hr_birth_place_write_date
@@ -543,48 +543,50 @@ msgstr ""
 #: model:ir.model.fields,field_description:hr_mis.field_hr_relative_write_date
 #: model:ir.model.fields,field_description:hr_mis.field_hr_salary_rate_write_date
 msgid "Last Updated on"
-msgstr ""
+msgstr "နောက်ဆုံးအသစ်မွမ်းမံခဲ့သည်မှာ"
 
 #. module: hr_mis
 #: selection:hr.form4,local:0
 msgid "Local"
-msgstr ""
+msgstr "စက်အတွင်းသာ"
 
 #. module: hr_mis
 #: model:ir.model.fields,field_description:hr_mis.field_hr_educational_institution_location
 #: model:ir.model.fields,field_description:hr_mis.field_hr_external_department_location
 msgid "Location"
-msgstr ""
+msgstr "နေရာ"
 
 #. module: hr_mis
 #: model:ir.model.fields,field_description:hr_mis.field_hr_employee_military_colleague_ids
 msgid "Military colleague ids"
-msgstr ""
+msgstr "တပ်မတော် ကိုယ်ပိုင်အမှတ်"
 
 #. module: hr_mis
 #: model:ir.ui.view,arch_db:hr_mis.view_employee_form
 msgid "Military colleagues"
 msgstr ""
+"စစ်ဘက်၊ရဲဘက်၊နယ်ဘက်နှင့်နိုင်ငံရေး ဘက်တွင်ခင်မင်ရင်းနှီးသောမိတ်ဆွေများ "
+"ရှိ၊မရှိနှင့် ရှိပါက အမည် အလုပ်အကိုင်နေရပ်လိပ်စာ"
 
 #. module: hr_mis
 #: model:ir.model.fields,field_description:hr_mis.field_hr_employee_military_record_ids
 msgid "Military records"
-msgstr ""
+msgstr "တပ်တွင်းရာဇဝင်အကျဉ်းချုပ်"
 
 #. module: hr_mis
 #: selection:hr.employee,race:0 selection:hr.relative,race:0
 msgid "Mon"
-msgstr ""
+msgstr "မွန်"
 
 #. module: hr_mis
 #: selection:hr.relative,name:0
 msgid "Mother"
-msgstr ""
+msgstr "အမိ"
 
 #. module: hr_mis
 #: model:ir.ui.view,arch_db:hr_mis.view_employee_form
 msgid "NRC Number"
-msgstr ""
+msgstr "နိုင်ငံသားစိစစ်ရေးကတ်ပြားအမှတ်"
 
 #. module: hr_mis
 #: model:ir.model.fields,field_description:hr_mis.field_hr_club_name
@@ -597,106 +599,106 @@ msgstr ""
 #: model:ir.model.fields,field_description:hr_mis.field_hr_relative_relative_name
 #: model:ir.model.fields,field_description:hr_mis.field_hr_salary_rate_name
 msgid "Name"
-msgstr ""
+msgstr "အမည်"
 
 #. module: hr_mis
 #: selection:hr.employee,religion:0 selection:hr.relative,religion:0
 msgid "Not Stated"
-msgstr ""
+msgstr "မဖော်ပြထားပါ"
 
 #. module: hr_mis
 #: selection:hr.employee,race:0 selection:hr.relative,race:0
 msgid "Not stated"
-msgstr ""
+msgstr "မဖော်ပြထားပါ"
 
 #. module: hr_mis
 #: model:ir.model.fields,field_description:hr_mis.field_hr_relative_note
 msgid "Note"
-msgstr ""
+msgstr "မှတ်ချက်"
 
 #. module: hr_mis
 #: model:ir.model.fields,field_description:hr_mis.field_hr_relative_occupation
 msgid "Occupation"
-msgstr ""
+msgstr "အလုပ်အကိုင်"
 
 #. module: hr_mis
 #: model:ir.model.fields,field_description:hr_mis.field_hr_form2_order_number
 #: model:ir.model.fields,field_description:hr_mis.field_hr_form3_order_number
 msgid "Order #"
-msgstr ""
+msgstr "အမိန့်အမှတ်"
 
 #. module: hr_mis
 #: model:ir.model.fields,field_description:hr_mis.field_hr_form2_order_date
 #: model:ir.model.fields,field_description:hr_mis.field_hr_form3_order_date
 msgid "Order date"
-msgstr ""
+msgstr "အမိန့်ရက်စွဲ"
 
 #. module: hr_mis
 #: selection:hr.employee,eyes:0 selection:hr.employee,hair:0
 msgid "Other"
-msgstr ""
+msgstr "တခြား"
 
 #. module: hr_mis
 #: model:ir.ui.view,arch_db:hr_mis.view_employee_form
 msgid "Other Information ..."
-msgstr ""
+msgstr "တခြားအချက်အလက်.."
 
 #. module: hr_mis
 #: model:ir.model.fields,field_description:hr_mis.field_hr_employee_other_name
 #: model:ir.ui.view,arch_db:hr_mis.view_employee_form
 msgid "Other Name"
-msgstr ""
+msgstr "အခြားအမည်"
 
 #. module: hr_mis
 #: selection:hr.employee,race:0 selection:hr.relative,race:0
 msgid "Other Race"
-msgstr ""
+msgstr "တခြားလူမျိုး"
 
 #. module: hr_mis
 #: selection:hr.employee,religion:0 selection:hr.relative,religion:0
 msgid "Other Religion"
-msgstr ""
+msgstr "တခြားဘာသာဝင်"
 
 #. module: hr_mis
 #: model:ir.model.fields,field_description:hr_mis.field_hr_military_record_pension
 msgid "Pension"
-msgstr ""
+msgstr "အငြိမ်းစားလစာရငွေ"
 
 #. module: hr_mis
 #: model:ir.ui.view,arch_db:hr_mis.view_employee_form
 msgid "Permanent Address"
-msgstr ""
+msgstr "အမြဲတမ်းနေရပ်လိပ်စာ"
 
 #. module: hr_mis
 #: model:ir.model.fields,field_description:hr_mis.field_hr_military_record_name
 msgid "Personal ID"
-msgstr ""
+msgstr "ကိုယ်ပိုင်အိုင်ဒီ"
 
 #. module: hr_mis
 #: model:ir.model.fields,field_description:hr_mis.field_hr_employee_personal_number
 #: model:ir.ui.view,arch_db:hr_mis.view_employee_form
 msgid "Personal Number"
-msgstr ""
+msgstr "ကိုယ်ပိုင်အမှတ်"
 
 #. module: hr_mis
 #: model:ir.model.fields,help:hr_mis.field_hr_employee_personal_number
 msgid "Personal number in the MCD"
-msgstr ""
+msgstr "အကောက်ခွန်ဌာနအတွင်း ကိုယ်ပိုင်အမှတ်"
 
 #. module: hr_mis
 #: model:ir.model.fields,field_description:hr_mis.field_hr_form4_local
 msgid "Place"
-msgstr ""
+msgstr "နေရာ"
 
 #. module: hr_mis
 #: model:ir.model.fields,field_description:hr_mis.field_hr_employee_place_of_birth_id
 msgid "Place of birth"
-msgstr ""
+msgstr "မွေးဖွားအရပ်"
 
 #. module: hr_mis
 #: model:ir.model.fields,field_description:hr_mis.field_hr_employee_political_activity
 msgid "Political Activity"
-msgstr ""
+msgstr "နိုင်ငံရေးလှုပ်ရှားမှုများ"
 
 #. module: hr_mis
 #: model:ir.model.fields,field_description:hr_mis.field_hr_form2_position
@@ -706,92 +708,92 @@ msgstr ""
 #: model:ir.model.fields,field_description:hr_mis.field_hr_salary_rate_position
 #: model:ir.ui.view,arch_db:hr_mis.view_employee_form
 msgid "Position"
-msgstr ""
+msgstr "ရာထူး"
 
 #. module: hr_mis
 #: model:ir.model.fields,field_description:hr_mis.field_hr_employee_position_name_at_start
 msgid "Position started"
-msgstr ""
+msgstr "စတင်ခန့် ရာထူးအမည်"
 
 #. module: hr_mis
 #: model:ir.model.fields,help:hr_mis.field_hr_employee_position_name_at_start
 msgid "Position started as civil staff"
-msgstr ""
+msgstr "ဝန်ထမ်းအဖြစ်စတင်ခန့်ရာထူးအမည်"
 
 #. module: hr_mis
 #: model:ir.model.fields,field_description:hr_mis.field_hr_employee_previous_position_and_place
 msgid "Previous position abd place"
-msgstr ""
+msgstr "ဤဌာနမဝင်မီက အလုပ်နှင့်နေရာ ဒေသ"
 
 #. module: hr_mis
 #: model:ir.model.fields,field_description:hr_mis.field_hr_employee_qualification
 #: model:ir.model.fields,field_description:hr_mis.field_hr_form4_qualification
 msgid "Qualification"
-msgstr ""
+msgstr "အရည်အချင်း"
 
 #. module: hr_mis
 #: model:ir.model.fields,field_description:hr_mis.field_hr_employee_race
 #: model:ir.model.fields,field_description:hr_mis.field_hr_relative_race
 msgid "Race"
-msgstr ""
+msgstr "လူမျိုး"
 
 #. module: hr_mis
 #: selection:hr.employee,race:0 selection:hr.relative,race:0
 msgid "Rakhine"
-msgstr ""
+msgstr "ရခိုင်"
 
 #. module: hr_mis
 #: model:ir.model.fields,field_description:hr_mis.field_hr_club_record_name
 msgid "Rank"
-msgstr ""
+msgstr "လက်ရှိရာထူး"
 
 #. module: hr_mis
 #: model:ir.model.fields,field_description:hr_mis.field_hr_form7_name
 msgid "Reason"
-msgstr ""
+msgstr "သွားရောက်သည့်ကိစ္စ"
 
 #. module: hr_mis
 #: model:ir.model.fields,field_description:hr_mis.field_hr_employee_recommender_ids
 #: model:ir.ui.view,arch_db:hr_mis.view_employee_form
 msgid "Recommender"
-msgstr ""
+msgstr "အလုပ်အကိုင်အတွက်ထောက်ခံသူများ"
 
 #. module: hr_mis
 #: model:ir.ui.view,arch_db:hr_mis.view_employee_form
 msgid "Related User"
-msgstr ""
+msgstr "သက်ဆိုင်သောအသုံးပြုသူ"
 
 #. module: hr_mis
 #: model:ir.model.fields,field_description:hr_mis.field_hr_relative_name
 msgid "Relative"
-msgstr ""
+msgstr "အမျိုး"
 
 #. module: hr_mis
 #: model:ir.model.fields,field_description:hr_mis.field_hr_employee_relative_ids
 msgid "Relatives"
-msgstr ""
+msgstr "အမျိုးများ"
 
 #. module: hr_mis
 #: model:ir.model.fields,field_description:hr_mis.field_hr_employee_religion
 #: model:ir.model.fields,field_description:hr_mis.field_hr_relative_religion
 msgid "Religion"
-msgstr ""
+msgstr "ဘာသာ"
 
 #. module: hr_mis
 #: model:ir.model.fields,field_description:hr_mis.field_hr_military_record_reason_for_leaving
 msgid "Resign reason"
-msgstr ""
+msgstr "ထွက်သည့်အကြောင်း"
 
 #. module: hr_mis
 #: model:ir.model.fields,field_description:hr_mis.field_hr_employee_salary_rate_id
 #: model:ir.model.fields,field_description:hr_mis.field_hr_form2_salary_rate_id
 msgid "Salary rate"
-msgstr ""
+msgstr "လစာနှုန်း"
 
 #. module: hr_mis
 #: selection:hr.employee,race:0 selection:hr.relative,race:0
 msgid "Shan"
-msgstr ""
+msgstr "ရှမ်း"
 
 #. module: hr_mis
 #: selection:hr.relative,name:0
@@ -801,66 +803,66 @@ msgstr ""
 #. module: hr_mis
 #: selection:hr.employee,religion:0 selection:hr.relative,religion:0
 msgid "Sikh"
-msgstr ""
+msgstr "ဆစ်ခ်ဘာသာ"
 
 #. module: hr_mis
 #: selection:hr.relative,name:0
 msgid "Spouse"
-msgstr ""
+msgstr "ဇနီး၊ခင်ပွန်းအမည်"
 
 #. module: hr_mis
 #: selection:hr.relative,name:0
 msgid "Spouse's Father"
-msgstr ""
+msgstr "ဇနီး၊ခင်ပွန်း ၏အဘအမည်"
 
 #. module: hr_mis
 #: selection:hr.relative,name:0
 msgid "Spouse's Mother"
-msgstr ""
+msgstr "ဇနီး၊ခင်ပွန်း ၏အမိအမည်"
 
 #. module: hr_mis
 #: model:ir.model.fields,field_description:hr_mis.field_hr_form3_status
 #: model:ir.ui.view,arch_db:hr_mis.view_employee_form
 msgid "Status"
-msgstr ""
+msgstr "ညီအစ်ကို မောင်နှမများ"
 
 #. module: hr_mis
 #: model:ir.model.fields,field_description:hr_mis.field_hr_form3_summary
 msgid "Summary"
-msgstr ""
+msgstr "အကျဉ်းချုပ်"
 
 #. module: hr_mis
 #: model:ir.model.fields,field_description:hr_mis.field_hr_form5_date_to
 #: model:ir.model.fields,field_description:hr_mis.field_hr_form6_date_to
 #: model:ir.model.fields,field_description:hr_mis.field_hr_form7_date_to
 msgid "To"
-msgstr ""
+msgstr "သို့"
 
 #. module: hr_mis
 #: model:ir.model.fields,field_description:hr_mis.field_hr_form4_name
 msgid "Training"
-msgstr ""
+msgstr "သင်တန်းအမည်"
 
 #. module: hr_mis
 #: model:ir.ui.view,arch_db:hr_mis.view_employee_form
 msgid "Training records"
-msgstr ""
+msgstr "သင်တန်းမှတ်တမ်းများ"
 
 #. module: hr_mis
 #: model:ir.model.fields,field_description:hr_mis.field_hr_employee_weight
 msgid "Weight"
-msgstr ""
+msgstr "ကိုယ်အလေးချိန်"
 
 #. module: hr_mis
 #: model:ir.ui.view,arch_db:hr_mis.view_employee_form
 msgid "as civil staff"
-msgstr ""
+msgstr "ဝန်ထမ်းအဖြစ်"
 
 #. module: hr_mis
 #: model:ir.model.fields,help:hr_mis.field_hr_employee_height
 #: model:ir.ui.view,arch_db:hr_mis.view_employee_form
 msgid "cm"
-msgstr ""
+msgstr "စီအမ်"
 
 #. module: hr_mis
 #: model:ir.ui.view,arch_db:hr_mis.view_employee_form
@@ -868,16 +870,18 @@ msgid ""
 "e.g. Amateur Radio, Acting, Baton Twirling, Board Games, Calligraphy, Candle "
 "Making, Computer Programming, Coffee Roasting..."
 msgstr ""
+"ကျန်းမာရေး၊အားကစား၊အနုပညာဆိုင်ရာတူရိယာအတီးအမှုတ်များ၊ပညာရေးဆိုင်ရာများနှင့်စက"
+"်မှုလက်မှုပညာရပ်များ..."
 
 #. module: hr_mis
 #: model:ir.ui.view,arch_db:hr_mis.view_employee_form
 msgid "e.g. Part Time"
-msgstr ""
+msgstr "ဥပမာ - အချိန်ပိုင်း"
 
 #. module: hr_mis
 #: model:ir.model.fields,field_description:hr_mis.field_hr_salary_rate_salary_from
 msgid "from"
-msgstr ""
+msgstr "မှ"
 
 #. module: hr_mis
 #: model:ir.model,name:hr_mis.model_hr_birth_place
@@ -978,19 +982,19 @@ msgstr ""
 #: model:ir.model.fields,help:hr_mis.field_hr_employee_weight
 #: model:ir.ui.view,arch_db:hr_mis.view_employee_form
 msgid "lbs"
-msgstr ""
+msgstr "ပေါင်"
 
 #. module: hr_mis
 #: model:ir.ui.view,arch_db:hr_mis.view_employee_form
 msgid "started as civil staff"
-msgstr ""
+msgstr "ဝန်ထမ်းအဖြစ်စတင်တာဝန်ထမ်းဆောင်ခြင်း"
 
 #. module: hr_mis
 #: model:ir.model.fields,field_description:hr_mis.field_hr_salary_rate_salary_step
 msgid "step"
-msgstr ""
+msgstr "အဆင့်"
 
 #. module: hr_mis
 #: model:ir.model.fields,field_description:hr_mis.field_hr_salary_rate_salary_to
 msgid "to"
-msgstr ""
+msgstr "သို့"
