@@ -3,7 +3,7 @@ msgstr ""
 "Project-Id-Version: Odoo Server 9.0\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2015-09-18 08:11+0000\n"
-"PO-Revision-Date: 2016-10-07 07:12+0000\n"
+"PO-Revision-Date: 2016-10-10 11:12+0000\n"
 "Last-Translator: Pyae Sone <gipsyhnh@gmail.com>\n"
 "Language-Team: Burmese "
 "<http://weblate.kostik.net/projects/erp/hr_recruitment/my/>\n"
@@ -169,7 +169,7 @@ msgstr "<span>အသစ်</span>"
 #. module: hr_recruitment
 #: model:ir.ui.view,arch_db:hr_recruitment.view_hr_job_kanban
 msgid "<span>Reports</span>"
-msgstr "<span>မှတ်တမ်း</span>"
+msgstr "<span>ရီပိုဒ့်များ</span>"
 
 #. module: hr_recruitment
 #: model:ir.ui.view,arch_db:hr_recruitment.view_hr_job_kanban
@@ -189,7 +189,7 @@ msgstr "လှုပ်ဆောင်မှုလိုအပ်သည်"
 #. module: hr_recruitment
 #: model:ir.model.fields,field_description:hr_recruitment.field_hr_applicant_active
 msgid "Active"
-msgstr "ရှိသည်"
+msgstr "လက်ရှိလုပ်ဆောင်နေသော"
 
 #. module: hr_recruitment
 #: model:survey.question,question:hr_recruitment.recruitment_2_4
@@ -351,7 +351,7 @@ msgstr "ကျေးဇူးတင်ကြောင်း"
 #. module: hr_recruitment
 #: model:ir.ui.view,arch_db:hr_recruitment.view_crm_case_jobs_filter
 msgid "Archived"
-msgstr "ဖျောက်မည်"
+msgstr "ပယ်ဖျက်မည်"
 
 #. module: hr_recruitment
 #: model:ir.model.fields,field_description:hr_recruitment.field_hr_applicant_date_open
@@ -451,7 +451,7 @@ msgstr ""
 #. module: hr_recruitment
 #: model:ir.actions.act_window,help:hr_recruitment.action_hr_job_no_employee
 msgid "Click to add a new employee."
-msgstr "ဝန်ထမ်းအသစ်ပေါင်းထည့်ရန်နှိပ်ပါ"
+msgstr "ဝန်ထမ်းအသစ်ပေါင်းထည့်ရန်ကလစ်နှိပ်ပါ"
 
 #. module: hr_recruitment
 #: model:ir.actions.act_window,help:hr_recruitment.hr_job_stage_act
@@ -481,7 +481,7 @@ msgstr "အဖွဲ့အစည်း"
 #. module: hr_recruitment
 #: model:ir.ui.menu,name:hr_recruitment.menu_hr_recruitment_configuration
 msgid "Configuration"
-msgstr "ပြင်ဆင်မည်"
+msgstr "ပြင်ဆင်ရန်"
 
 #. module: hr_recruitment
 #: model:ir.ui.view,arch_db:hr_recruitment.view_hr_recruitment_configuration
@@ -810,7 +810,7 @@ msgstr "အင်တာဗျူးအတွက်မှတ်ချက်မျ
 #. module: hr_recruitment
 #: model:survey.label,value:hr_recruitment.recruitment_1_2_2
 msgid "Female"
-msgstr "အမျိုးသမီး"
+msgstr "မ"
 
 #. module: hr_recruitment
 #: model:ir.ui.view,arch_db:hr_recruitment.view_crm_case_jobs_filter
@@ -897,7 +897,7 @@ msgstr "ဘွဲ့ရ"
 #: model:ir.ui.view,arch_db:hr_recruitment.view_crm_case_jobs_filter
 #: model:ir.ui.view,arch_db:hr_recruitment.view_hr_recruitment_report_search
 msgid "Group By"
-msgstr "အုပ်စုဖွဲ့မည်"
+msgstr "အုပ်စုဖြင့်"
 
 #. module: hr_recruitment
 #: model:ir.model,name:hr_recruitment.model_hr_department
@@ -1022,7 +1022,7 @@ msgstr "အလုပ်ခေါ်စာဖန်တီးခဲ့သည်"
 #: model:ir.actions.act_window,name:hr_recruitment.action_hr_job
 #: model:ir.actions.act_window,name:hr_recruitment.action_hr_job_config
 msgid "Job Positions"
-msgstr "အလုပ်ရာထူးများ"
+msgstr "အလုပ်ရာထူး"
 
 #. module: hr_recruitment
 #: model:ir.model.fields,field_description:hr_recruitment.field_hr_job_stage_ids
@@ -1101,7 +1101,7 @@ msgstr "နောက်ဆုံးအသစ်မွမ်းမံခဲ့သ
 #. module: hr_recruitment
 #: model:survey.label,value:hr_recruitment.recruitment_1_2_1
 msgid "Male"
-msgstr "အမျိုးသား"
+msgstr "ကျား"
 
 #. module: hr_recruitment
 #: model:ir.model.fields,help:hr_recruitment.field_hr_recruitment_config_settings_module_document
@@ -1143,7 +1143,7 @@ msgstr "မိုဘိုင်း-"
 #. module: hr_recruitment
 #: model:ir.ui.view,arch_db:hr_recruitment.view_hr_job_kanban
 msgid "More <i class=\"fa fa-caret-down\"/>"
-msgstr "နောက်ထပ် <i class=\"fa fa-caret-down\"/>"
+msgstr "နောက်ထပ်"
 
 #. module: hr_recruitment
 #: model:survey.label,value:hr_recruitment.rcol_3_1_5
@@ -1311,7 +1311,7 @@ msgstr "ရုံးတည်နေရာ"
 #. module: hr_recruitment
 #: model:ir.actions.client,name:hr_recruitment.action_client_hr_recruitment_menu
 msgid "Open HR Menu"
-msgstr "လူ၊အရင်းအမြစ်မီနူးဖွင့်မည်"
+msgstr "HR မီနူးကိုဖွင့်မည်"
 
 #. module: hr_recruitment
 #: model:ir.model.fields,help:hr_recruitment.field_hr_job_alias_force_thread_id
@@ -1457,7 +1457,7 @@ msgstr "ပုံမှန်မီတင်"
 #. module: hr_recruitment
 #: model:ir.ui.menu,name:hr_recruitment.report_hr_recruitment
 msgid "Reports"
-msgstr "ရီပိုဒ့်"
+msgstr "ရီပိုဒ့်များ"
 
 #. module: hr_recruitment
 #: model:ir.model.fields,field_description:hr_recruitment.field_hr_recruitment_stage_requirements
@@ -1558,7 +1558,7 @@ msgstr "စီကွမ့်"
 #: model:ir.ui.menu,name:hr_recruitment.menu_hr_recruitment_global_settings
 #: model:ir.ui.view,arch_db:hr_recruitment.view_hr_job_kanban
 msgid "Settings"
-msgstr "အပြင်အဆင်"
+msgstr "ပြင်ဆင်ရန်"
 
 #. module: hr_recruitment
 #: model:survey.label,value:hr_recruitment.rcol_3_1_2
@@ -1783,12 +1783,12 @@ msgstr "မဖတ်ရသေးသောစာများ"
 #. module: hr_recruitment
 #: model:ir.model.fields,field_description:hr_recruitment.field_hr_applicant_message_unread_counter
 msgid "Unread Messages Counter"
-msgstr ""
+msgstr "မဖတ်ရသေးသောစာများနံပါတ်"
 
 #. module: hr_recruitment
 #: model:ir.model.fields,field_description:hr_recruitment.field_hr_applicant_write_date
 msgid "Update Date"
-msgstr "အသစ်မွမ်းမံထားသောရက်စွဲ"
+msgstr "အသစ်မွမ်းမံသည့်ရက်"
 
 #. module: hr_recruitment
 #: model:ir.model.fields,field_description:hr_recruitment.field_hr_recruitment_stage_template_id
