@@ -7,7 +7,7 @@ msgstr ""
 "Project-Id-Version: Odoo Server 9.0c\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2016-01-15 10:41+0000\n"
-"PO-Revision-Date: 2016-10-08 10:30+0000\n"
+"PO-Revision-Date: 2016-10-13 12:04+0000\n"
 "Last-Translator: Pyae Sone <gipsyhnh@gmail.com>\n"
 "Language-Team: Burmese <http://weblate.kostik.net/projects/erp/hr/my/>\n"
 "Language: my\n"
@@ -21,7 +21,7 @@ msgstr ""
 #: code:addons/hr/hr.py:119
 #, python-format
 msgid "%s (copy)"
-msgstr ""
+msgstr "%s (ကူးရန်)"
 
 #. module: hr
 #: model:hr.job,website_description:hr.job_ceo
@@ -69,17 +69,17 @@ msgstr ""
 #. module: hr
 #: model:ir.ui.view,arch_db:hr.hr_department_view_kanban
 msgid "<span>Reports</span>"
-msgstr ""
+msgstr "<span>ရီပိုဒ့်များ</span>"
 
 #. module: hr
 #: model:ir.ui.view,arch_db:hr.hr_department_view_kanban
 msgid "<span>To Approve</span>"
-msgstr ""
+msgstr "<span>အတည်ပြုရန်</span>"
 
 #. module: hr
 #: model:ir.ui.view,arch_db:hr.hr_department_view_kanban
 msgid "<span>To Do</span>"
-msgstr ""
+msgstr "<span>လုပ်ဆောင်ရန်</span>"
 
 #. module: hr
 #: model:hr.job,website_description:hr.job_ceo
@@ -108,12 +108,12 @@ msgstr ""
 #: model:ir.model.fields,field_description:hr.field_hr_employee_message_needaction
 #: model:ir.model.fields,field_description:hr.field_hr_job_message_needaction
 msgid "Action Needed"
-msgstr ""
+msgstr "လှုပ်ဆောင်မှုလိုအပ်သည်"
 
 #. module: hr
 #: model:ir.model.fields,field_description:hr.field_hr_employee_active
 msgid "Active"
-msgstr ""
+msgstr "လက်ရှိလုပ်ဆောင်နေသော"
 
 #. module: hr
 #: model:hr.job,website_description:hr.job_consultant
@@ -123,7 +123,7 @@ msgstr ""
 #. module: hr
 #: model:ir.ui.view,arch_db:hr.view_employee_filter
 msgid "Archived"
-msgstr ""
+msgstr "ပယ်ဖျက်မည်"
 
 #. module: hr
 #: model:ir.model.fields,field_description:hr.field_hr_employee_bank_account_id
@@ -177,7 +177,7 @@ msgstr "နိုင်ငံသားနှင့် တခြားအချ�
 #. module: hr
 #: model:ir.model.fields,field_description:hr.field_hr_employee_city
 msgid "City"
-msgstr ""
+msgstr "မြို့"
 
 #. module: hr
 #: model:web.tip,description:hr.hr_tip_2
@@ -188,22 +188,22 @@ msgstr ""
 #: model:ir.actions.act_window,help:hr.act_employee_from_department
 #: model:ir.actions.act_window,help:hr.open_view_employee_list_my
 msgid "Click to add a new employee."
-msgstr ""
+msgstr "ဝန်ထမ်းအသစ်ပေါင်းထည့်ရန်ကလစ်နှိပ်ပါ"
 
 #. module: hr
 #: model:ir.actions.act_window,help:hr.open_module_tree_department
 msgid "Click to create a department."
-msgstr ""
+msgstr "ဌာန အသစ်ပေါင်းထည့်ရန်ကလစ်နှိပ်ပါ."
 
 #. module: hr
 #: model:ir.actions.act_window,help:hr.view_department_form_installer
 msgid "Click to define a new department."
-msgstr ""
+msgstr "ဌာန အသစ်တစ်ခုကို သတ်မှတ်မည်."
 
 #. module: hr
 #: model:ir.actions.act_window,help:hr.action_hr_job
 msgid "Click to define a new job position."
-msgstr ""
+msgstr "ရာထူးအသစ်တစ်ခု သတ်မှတ်မည်."
 
 #. module: hr
 #: model:hr.job,website_description:hr.job_ceo
@@ -237,7 +237,7 @@ msgstr ""
 #. module: hr
 #: model:ir.ui.view,arch_db:hr.view_department_tree
 msgid "Companies"
-msgstr ""
+msgstr "ကုမ္ပဏီများ"
 
 #. module: hr
 #: model:ir.model.fields,field_description:hr.field_hr_department_company_id
@@ -251,7 +251,7 @@ msgstr ""
 #. module: hr
 #: model:ir.ui.menu,name:hr.menu_human_resources_configuration
 msgid "Configuration"
-msgstr ""
+msgstr "ပြင်ဆင်ရန်"
 
 #. module: hr
 #: model:hr.job,name:hr.job_consultant
@@ -273,7 +273,7 @@ msgstr ""
 #. module: hr
 #: model:ir.actions.act_window,name:hr.view_department_form_installer
 msgid "Create Your Departments"
-msgstr ""
+msgstr "သင့်ဌာနများဖန်တီးပါ"
 
 #. module: hr
 #: model:ir.model.fields,field_description:hr.field_hr_department_create_uid
@@ -294,12 +294,12 @@ msgstr "ဖန်တီးခဲ့ချိန်မှာ"
 #. module: hr
 #: model:ir.model.fields,field_description:hr.field_hr_job_no_of_employee
 msgid "Current Number of Employees"
-msgstr ""
+msgstr "ယခုလက်ရှိ ဝန်ထမ်းအရေအတွက်"
 
 #. module: hr
 #: model:ir.model.fields,field_description:hr.field_hr_employee_birthday
 msgid "Date of Birth"
-msgstr ""
+msgstr "မွေးနေ့"
 
 #. module: hr
 #: model:ir.model.fields,help:hr.field_hr_department_message_last_post
@@ -337,14 +337,14 @@ msgstr "ဌာန"
 #. module: hr
 #: model:ir.model.fields,field_description:hr.field_hr_department_name
 msgid "Department Name"
-msgstr ""
+msgstr "ဌာနအမည်"
 
 #. module: hr
 #: model:ir.actions.act_window,name:hr.open_module_tree_department
 #: model:ir.ui.menu,name:hr.menu_hr_department_tree
 #: model:ir.ui.view,arch_db:hr.view_department_filter
 msgid "Departments"
-msgstr ""
+msgstr "ဌာနများ"
 
 #. module: hr
 #: model:ir.model.fields,field_description:hr.field_hr_department_display_name
@@ -357,7 +357,7 @@ msgstr "ဖော်ပြပါအမည်"
 #. module: hr
 #: selection:hr.employee,marital:0
 msgid "Divorced"
-msgstr ""
+msgstr "ကွာရှင်းထားသော"
 
 #. module: hr
 #: model:ir.model.fields,field_description:hr.field_hr_employee_time_efficiency
@@ -373,7 +373,7 @@ msgstr "ဝန်ထမ်း"
 #. module: hr
 #: model:ir.model,name:hr.model_hr_employee_category
 msgid "Employee Category"
-msgstr ""
+msgstr "ဝန်ထမ်းခေါင်းစဉ်"
 
 #. module: hr
 #: model:ir.model.fields,field_description:hr.field_hr_employee_category_name
@@ -410,12 +410,12 @@ msgstr "ဝန်ထမ်းအမည်"
 #: model:ir.ui.view,arch_db:hr.view_employee_tree
 #: model:ir.ui.view,arch_db:hr.view_partner_tree2
 msgid "Employees"
-msgstr ""
+msgstr "ဝန်ထမ်းများ"
 
 #. module: hr
 #: model:ir.actions.act_window,name:hr.open_view_employee_tree
 msgid "Employees Structure"
-msgstr ""
+msgstr "ဝန်ထမ်းများဖွဲ့စည်းပုံ"
 
 #. module: hr
 #: model:ir.ui.view,arch_db:hr.view_employee_category_list
@@ -450,7 +450,7 @@ msgstr ""
 #. module: hr
 #: selection:hr.employee,gender:0
 msgid "Female"
-msgstr ""
+msgstr "မ"
 
 #. module: hr
 #: model:ir.ui.view,arch_db:hr.hr_kanban_view_employees
@@ -487,7 +487,7 @@ msgstr ""
 #. module: hr
 #: model:ir.model.fields,field_description:hr.field_hr_employee_gender
 msgid "Gender"
-msgstr ""
+msgstr "ကျား၊မ"
 
 #. module: hr
 #: model:hr.job,website_description:hr.job_developer
@@ -533,12 +533,12 @@ msgstr ""
 #: model:ir.ui.view,arch_db:hr.view_employee_filter
 #: model:ir.ui.view,arch_db:hr.view_job_filter
 msgid "Group By"
-msgstr ""
+msgstr "အုပ်စုဖြင့်"
 
 #. module: hr
 #: model:ir.model,name:hr.model_hr_department
 msgid "HR Department"
-msgstr ""
+msgstr "လူစွမ်းအားအရင်းအမြစ်ဌာန"
 
 #. module: hr
 #: model:ir.ui.view,arch_db:hr.view_employee_form
@@ -568,22 +568,22 @@ msgstr ""
 #. module: hr
 #: model:ir.model.fields,field_description:hr.field_hr_job_no_of_hired_employee
 msgid "Hired Employees"
-msgstr ""
+msgstr "ခန့်ထားသောဝန်ထမ်းများ"
 
 #. module: hr
 #: model:ir.model.fields,field_description:hr.field_hr_employee_address_home_id
 msgid "Home Address"
-msgstr ""
+msgstr "အိမ်လိပ်စာ"
 
 #. module: hr
 #: model:ir.ui.menu,name:hr.menu_hr_main
 msgid "Human Resources"
-msgstr ""
+msgstr "လူ့စွမ်းအားအရင်းအမြစ်"
 
 #. module: hr
 #: model:hr.job,name:hr.job_hrm
 msgid "Human Resources Manager"
-msgstr ""
+msgstr "လူ့စွမ်းအားအရင်းအမြစ်မန်နေဂျာ"
 
 #. module: hr
 #: model:ir.model.fields,field_description:hr.field_hr_department_id
@@ -627,12 +627,12 @@ msgstr ""
 #. module: hr
 #: model:ir.ui.view,arch_db:hr.view_job_filter
 msgid "In Position"
-msgstr ""
+msgstr "ခန့်ထားပြီးသော"
 
 #. module: hr
 #: model:ir.ui.view,arch_db:hr.view_job_filter
 msgid "In Recruitment"
-msgstr ""
+msgstr "ခေါ်ယူနေစဉ်"
 
 #. module: hr
 #: model:hr.job,website_description:hr.job_ceo
@@ -661,17 +661,17 @@ msgstr ""
 #: model:ir.ui.view,arch_db:hr.view_hr_job_tree
 #: model:ir.ui.view,arch_db:hr.view_job_filter
 msgid "Job"
-msgstr ""
+msgstr "အလုပ်"
 
 #. module: hr
 #: model:ir.model.fields,field_description:hr.field_hr_job_description
 msgid "Job Description"
-msgstr ""
+msgstr "အလုပ်၏ဖော်ပြချက်များ"
 
 #. module: hr
 #: model:ir.model.fields,field_description:hr.field_hr_job_name
 msgid "Job Name"
-msgstr ""
+msgstr "တာဝန်အမည်"
 
 #. module: hr
 #: model:ir.model,name:hr.model_hr_job
@@ -681,14 +681,14 @@ msgstr ""
 #. module: hr
 #: model:ir.ui.view,arch_db:hr.view_hr_job_form
 msgid "Job Position Name"
-msgstr ""
+msgstr "အလုပ်ရာထူးအမည်"
 
 #. module: hr
 #: model:ir.actions.act_window,name:hr.action_hr_job
 #: model:ir.ui.menu,name:hr.menu_hr_job_position
 #: model:ir.ui.menu,name:hr.menu_hr_job_position_config
 msgid "Job Positions"
-msgstr ""
+msgstr "အလုပ်ရာထူး"
 
 #. module: hr
 #: model:ir.actions.act_window,help:hr.action_hr_job
@@ -701,7 +701,7 @@ msgstr ""
 #. module: hr
 #: model:ir.model.fields,field_description:hr.field_hr_employee_job_id
 msgid "Job Title"
-msgstr ""
+msgstr "အလုပ်ခေါင်းစဉ်"
 
 #. module: hr
 #: model:ir.model.fields,field_description:hr.field_hr_department_jobs_ids
@@ -772,24 +772,24 @@ msgstr ""
 #. module: hr
 #: model:ir.model.fields,field_description:hr.field_hr_employee_login
 msgid "Login"
-msgstr ""
+msgstr "ဝင်ရောက်မည်"
 
 #. module: hr
 #: selection:hr.employee,gender:0
 msgid "Male"
-msgstr ""
+msgstr "ကျား"
 
 #. module: hr
 #: model:ir.model.fields,field_description:hr.field_hr_department_manager_id
 #: model:ir.model.fields,field_description:hr.field_hr_employee_parent_id
 #: model:ir.ui.view,arch_db:hr.view_employee_filter
 msgid "Manager"
-msgstr ""
+msgstr "မန်နေဂျာ"
 
 #. module: hr
 #: model:ir.model.fields,field_description:hr.field_hr_employee_marital
 msgid "Marital Status"
-msgstr ""
+msgstr "အိမ်ထောင်မှု"
 
 #. module: hr
 #: model:hr.job,name:hr.job_marketing
@@ -799,7 +799,7 @@ msgstr ""
 #. module: hr
 #: selection:hr.employee,marital:0
 msgid "Married"
-msgstr ""
+msgstr "မင်္ဂလာဆောင်ပြီးသော"
 
 #. module: hr
 #: model:hr.job,website_description:hr.job_cto
@@ -811,7 +811,7 @@ msgstr ""
 #. module: hr
 #: model:ir.model.fields,field_description:hr.field_hr_employee_image_medium
 msgid "Medium-sized photo"
-msgstr ""
+msgstr "အလယ်အလတ်အရွယ်အစားဓာတ်ပုံ"
 
 #. module: hr
 #: model:ir.model.fields,help:hr.field_hr_employee_image_medium
@@ -821,7 +821,7 @@ msgstr ""
 #. module: hr
 #: model:ir.model.fields,field_description:hr.field_hr_department_member_ids
 msgid "Members"
-msgstr ""
+msgstr "အဖွဲ့ဝင်များ"
 
 #. module: hr
 #: model:ir.model.fields,field_description:hr.field_hr_department_message_ids
@@ -829,12 +829,12 @@ msgstr ""
 #: model:ir.model.fields,field_description:hr.field_hr_job_message_ids
 #: model:ir.ui.view,arch_db:hr.hr_kanban_view_employees
 msgid "Messages"
-msgstr ""
+msgstr "စာများ"
 
 #. module: hr
 #: model:ir.ui.view,arch_db:hr.hr_department_view_kanban
 msgid "More <i class=\"fa fa-caret-down\"/>"
-msgstr ""
+msgstr "နောက်ထပ်"
 
 #. module: hr
 #: model:hr.job,website_description:hr.job_ceo
@@ -845,7 +845,7 @@ msgstr ""
 #: model:hr.job,website_description:hr.job_marketing
 #: model:hr.job,website_description:hr.job_trainee
 msgid "Must have ..."
-msgstr ""
+msgstr "ရှိရမည် ..."
 
 #. module: hr
 #: model:ir.model.fields,field_description:hr.field_hr_department_complete_name
@@ -857,7 +857,7 @@ msgstr "အမည်"
 #. module: hr
 #: model:ir.model.fields,field_description:hr.field_hr_employee_country_id
 msgid "Nationality (Country)"
-msgstr ""
+msgstr "နိုင်ငံသား(နိုင်ငံ)"
 
 #. module: hr
 #: model:hr.job,website_description:hr.job_ceo
@@ -878,7 +878,7 @@ msgstr "မှတ်ချက်"
 #. module: hr
 #: model:ir.model.fields,field_description:hr.field_hr_employee_notes
 msgid "Notes"
-msgstr ""
+msgstr "မှတ်စုများ"
 
 #. module: hr
 #: model:ir.model.fields,field_description:hr.field_hr_department_message_needaction_counter
@@ -926,7 +926,7 @@ msgstr ""
 #. module: hr
 #: model:ir.actions.client,name:hr.action_client_hr_menu
 msgid "Open HR Menu"
-msgstr ""
+msgstr "HR မီနူးကိုဖွင့်မည်"
 
 #. module: hr
 #: selection:hr.employee,gender:0
@@ -952,7 +952,7 @@ msgstr ""
 #. module: hr
 #: model:ir.model.fields,field_description:hr.field_hr_department_parent_id
 msgid "Parent Department"
-msgstr ""
+msgstr "မူလဌာန"
 
 #. module: hr
 #: model:hr.job,website_description:hr.job_developer
@@ -962,17 +962,17 @@ msgstr ""
 #. module: hr
 #: model:ir.model.fields,field_description:hr.field_hr_employee_passport_id
 msgid "Passport No"
-msgstr ""
+msgstr "နိုင်ငံကူးလက်မှတ်"
 
 #. module: hr
 #: model:ir.ui.view,arch_db:hr.view_employee_form
 msgid "Personal Information"
-msgstr ""
+msgstr "ကိုယ်ပိုင်အချက်အလက်"
 
 #. module: hr
 #: model:ir.model.fields,field_description:hr.field_hr_employee_image
 msgid "Photo"
-msgstr ""
+msgstr "ဓာတ်ပုံ"
 
 #. module: hr
 #: model:hr.job,website_description:hr.job_ceo
@@ -1015,12 +1015,12 @@ msgstr ""
 #. module: hr
 #: selection:hr.job,state:0
 msgid "Recruitment Closed"
-msgstr ""
+msgstr "အလုပ်ခေါ်ယူမှု ပိတ်ထားသည်"
 
 #. module: hr
 #: selection:hr.job,state:0
 msgid "Recruitment in Progress"
-msgstr ""
+msgstr "ဝန်ထမ်းများခေါ်ယူနေသည်"
 
 #. module: hr
 #: model:ir.ui.view,arch_db:hr.view_employee_form
@@ -1030,7 +1030,7 @@ msgstr "သက်ဆိုင်သောအသုံးပြုသူ"
 #. module: hr
 #: model:ir.model.fields,field_description:hr.field_res_users_employee_ids
 msgid "Related employees"
-msgstr ""
+msgstr "သက်ဆိုင်သော ဝန်ထမ်း"
 
 #. module: hr
 #: model:ir.model.fields,help:hr.field_hr_employee_user_id
@@ -1040,17 +1040,17 @@ msgstr ""
 #. module: hr
 #: model:ir.ui.menu,name:hr.menu_hr_reporting_timesheet
 msgid "Reports"
-msgstr ""
+msgstr "ရီပိုဒ့်များ"
 
 #. module: hr
 #: model:ir.model.fields,field_description:hr.field_hr_job_requirements
 msgid "Requirements"
-msgstr ""
+msgstr "လိုအပ်ချက်များ"
 
 #. module: hr
 #: model:ir.model.fields,field_description:hr.field_hr_employee_resource_id
 msgid "Resource"
-msgstr ""
+msgstr "ရင်းမြစ်"
 
 #. module: hr
 #: model:ir.model.fields,field_description:hr.field_hr_employee_resource_type
@@ -1066,7 +1066,7 @@ msgstr ""
 #: model:hr.job,website_description:hr.job_marketing
 #: model:hr.job,website_description:hr.job_trainee
 msgid "Responsibilities"
-msgstr ""
+msgstr "တာဝန်များ"
 
 #. module: hr
 #: model:ir.model.fields,field_description:hr.field_hr_employee_sinid
@@ -1093,12 +1093,12 @@ msgstr ""
 #. module: hr
 #: model:ir.ui.view,arch_db:hr.hr_department_view_kanban
 msgid "Settings"
-msgstr ""
+msgstr "ပြင်ဆင်ရန်"
 
 #. module: hr
 #: selection:hr.employee,marital:0
 msgid "Single"
-msgstr ""
+msgstr "လူပျို၊အပျို"
 
 #. module: hr
 #: model:hr.job,website_description:hr.job_ceo
@@ -1109,12 +1109,12 @@ msgstr ""
 #: model:hr.job,website_description:hr.job_marketing
 #: model:hr.job,website_description:hr.job_trainee
 msgid "Skills"
-msgstr ""
+msgstr "တက်ကျွမ်းမှုများ"
 
 #. module: hr
 #: model:ir.model.fields,field_description:hr.field_hr_employee_image_small
 msgid "Small-sized photo"
-msgstr ""
+msgstr "အရွယ်အစားသေး ဓာတ်ပုံ"
 
 #. module: hr
 #: model:ir.model.fields,help:hr.field_hr_employee_image_small
@@ -1136,12 +1136,12 @@ msgstr ""
 #: model:ir.ui.view,arch_db:hr.view_employee_form
 #: model:ir.ui.view,arch_db:hr.view_job_filter
 msgid "Status"
-msgstr "ညီအစ်ကို မောင်နှမများ"
+msgstr "ပြစ်ဒဏ်ချမှတ်ချက်"
 
 #. module: hr
 #: model:ir.ui.view,arch_db:hr.view_hr_job_form
 msgid "Stop Recruitment"
-msgstr ""
+msgstr "အလုပ်ခေါ်ယူမှုကိုရပ်လိုက်မည်"
 
 #. module: hr
 #: model:ir.actions.act_window,name:hr.hr_employee_action_subordinate_hierachy
@@ -1217,29 +1217,29 @@ msgstr ""
 #: model:ir.ui.view,arch_db:hr.view_employee_filter
 #: model:ir.ui.view,arch_db:hr.view_job_filter
 msgid "Unread Messages"
-msgstr ""
+msgstr "မဖတ်ရသေးသောစာများ"
 
 #. module: hr
 #: model:ir.model.fields,field_description:hr.field_hr_department_message_unread_counter
 #: model:ir.model.fields,field_description:hr.field_hr_employee_message_unread_counter
 #: model:ir.model.fields,field_description:hr.field_hr_job_message_unread_counter
 msgid "Unread Messages Counter"
-msgstr ""
+msgstr "မဖတ်ရသေးသောစာများနံပါတ်"
 
 #. module: hr
 #: model:ir.model.fields,field_description:hr.field_hr_job_write_date
 msgid "Update Date"
-msgstr ""
+msgstr "အသစ်မွမ်းမံသည့်ရက်"
 
 #. module: hr
 #: model:ir.model.fields,field_description:hr.field_hr_employee_user_id
 msgid "User"
-msgstr ""
+msgstr "အသုံးပြုသူ"
 
 #. module: hr
 #: model:ir.model,name:hr.model_res_users
 msgid "Users"
-msgstr ""
+msgstr "အသုံးပြုသူများ"
 
 #. module: hr
 #: model:hr.job,website_description:hr.job_consultant
@@ -1286,7 +1286,7 @@ msgstr ""
 #. module: hr
 #: selection:hr.employee,marital:0
 msgid "Widower"
-msgstr ""
+msgstr "မုဆိုးမ"
 
 #. module: hr
 #: model:hr.job,website_description:hr.job_consultant
@@ -1315,32 +1315,32 @@ msgstr ""
 #. module: hr
 #: model:ir.model.fields,field_description:hr.field_hr_employee_work_email
 msgid "Work Email"
-msgstr ""
+msgstr "အလုပ်အီးမေးလ်"
 
 #. module: hr
 #: model:ir.model.fields,field_description:hr.field_hr_employee_work_location
 msgid "Work Location"
-msgstr ""
+msgstr "အလုပ်တည်နေရာ"
 
 #. module: hr
 #: model:ir.model.fields,field_description:hr.field_hr_employee_mobile_phone
 msgid "Work Mobile"
-msgstr ""
+msgstr "အလုပ် မိုဘိုင်းဖုန်းနံပါတ်"
 
 #. module: hr
 #: model:ir.model.fields,field_description:hr.field_hr_employee_work_phone
 msgid "Work Phone"
-msgstr ""
+msgstr "အလုပ် ဖုန်း"
 
 #. module: hr
 #: model:ir.model.fields,field_description:hr.field_hr_employee_address_id
 msgid "Working Address"
-msgstr ""
+msgstr "အလုပ် လိပ်စာ"
 
 #. module: hr
 #: model:ir.model.fields,field_description:hr.field_hr_employee_calendar_id
 msgid "Working Time"
-msgstr ""
+msgstr "အလုပ်ချိန်"
 
 #. module: hr
 #: model:hr.job,website_description:hr.job_marketing
@@ -1515,7 +1515,7 @@ msgstr ""
 #. module: hr
 #: model:ir.ui.view,arch_db:hr.view_department_form
 msgid "department"
-msgstr ""
+msgstr "ဌာန"
 
 #. module: hr
 #: model:ir.ui.view,arch_db:hr.view_employee_form
