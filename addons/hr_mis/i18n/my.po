@@ -7,7 +7,7 @@ msgstr ""
 "Project-Id-Version: Odoo Server 9.0c\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2016-10-06 10:32+0100\n"
-"PO-Revision-Date: 2016-10-08 10:32+0000\n"
+"PO-Revision-Date: 2016-10-14 07:37+0000\n"
 "Last-Translator: Pyae Sone <gipsyhnh@gmail.com>\n"
 "Language-Team: Burmese <http://weblate.kostik.net/projects/erp/hr_mis/my/>\n"
 "Language: my\n"
@@ -20,7 +20,7 @@ msgstr ""
 #. module: hr_mis
 #: model:ir.ui.view,arch_db:hr_mis.view_employee_form
 msgid "Activity"
-msgstr "လှုပ်ရှားမှုများ"
+msgstr "ဝန်ထမ်း၏ထူးခြားဖြစ်စဉ်"
 
 #. module: hr_mis
 #: model:ir.model.fields,field_description:hr_mis.field_hr_military_colleague_address
@@ -146,7 +146,7 @@ msgstr "ဆက်သွယ်ရန်အချက်အလက်"
 #. module: hr_mis
 #: model:ir.model.fields,field_description:hr_mis.field_hr_form7_country_id
 msgid "Country id"
-msgstr "နိုင်ငံ အိုင်ဒီ"
+msgstr "သွားရောက်ခဲ့သည့်နိုင်ငံများ"
 
 #. module: hr_mis
 #: model:ir.model.fields,field_description:hr_mis.field_hr_birth_place_create_uid
@@ -281,7 +281,7 @@ msgstr "သင်တန်းကာလ"
 #. module: hr_mis
 #: model:ir.ui.view,arch_db:hr_mis.view_employee_form
 msgid "Education records"
-msgstr "ပညာအရည်အချင်း"
+msgstr "ဝန်ထမ်းနေခဲ့ဖူးသောကျောင်းများ"
 
 #. module: hr_mis
 #: model:ir.model.fields,field_description:hr_mis.field_hr_educational_institution_educational_institution
@@ -319,7 +319,7 @@ msgstr "ဝန်ထမ်းအမည်"
 #. module: hr_mis
 #: model:ir.ui.view,arch_db:hr_mis.view_employee_form
 msgid "Employment history"
-msgstr "ဝန်ထမ်းမှတ်တမ်း"
+msgstr "ဝန်ထမ်းလုပ်ကိုင်ခဲ့သော အလုပ်အကိုင်များနှင့်ယခင်ဌာန"
 
 #. module: hr_mis
 #: model:ir.model.fields,field_description:hr_mis.field_hr_employee_eyes
@@ -344,7 +344,7 @@ msgstr "ပြည်ပ"
 #. module: hr_mis
 #: model:ir.ui.view,arch_db:hr_mis.view_employee_form
 msgid "Foreign trips"
-msgstr "ပြည်ပခရီးစဉ်များ"
+msgstr "ဝန်ထမ်းနိုင်ငံခြားသို့သွားရောက်ခဲ့ခြင်း"
 
 #. module: hr_mis
 #: model:ir.ui.view,arch_db:hr_mis.view_employee_form
@@ -418,12 +418,12 @@ msgstr "အရပ်"
 #. module: hr_mis
 #: selection:hr.employee,religion:0 selection:hr.relative,religion:0
 msgid "Hindu"
-msgstr "ဟိန္ဒူ"
+msgstr "ဟိန္ဒူဘာသာ"
 
 #. module: hr_mis
 #: model:ir.ui.view,arch_db:hr_mis.view_employee_form
 msgid "Hobbies"
-msgstr "ဝါသနာမ်ား"
+msgstr "ဝါသနာများ"
 
 #. module: hr_mis
 #: model:ir.model.fields,field_description:hr_mis.field_hr_hobby_name
@@ -554,7 +554,7 @@ msgstr "စက်အတွင်းသာ"
 #: model:ir.model.fields,field_description:hr_mis.field_hr_educational_institution_location
 #: model:ir.model.fields,field_description:hr_mis.field_hr_external_department_location
 msgid "Location"
-msgstr "နေရာ"
+msgstr "ပြည်တွင်း၊ပြည်ပ"
 
 #. module: hr_mis
 #: model:ir.model.fields,field_description:hr_mis.field_hr_employee_military_colleague_ids
@@ -565,8 +565,9 @@ msgstr "တပ်မတော် ကိုယ်ပိုင်အမှတ်"
 #: model:ir.ui.view,arch_db:hr_mis.view_employee_form
 msgid "Military colleagues"
 msgstr ""
-"စစ်ဘက်၊ရဲဘက်၊နယ်ဘက်နှင့်နိုင်ငံရေး ဘက်တွင်ခင်မင်ရင်းနှီးသောမိတ်ဆွေများ "
-"ရှိ၊မရှိနှင့် ရှိပါက အမည် အလုပ်အကိုင်နေရပ်လိပ်စာ"
+"စစ်ဘက်၊ရဲဘက်၊နယ်ဘက်နှင့်နိုင်ငံရေး ဘက်တွင်\n"
+"ခင်မင်ရင်းနှီးသောမိတ်ဆွေများ ရှိ၊မရှိနှင့် ရှိပါက \n"
+"အမည် အလုပ်အကိုင်နေရပ်လိပ်စာ"
 
 #. module: hr_mis
 #: model:ir.model.fields,field_description:hr_mis.field_hr_employee_military_record_ids
@@ -729,7 +730,7 @@ msgstr "ဤဌာနမဝင်မီက အလုပ်နှင့်နေ�
 #: model:ir.model.fields,field_description:hr_mis.field_hr_employee_qualification
 #: model:ir.model.fields,field_description:hr_mis.field_hr_form4_qualification
 msgid "Qualification"
-msgstr "အရည်အချင်း"
+msgstr "သင်တန်းဆင်းအရည်အချင်း"
 
 #. module: hr_mis
 #: model:ir.model.fields,field_description:hr_mis.field_hr_employee_race
@@ -824,29 +825,29 @@ msgstr "ဇနီး၊ခင်ပွန်း ၏အမိအမည်"
 #: model:ir.model.fields,field_description:hr_mis.field_hr_form3_status
 #: model:ir.ui.view,arch_db:hr_mis.view_employee_form
 msgid "Status"
-msgstr "ညီအစ်ကို မောင်နှမများ"
+msgstr "ပြစ်ဒဏ်ချမှတ်ချက်"
 
 #. module: hr_mis
 #: model:ir.model.fields,field_description:hr_mis.field_hr_form3_summary
 msgid "Summary"
-msgstr "အကျဉ်းချုပ်"
+msgstr "မှုခင်းအကျဉ်းချုပ်"
 
 #. module: hr_mis
 #: model:ir.model.fields,field_description:hr_mis.field_hr_form5_date_to
 #: model:ir.model.fields,field_description:hr_mis.field_hr_form6_date_to
 #: model:ir.model.fields,field_description:hr_mis.field_hr_form7_date_to
 msgid "To"
-msgstr "သို့"
+msgstr "ထိ"
 
 #. module: hr_mis
 #: model:ir.model.fields,field_description:hr_mis.field_hr_form4_name
 msgid "Training"
-msgstr "သင်တန်းအမည်"
+msgstr "သင်တန်းအမည်နှင့်အမှတ်စဉ်"
 
 #. module: hr_mis
 #: model:ir.ui.view,arch_db:hr_mis.view_employee_form
 msgid "Training records"
-msgstr "သင်တန်းမှတ်တမ်းများ"
+msgstr "ဝန်ထမ်းတက်ရောက်ခဲ့သောသင်တန်းများ"
 
 #. module: hr_mis
 #: model:ir.model.fields,field_description:hr_mis.field_hr_employee_weight
@@ -997,4 +998,4 @@ msgstr "အဆင့်"
 #. module: hr_mis
 #: model:ir.model.fields,field_description:hr_mis.field_hr_salary_rate_salary_to
 msgid "to"
-msgstr "သို့"
+msgstr "ထိ"
