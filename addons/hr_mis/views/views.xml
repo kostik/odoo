@@ -233,6 +233,7 @@
                                         <field name="place_of_birth_id"/>
                                     </group>
                                     <group>
+                                        <field name="distinctive_marks"/>
                                         <field name="hair"/>
                                         <field name="eyes"/>
                                         <field name="height" placeholder="cm" widget="imperial_length"/>
