@@ -61,7 +61,7 @@ class hr_mis(models.Model):
 
     # Supporter for the jobs http://redmine.kostik.net/redmine/issues/417
 
-    previous_position_and_place = fields.Char("Previous position abd place")
+    previous_position_and_place = fields.Char("Previous position and place")
     military_record_ids = fields.One2many('hr.military_record', 'employee_id', string="Military records")
     distinction = fields.Text("Distinction, Certification")
     criminal_records = fields.Text("Criminal records")
