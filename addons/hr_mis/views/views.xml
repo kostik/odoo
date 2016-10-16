@@ -197,6 +197,7 @@
                                         <field name="work_phone"/>
                                     </group>
                                     <group string="Position">
+                                        <field name="qualification"/>
                                         <field name="department_id" on_change="onchange_department_id(department_id)"/>
                                         <field name="job_id"/>
                                         <field name="parent_id"/>
