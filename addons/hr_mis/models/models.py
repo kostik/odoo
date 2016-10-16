@@ -371,3 +371,6 @@ class hr_form8(models.Model):
 
     image = fields.Binary('Attachment')
     image_filename = fields.Char("Attachment filename")
+
+
+#class hr_inernationa_workgroup

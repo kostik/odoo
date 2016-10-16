@@ -282,10 +282,10 @@
                                            nolabel="1">
                                         <tree>
                                             <field name="position"/>
+                                            <field name="salary_rate_id"/>
                                             <field name="order_number"/>
                                             <field name="order_date"/>
                                             <field name="date"/>
-                                            <field name="salary_rate_id"/>
                                         </tree>
                                     </field>
                                 </group>
