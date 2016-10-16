@@ -295,10 +295,10 @@
                                     <field name="form3_id" context="{'default_employee_id': context.get('active_id')}"
                                            nolabel="1">
                                         <tree>
-                                            <field name="order_number"/>
-                                            <field name="order_date"/>
                                             <field name="summary"/>
                                             <field name="status"/>
+                                            <field name="order_number"/>
+                                            <field name="order_date"/>
                                             <field widget="binary" name="image" filename="image_filename"/>
                                         </tree>
                                     </field>
