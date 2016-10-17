@@ -232,20 +232,12 @@ class hr_form2(models.Model):
     http://redmine.kostik.net/redmine/issues/361
     """
     _name = "hr.form2"
-    name = fields.Char("Name", compute="compute_name")
-    position = fields.Char("Position", required=True)
+    name = fields.Char("Position", required=True)
     order_number = fields.Char("Order #")
     order_date = fields.Date("Order date")
     date = fields.Date("Effective date", required=True)
     employee_id = fields.Many2one('hr.employee', ondelete='cascade', string="Employee")
     salary_rate_id = fields.Many2one("hr.salary_rate", "Salary rate")
-
-    def compute_name(self):
-        try:
-            self.name = '{} @ {}'.format(self.position, self.date)
-        except ValueError:
-            self.name = '***'
-
 
 class hr_form3(models.Model):
     """

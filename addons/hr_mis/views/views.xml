@@ -286,7 +286,7 @@
                                     <field name="form2_id" context="{'default_employee_id': context.get('active_id')}"
                                            nolabel="1">
                                         <tree>
-                                            <field name="position"/>
+                                            <field name="name"/>
                                             <field name="salary_rate_id"/>
                                             <field name="order_number"/>
                                             <field name="order_date"/>
