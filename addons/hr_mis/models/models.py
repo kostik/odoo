@@ -59,9 +59,11 @@ class hr_mis(models.Model):
     position_name_at_start = fields.Char("Position started", help="Position started as civil staff")
     date_started = fields.Date("Date started", help="Date started as civil staff")
 
-    # Supporter for the jobs http://redmine.kostik.net/redmine/issues/417
 
-    previous_position_and_place = fields.Char("Previous position abd place")
+    recommender_id = fields.Many2one('hr.recommender',
+                                       string="Recommender") # Supporter for the jobs http://redmine.kostik.net/redmine/issues/417
+
+    previous_position_and_place = fields.Char("Previous position and place")
     military_record_ids = fields.One2many('hr.military_record', 'employee_id', string="Military records")
     distinction = fields.Text("Distinction, Certification")
     criminal_records = fields.Text("Criminal records")
@@ -73,7 +75,7 @@ class hr_mis(models.Model):
         "Political Activity")  # Activity,Rank and Duties for Political in Student life http://redmine.kostik.net/redmine/issues/419
 
     recommender_ids = fields.Many2many('hr.recommender',
-                                       string="Recommender")  # Supporter Name (Headmaster, Administrator,Police Officer,Military Officer’s Name, Address (Full) http://redmine.kostik.net/redmine/issues/420
+                                       string="Recommenders")  # Supporter Name (Headmaster, Administrator,Police Officer,Military Officer’s Name, Address (Full) http://redmine.kostik.net/redmine/issues/420
     hobby_ids = fields.Many2many('hr.hobby')
     military_colleague_ids = fields.Many2many(
         'hr.military_colleague')  # Friends list who working in Military,Police and Political and their Name, Position,Address
@@ -102,16 +104,17 @@ class hr_salary_rate(models.Model):
     http://redmine.kostik.net/redmine/issues/403
     """
     _name = 'hr.salary_rate'
-    name = fields.Char("Name", compute='compute_name')
+    name = fields.Char("Name", compute='compute_name', store=True)
 
     position = fields.Char("Position", required=True)
     salary_from = fields.Integer("from", required=True)
     salary_step = fields.Integer("step")
     salary_to = fields.Integer("to")
 
+    @api.depends('position', 'salary_from', 'salary_step', 'salary_to')
     def compute_name(self):
         try:
-            self.name = '{}:{}-{}-{}'.format(self.position, self.salary_from, self.salary_step, self.salary_to)
+            self.name = '{}: {}-{}-{}'.format(self.position, self.salary_from, self.salary_step, self.salary_to)
         except ValueError:
             self.name = '***'
 
@@ -232,38 +235,28 @@ class hr_form2(models.Model):
     http://redmine.kostik.net/redmine/issues/361
     """
     _name = "hr.form2"
-    name = fields.Char("Name", compute="compute_name")
-    position = fields.Char("Position", required=True)
+    name = fields.Char("Position", required=True)
     order_number = fields.Char("Order #")
     order_date = fields.Date("Order date")
     date = fields.Date("Effective date", required=True)
     employee_id = fields.Many2one('hr.employee', ondelete='cascade', string="Employee")
     salary_rate_id = fields.Many2one("hr.salary_rate", "Salary rate")
 
-    def compute_name(self):
-        try:
-            self.name = '{} @ {}'.format(self.position, self.date)
-        except ValueError:
-            self.name = '***'
 
+    image = fields.Binary('Attachment')
+    image_filename = fields.Char("Attachment filename")
 
 class hr_form3(models.Model):
     """
     http://redmine.kostik.net/redmine/issues/362
     """
     _name = "hr.form3"
-    name = fields.Char("Name", compute="compute_name")
+    name = fields.Text("Summary")
+    status = fields.Text("Status")
+
     order_number = fields.Char("Order #", required=True)
     order_date = fields.Date("Order date", required=True)
     employee_id = fields.Many2one('hr.employee', ondelete='cascade', string="Employee")
-    summary = fields.Text("Summary")
-    status = fields.Text("Status")
-
-    def compute_name(self):
-        try:
-            self.name = '"Order #{} @ {}'.format(self.order_number, self.order_date)
-        except ValueError:
-            self.name = '***'
 
     image = fields.Binary('Attachment')
     image_filename = fields.Char("Attachment filename")
@@ -290,10 +283,11 @@ class hr_educational_institution(models.Model):
     http://redmine.kostik.net/redmine/issues/364
     """
     _name = "hr.educational_institution"
-    name = fields.Char("Name", compute="compute_name")
+    name = fields.Char("Name", compute="compute_name", store=True)
     educational_institution = fields.Char("Educational institution", requied=True)
     location = fields.Char("Location", requied=True)
 
+    @api.depends('educational_institution', 'location')
     def compute_name(self):
         try:
             self.name = '{} @ {}'.format(self.educational_institution, self.location)
@@ -306,10 +300,11 @@ class hr_external_department(models.Model):
     http://redmine.kostik.net/redmine/issues/365
     """
     _name = "hr.external_department"
-    name = fields.Char("Name", compute="compute_name")
+    name = fields.Char("Name", compute="compute_name", store=True)
     external_department = fields.Char("Department", requied=True)
     location = fields.Char("Location", requied=True)
 
+    @api.depends('external_department', 'location')
     def compute_name(self):
         try:
             self.name = '{} @ {}'.format(self.external_department, self.location)
@@ -371,3 +366,6 @@ class hr_form8(models.Model):
 
     image = fields.Binary('Attachment')
     image_filename = fields.Char("Attachment filename")
+
+
+#class hr_inernationa_workgroup

@@ -1,6 +1,32 @@
 <?xml version="1.0" encoding="utf-8"?>
 <openerp>
     <data>
+
+        <record id="view_form_hr_form_2" model="ir.ui.view">
+            <field name="name">hr.form2.form</field>
+            <field name="model">hr.form2</field>
+            <field name="arch" type="xml">
+                <form>
+                    <sheet>
+                        <group name="group_top">
+                            <group name="group_left">
+                                <field name="name"/>
+
+                                <field name="order_number"/>
+                                <field name="order_date"/>
+
+                                <field name="salary_rate_id"/>
+                            </group>
+                            <group name="group_right">
+                                <field name="image_filename" invisible="1"/>
+                                <field widget="binary" name="image" filename="image_filename"/>
+                            </group>
+                        </group>
+                    </sheet>
+                </form>
+            </field>
+        </record>
+
         <record id="view_form_hr_form_3" model="ir.ui.view">
             <field name="name">hr.form3.form</field>
             <field name="model">hr.form3</field>
@@ -11,11 +37,12 @@
                             <group name="group_left">
                                 <field name="employee_id"/>
 
+                                <field name="name"/>
+                                <field name="status"/>
+
                                 <field name="order_number"/>
                                 <field name="order_date"/>
 
-                                <field name="summary"/>
-                                <field name="status"/>
                             </group>
                             <group name="group_right">
                                 <field name="image_filename" invisible="1"/>
@@ -180,7 +207,23 @@
                         <notebook>
                             <page name="public" string="Form 1">
                                 <group>
-                                    <group string="Contact Information">
+                                    <group>
+                                        <field name="race"/>
+                                        <field name="religion"/>
+                                        <field name="job_id"/>
+                                        <field name="salary_rate_id"/>
+                                        <field name="identification_id" groups="base.group_hr_user"
+                                               string="NRC Number"/>
+                                        <field name="qualification"/>
+
+                                        <field name="birthday"/>
+                                        <field name="place_of_birth_id"/>
+
+                                        <field name="distinctive_marks"/>
+                                        <field name="hair"/>
+                                        <field name="eyes"/>
+                                        <field name="height" placeholder="cm" widget="imperial_length"/>
+                                        <field name="weight" placeholder="lbs"/>
                                         <field name="address_home_id"
                                                context="{'show_address': 1}"
                                                options='{"always_reload": True, "highlight_first_line": True}'
@@ -191,54 +234,47 @@
                                                options='{"always_reload": True, "highlight_first_line": True}'
                                                string="Current Address"
                                         />
-                                        <field name="mobile_phone"/>
-                                        <field name="work_location"/>
-                                        <field name="work_email" widget="email"/>
-                                        <field name="work_phone"/>
-                                    </group>
-                                    <group string="Position">
-                                        <field name="department_id" on_change="onchange_department_id(department_id)"/>
-                                        <field name="job_id"/>
-                                        <field name="parent_id"/>
-                                        <!--<field name="coach_id"/>-->
-                                        <field name="salary_rate_id"/>
-                                        <field name="position_name_at_start" placeholder="started as civil staff"/>
-                                        <field name="date_started" placeholder="as civil staff"/>
-                                        <field name="military_record_ids"
-                                               context="{'default_employee_id': context.get('active_id')}"/>
-                                        <field name="distinction"/>
-                                        <field name="criminal_records"/>
-                                    </group>
-                                </group>
-
-                                <field name="notes" placeholder="Other Information ..." colspan="4"/>
-                                <!--</page>-->
-                                <!--<page string="Personal Information1" groups="base.group_hr_user">-->
-                                <group>
-                                    <group string="Citizenship &amp; Other Information">
-                                        <field name="country_id" options='{"no_open": True, "no_create": True}'/>
-                                        <field name="identification_id" groups="base.group_hr_user"
-                                               string="NRC Number"/>
-                                        <field name="passport_id" groups="base.group_hr_user"/>
-                                        <field name="race"/>
-                                        <field name="religion"/>
-                                    </group>
-                                    <group string="Status">
-                                        <field name="gender"/>
-                                        <field name="marital"/>
-                                    </group>
-                                    <group string="Birth">
-                                        <field name="birthday"/>
-                                        <field name="place_of_birth_id"/>
                                     </group>
                                     <group>
-                                        <field name="hair"/>
-                                        <field name="eyes"/>
-                                        <field name="height" placeholder="cm" widget="imperial_length"/>
-                                        <field name="weight" placeholder="lbs"/>
-                                    </group>
+                                        <field name="position_name_at_start" placeholder="started as civil staff"/>
+                                        <field name="date_started" placeholder="as civil staff"/>
 
+                                        <field name="recommender_id" string="Recommender"/>
+
+                                        <field name="previous_position_and_place"/>
+                                        <label for="military_record_ids"/>
+                                        <field name="military_record_ids" nolabel="1" colspan="2"
+                                               context="{'default_employee_id': context.get('active_id')}">
+                                            <tree>
+                                                <field name="name"/>
+                                                <field name="division"/>
+                                            </tree>
+                                        </field>
+                                        <field name="distinction"/>
+
+                                        <hr colspan="2"/>
+
+                                        <!-- not in the form -->
+
+                                        <field name="department_id" on_change="onchange_department_id(department_id)"/>
+                                        <field name="parent_id"/>
+
+
+                                        <field name="gender"/>
+                                        <field name="marital"/>
+
+                                        <field name="passport_id" groups="base.group_hr_user"/>
+                                        <field name="mobile_phone"/>
+                                        <!--<field name="work_location"/>-->
+                                        <field name="work_email" widget="email"/>
+                                        <field name="work_phone"/>
+                                        <!--<field name="coach_id"/>-->
+                                        <!--&lt;!&ndash;<group string="Citizenship &amp; Other Information">&ndash;&gt;-->
+                                        <!--&lt;!&ndash;<field name="country_id" options='{"no_open": True, "no_create": True}'/>&ndash;&gt;-->
+                                        <!-- not in the form end-->
+                                    </group>
                                 </group>
+
                                 <group>
                                     <field name="relative_ids"
                                            context="{'default_employee_id': context.get('active_id')}">
@@ -246,7 +282,21 @@
                                                 <field name="name"/>
                                                 <field name="relative_name"/>
                                             </tree>
-                                        </field>
+                                    </field>
+
+                                    <field name="political_activity"/>
+                                    <field name="hobby_ids" string="Hobbies" widget="many2many_tags"
+                                           placeholder="e.g. Amateur Radio, Acting, Baton Twirling, Board Games, Calligraphy, Candle Making, Computer Programming, Coffee Roasting..."/>
+
+                                    <field name="military_colleague_ids" string="Military colleagues">
+                                        <tree>
+                                            <field name="name"/>
+                                            <field name="position"/>
+                                        </tree>
+                                    </field>
+                                    <field name="criminal_records"/>
+                                    <field name="recommender_ids" string="Recommenders"/>
+
                                     <field name="club_record_ids" string="Club and Organizations"
                                            context="{'default_employee_id': context.get('active_id')}">
                                         <tree>
@@ -254,38 +304,21 @@
                                             <field name="club_id"/>
                                         </tree>
                                     </field>
-                                    <field name="military_colleague_ids" string="Military colleagues">
-                                        <tree>
-                                            <field name="name"/>
-                                            <field name="position"/>
-                                        </tree>
-                                    </field>
-
-                                    <field name="political_activity"/>
-
-                                    <field name="recommender_ids" string="Recommender">
-                                        <tree>
-                                            <field name="name"/>
-                                            <field name="position"/>
-                                        </tree>
-                                    </field>
-
-                                    <field name="hobby_ids" string="Hobbies" widget="many2many_tags"
-                                           placeholder="e.g. Amateur Radio, Acting, Baton Twirling, Board Games, Calligraphy, Candle Making, Computer Programming, Coffee Roasting..."/>
                                 </group>
 
-
+                                <field name="notes" placeholder="Other Information ..." colspan="4"/>
                             </page>
                             <page string="Form 2" groups="base.group_hr_user">
                                 <group string="Civil service">
                                     <field name="form2_id" context="{'default_employee_id': context.get('active_id')}"
                                            nolabel="1">
                                         <tree>
-                                            <field name="position"/>
+                                            <field name="name"/>
+                                            <field name="salary_rate_id"/>
                                             <field name="order_number"/>
                                             <field name="order_date"/>
                                             <field name="date"/>
-                                            <field name="salary_rate_id"/>
+                                            <field widget="binary" name="image" filename="image_filename"/>
                                         </tree>
                                     </field>
                                 </group>
@@ -295,10 +328,10 @@
                                     <field name="form3_id" context="{'default_employee_id': context.get('active_id')}"
                                            nolabel="1">
                                         <tree>
+                                            <field name="name"/>
+                                            <field name="status"/>
                                             <field name="order_number"/>
                                             <field name="order_date"/>
-                                            <field name="summary"/>
-                                            <field name="status"/>
                                             <field widget="binary" name="image" filename="image_filename"/>
                                         </tree>
                                     </field>
@@ -355,10 +388,10 @@
                                     <field name="form7_id" context="{'default_employee_id': context.get('active_id')}"
                                            nolabel="1">
                                         <tree>
-                                            <field name="name"/>
-                                            <field name="country_id"/>
                                             <field name="date_from"/>
                                             <field name="date_to"/>
+                                            <field name="country_id"/>
+                                            <field name="name"/>
                                             <field widget="binary" name="image" filename="image_filename"/>
                                         </tree>
                                     </field>
