@@ -197,7 +197,6 @@
                                         <field name="eyes"/>
                                         <field name="height" placeholder="cm" widget="imperial_length"/>
                                         <field name="weight" placeholder="lbs"/>
-
                                         <field name="address_home_id"
                                                context="{'show_address': 1}"
                                                options='{"always_reload": True, "highlight_first_line": True}'
@@ -216,9 +215,17 @@
                                         <!-- Supporter for the jobs - a new field from #453-->
 
                                         <field name="previous_position_and_place"/>
-                                        <field name="military_record_ids"
-                                               context="{'default_employee_id': context.get('active_id')}"/>
+                                        <label for="military_record_ids"/>
+                                        <field name="military_record_ids" nolabel="1" colspan="2"
+                                               context="{'default_employee_id': context.get('active_id')}">
+                                            <tree>
+                                                <field name="name"/>
+                                                <field name="division"/>
+                                            </tree>
+                                        </field>
                                         <field name="distinction"/>
+
+                                        <hr colspan="2"/>
 
                                         <!-- not in the form -->
 
