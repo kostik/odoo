@@ -59,7 +59,9 @@ class hr_mis(models.Model):
     position_name_at_start = fields.Char("Position started", help="Position started as civil staff")
     date_started = fields.Date("Date started", help="Date started as civil staff")
 
-    # Supporter for the jobs http://redmine.kostik.net/redmine/issues/417
+
+    recommender_id = fields.Many2one('hr.recommender',
+                                       string="Recommender") # Supporter for the jobs http://redmine.kostik.net/redmine/issues/417
 
     previous_position_and_place = fields.Char("Previous position and place")
     military_record_ids = fields.One2many('hr.military_record', 'employee_id', string="Military records")
@@ -73,7 +75,7 @@ class hr_mis(models.Model):
         "Political Activity")  # Activity,Rank and Duties for Political in Student life http://redmine.kostik.net/redmine/issues/419
 
     recommender_ids = fields.Many2many('hr.recommender',
-                                       string="Recommender")  # Supporter Name (Headmaster, Administrator,Police Officer,Military Officer’s Name, Address (Full) http://redmine.kostik.net/redmine/issues/420
+                                       string="Recommenders")  # Supporter Name (Headmaster, Administrator,Police Officer,Military Officer’s Name, Address (Full) http://redmine.kostik.net/redmine/issues/420
     hobby_ids = fields.Many2many('hr.hobby')
     military_colleague_ids = fields.Many2many(
         'hr.military_colleague')  # Friends list who working in Military,Police and Political and their Name, Position,Address

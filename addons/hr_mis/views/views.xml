@@ -239,7 +239,7 @@
                                         <field name="position_name_at_start" placeholder="started as civil staff"/>
                                         <field name="date_started" placeholder="as civil staff"/>
 
-                                        <!-- Supporter for the jobs - a new field from #453-->
+                                        <field name="recommender_id" string="Recommender"/>
 
                                         <field name="previous_position_and_place"/>
                                         <label for="military_record_ids"/>
@@ -295,7 +295,7 @@
                                         </tree>
                                     </field>
                                     <field name="criminal_records"/>
-                                    <field name="recommender_ids" string="Recommender"/>
+                                    <field name="recommender_ids" string="Recommenders"/>
 
                                     <field name="club_record_ids" string="Club and Organizations"
                                            context="{'default_employee_id': context.get('active_id')}">
