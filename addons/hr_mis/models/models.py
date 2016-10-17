@@ -248,18 +248,12 @@ class hr_form3(models.Model):
     http://redmine.kostik.net/redmine/issues/362
     """
     _name = "hr.form3"
-    name = fields.Char("Name", compute="compute_name")
+    name = fields.Text("Summary")
+    status = fields.Text("Status")
+
     order_number = fields.Char("Order #", required=True)
     order_date = fields.Date("Order date", required=True)
     employee_id = fields.Many2one('hr.employee', ondelete='cascade', string="Employee")
-    summary = fields.Text("Summary")
-    status = fields.Text("Status")
-
-    def compute_name(self):
-        try:
-            self.name = '"Order #{} @ {}'.format(self.order_number, self.order_date)
-        except ValueError:
-            self.name = '***'
 
     image = fields.Binary('Attachment')
     image_filename = fields.Char("Attachment filename")
