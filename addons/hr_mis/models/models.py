@@ -102,16 +102,17 @@ class hr_salary_rate(models.Model):
     http://redmine.kostik.net/redmine/issues/403
     """
     _name = 'hr.salary_rate'
-    name = fields.Char("Name", compute='compute_name')
+    name = fields.Char("Name", compute='compute_name', store=True)
 
     position = fields.Char("Position", required=True)
     salary_from = fields.Integer("from", required=True)
     salary_step = fields.Integer("step")
     salary_to = fields.Integer("to")
 
+    @api.depends('position', 'salary_from', 'salary_step', 'salary_to')
     def compute_name(self):
         try:
-            self.name = '{}:{}-{}-{}'.format(self.position, self.salary_from, self.salary_step, self.salary_to)
+            self.name = '{}: {}-{}-{}'.format(self.position, self.salary_from, self.salary_step, self.salary_to)
         except ValueError:
             self.name = '***'
 
@@ -280,10 +281,11 @@ class hr_educational_institution(models.Model):
     http://redmine.kostik.net/redmine/issues/364
     """
     _name = "hr.educational_institution"
-    name = fields.Char("Name", compute="compute_name")
+    name = fields.Char("Name", compute="compute_name", store=True)
     educational_institution = fields.Char("Educational institution", requied=True)
     location = fields.Char("Location", requied=True)
 
+    @api.depends('educational_institution', 'location')
     def compute_name(self):
         try:
             self.name = '{} @ {}'.format(self.educational_institution, self.location)
@@ -296,10 +298,11 @@ class hr_external_department(models.Model):
     http://redmine.kostik.net/redmine/issues/365
     """
     _name = "hr.external_department"
-    name = fields.Char("Name", compute="compute_name")
+    name = fields.Char("Name", compute="compute_name", store=True)
     external_department = fields.Char("Department", requied=True)
     location = fields.Char("Location", requied=True)
 
+    @api.depends('external_department', 'location')
     def compute_name(self):
         try:
             self.name = '{} @ {}'.format(self.external_department, self.location)
