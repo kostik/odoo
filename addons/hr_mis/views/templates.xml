@@ -3,7 +3,7 @@
     <data>
         <template id="assets_backend" name="hr_mis_assets" inherit_id="web.assets_backend">
             <xpath expr="." position="inside">
-                <!--<link rel="stylesheet" href="/hr_mis/static/src/css/hr_mis.css"/>-->
+                <link rel="stylesheet" href="/hr_mis/static/src/css/hr_mis.css"/>
                 <script type="text/javascript" src="/hr_mis/static/src/js/hr_mis.js"/>
             </xpath>
         </template>
