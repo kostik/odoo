@@ -239,6 +239,10 @@ class hr_form2(models.Model):
     employee_id = fields.Many2one('hr.employee', ondelete='cascade', string="Employee")
     salary_rate_id = fields.Many2one("hr.salary_rate", "Salary rate")
 
+
+    image = fields.Binary('Attachment')
+    image_filename = fields.Char("Attachment filename")
+
 class hr_form3(models.Model):
     """
     http://redmine.kostik.net/redmine/issues/362
