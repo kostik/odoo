@@ -18,6 +18,30 @@
             </field>
         </record>
 
+        <record id="view_form_hr_military_record" model="ir.ui.view">
+            <field name="name">hr.military_record.form</field>
+            <field name="model">hr.military_record</field>
+            <field name="arch" type="xml">
+                <form>
+                    <sheet>
+                        <group>
+                            <field name="name"/>
+
+                            <field name="date_joined"/>
+                            <field name="date_resigned"/>
+                            <field name="reason_for_leaving"/>
+
+                            <field name="division"/>
+                            <field name="summary"/>
+
+                            <field name="pension"/>
+                        </group>
+                    </sheet>
+                </form>
+            </field>
+        </record>
+
+
         <record id="view_form_hr_form_2" model="ir.ui.view">
             <field name="name">hr.form2.form</field>
             <field name="model">hr.form2</field>
