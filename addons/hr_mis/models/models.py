@@ -193,6 +193,8 @@ class hr_relative(models.Model):
         ], string="Relative", required=True)
 
     relative_name = fields.Char("Name")
+    birth_date = fields.Date("Birth date")
+    NRC = fields.Char(string="NRC Number", help="up to 30 characters", size=30)
     race = fields.Selection(RACE_CHOICES, string="Race", default=10)
     religion = fields.Selection(RELIGION_CHOICES, string="Religion", default=10)
     occupation = fields.Char("Occupation")
