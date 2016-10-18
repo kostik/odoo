@@ -52,7 +52,7 @@ class hr_mis(models.Model):
 
     salary_rate_id = fields.Many2one("hr.salary_rate", "Salary rate")
 
-    identification_id = fields.Char(string="NRC Number", help="1-15 characters", size=15)
+    identification_id = fields.Char(string="NRC Number", help="up to 30 characters", size=30)
     qualification = fields.Char("Qualification")
 
     place_of_birth_id = fields.Many2one("hr.birth_place", "Place of birth")
