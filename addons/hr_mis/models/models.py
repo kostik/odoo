@@ -78,7 +78,7 @@ class hr_mis(models.Model):
                                        string="Recommenders")  # Supporter Name (Headmaster, Administrator,Police Officer,Military Officer’s Name, Address (Full) http://redmine.kostik.net/redmine/issues/420
     hobby_ids = fields.Many2many('hr.hobby')
     military_colleague_ids = fields.Many2many(
-        'hr.military_colleague')  # Friends list who working in Military,Police and Political and their Name, Position,Address
+        'hr.military_colleague', help="Friends list who is in the Military, Police:  their names, positions, addresses")  # Friends list who working in Military,Police and Political and their Name, Position,Address
 
     club_record_ids = fields.One2many('hr.club_record', 'employee_id', string="Club and Organizations")
 
