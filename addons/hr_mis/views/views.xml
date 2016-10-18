@@ -1,6 +1,22 @@
 <?xml version="1.0" encoding="utf-8"?>
 <openerp>
     <data>
+        <record id="view_form_hr_salary_rate" model="ir.ui.view">
+            <field name="name">hr.salary_rate.form</field>
+            <field name="model">hr.salary_rate</field>
+            <field name="arch" type="xml">
+                <form>
+                    <sheet>
+                        <group>
+                            <field name="position"/>
+                            <field name="salary_from"/>
+                            <field name="salary_step"/>
+                            <field name="salary_to"/>
+                        </group>
+                    </sheet>
+                </form>
+            </field>
+        </record>
 
         <record id="view_form_hr_form_2" model="ir.ui.view">
             <field name="name">hr.form2.form</field>
