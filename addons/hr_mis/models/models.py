@@ -183,11 +183,13 @@ class hr_relative(models.Model):
         [
             ("Father", "Father"),
             ("Mother", "Mother"),
+            ("Child", "Child"),
+            ("Sibling", "Sibling"),
             ("Spouse", "Spouse"),
             ("Spouse's Father", "Spouse's Father"),
             ("Spouse's Mother", "Spouse's Mother"),
-            ("Child", "Child"),
-            ("Sibling", "Sibling")
+            ("Spouse's Sibling", "Spouse's Sibling")
+
         ], string="Relative", required=True)
 
     relative_name = fields.Char("Name")
