@@ -36,7 +36,7 @@ class hr_mis(models.Model):
     _name = 'hr.employee'
     _inherit = 'hr.employee'
 
-    personal_number = fields.Char('Personal Number', required=True, help="Personal number in the MCD")
+    personal_number = fields.Char('Personal Number', help="Personal number in the MCD")
     other_name = fields.Char('Other Name')
     distinctive_marks = fields.Char('Distinctive Marks')
 
