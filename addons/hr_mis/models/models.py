@@ -114,7 +114,7 @@ class hr_salary_rate(models.Model):
     @api.depends('position', 'salary_from', 'salary_step', 'salary_to')
     def compute_name(self):
         try:
-            self.name = '{}: {}-{}-{}'.format(self.position, self.salary_from, self.salary_step, self.salary_to)
+            self.name = u'{}: {}-{}-{}'.format(self.position, self.salary_from, self.salary_step, self.salary_to)
         except ValueError:
             self.name = '***'
 
@@ -290,7 +290,7 @@ class hr_educational_institution(models.Model):
     @api.depends('educational_institution', 'location')
     def compute_name(self):
         try:
-            self.name = '{} @ {}'.format(self.educational_institution, self.location)
+            self.name = u'{} @ {}'.format(self.educational_institution, self.location)
         except ValueError:
             self.name = '***'
 
@@ -307,7 +307,7 @@ class hr_external_department(models.Model):
     @api.depends('external_department', 'location')
     def compute_name(self):
         try:
-            self.name = '{} @ {}'.format(self.external_department, self.location)
+            self.name = u'{} @ {}'.format(self.external_department, self.location)
         except ValueError:
             self.name = '***'
 
