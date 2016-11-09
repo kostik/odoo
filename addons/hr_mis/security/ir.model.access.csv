@@ -1,2 +1,19 @@
 id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
-access_hr_mis_hr_mis,hr_mis.hr_mis,model_hr_mis_hr_mis,,1,0,0,0
+access_hr_relative,hr.relative user,model_hr_relative,base.group_hr_user,1,1,1,1
+access_hr_form2,hr_form2 user,model_hr_form2,base.group_hr_user,1,1,1,1
+access_hr_form3,hr_form3 user,model_hr_form3,base.group_hr_user,1,1,1,1
+access_hr_form4,hr_form4 user,model_hr_form4,base.group_hr_user,1,1,1,1
+access_hr_form5,hr_form5 user,model_hr_form5,base.group_hr_user,1,1,1,1
+access_hr_form6,hr_form6 user,model_hr_form6,base.group_hr_user,1,1,1,1
+access_hr_form7,hr_form7 user,model_hr_form7,base.group_hr_user,1,1,1,1
+access_hr_form8,hr_form8 user,model_hr_form8,base.group_hr_user,1,1,1,1
+access_hr_club_record,hr_club_record user,model_hr_club_record,base.group_hr_user,1,1,1,1
+access_hr_military_record,hr_military_record user,model_hr_military_record,base.group_hr_user,1,1,1,1
+access_hr_military_colleague,hr_military_colleague user,model_hr_military_colleague,base.group_hr_user,1,1,1,1
+access_hr_salary_rate,hr_salary_rate user,model_hr_salary_rate,base.group_hr_user,1,1,1,1
+access_hr_birth_place,hr_birth_place user,model_hr_birth_place,base.group_hr_user,1,1,1,1
+access_hr_club,hr_club user,model_hr_club,base.group_hr_user,1,1,1,1
+access_hr_hobby,hr_hobby user,model_hr_hobby,base.group_hr_user,1,1,1,1
+access_hr_recommender,hr_recommender user,model_hr_recommender,base.group_hr_user,1,1,1,1
+access_hr_educational_institution,hr_educational_institution user,model_hr_educational_institution,base.group_hr_user,1,1,1,1
+access_hr_external_department,hr_external_department user,model_hr_external_department,base.group_hr_user,1,1,1,1
