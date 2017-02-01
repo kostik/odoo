@@ -278,7 +278,7 @@
                                         <field name="distinctive_marks"/>
                                         <field name="hair"/>
                                         <field name="eyes"/>
-                                        <field name="height" placeholder="cm" widget="imperial_length"/>
+                                        <field name="height" placeholder="176 cm OR 6 2.5 for 6 feet 2.5 inches" widget="imperial_length"/>
                                         <field name="weight" placeholder="lbs"/>
                                         <field name="address_home_id"
                                                context="{'show_address': 1}"
