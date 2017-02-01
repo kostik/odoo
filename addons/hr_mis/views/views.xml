@@ -489,5 +489,70 @@
         </record>
 
 
+        <!-- Educational institutions -->
+        <record id="view_educational_institution_form" model="ir.ui.view">
+            <field name="name">hr.educational_institution.form</field>
+            <field name="model">hr.educational_institution</field>
+            <field name="arch" type="xml">
+                <form string="Educational institutions">
+                    <group>
+                        <field name="educational_institution"/>
+                        <field name="location"/>
+                    </group>
+                </form>
+            </field>
+        </record>
+        <record id="view_clubs_list" model="ir.ui.view">
+            <field name="name">hr.educational_institution.list</field>
+            <field name="model">hr.educational_institution</field>
+            <field eval="8" name="priority"/>
+            <field name="arch" type="xml">
+                <tree string="Educational institutions">
+                    <field name="name"/>
+                </tree>
+            </field>
+        </record>
+        <record id="open_view_educational_institution_form" model="ir.actions.act_window">
+            <field name="name">Educational institutions</field>
+            <field name="res_model">hr.educational_institution</field>
+            <field name="view_type">form</field>
+            <field name="view_mode">tree,form</field>
+        </record>
+        <menuitem action="open_view_educational_institution_form" id="menu_view_educational_institution_form"
+                  parent="hr.menu_human_resources_configuration" sequence="1" groups="base.group_no_one"/>
+
+
+        <!-- Clubs -->
+        <record id="view_clubs_form" model="ir.ui.view">
+            <field name="name">hr.club.form</field>
+            <field name="model">hr.club</field>
+            <field name="arch" type="xml">
+                <form string="Clubs">
+                    <group>
+                        <field name="name"/>
+                    </group>
+                </form>
+            </field>
+        </record>
+        <record id="view_clubs_list" model="ir.ui.view">
+            <field name="name">hr.club.list</field>
+            <field name="model">hr.club</field>
+            <field eval="8" name="priority"/>
+            <field name="arch" type="xml">
+                <tree string="Clubs">
+                    <field name="name"/>
+                </tree>
+            </field>
+        </record>
+        <record id="open_view_club_form" model="ir.actions.act_window">
+            <field name="name">Clubs</field>
+            <field name="res_model">hr.club</field>
+            <field name="view_type">form</field>
+            <field name="view_mode">tree,form</field>
+        </record>
+        <menuitem action="open_view_club_form" id="menu_view_club_form"
+                  parent="hr.menu_human_resources_configuration" sequence="1" groups="base.group_no_one"/>
+
+
     </data>
 </openerp>
