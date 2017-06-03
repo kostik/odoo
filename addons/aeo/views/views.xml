@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?>
+<openerp>
+    <data>
+        <!-- Top menu item -->
+        <menuitem name="AEOs"
+            id="menu_aeo"
+            groups="aeo_group"
+            sequence="40"/>
+
+            <menuitem id="menu_aeo_config" name="Configuration" parent="menu_aeo"
+            sequence="100" groups="base.group_configuration"/>
+            <menuitem id="menu_config_address_book" parent="menu_aeo_config" name="AEO" sequence="40" groups="aeo_group" />
+      <!--groups="group_system"-->
+
+    </data>
+</openerp>
+
+
+<!--<openerp>-->
+  <!--<data>-->
+    <!--&lt;!&ndash; explicit list view definition &ndash;&gt;-->
+    <!--&lt;!&ndash;-->
+    <!--<record model="ir.ui.view" id="aeo.list">-->
+      <!--<field name="name">aeo list</field>-->
+      <!--<field name="model">aeo.aeo</field>-->
+      <!--<field name="arch" type="xml">-->
+        <!--<tree>-->
+          <!--<field name="name"/>-->
+          <!--<field name="value"/>-->
+          <!--<field name="value2"/>-->
+        <!--</tree>-->
+      <!--</field>-->
+    <!--</record>-->
+    <!--&ndash;&gt;-->
+
+    <!--&lt;!&ndash; actions opening views on models &ndash;&gt;-->
+    <!--&lt;!&ndash;-->
+    <!--<record model="ir.actions.act_window" id="aeo.action_window">-->
+      <!--<field name="name">aeo window</field>-->
+      <!--<field name="res_model">aeo.aeo</field>-->
+      <!--<field name="view_mode">tree,form</field>-->
+    <!--</record>-->
+    <!--&ndash;&gt;-->
+
+    <!--&lt;!&ndash; server action to the one above &ndash;&gt;-->
+    <!--&lt;!&ndash;-->
+    <!--<record model="ir.actions.server" id="aeo.action_server">-->
+      <!--<field name="name">aeo server</field>-->
+      <!--<field name="model_id" ref="model_aeo_aeo"/>-->
+      <!--<field name="code">-->
+        <!--action = {-->
+          <!--"type": "ir.actions.act_window",-->
+          <!--"view_mode": "tree,form",-->
+          <!--"res_model": self._name,-->
+        <!--}-->
+      <!--</field>-->
+    <!--</record>-->
+    <!--&ndash;&gt;-->
+
+    <!--&lt;!&ndash; Top menu item &ndash;&gt;-->
+    <!--<menuitem name="AEO" id="aeo.menu_root" sequence="450"/>-->
+    <!--&lt;!&ndash; menu categories &ndash;&gt;-->
+    <!--<menuitem name="Menu 1" id="aeo.menu_1" parent="aeo.menu_root"/>-->
+    <!--<menuitem name="Menu 2" id="aeo.menu_2" parent="aeo.menu_root"/>-->
+
+    <!--&lt;!&ndash; actions &ndash;&gt;-->
+    <!--&lt;!&ndash;-->
+    <!--<menuitem name="List" id="aeo.menu_1_list" parent="aeo.menu_1"-->
+              <!--action="aeo.action_window"/>-->
+    <!--<menuitem name="Server to list" id="aeo" parent="aeo.menu_2"-->
+              <!--action="aeo.action_server"/>-->
+    <!--&ndash;&gt;-->
+    <!---->
+    <!---->
+  <!--</data>-->
+<!--</openerp>-->
