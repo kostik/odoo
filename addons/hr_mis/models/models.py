@@ -217,6 +217,7 @@ class hr_club_record(models.Model):
 
 class hr_hobby(models.Model):
     _name = "hr.hobby"
+    _description = "HR Department"
     name = fields.Char("Hobby", required=True)
 
 

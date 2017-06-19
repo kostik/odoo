@@ -268,8 +268,7 @@
                                         <field name="religion"/>
                                         <field name="job_id"/>
                                         <field name="salary_rate_id"/>
-                                        <field name="identification_id" groups="base.group_hr_user"
-                                               string="NRC Number"/>
+                                        <field name="identification_id" groups="base.group_hr_user"/>
                                         <field name="qualification"/>
 
                                         <field name="birthday"/>
@@ -295,7 +294,7 @@
                                         <field name="position_name_at_start" placeholder="started as civil staff"/>
                                         <field name="date_started" placeholder="as civil staff"/>
 
-                                        <field name="recommender_id" string="Recommender"/>
+                                        <field name="recommender_id"/>
 
                                         <field name="previous_position_and_place"/>
                                         <label for="military_record_ids"/>
@@ -341,19 +340,19 @@
                                     </field>
 
                                     <field name="political_activity"/>
-                                    <field name="hobby_ids" string="Hobbies" widget="many2many_tags"
+                                    <field name="hobby_ids" widget="many2many_tags"
                                            placeholder="e.g. Amateur Radio, Acting, Baton Twirling, Board Games, Calligraphy, Candle Making, Computer Programming, Coffee Roasting..."/>
 
-                                    <field name="military_colleague_ids" string="Military colleagues">
+                                    <field name="military_colleague_ids">
                                         <tree>
                                             <field name="name"/>
                                             <field name="position"/>
                                         </tree>
                                     </field>
                                     <field name="criminal_records"/>
-                                    <field name="recommender_ids" string="Recommenders"/>
+                                    <field name="recommender_ids"/>
 
-                                    <field name="club_record_ids" string="Club and Organizations"
+                                    <field name="club_record_ids"
                                            context="{'default_employee_id': context.get('active_id')}">
                                         <tree>
                                             <field name="name"/>
