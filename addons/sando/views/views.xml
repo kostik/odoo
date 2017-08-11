@@ -1,0 +1,204 @@
+<openerp>
+    <data>
+        <!-- explicit list view definition -->
+
+        <record model="ir.ui.view" id="sando.list">
+            <field name="name">O&amp;S records</field>
+            <field name="model">sando.sando</field>
+            <field name="arch" type="xml">
+                <tree>
+                    <field name="name"/>
+                    <field name="offence_datetime"/>
+                </tree>
+            </field>
+        </record>
+
+
+        <record model="ir.ui.view" id="sando.sando_form">
+            <field name="name">sando.form</field>
+            <field name="model">sando.sando</field>
+            <field name="arch" type="xml">
+                <form>
+                    <header>
+                    </header>
+                    <sheet>
+                        <div class="oe_button_box" name="button_box">
+                            <button name="toggle_active" type="object" groups="base.group_no_one"
+                                    class="oe_stat_button" icon="fa-archive">
+                                <field name="active" widget="boolean_button"
+                                       options='{"terminology": "archive"}'/>
+                            </button>
+                        </div>
+                        <group>
+                            <group>
+                                <field name="case_number"/>
+                                <field name="offence_datetime"/>
+                                <field name="offence_code"/>
+                                <!--<field name="category_of_case"/>-->
+                                <field name="profile"/>
+                                <field name="customs_house"/>
+                                <field name="case_officer"/>
+                                <field name="legal_act"/>
+                                <field name="case_description"/>
+                                <field name="route"/>
+
+                                <hr/><newline/>
+
+                                <field name="offender_name"/>
+                                <field name="offender_id_number"/>
+                                <field name="offender_address"/>
+                                <field name="offender_phone" widget="phone"/>
+                                <field name="offender_email" widget="email" on_change="ValidateEmail(offender_email)"/>
+
+                                <hr/><newline/>
+
+                                <field name="importer_or_exporter_name"/>
+                                <field name="importer_or_exporter_tin_number"/>
+                                <field name="importer_or_exporter_id_number"/>
+                                <field name="importer_or_exporter_address"/>
+                                <field name="importer_or_exporter_phone" widget="phone"/>
+                                <field name="importer_or_exporter_email" widget="email"
+                                       on_change="ValidateEmail(importer_or_exporter_email)"/>
+                            </group>
+                            <group>
+                            </group>
+                        </group>
+                        <group col="1">
+                            <field name="description_of_goods"/>
+                        </group>
+                        <hr/>
+                        <group col="1">
+                            <field name="category_id" widget="many2many_tags" placeholder="Tags..."/>
+                        </group>
+                    </sheet>
+                    <sheet>
+                        <div class="oe_chatter">
+                            <field name="message_follower_ids" widget="mail_followers"/>
+                            <field name="message_ids" widget="mail_thread"/>
+                        </div>
+                    </sheet>
+                </form>
+            </field>
+        </record>
+
+
+        <record id="view_sando_sando_filter" model="ir.ui.view">
+            <field name="name">sando.sando.select</field>
+            <field name="model">sando.sando</field>
+            <field name="arch" type="xml">
+                <search string="Search O&amp;S">
+                    <!--<field name="name"-->
+                    <!--filter_domain="['|','|',('display_name','ilike',self),('ref','=',self),('email','ilike',self)]"/>-->
+                    <filter help="My records" domain="[('create_uid','=',uid)]"/>
+                    <separator/>
+                    <filter string="Archived" name="inactive" domain="[('active','=',False)]"/>
+                    <separator/>
+                    <field name="category_id" string="Tag" filter_domain="[('category_id','ilike', self)]"/>
+                    <field name="create_uid"/>
+                    <field name="description_of_goods"/>
+                    <field name="case_description"/>
+                    <field name="route"/>
+                    <field name="offender_name"/>
+                    <field name="offender_id_number"/>
+                    <field name="offender_address"/>
+                    <field name="offender_phone"/>
+                    <field name="offender_email"/>
+                    <field name="importer_or_exporter_name"/>
+                </search>
+            </field>
+        </record>
+
+
+        <!-- actions opening views on models -->
+
+        <record model="ir.actions.act_window" id="sando.action_window">
+            <field name="name">O&amp;S records</field>
+            <field name="res_model">sando.sando</field>
+            <field name="view_mode">tree,form</field>
+            <field name="view_type">form</field>
+            <field name="help" type="html">
+                <p class="oe_view_nocontent_create">
+                    Click to add a record
+                </p>
+            </field>
+        </record>
+
+
+        <!-- server action to the one above -->
+        <!--
+        <record model="ir.actions.server" id="sando.action_server">
+          <field name="name">sando server</field>
+          <field name="model_id" ref="model_sando_sando"/>
+          <field name="code">
+            action = {
+              "type": "ir.actions.act_window",
+              "view_mode": "tree,form",
+              "res_model": self._name,
+            }
+          </field>
+        </record>
+        -->
+
+        <!-- Top menu item -->
+
+        <menuitem name="O&amp;S" id="sando.menu_root"/>
+
+        <!-- menu categories -->
+
+
+        <menuitem name="O&amp;S records" id="sando.menu_1_list" parent="sando.menu_root"
+                  action="sando.action_window"/>
+        <!--<menuitem name="Server to list" id="sando" parent="sando.menu_2"-->
+        <!--action="sando.action_server"/>-->
+
+
+        <!-- Categories -->
+        <record id="view_sando_category_form" model="ir.ui.view">
+            <field name="name">O&amp;S Tags</field>
+            <field name="model">sando.category</field>
+            <field name="arch" type="xml">
+                <form string="O&amp;S Tag">
+                    <group col="4">
+                        <field name="name"/>
+                        <field name="active"/>
+                        <field name="parent_id"/>
+                    </group>
+                </form>
+            </field>
+        </record>
+        <record id="view_sando_category_list" model="ir.ui.view">
+            <field name="name">O&amp;S Tags</field>
+            <field name="model">sando.category</field>
+            <field eval="6" name="priority"/>
+            <field name="arch" type="xml">
+                <tree string="Samp;O Tags">
+                    <field name="complete_name"/>
+                </tree>
+            </field>
+        </record>
+
+        <record id="action_sando_category_form" model="ir.actions.act_window">
+            <field name="name">O&amp;S Tags</field>
+            <field name="type">ir.actions.act_window</field>
+            <field name="res_model">sando.category</field>
+            <field name="view_type">form</field>
+            <field name="help" type="html">
+                <p class="oe_view_nocontent_create">
+                    Click to create a new O&amp;S tag.
+                </p>
+                <p>
+                    Manage O&amp;S tags to better classify them for tracking and analysis purposes.
+                    An O&amp;S record may have several categories.
+                </p>
+            </field>
+        </record>
+
+        <menuitem id="sando_menu_config" name="Configuration" parent="sando.menu_root"
+                  sequence="100" groups="base.group_configuration"/>
+
+        <menuitem action="action_sando_category_form" id="menu_sando_category_form" name="O&amp;O Records Tags"
+                  sequence="1"
+                  parent="sando_menu_config" groups="base.group_configuration"/>
+
+    </data>
+</openerp>
