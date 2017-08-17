@@ -36,26 +36,25 @@
                         </div>
                         <group col="1">
                             <group>
-                                <field name="case_number"/>
-                                <field name="offence_datetime"/>
-                                <field name="offence_code"/>
-                                <field name="profile"/>
-                                <field name="customs_house"/>
-                                <field name="case_officer"/>
-                                <field name="legal_act"/>
-                                <field name="case_description"/>
-                                <field name="route"/>
+                                <field name="case_number" required="True"/>
+                                <field name="offence_datetime" required="True"/>
+                                <field name="offence_code" required="True"/>
+                                <field name="profile" required="True"/>
+                                <field name="customs_house" required="True"/>
+                                <field name="case_officer" required="True"/>
+                                <field name="legal_act" required="True"/>
+                                <field name="case_description" required="True"/>
+                                <field name="route" required="True"/>
 
                                 <hr/>
                                 <newline/>
 
-                                <field name="offender_name"/>
-                                <field name="offender_id_number"/>
-                                <field name="offender_address"/>
-                                <field name="offender_phone" widget="phone"/>
+                                <field name="offender_name" required="True"/>
+                                <field name="offender_id_number" required="True"/>
+                                <field name="offender_address" required="True"/>
+                                <field name="offender_phone" widget="phone" required="True"/>
                                 <field name="offender_email" widget="email"
                                        on_change="ValidateEmail(offender_email)"/>
-
                                 <hr/>
                                 <newline/>
 
@@ -114,20 +113,20 @@
                         <group col="1">
                             <group>
                                 <field name="harmonised_system_code"/>
-                                <field name="description_of_goods"/>
-                                <field name="country_of_origin"/>
-                                <field name="country_of_departure"/>
-                                <field name="country_of_destination"/>
-                                <field name="weight_declared"/>
+                                <field name="description_of_goods" required="True"/>
+                                <field name="country_of_origin" required="True"/>
+                                <field name="country_of_departure" required="True"/>
+                                <field name="country_of_destination" required="True"/>
+                                <field name="weight_declared" required="True"/>
                                 <field name="weight_actual"/>
-                                <field name="number_of_packages_declaration"/>
+                                <field name="number_of_packages_declaration" required="True"/>
                                 <field name="number_of_packages_actual"/>
-                                <field name="currency_id"/>
-                                <field name="value_declared"/>
+                                <field name="currency_id" required="True"/>
+                                <field name="value_declared" required="True"/>
                                 <field name="value_actual"/>
                                 <field name="additional_duties"/>
-                                <field name="declaration_number"/>
-                                <field name="customs_regime_code"/>
+                                <field name="declaration_number" required="True"/>
+                                <field name="customs_regime_code" required="True"/>
                                 <group>
                                     <group>
                                         <field name="seized_goods"/>
@@ -140,7 +139,7 @@
                             </group>
                             <hr/>
                             <group col="1">
-                                <field name="inspection_result"/>
+                                <field name="inspection_result" required="True"/>
                             </group>
                         </group>
                         <hr/>
@@ -232,6 +231,18 @@
             </field>
         </record>
 
+        <record model="ir.actions.act_window" id="sando.i_action_window">
+            <field name="name">O&amp;S intelligence reports</field>
+            <field name="res_model">sando.intelligence</field>
+            <field name="view_mode">tree,form</field>
+            <field name="view_type">form</field>
+            <field name="help" type="html">
+                <p class="oe_view_nocontent_create">
+                    Click to add a record
+                </p>
+            </field>
+        </record>
+
 
         <!-- server action to the one above -->
         <!--
@@ -257,9 +268,53 @@
 
         <menuitem name="O&amp;S records" id="sando.menu_1_list" parent="sando.menu_root"
                   action="sando.action_window"/>
+        <!--todo: visibility! -->
+        <menuitem name="O&amp;S intelligence reports" id="sando.menu_2_list" parent="sando.menu_root"
+                  action="sando.i_action_window"/>
+
         <!--<menuitem name="Server to list" id="sando" parent="sando.menu_2"-->
         <!--action="sando.action_server"/>-->
 
+        <record model="ir.ui.view" id="sando.intelligence_list">
+            <field name="name">O&amp;S intelligence reports</field>
+            <field name="model">sando.intelligence</field>
+            <field name="arch" type="xml">
+                <tree>
+                    <field name="name"/>
+                    <field name="report_datetime"/>
+                    <field name="customs_house"/>
+                    <field name="report_officer"/>
+                </tree>
+            </field>
+        </record>
+
+        <record model="ir.ui.view" id="sando.intelligence_form">
+            <field name="name">sando.form</field>
+            <field name="model">sando.intelligence</field>
+            <field name="arch" type="xml">
+                <form>
+                    <!--<header>-->
+
+                    <!--</header>-->
+                    <sheet>
+                        <div class="oe_button_box" name="button_box">
+                            <!--todo: visibility control-->
+                            <button name="toggle_active" type="object" groups="base.group_no_one"
+                                    class="oe_stat_button" icon="fa-archive">
+                                <field name="active" widget="boolean_button"
+                                       options='{"terminology": "archive"}'/>
+                            </button>
+                        </div>
+                        <group col="1">
+                            <group>
+                                <field name="report_datetime" required="True"/>
+                                <field name="report_officer" required="True"/>
+                            </group>
+                        </group>
+                    </sheet>
+                </form>
+            </field>
+        </record>
 
         <!-- Categories -->
         <record id="view_sando_category_form" model="ir.ui.view">
@@ -275,6 +330,7 @@
                 </form>
             </field>
         </record>
+
         <record id="view_sando_category_list" model="ir.ui.view">
             <field name="name">O&amp;S Tags</field>
             <field name="model">sando.category</field>

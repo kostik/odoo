@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <openerp>
     <data noupdate="1">
+
         <record id="seq_sando_sando" model="ir.sequence">
             <field name="name">O&amp;S Code</field>
             <field name="code">sando.sando</field>
@@ -8,5 +9,16 @@
             <field name="padding">7</field>
             <field eval="1" name="number_increment"/>
         </record>
+
+        <record id="seq_sando_intelligence" model="ir.sequence">
+            <field name="name">O&amp;S Intelligence Code</field>
+            <field name="code">sando.intelligence</field>
+            <field name="prefix">OSI</field>
+            <field name="padding">6</field>
+            <field eval="1" name="number_increment"/>
+        </record>
+
     </data>
 </openerp>
+
+
