@@ -15,6 +15,22 @@ class sando_customs_house(models.Model):
     )
 
 
+class sando_customs_regime_code(models.Model):
+    _name = 'sando.customs_regime_code'
+    name = fields.Char(
+        string="Customs regime code",
+        required=True
+    )
+
+
+class sando_vehicle_type(models.Model):
+    _name = 'sando.vehicle_type'
+    name = fields.Char(
+        string="Vehicle type",
+        required=True
+    )
+
+
 class sando_offence_code(models.Model):
     _name = 'sando.offence_code'
     name = fields.Char(
@@ -40,7 +56,7 @@ class sando(models.Model):
     active = fields.Boolean(
         default=True,
         track_visibility='onchange',
-        help="Set active to false to hide the tax without removing it."
+        help="Set active to false to hide the case without removing it."
     )
 
     # category_of_case = fields.Selection(
@@ -63,7 +79,7 @@ class sando(models.Model):
     case_number = fields.Char(
         string="Local file reference number",
         track_visibility='onchange',
-        help="This is a free text field and can be used to include a Customs case number"
+        help="This is a free text field and can be used to include a Customs case number "
              "into the register",
         required=True,
     )
@@ -71,10 +87,10 @@ class sando(models.Model):
     offence_datetime = fields.Datetime(
         string="Offence date and time",
         track_visibility='onchange',
-        help="This will enable analysis of exactly when offences take place and when used in conjunction with other"
-             "fields may allow the analyst to identify “weak points” in coverage at each Customs office"
-             "and border crossing. For example, importers may try to clear goods at the end of a shift when"
-             "officers are fatigued or alternatively may time their clearance with exceptionally busy times at"
+        help="This will enable analysis of exactly when offences take place and when used in conjunction with other "
+             "fields may allow the analyst to identify “weak points” in coverage at each Customs office "
+             "and border crossing. For example, importers may try to clear goods at the end of a shift when "
+             "officers are fatigued or alternatively may time their clearance with exceptionally busy times at "
              "particular offices. If such trends are discovered then additional resources can be assigned.",
         required=True,
 
@@ -91,9 +107,9 @@ class sando(models.Model):
         string="Risk Profile #",
         track_visibility='onchange',
         help="Profile # identifying the type of risk it was set up to counter."
-             "Using the profile # will allow interrogation of the database to identify those profiles that"
-             "are performing well and conversely, those that are failing to work. It will allow"
-             "a performance measurement to be made and from that,"
+             "Using the profile # will allow interrogation of the database to identify those profiles that "
+             "are performing well and conversely, those that are failing to work. It will allow "
+             "a performance measurement to be made and from that, "
              "non performing profiles can be amended or deleted appropriately.",
         required=True,
     )
@@ -109,7 +125,7 @@ class sando(models.Model):
         "sando.customs_house",
         string="Custom House Code",
         track_visibility='onchange',
-        help="This information can be used by the analysts, in conjunction with other fields, to identify what types"
+        help="This information can be used by the analysts, in conjunction with other fields, to identify what types "
              "of offences are being detected at the various clearance offices and to create trend analysis"
              "and management reports. ",
         required=True,
@@ -126,8 +142,8 @@ class sando(models.Model):
     legal_act = fields.Char(
         string="Legal Act",
         track_visibility='onchange',
-        help="Insert the Article, or regulation number under which the irregularity or offence"
-             "was committed. Information such as this will help to identify the most common"
+        help="Insert the Article, or regulation number under which the irregularity or offence "
+             "was committed. Information such as this will help to identify the most common "
              "offences and may assist in identifying gaps or weaknesses in current legislation",
         required=True,
     )
@@ -135,7 +151,7 @@ class sando(models.Model):
     case_description = fields.Text(
         string="Case Description",
         track_visibility='onchange',
-        help="A brief description of the case should be entered."
+        help="A brief description of the case should be entered. "
              "Type of goods, type of offence, etc. "
              "Sometimes having just a code to describe an event is insufficient.",
         required=True,
@@ -144,8 +160,8 @@ class sando(models.Model):
     route = fields.Char(
         string="Route",
         track_visibility='onchange',
-        help="This is the route taken by the goods/means of transport from when the goods"
-             "were dispatched to arrival in the Customs territory. It should include the country"
+        help="This is the route taken by the goods/means of transport from when the goods "
+             "were dispatched to arrival in the Customs territory. It should include the country "
              "of origin/dispatch/transit countries.",
         required=True,
     )
@@ -174,10 +190,10 @@ class sando(models.Model):
     offender_phone = fields.Char(
         string="Offender’s telephone number",
         track_visibility='onchange',
-        help="If an offender is using multiple identities to disguise his importations,"
-             "using a name may not highlight previous importations."
-             "It is less likely that mobile phone numbers are changed and so recording"
-             "this information may highlight duplicates where the same phone number"
+        help="If an offender is using multiple identities to disguise his importations, "
+             "using a name may not highlight previous importations. "
+             "It is less likely that mobile phone numbers are changed and so recording "
+             "this information may highlight duplicates where the same phone number "
              "is used by multiple identities",
         required=True,
     )
@@ -191,18 +207,12 @@ class sando(models.Model):
     importer_or_exporter_name = fields.Char(
         string="Importer or Exporter Name",
         track_visibility='onchange',
-        help="Can be searched to identify how many times specific individuals"
+        help="Can be searched to identify how many times specific individuals "
              "have been non-compliant. This is a useful tool for risk analysis",
     )
 
-    importer_or_exporter_tin_number = fields.Char(
-        string="Importer's or Exporter’s TIN",
-        track_visibility='onchange',
-        help="If the trader does not have a TIN then the passport or ID card number should be recorded",
-    )
-
     importer_or_exporter_id_number = fields.Char(
-        string="Importer's or Exporter’s Passport/ID number",
+        string="Importer's or Exporter’s TIN/Passport/ID number",
         track_visibility='onchange',
         help="If the trader does not have a TIN then the passport or ID card number should be recorded",
     )
@@ -215,16 +225,295 @@ class sando(models.Model):
     importer_or_exporter_phone = fields.Char(
         string="Importer's or Exporter’s telephone number",
         track_visibility='onchange',
-        help="If an offender is using multiple identities to disguise his importations,"
-             "using a name may not highlight previous importations."
-             "It is less likely that mobile phone numbers are changed and so recording"
-             "this information may highlight duplicates where the same phone number"
+        help="If an offender is using multiple identities to disguise his importations, "
+             "using a name may not highlight previous importations. "
+             "It is less likely that mobile phone numbers are changed and so recording "
+             "this information may highlight duplicates where the same phone number "
              "is used by multiple identities",
     )
 
     importer_or_exporter_email = fields.Char(
         string="Importer's or Exporter’s email",
         track_visibility='onchange',
+    )
+
+    name_of_customs_broker = fields.Char(
+        string="Name of Customs Broker",
+        track_visibility='onchange',
+        help="Can be used to search for brokers that are regularly inputting incorrect "
+             "declarations either by error or in collusion with importers"
+    )
+
+    broker_id_number = fields.Char(
+        string="Broker’s TIN/Passport/ID Number",
+        track_visibility='onchange',
+        help="Customs Brokers often work in coordination with importers to evade controls and revenue. "
+             "Using this field will enable analysis to be made of customs brokers that are involved "
+             "in a higher number of infractions or offences than would be considered normal. "
+             "It would also identify other traders that may represent a greater risk because "
+             "of their association with non-compliant brokers."
+    )
+    broker_address = fields.Text(
+        string="Broker’s address",
+        track_visibility='onchange',
+        help="Can be used to help track traders who change their identity. "
+             "Often they retain their address. By using this field in a query, "
+             "the database will display all traders that utilise this address.",
+    )
+
+    broker_phone = fields.Char(
+        string="Broker’s telephone number",
+        track_visibility='onchange',
+        help="This field can be utilised to find traders that are itinerant (briefcase traders) "
+             "and change their names and or addresses in order to deceive Customs when making declarations. "
+             "It is more inconvenient to change phone numbers and therefore traders often retain the same "
+             "number even though they utilise false names. Entering this field in a query will give a "
+             "list of all traders using this phone number",
+    )
+
+    broker_email = fields.Char(
+        string="Broker’s email",
+        track_visibility='onchange',
+    )
+
+    exporter_or_supplier_name = fields.Char(
+        string="Exporter’s or Supplier’s name",
+        track_visibility='onchange',
+        help="The name of the foreign exporter or supplier of the goods."
+             "They may work in collusion with the importer in order to facilitate under valuation, "
+             "misdescription, falsification of origin, or general underdeclaration. "
+             "Search using this field will highlight all importations made where an irregularity has been found"
+    )
+
+    supplier_address = fields.Text(
+        string="Supplier’s Address",
+        track_visibility='onchange',
+        help="Interrogation of the database using this assist to verify the identity "
+             "and country of origin of suppliers that are/may be involved in certain types "
+             "of offences such as undervaluation, misdescription. Queries using this field "
+             "in conjunction with others will also reveal such things as which importers "
+             "they deal with, what types of goods, etc. ",
+    )
+
+    transporter_or_haulier_name = fields.Char(
+        string="Transporter or haulier’s name",
+        track_visibility='onchange',
+        help="Transport companies may pose a risk either because they assist the trade "
+             "in smuggling goods or often because they undertake smuggling operations "
+             "in their own right. Querying this field together with others may highlight "
+             "associations with suppliers or importers who are known to be non- compliant "
+             "and also those companies that use routes which pose a higher risk, "
+             "for example through drug source countries."
+    )
+
+    transporter_id_number = fields.Char(
+        string="Transporter’s TIN/Passport/ID Number",
+        track_visibility='onchange',
+    )
+    transporter_address = fields.Text(
+        string="Transporter’s address",
+        track_visibility='onchange',
+        help="Can be used to help track traders who change their identity. "
+             "Often they retain their address. By using this field in a query, "
+             "the database will display all traders that utilise this address.",
+    )
+
+    transporter_phone = fields.Char(
+        string="Transporter’s telephone number",
+        track_visibility='onchange',
+        help="Assists to search for associates of non compliant traders and those "
+             "that use multiple names. Whereas many traders will change names "
+             "on each declaration to mislead Customs, few will go to the trouble "
+             "of changing cell and/or land line numbers as they will not expectCustoms to have the means to check.",
+    )
+
+    transporter_email = fields.Char(
+        string="Transporter’s email",
+        track_visibility='onchange',
+    )
+
+    vehicle_driver_name = fields.Char(
+        string="Vehicle driver’s name",
+        track_visibility='onchange',
+        help="This is required as drivers are often either involved in irregularities as accomplices to traders "
+             "or are directly involved in carrying contraband in the vehicles whether or not the owner of the goods "
+             "is involved in non-compliance.",
+    )
+
+    driver_id_number = fields.Char(
+        string="Driver’s TIN/Passport/ID Number",
+        track_visibility='onchange',
+        help="Assists in the identification of persons that are regularly involved in non-compliance, "
+             "smuggling or irregularities"
+    )
+    driver_address = fields.Text(
+        string="Driver’s address",
+        track_visibility='onchange',
+        help="Can be used to help track persons of interest who change their identity. "
+             "Often they retain their address. By using this field in a query, "
+             "the database will display everyone that utilise this address.",
+    )
+
+    driver_phone = fields.Char(
+        string="Driver’s telephone number",
+        track_visibility='onchange',
+        help="Assists to search for associates of non compliant traders and those "
+             "that use multiple names. Whereas many traders will change names "
+             "on each declaration to mislead Customs, few will go to the trouble "
+             "of changing cell and/or land line numbers as they will not expectCustoms to have the means to check.",
+    )
+
+    driver_email = fields.Char(
+        string="Driver’s email",
+        track_visibility='onchange',
+    )
+
+    vehicle_type = fields.Many2one(
+        "sando.vehicle_type",
+        string="Vehicle type",
+        track_visibility='onchange',
+        help="Drop down menu that will give options categorizing what means of transport has been used "
+             "covering vehicle "
+             "(Freight, private, public transport vehicle), train (Freight or Passenger), "
+             "Air (private, passenger, freight) or Other (enter details in Notes box). "
+             "This will enable searches to be made that will show trends – certain "
+             "types of goods smuggled using particular means of transport, etc.)",
+    )
+
+    vehicle_make_and_model = fields.Char(
+        string="Make or brand name of vehicle or means of transport",
+        track_visibility='onchange',
+        help="Can potentially be used to identify particular methods of concealment on particular makes "
+             "of vehicles/aircraft/containers",
+    )
+
+    harmonised_system_code = fields.Char(
+        string="Harmonised System of Classification Code/Tariff Trade Code etc.",
+        track_visibility='onchange',
+    )
+
+    country_of_origin = fields.Many2one(
+        "res.country",
+        string="Country of Origin",
+        help="Enter the country of origin of the goods subject to the offence from the drop down menu. "
+             "This may or may not be the country of supply! ",
+        track_visibility='onchange',
+        requied=True
+    )
+
+    country_of_departure = fields.Many2one(
+        "res.country",
+        string="Country of Departure",
+        help="The country from which the goods are consigned. (Select from drop down menu)",
+        track_visibility='onchange',
+        requied=True
+    )
+
+    country_of_destination = fields.Many2one(
+        "res.country",
+        string="Country of Destination",
+        help="The final destination of the goods. Select from drop down menu)",
+        track_visibility='onchange',
+        requied=True
+    )
+    weight_declared = fields.Float(
+        string="Declared weight of the goods (Net) in kgs",
+        help="Enter the net weight of the goods in Kgs as declared",
+        track_visibility='onchange',
+        requied=True
+
+    )
+
+    weight_actual = fields.Float(
+        string="Actual weight of the goods (net) in Kgs",
+        help="Enter the actual weight found if the offence includes "
+             "underdeclaring the actual weight of the goods",
+        track_visibility='onchange',
+        requied=True
+
+    )
+
+    number_of_packages_declaration = fields.Integer(
+        string="Number of packages entered on the declaration",
+        help="Enables a judgement to be made concerning the significance of any potential offence in cases where "
+             "underdeclaration of the number of packages is an issue",
+        track_visibility='onchange',
+        requied=True
+    )
+
+    number_of_packages_actual = fields.Integer(
+        string="Actual Number of Packages",
+        help="Enter the actual number of packages found during inspection if different from declared number",
+        track_visibility='onchange',
+    )
+
+    currency_id = fields.Many2one(
+        'res.currency',
+        string='Currency',
+        requied=True
+    )
+
+    value_declared = fields.Monetary(
+        currency_field="currency_id",
+        string="Declared Statistical Value",
+        help="Allows comparison to be made between how much was declared and how much the goods were actually worth",
+        track_visibility='onchange',
+        requied=True
+    )
+
+    value_actual = fields.Monetary(
+        currency_field="currency_id",
+        string="Actual Statistical Value if different from Declared Statistical value",
+        help="Allows comparison to be made between how much was declared and how much the goods were actually worth",
+        track_visibility='onchange',
+    )
+
+    additional_duties = fields.Monetary(
+        currency_field="currency_id",
+        string="Additional duties resulting from offence",
+        help="This is the total of all penalties imposed in relation to the specific offence. It indicates the "
+             "magnitude of the problem and is useful in assessing the risk for future importations/exportations "
+             "that will be made by the same principals. Enter any additional duties or taxes that have been levied "
+             "on the offender as a result of the irregularity that was found.",
+        track_visibility='onchange',
+    )
+
+    declaration_number = fields.Char(
+        string="Declaration Number",
+        track_visibility='onchange',
+        help="Enables the system to identify the declaration in order to extract further data",
+        requied=True
+    )
+
+    customs_regime_code = fields.Many2one(
+        "sando.customs_regime_code",
+        string="Customs regime code",
+        track_visibility='onchange',
+        help="Select the correct regime code (home use, warehousing, export, etc) from the drop down menu",
+    )
+
+    seized_goods = fields.Boolean(
+        string="Seized Goods",
+        track_visibility='onchange',
+        help="Tick box indicating whether goods have been confiscated by Customs or not",
+        requied=True
+    )
+
+    penalty_imposed = fields.Boolean(
+        string="Penalty Imposed",
+        track_visibility='onchange',
+        requied=True
+    )
+
+    inspection_result = fields.Text(
+        string="Inspection Result",
+        track_visibility='onchange',
+        help="This is an unlimited text box that can be used to describe what was found during the examination. "
+             "For example, it could include specific cases that were examined, particular concealments "
+             "or characteristics specific to smuggled goods. Should add basis for discovery of offence"
+             "e.g Red Channel exam/Random exam/full exam/MACCS profile /x ray/ info received/voluntary declaration, "
+             "etc",
+        requied=True
     )
 
     @staticmethod
@@ -234,6 +523,18 @@ class sando(models.Model):
             if val:
                 return re.sub("(\d)(?=(\d{3})+(?!\d))", r"\1-", "%d" % int(val[:-1])) + val[-1]
         return number
+
+    @api.onchange('driver_phone')
+    def _onchange_driver_phone(self):
+        self.driver_phone = self.clean_phone_number(self.driver_phone)
+
+    @api.onchange('transporter_phone')
+    def _onchange_transporter_phone(self):
+        self.transporter_phone = self.clean_phone_number(self.transporter_phone)
+
+    @api.onchange('broker_phone')
+    def _onchange_broker_phone(self):
+        self.broker_phone = self.clean_phone_number(self.broker_phone)
 
     @api.onchange('offender_phone')
     def _onchange_offender_phone(self):

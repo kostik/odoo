@@ -19,17 +19,19 @@
             <field name="model">sando.sando</field>
             <field name="arch" type="xml">
                 <form>
-                    <header>
-                    </header>
+                    <!--<header>-->
+
+                    <!--</header>-->
                     <sheet>
                         <div class="oe_button_box" name="button_box">
+                            <!--todo: visibility control-->
                             <button name="toggle_active" type="object" groups="base.group_no_one"
                                     class="oe_stat_button" icon="fa-archive">
                                 <field name="active" widget="boolean_button"
                                        options='{"terminology": "archive"}'/>
                             </button>
                         </div>
-                        <group>
+                        <group col="1">
                             <group>
                                 <field name="case_number"/>
                                 <field name="offence_datetime"/>
@@ -42,29 +44,102 @@
                                 <field name="case_description"/>
                                 <field name="route"/>
 
-                                <hr/><newline/>
+                                <hr/>
+                                <newline/>
 
                                 <field name="offender_name"/>
                                 <field name="offender_id_number"/>
                                 <field name="offender_address"/>
                                 <field name="offender_phone" widget="phone"/>
-                                <field name="offender_email" widget="email" on_change="ValidateEmail(offender_email)"/>
+                                <field name="offender_email" widget="email"
+                                       on_change="ValidateEmail(offender_email)"/>
 
-                                <hr/><newline/>
+                                <hr/>
+                                <newline/>
 
                                 <field name="importer_or_exporter_name"/>
-                                <field name="importer_or_exporter_tin_number"/>
                                 <field name="importer_or_exporter_id_number"/>
                                 <field name="importer_or_exporter_address"/>
                                 <field name="importer_or_exporter_phone" widget="phone"/>
                                 <field name="importer_or_exporter_email" widget="email"
                                        on_change="ValidateEmail(importer_or_exporter_email)"/>
-                            </group>
-                            <group>
+
+                                <hr/>
+                                <newline/>
+
+                                <field name="name_of_customs_broker"/>
+                                <field name="broker_id_number"/>
+                                <field name="broker_address"/>
+                                <field name="broker_phone" widget="phone"/>
+                                <field name="broker_email" widget="email"
+                                       on_change="ValidateEmail(broker_email)"/>
+
+                                <hr/>
+                                <newline/>
+
+                                <field name="exporter_or_supplier_name"/>
+                                <field name="supplier_address"/>
+
+                                <hr/>
+                                <newline/>
+
+                                <field name="transporter_or_haulier_name"/>
+                                <field name="transporter_id_number"/>
+                                <field name="transporter_address"/>
+                                <field name="transporter_phone"/>
+                                <field name="transporter_email" widget="email"
+                                       on_change="ValidateEmail(transporter_email)"/>
+
+                                <hr/>
+                                <newline/>
+
+                                <field name="vehicle_driver_name"/>
+                                <field name="driver_id_number"/>
+                                <field name="driver_address"/>
+                                <field name="driver_phone"/>
+                                <field name="driver_email" widget="email"
+                                       on_change="ValidateEmail(driver_email)"/>
+
+                                <hr/>
+                                <newline/>
+
+                                <field name="vehicle_type"/>
+                                <field name="vehicle_make_and_model"/>
+
                             </group>
                         </group>
+                        <hr/>
                         <group col="1">
-                            <field name="description_of_goods"/>
+                            <group>
+                                <field name="harmonised_system_code"/>
+                                <field name="description_of_goods"/>
+                                <field name="country_of_origin"/>
+                                <field name="country_of_departure"/>
+                                <field name="country_of_destination"/>
+                                <field name="weight_declared"/>
+                                <field name="weight_actual"/>
+                                <field name="number_of_packages_declaration"/>
+                                <field name="number_of_packages_actual"/>
+                                <field name="currency_id"/>
+                                <field name="value_declared"/>
+                                <field name="value_actual"/>
+                                <field name="additional_duties"/>
+                                <field name="declaration_number"/>
+                                <field name="customs_regime_code"/>
+                                <group>
+                                    <group>
+                                        <field name="seized_goods"/>
+                                    </group>
+                                    <group>
+                                        <field name="penalty_imposed"/>
+                                    </group>
+                                </group>
+                                <hr/>
+                            </group>
+                            <hr/>
+                            <group col="1">
+                                <field name="inspection_result"/>
+                            </group>
                         </group>
                         <hr/>
                         <group col="1">
@@ -98,12 +173,44 @@
                     <field name="description_of_goods"/>
                     <field name="case_description"/>
                     <field name="route"/>
+
                     <field name="offender_name"/>
                     <field name="offender_id_number"/>
                     <field name="offender_address"/>
                     <field name="offender_phone"/>
                     <field name="offender_email"/>
+
                     <field name="importer_or_exporter_name"/>
+                    <field name="importer_or_exporter_id_number"/>
+                    <field name="importer_or_exporter_address"/>
+                    <field name="importer_or_exporter_phone"/>
+                    <field name="importer_or_exporter_email"/>
+
+                    <field name="name_of_customs_broker"/>
+                    <field name="broker_id_number"/>
+                    <field name="broker_address"/>
+                    <field name="broker_phone"/>
+                    <field name="broker_email"/>
+
+                    <field name="exporter_or_supplier_name"/>
+                    <field name="supplier_address"/>
+
+                    <field name="transporter_or_haulier_name"/>
+                    <field name="transporter_id_number"/>
+                    <field name="transporter_address"/>
+                    <field name="transporter_phone"/>
+                    <field name="transporter_email"/>
+
+                    <field name="vehicle_driver_name"/>
+                    <field name="driver_id_number"/>
+                    <field name="driver_address"/>
+                    <field name="driver_phone"/>
+                    <field name="driver_email"/>
+
+                    <field name="vehicle_make_and_model"/>
+
+                    <field name="inspection_result"/>
+
                 </search>
             </field>
         </record>
@@ -196,7 +303,7 @@
         <menuitem id="sando_menu_config" name="Configuration" parent="sando.menu_root"
                   sequence="100" groups="base.group_configuration"/>
 
-        <menuitem action="action_sando_category_form" id="menu_sando_category_form" name="O&amp;O Records Tags"
+        <menuitem action="action_sando_category_form" id="menu_sando_category_form" name="O&amp;S Records Tags"
                   sequence="1"
                   parent="sando_menu_config" groups="base.group_configuration"/>
 
