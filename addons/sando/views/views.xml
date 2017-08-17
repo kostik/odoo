@@ -8,11 +8,14 @@
             <field name="arch" type="xml">
                 <tree>
                     <field name="name"/>
+                    <field name="case_number"/>
                     <field name="offence_datetime"/>
+                    <field name="offence_code"/>
+                    <field name="customs_house"/>
+                    <field name="case_officer"/>
                 </tree>
             </field>
         </record>
-
 
         <record model="ir.ui.view" id="sando.sando_form">
             <field name="name">sando.form</field>
@@ -36,7 +39,6 @@
                                 <field name="case_number"/>
                                 <field name="offence_datetime"/>
                                 <field name="offence_code"/>
-                                <!--<field name="category_of_case"/>-->
                                 <field name="profile"/>
                                 <field name="customs_house"/>
                                 <field name="case_officer"/>
