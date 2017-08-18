@@ -244,77 +244,18 @@
         </record>
 
 
-        <!-- server action to the one above -->
-        <!--
-        <record model="ir.actions.server" id="sando.action_server">
-          <field name="name">sando server</field>
-          <field name="model_id" ref="model_sando_sando"/>
-          <field name="code">
-            action = {
-              "type": "ir.actions.act_window",
-              "view_mode": "tree,form",
-              "res_model": self._name,
-            }
-          </field>
-        </record>
-        -->
-
         <!-- Top menu item -->
 
         <menuitem name="O&amp;S" id="sando.menu_root"/>
 
         <!-- menu categories -->
 
-
         <menuitem name="O&amp;S records" id="sando.menu_1_list" parent="sando.menu_root"
                   action="sando.action_window"/>
+
         <!--todo: visibility! -->
         <menuitem name="O&amp;S intelligence reports" id="sando.menu_2_list" parent="sando.menu_root"
                   action="sando.i_action_window"/>
-
-        <!--<menuitem name="Server to list" id="sando" parent="sando.menu_2"-->
-        <!--action="sando.action_server"/>-->
-
-        <record model="ir.ui.view" id="sando.intelligence_list">
-            <field name="name">O&amp;S intelligence reports</field>
-            <field name="model">sando.intelligence</field>
-            <field name="arch" type="xml">
-                <tree>
-                    <field name="name"/>
-                    <field name="report_datetime"/>
-                    <field name="customs_house"/>
-                    <field name="report_officer"/>
-                </tree>
-            </field>
-        </record>
-
-        <record model="ir.ui.view" id="sando.intelligence_form">
-            <field name="name">sando.form</field>
-            <field name="model">sando.intelligence</field>
-            <field name="arch" type="xml">
-                <form>
-                    <!--<header>-->
-
-                    <!--</header>-->
-                    <sheet>
-                        <div class="oe_button_box" name="button_box">
-                            <!--todo: visibility control-->
-                            <button name="toggle_active" type="object" groups="base.group_no_one"
-                                    class="oe_stat_button" icon="fa-archive">
-                                <field name="active" widget="boolean_button"
-                                       options='{"terminology": "archive"}'/>
-                            </button>
-                        </div>
-                        <group col="1">
-                            <group>
-                                <field name="report_datetime" required="True"/>
-                                <field name="report_officer" required="True"/>
-                            </group>
-                        </group>
-                    </sheet>
-                </form>
-            </field>
-        </record>
 
         <!-- Categories -->
         <record id="view_sando_category_form" model="ir.ui.view">
@@ -364,6 +305,73 @@
         <menuitem action="action_sando_category_form" id="menu_sando_category_form" name="O&amp;S Records Tags"
                   sequence="1"
                   parent="sando_menu_config" groups="base.group_configuration"/>
+
+
+        <record model="ir.ui.view" id="sando.intelligence_list">
+            <field name="name">O&amp;S intelligence reports</field>
+            <field name="model">sando.intelligence</field>
+            <field name="arch" type="xml">
+                <tree>
+                    <field name="name"/>
+                    <field name="report_datetime"/>
+                    <field name="customs_house"/>
+                    <field name="report_officer"/>
+                    <field name="evaluation"/>
+                    <field name="activity_location"/>
+                    <field name="travel_dates_from"/>
+                    <field name="sando_ids"/>
+                </tree>
+            </field>
+        </record>
+
+        <record model="ir.ui.view" id="sando.intelligence_form">
+            <field name="name">sando.form</field>
+            <field name="model">sando.intelligence</field>
+            <field name="arch" type="xml">
+                <form>
+                    <!--<header>-->
+
+                    <!--</header>-->
+                    <sheet>
+                        <div class="oe_button_box" name="button_box">
+                            <!--todo: visibility control-->
+                            <button name="toggle_active" type="object" groups="base.group_no_one"
+                                    class="oe_stat_button" icon="fa-archive">
+                                <field name="active" widget="boolean_button"
+                                       options='{"terminology": "archive"}'/>
+                            </button>
+                        </div>
+                        <group col="1">
+                            <group col="2">
+                                <field name="report_datetime" required="True"/>
+                                <field name="customs_house" required="True"/>
+                                <field name="report_officer" required="True"/>
+
+                                <field name="evaluation_source" required="True" class="oe_edit_only"/>
+                                <field name="evaluation_intelligence" required="True" class="oe_edit_only"/>
+
+                                <field name="evaluation"/>
+
+                                <field name="activity_suspected" required="True"/>
+                                <field name="activity_location" required="True"/>
+                                <field name="flight_number"/>
+                                <field name="travel_dates_from"/>
+                                <field name="travel_dates_to"/>
+                                <field name="associates"/>
+                                <field name="vessel_name"/>
+                                <field name="vessel_port_of_registration"/>
+                                <field name="vessel_owners"/>
+                                <field name="vessel_type"/>
+                                <field name="aircraft_registration"/>
+                                <field name="aircraft_type"/>
+                                <hr/>
+                            </group>
+                            <field name="sando_ids" colspan="2"/>
+                        </group>
+                    </sheet>
+                </form>
+            </field>
+        </record>
 
     </data>
 </openerp>

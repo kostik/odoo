@@ -572,6 +572,67 @@ class intelligence(models.Model):
         track_visibility='onchange',
     )
 
+    evaluation_source = fields.Selection(
+        string='Evaluation source',
+        selection=[
+            (
+                'A', 'No doubt regarding authenticity, trustworthiness, '
+                     'integrity, competence, or, a history of complete reliability'
+            ),
+            (
+                'B', 'Source from whom information received has in most instances proved to be reliable'
+            ),
+            (
+                'C', 'Source from whom information received has in most instances proved to be unreliable'
+            ),
+            (
+                'X', 'Reliability cannot be judged'
+            ),
+
+        ]
+    )
+    evaluation_intelligence = fields.Selection(
+        string='Evaluation intelligence',
+        selection=[
+            (
+                '1', 'No doubt about accuracy'
+            ),
+            (
+                '2', "Information known personally to the source but not known personally "
+                     "to the official who is passing it on"
+            ),
+            (
+                '3', 'Information not known personally to the source but corroborated '
+                     'by other information already recorded'
+            ),
+            (
+                '4', 'Information which is not known personally to the source and cannot be independently corroborated'
+            ),
+
+        ]
+    )
+
+    evaluation = fields.Char(string="Evaluation 4x4", compute='_set_evaluation', store=True, read_only=True)
+
+    activity_suspected = fields.Text(string="Suspected_activity")
+    activity_location = fields.Char(string="Location of activity")
+    flight_number = fields.Char(string="Flight Number")
+    travel_dates_from = fields.Date(string="Travel date (from)")
+    travel_dates_to = fields.Date(string="Travel date (to)")
+    associates = fields.Char(string="Associates")
+    vessel_name = fields.Char(string="Vessel name")
+    vessel_port_of_registration = fields.Char(string="Vessel port of registration")
+    vessel_owners = fields.Char(string="Vessel owners")
+    vessel_type = fields.Char(string="Vessel type")
+    aircraft_registration = fields.Char(string="Aircraft (General Aviation) registration")
+    aircraft_type = fields.Char(string="Aircraft type")
+
+    sando_ids = fields.Many2many('sando.sando', string="Related offence records")
+
+    @api.depends("evaluation_source", "evaluation_intelligence")
+    def _set_evaluation(self):
+        self.evaluation = (self.evaluation_source or ' ') + (self.evaluation_intelligence or ' ')
+
     @api.model
     def create(self, vals):
         vals['name'] = self.env['ir.sequence'].next_by_code('sando.intelligence')
