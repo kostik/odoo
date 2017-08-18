@@ -1,6 +1,7 @@
 # -*- coding: utf-8 -*-
 import re
 
+from openerp import _
 from openerp import api
 from openerp import fields
 from openerp import models
@@ -533,6 +534,11 @@ class sando(models.Model):
 
         return True
 
+    @api.multi
+    def unlink(self):
+        from openerp.exceptions import AccessError
+        raise AccessError(_("You are can not delete this record"))
+
 
 class intelligence(models.Model):
     _name = 'sando.intelligence'
@@ -612,22 +618,61 @@ class intelligence(models.Model):
         ]
     )
 
-    evaluation = fields.Char(string="Evaluation 4x4", compute='_set_evaluation', store=True, read_only=True)
+    evaluation = fields.Char(string="Evaluation 4x4",
+                             compute='_set_evaluation', store=True, read_only=True,
+                             track_visibility='onchange')
 
-    activity_suspected = fields.Text(string="Suspected_activity")
-    activity_location = fields.Char(string="Location of activity")
-    flight_number = fields.Char(string="Flight Number")
-    travel_dates_from = fields.Date(string="Travel date (from)")
-    travel_dates_to = fields.Date(string="Travel date (to)")
-    associates = fields.Char(string="Associates")
-    vessel_name = fields.Char(string="Vessel name")
-    vessel_port_of_registration = fields.Char(string="Vessel port of registration")
-    vessel_owners = fields.Char(string="Vessel owners")
-    vessel_type = fields.Char(string="Vessel type")
-    aircraft_registration = fields.Char(string="Aircraft (General Aviation) registration")
-    aircraft_type = fields.Char(string="Aircraft type")
+    activity_suspected = fields.Text(
+        string="Suspected_activity",
+        track_visibility='onchange',
+    )
+    activity_location = fields.Char(
+        string="Location of activity",
+        track_visibility='onchange',
+    )
+    flight_number = fields.Char(
+        string="Flight Number",
+        track_visibility='onchange',
+    )
+    travel_dates_from = fields.Date(
+        string="Travel date (from)",
+        track_visibility='onchange',
+    )
+    travel_dates_to = fields.Date(
+        string="Travel date (to)",
+        track_visibility='onchange',
+    )
+    associates = fields.Char(
+        string="Associates",
+        track_visibility='onchange',
+    )
+    vessel_name = fields.Char(
+        string="Vessel name",
+        track_visibility='onchange',
+    )
+    vessel_port_of_registration = fields.Char(
+        string="Vessel port of registration",
+        track_visibility='onchange',
+    )
+    vessel_owners = fields.Char(
+        string="Vessel owners",
+        track_visibility='onchange',
+    )
+    vessel_type = fields.Char(
+        string="Vessel type",
+        track_visibility='onchange',
+    )
+    aircraft_registration = fields.Char(
+        string="Aircraft (General Aviation) registration",
+        track_visibility='onchange',
+    )
+    aircraft_type = fields.Char(
+        string="Aircraft type",
+        track_visibility='onchange',
+    )
 
-    sando_ids = fields.Many2many('sando.sando', string="Related offence records")
+    sando_ids = fields.Many2many('sando.sando', ondelete='restrict', string="Related offence records",
+                                 track_visibility='onchange', )
 
     @api.depends("evaluation_source", "evaluation_intelligence")
     def _set_evaluation(self):
@@ -637,3 +682,8 @@ class intelligence(models.Model):
     def create(self, vals):
         vals['name'] = self.env['ir.sequence'].next_by_code('sando.intelligence')
         return super(intelligence, self).create(vals)
+
+    @api.multi
+    def unlink(self):
+        from openerp.exceptions import AccessError
+        raise AccessError(_("You are can not delete this record"))
