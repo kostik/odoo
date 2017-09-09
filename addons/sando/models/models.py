@@ -1,4 +1,5 @@
 # -*- coding: utf-8 -*-
+import datetime
 import re
 
 from openerp import _
@@ -540,6 +541,9 @@ class sando(models.Model):
         raise AccessError(_("You are can not delete this record"))
 
 
+DEFAULT_EXPIRATION_DAYS = 365 * 6
+
+
 class intelligence(models.Model):
     _name = 'sando.intelligence'
     _inherit = ['mail.thread', 'ir.needaction_mixin']
@@ -567,14 +571,25 @@ class intelligence(models.Model):
         track_visibility='onchange',
     )
 
-    customs_house = fields.Many2one(
-        "sando.customs_house",
-        string="Custom House Code",
+    report_expiry_date = fields.Datetime(
+        string="Report expiry date",
+        track_visibility='onchange',
+        default=datetime.datetime.now() + datetime.timedelta(days=DEFAULT_EXPIRATION_DAYS)
+    )
+
+    # customs_house = fields.Many2one(
+    #     "sando.customs_house",
+    #     string="Custom House Code",
+    #     track_visibility='onchange',
+    # )
+
+    officer_reporting = fields.Char(
+        string="Officer receiving information ",
         track_visibility='onchange',
     )
 
-    report_officer = fields.Char(
-        string="Officer",
+    officer_evaluating = fields.Char(
+        string="Officer evaluating information ",
         track_visibility='onchange',
     )
 
@@ -622,57 +637,72 @@ class intelligence(models.Model):
                              compute='_set_evaluation', store=True, read_only=True,
                              track_visibility='onchange')
 
-    activity_suspected = fields.Text(
-        string="Suspected_activity",
-        track_visibility='onchange',
-    )
-    activity_location = fields.Char(
-        string="Location of activity",
-        track_visibility='onchange',
-    )
-    flight_number = fields.Char(
-        string="Flight Number",
-        track_visibility='onchange',
-    )
-    travel_dates_from = fields.Date(
-        string="Travel date (from)",
-        track_visibility='onchange',
-    )
-    travel_dates_to = fields.Date(
-        string="Travel date (to)",
-        track_visibility='onchange',
-    )
-    associates = fields.Char(
-        string="Associates",
-        track_visibility='onchange',
-    )
-    vessel_name = fields.Char(
-        string="Vessel name",
-        track_visibility='onchange',
-    )
-    vessel_port_of_registration = fields.Char(
-        string="Vessel port of registration",
-        track_visibility='onchange',
-    )
-    vessel_owners = fields.Char(
-        string="Vessel owners",
-        track_visibility='onchange',
-    )
-    vessel_type = fields.Char(
-        string="Vessel type",
-        track_visibility='onchange',
-    )
-    aircraft_registration = fields.Char(
-        string="Aircraft (General Aviation) registration",
-        track_visibility='onchange',
-    )
-    aircraft_type = fields.Char(
-        string="Aircraft type",
+    reasons_for_suspicion = fields.Text(
+        string="Reasons for suspicion",
         track_visibility='onchange',
     )
 
-    sando_ids = fields.Many2many('sando.sando', ondelete='restrict', string="Related offence records",
-                                 track_visibility='onchange', )
+    activity_suspected = fields.Text(
+        string="Suspected activity - details of information received",
+        track_visibility='onchange',
+    )
+
+    goods = fields.Text(
+        string="Goods description",
+        track_visibility='onchange',
+    )
+
+    # activity_location = fields.Char(
+    #     string="Location of activity",
+    #     track_visibility='onchange',
+    # )
+    # flight_number = fields.Char(
+    #     string="Flight Number",
+    #     track_visibility='onchange',
+    # )
+    # travel_dates_from = fields.Date(
+    #     string="Travel date (from)",
+    #     track_visibility='onchange',
+    # )
+    # travel_dates_to = fields.Date(
+    #     string="Travel date (to)",
+    #     track_visibility='onchange',
+    # )
+    # associates = fields.Char(
+    #     string="Associates",
+    #     track_visibility='onchange',
+    # )
+    # vessel_name = fields.Char(
+    #     string="Vessel name",
+    #     track_visibility='onchange',
+    # )
+    # vessel_port_of_registration = fields.Char(
+    #     string="Vessel port of registration",
+    #     track_visibility='onchange',
+    # )
+    # vessel_owners = fields.Char(
+    #     string="Vessel owners",
+    #     track_visibility='onchange',
+    # )
+    # vessel_type = fields.Char(
+    #     string="Vessel type",
+    #     track_visibility='onchange',
+    # )
+    # aircraft_registration = fields.Char(
+    #     string="Aircraft (General Aviation) registration",
+    #     track_visibility='onchange',
+    # )
+    # aircraft_type = fields.Char(
+    #     string="Aircraft type",
+    #     track_visibility='onchange',
+    # )
+
+    sando_ids = fields.Many2many(
+        'sando.sando',
+        ondelete='restrict',
+        string="Related offence records",
+        track_visibility='onchange',
+    )
 
     @api.depends("evaluation_source", "evaluation_intelligence")
     def _set_evaluation(self):
