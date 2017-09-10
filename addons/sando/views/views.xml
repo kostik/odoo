@@ -1,6 +1,7 @@
 <openerp>
     <data>
-        <!-- explicit list view definition -->
+
+        <!--Offence records-->
 
         <record model="ir.ui.view" id="sando.list">
             <field name="name">O&amp;S records</field>
@@ -157,7 +158,6 @@
             </field>
         </record>
 
-
         <record id="view_sando_sando_filter" model="ir.ui.view">
             <field name="name">sando.sando.select</field>
             <field name="model">sando.sando</field>
@@ -216,9 +216,6 @@
             </field>
         </record>
 
-
-        <!-- actions opening views on models -->
-
         <record model="ir.actions.act_window" id="sando.action_window">
             <field name="name">O&amp;S records</field>
             <field name="res_model">sando.sando</field>
@@ -231,33 +228,8 @@
             </field>
         </record>
 
-        <record model="ir.actions.act_window" id="sando.i_action_window">
-            <field name="name">O&amp;S intelligence reports</field>
-            <field name="res_model">sando.intelligence</field>
-            <field name="view_mode">tree,form</field>
-            <field name="view_type">form</field>
-            <field name="help" type="html">
-                <p class="oe_view_nocontent_create">
-                    Click to add a record
-                </p>
-            </field>
-        </record>
-
-
-        <!-- Top menu item -->
-
-        <menuitem name="O&amp;S" id="sando.menu_root"/>
-
-        <!-- menu categories -->
-
-        <menuitem name="O&amp;S records" id="sando.menu_1_list" parent="sando.menu_root"
-                  action="sando.action_window"/>
-
-        <!--todo: visibility! -->
-        <menuitem name="O&amp;S intelligence reports" id="sando.menu_2_list" parent="sando.menu_root"
-                  action="sando.i_action_window"/>
-
         <!-- Categories -->
+
         <record id="view_sando_category_form" model="ir.ui.view">
             <field name="name">O&amp;S Tags</field>
             <field name="model">sando.category</field>
@@ -299,13 +271,7 @@
             </field>
         </record>
 
-        <menuitem id="sando_menu_config" name="Configuration" parent="sando.menu_root"
-                  sequence="100" groups="base.group_configuration"/>
-
-        <menuitem action="action_sando_category_form" id="menu_sando_category_form" name="O&amp;S Records Tags"
-                  sequence="1"
-                  parent="sando_menu_config" groups="base.group_configuration"/>
-
+        <!--Intelligence reports-->
 
         <record model="ir.ui.view" id="sando.intelligence_list">
             <field name="name">O&amp;S intelligence reports</field>
@@ -338,35 +304,143 @@
                                        options='{"terminology": "archive"}'/>
                             </button>
                         </div>
-                        <group col="1">
-                            <group col="2">
-                                <field name="report_datetime" required="True"/>
-                                <field name="report_expiry_date"/>
-                                <field name="officer_reporting" required="True"/>
-                                <field name="officer_evaluating" required="True"/>
-                                <field name="reasons_for_suspicion" required="True"/>
+                        <group col="2">
+                            <field name="report_datetime" required="True"/>
+                            <field name="report_expiry_date"/>
+                            <field name="officer_reporting" required="True"/>
+                            <field name="officer_evaluating" required="True"/>
+                            <field name="reasons_for_suspicion" required="True"/>
 
-                                <field name="evaluation_source" required="True" class="oe_edit_only"/>
-                                <field name="evaluation_intelligence" required="True" class="oe_edit_only"/>
+                            <field name="evaluation_source" required="True" class="oe_edit_only"/>
+                            <field name="evaluation_intelligence" required="True" class="oe_edit_only"/>
 
-                                <field name="evaluation"/>
+                            <field name="evaluation"/>
 
-                                <field name="activity_suspected" required="True"/>
-                                <field name="goods" required="True"/>
-                                <!--<field name="activity_location" required="True"/>-->
-                                <!--<field name="flight_number"/>-->
-                                <!--<field name="travel_dates_from"/>-->
-                                <!--<field name="travel_dates_to"/>-->
-                                <!--<field name="associates"/>-->
-                                <!--<field name="vessel_name"/>-->
-                                <!--<field name="vessel_port_of_registration"/>-->
-                                <!--<field name="vessel_owners"/>-->
-                                <!--<field name="vessel_type"/>-->
-                                <!--<field name="aircraft_registration"/>-->
-                                <!--<field name="aircraft_type"/>-->
-                                <hr/>
-                            </group>
+                            <field name="activity_suspected" required="True"/>
+                            <field name="goods" required="True"/>
+                            <!--<field name="activity_location" required="True"/>-->
+                            <!--<field name="flight_number"/>-->
+                            <!--<field name="travel_dates_from"/>-->
+                            <!--<field name="travel_dates_to"/>-->
+                            <!--<field name="associates"/>-->
+                            <!--<field name="vessel_name"/>-->
+                            <!--<field name="vessel_port_of_registration"/>-->
+                            <!--<field name="vessel_owners"/>-->
+                            <!--<field name="vessel_type"/>-->
+                            <!--<field name="aircraft_registration"/>-->
+                            <!--<field name="aircraft_type"/>-->
+                            <hr/>
+                        </group>
+                        <group>
+                            <field name="means_of_transport_ids"
+                                   context="{'default_intelligence_id': context.get('active_id')}">
+                                <tree>
+                                    <field name="name"/>
+                                    <field name="mode_of_transport"/>
+                                    <field name="registration_number"/>
+                                </tree>
+                            </field>
+
+                            <field name="person_ids"
+                                   context="{'default_intelligence_id': context.get('active_id')}">
+                                <tree>
+                                    <field name="name"/>
+                                    <field name="first_name"/>
+                                    <field name="last_name"/>
+                                </tree>
+                            </field>
+
+                            <field name="organisation_ids"
+                                   context="{'default_intelligence_id': context.get('active_id')}">
+                                <tree>
+                                    <field name="name"/>
+                                    <field name="organisation_name"/>
+                                    <field name="tin"/>
+                                </tree>
+                            </field>
+
+                            <!--todo: visibility-->
+                            <field name="source_ids"
+                                   context="{'default_intelligence_id': context.get('active_id')}">
+                                <tree>
+                                    <field name="name"/>
+                                    <field name="evaluation"/>
+                                    <field name="alias"/>
+                                </tree>
+                            </field>
+
+
                             <field name="sando_ids" colspan="2"/>
+                        </group>
+                    </sheet>
+                    <sheet>
+                        <div class="oe_chatter">
+                            <field name="message_follower_ids" widget="mail_followers"/>
+                            <field name="message_ids" widget="mail_thread"/>
+                        </div>
+                    </sheet>
+                </form>
+            </field>
+        </record>
+
+        <record model="ir.actions.act_window" id="sando.i_action_window">
+            <field name="name">O&amp;S intelligence reports</field>
+            <field name="res_model">sando.intelligence</field>
+            <field name="view_mode">tree,form</field>
+            <field name="view_type">form</field>
+            <field name="help" type="html">
+                <p class="oe_view_nocontent_create">
+                    Click to add a record
+                </p>
+            </field>
+        </record>
+
+        <!--Means of transport-->
+
+        <record model="ir.ui.view" id="sando.means_of_transport_list">
+            <field name="name">Means of transport</field>
+            <field name="model">sando.means_of_transport</field>
+            <field name="arch" type="xml">
+                <tree>
+                    <field name="name"/>
+                    <field name="intelligence_ids"/>
+                </tree>
+            </field>
+        </record>
+
+        <record model="ir.ui.view" id="sando.means_of_transport_form">
+            <field name="name">sando.means_of_transport_form</field>
+            <field name="model">sando.means_of_transport</field>
+            <field name="arch" type="xml">
+                <form>
+                    <header>
+                    </header>
+                    <sheet>
+                        <div class="oe_button_box" name="button_box">
+                            <!--todo: visibility control-->
+                            <button name="toggle_active" type="object" groups="base.group_no_one"
+                                    class="oe_stat_button" icon="fa-archive">
+                                <field name="active" widget="boolean_button"
+                                       options='{"terminology": "archive"}'/>
+                            </button>
+                        </div>
+                        <group col="1">
+                            <group>
+                                <field name="expiry_date"/>
+                                <field name="mode_of_transport"/>
+                                <field name="registration_number"/>
+                                <field name="country_of_registration"/>
+                                <field name="port_of_registration"/>
+                                <field name="description"/>
+
+                                <!--todo: correct field in search-->
+                                <button string="Find offences" name="%(sando.action_window)d"
+                                        context="{'search_default_transporter_id_number': registration_number}"
+                                        style="background-color:red"
+                                        type="action" class="oe_highlight" icon="fa-search"
+                                        attrs="{'invisible':[('registration_number', '==', False)]}"/>
+
+                            </group>
                         </group>
                     </sheet>
                     <sheet>
@@ -379,6 +453,334 @@
                 </form>
             </field>
         </record>
+
+        <record model="ir.actions.act_window" id="sando.means_of_transport_action_window">
+            <field name="name">Means of transport</field>
+            <field name="res_model">sando.means_of_transport</field>
+            <field name="view_mode">tree,form</field>
+            <field name="view_type">form</field>
+            <field name="help" type="html">
+                <p class="oe_view_nocontent_create">
+                    Click to add a record
+                </p>
+            </field>
+        </record>
+
+        <!--Persons-->
+
+        <record model="ir.ui.view" id="sando.person_list">
+            <field name="name">Person of interest</field>
+            <field name="model">sando.person</field>
+            <field name="arch" type="xml">
+                <tree>
+                    <field name="name"/>
+                    <field name="last_name"/>
+                    <field name="first_name"/>
+                    <field name="intelligence_ids"/>
+                </tree>
+            </field>
+        </record>
+
+        <record model="ir.ui.view" id="sando.person_form">
+            <field name="name">sando.person_form</field>
+            <field name="model">sando.person</field>
+            <field name="arch" type="xml">
+                <form>
+                    <header>
+                    </header>
+                    <sheet>
+                        <div class="oe_button_box" name="button_box">
+                            <!--todo: visibility control-->
+                            <button name="toggle_active" type="object" groups="base.group_no_one"
+                                    class="oe_stat_button" icon="fa-archive">
+                                <field name="active" widget="boolean_button"
+                                       options='{"terminology": "archive"}'/>
+                            </button>
+                        </div>
+                        <group col="1">
+                            <group>
+                                <field name="last_name"/>
+                                <field name="first_name"/>
+                                <field name="alias"/>
+
+                                <field name="passport_number"/>
+
+                                <field name="passport_issue_date"/>
+
+                                <field name="passport_expiry_date"/>
+
+                                <field name="passport_issuing_country"/>
+
+                                <field name="passport_issuing_location"/>
+
+                                <field name="date_of_birth"/>
+
+                                <field name="birth_place"/>
+
+                                <field name="citizenship"/>
+
+                                <field name="nationality"/>
+
+                                <field name="address"/>
+
+                                <field name="phone"/>
+
+                                <field name="email"/>
+
+                                <field name="occupation"/>
+
+                                <field name="civil_status"/>
+
+                                <field name="gender"/>
+
+                                <field name="description"/>
+
+                                <field name="expiry_date"/>
+
+                                <field name="intelligence_ids"/>
+
+                                <!--todo: correct field in search-->
+                                <!--<button string="Find offences" name="%(sando.action_window)d"-->
+                                <!--context="{'search_default_transporter_id_number': registration_number}"-->
+                                <!--style="background-color:red"-->
+                                <!--type="action" class="oe_highlight" icon="fa-search"-->
+                                <!--attrs="{'invisible':[('registration_number', '==', False)]}"/>-->
+
+                            </group>
+                        </group>
+                    </sheet>
+                    <sheet>
+                        <div class="oe_chatter">
+                            <field name="message_follower_ids" widget="mail_followers"/>
+                            <field name="message_ids" widget="mail_thread"/>
+                        </div>
+                    </sheet>
+
+                </form>
+            </field>
+        </record>
+
+        <record model="ir.actions.act_window" id="sando.person_action_window">
+            <field name="name">Persons of interest</field>
+            <field name="res_model">sando.person</field>
+            <field name="view_mode">tree,form</field>
+            <field name="view_type">form</field>
+            <field name="help" type="html">
+                <p class="oe_view_nocontent_create">
+                    Click to add a record
+                </p>
+            </field>
+        </record>
+
+        <!--Organisation-->
+
+        <record model="ir.ui.view" id="sando.organisation_list">
+            <field name="name">organisation</field>
+            <field name="model">sando.organisation</field>
+            <field name="arch" type="xml">
+                <tree>
+                    <field name="name"/>
+                    <field name="organisation_name"/>
+                    <field name="tin"/>
+                    <field name="intelligence_ids"/>
+                </tree>
+            </field>
+        </record>
+
+        <record model="ir.ui.view" id="sando.organisation_form">
+            <field name="name">sando.organisation_form</field>
+            <field name="model">sando.organisation</field>
+            <field name="arch" type="xml">
+                <form>
+                    <header>
+                    </header>
+                    <sheet>
+                        <div class="oe_button_box" name="button_box">
+                            <!--todo: visibility control-->
+                            <button name="toggle_active" type="object" groups="base.group_no_one"
+                                    class="oe_stat_button" icon="fa-archive">
+                                <field name="active" widget="boolean_button"
+                                       options='{"terminology": "archive"}'/>
+                            </button>
+                        </div>
+                        <group col="1">
+                            <group>
+                                <field name="organisation_name"/>
+
+                                <field name="tin"/>
+
+                                <field name="address"/>
+
+                                <field name="phone"/>
+
+                                <field name="email"/>
+
+                                <field name="website"/>
+
+                                <field name="description"/>
+
+                                <field name="expiry_date"/>
+
+                                <field name="intelligence_ids"/>
+
+                                <!--todo: correct field in search-->
+                                <!--<button string="Find offences" name="%(sando.action_window)d"-->
+                                <!--context="{'search_default_transporter_id_number': registration_number}"-->
+                                <!--style="background-color:red"-->
+                                <!--type="action" class="oe_highlight" icon="fa-search"-->
+                                <!--attrs="{'invisible':[('registration_number', '==', False)]}"/>-->
+
+                            </group>
+                        </group>
+                    </sheet>
+                    <sheet>
+                        <div class="oe_chatter">
+                            <field name="message_follower_ids" widget="mail_followers"/>
+                            <field name="message_ids" widget="mail_thread"/>
+                        </div>
+                    </sheet>
+
+                </form>
+            </field>
+        </record>
+
+        <record model="ir.actions.act_window" id="sando.organisation_action_window">
+            <field name="name">Organisation</field>
+            <field name="res_model">sando.organisation</field>
+            <field name="view_mode">tree,form</field>
+            <field name="view_type">form</field>
+            <field name="help" type="html">
+                <p class="oe_view_nocontent_create">
+                    Click to add a record
+                </p>
+            </field>
+        </record>
+
+        <!--Sources-->
+
+        <record model="ir.ui.view" id="sando.source_list">
+            <field name="name">Source</field>
+            <field name="model">sando.source</field>
+            <field name="arch" type="xml">
+                <tree>
+                    <field name="name"/>
+                    <field name="alias"/>
+                     <field name="evaluation_value"/>
+                    <field name="intelligence_ids"/>
+                </tree>
+            </field>
+        </record>
+
+        <record model="ir.ui.view" id="sando.source_form">
+            <field name="name">sando.source_form</field>
+            <field name="model">sando.source</field>
+            <field name="arch" type="xml">
+                <form>
+                    <header>
+                    </header>
+                    <sheet>
+                        <div class="oe_button_box" name="button_box">
+                            <!--todo: visibility control-->
+                            <button name="toggle_active" type="object" groups="base.group_no_one"
+                                    class="oe_stat_button" icon="fa-archive">
+                                <field name="active" widget="boolean_button"
+                                       options='{"terminology": "archive"}'/>
+                            </button>
+                        </div>
+                        <group col="1">
+                            <group>
+                                <field name="officer_receiving_information"/>
+                                <field name="officer_evaluating_information"/>
+                                <field name="officer_managing_source"/>
+                                <field name="evaluation"  class="oe_edit_only"/>
+                                <field name="evaluation_value"/>
+                                <field name="last_name"/>
+                                <field name="first_name"/>
+                                <field name="alias"/>
+                                <field name="address"/>
+                                <field name="organisation_name"/>
+                                <field name="phone"/>
+                                <field name="email"/>
+                                <field name="description"/>
+                                <field name="possible_offender"/>
+                                <field name="sando_ids"/>
+                                <field name="rules"/>
+                                <field name="rules_approval"/>
+                                <field name="intelligence_ids"/>
+                                <!--todo: correct field in search-->
+                                <!--<button string="Find offences" name="%(sando.action_window)d"-->
+                                <!--context="{'search_default_transporter_id_number': registration_number}"-->
+                                <!--style="background-color:red"-->
+                                <!--type="action" class="oe_highlight" icon="fa-search"-->
+                                <!--attrs="{'invisible':[('registration_number', '==', False)]}"/>-->
+
+                            </group>
+                        </group>
+                    </sheet>
+                    <sheet>
+                        <div class="oe_chatter">
+                            <field name="message_follower_ids" widget="mail_followers"/>
+                            <field name="message_ids" widget="mail_thread"/>
+                        </div>
+                    </sheet>
+
+                </form>
+            </field>
+        </record>
+
+        <record model="ir.actions.act_window" id="sando.source_action_window">
+            <field name="name">Source</field>
+            <field name="res_model">sando.source</field>
+            <field name="view_mode">tree,form</field>
+            <field name="view_type">form</field>
+            <field name="help" type="html">
+                <p class="oe_view_nocontent_create">
+                    Click to add a record
+                </p>
+            </field>
+        </record>
+
+
+        <!-- Top menu item -->
+
+        <!--todo: visibility! -->
+        <menuitem name="O&amp;S" id="sando.menu_root"/>
+
+
+        <!--todo: visibility! -->
+        <menuitem name="Offence records" id="sando.menu_1_list" parent="sando.menu_root"
+                  action="sando.action_window"/>
+
+        <!--todo: visibility! -->
+        <menuitem id="sando.menu_intelligence" name="Intelligence" parent="sando.menu_root"
+                  sequence="100"/>
+
+        <!--todo: visibility! -->
+        <menuitem name="Intelligence reports" id="sando.menu_2_list" parent="sando.menu_intelligence"
+                  action="sando.i_action_window"/>
+
+        <!--todo: visibility! -->
+        <menuitem name="Mean of transport" id="sando.menu_means_of_transport_list" parent="sando.menu_intelligence"
+                  action="sando.means_of_transport_action_window"/>
+
+        <!--todo: visibility! -->
+        <menuitem name="Persons of interest" id="sando.menu_person_list" parent="sando.menu_intelligence"
+                  action="sando.person_action_window"/>
+
+        <!--todo: visibility! -->
+        <menuitem name="Organisations" id="sando.menu_organisation_list" parent="sando.menu_intelligence"
+                  action="sando.organisation_action_window"/>
+
+        <!--todo: visibility! -->
+        <menuitem name="Sources" id="sando.menu_source_list" parent="sando.menu_intelligence"
+                  action="sando.source_action_window"/>
+
+        <menuitem id="sando_menu_config" name="Configuration" parent="sando.menu_root"
+                  sequence="200" groups="base.group_configuration"/>
+
+        <menuitem action="action_sando_category_form" id="menu_sando_category_form" name="O&amp;S Records Tags"
+                  sequence="1"
+                  parent="sando_menu_config" groups="base.group_configuration"/>
 
     </data>
 </openerp>

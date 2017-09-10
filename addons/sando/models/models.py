@@ -697,6 +697,26 @@ class intelligence(models.Model):
     #     track_visibility='onchange',
     # )
 
+    means_of_transport_ids = fields.Many2many(
+        'sando.means_of_transport',
+        string="Means of transport",
+    )
+
+    person_ids = fields.Many2many(
+        'sando.person',
+        string="Person",
+    )
+
+    organisation_ids = fields.Many2many(
+        'sando.organisation',
+        string="Organisation",
+    )
+
+    source_ids = fields.Many2many(
+        'sando.source',
+        string="Source",
+    )
+
     sando_ids = fields.Many2many(
         'sando.sando',
         ondelete='restrict',
@@ -712,6 +732,508 @@ class intelligence(models.Model):
     def create(self, vals):
         vals['name'] = self.env['ir.sequence'].next_by_code('sando.intelligence')
         return super(intelligence, self).create(vals)
+
+    @api.multi
+    def unlink(self):
+        from openerp.exceptions import AccessError
+        raise AccessError(_("You are can not delete this record"))
+
+
+class means_of_transport(models.Model):
+    _name = 'sando.means_of_transport'
+    _inherit = ['mail.thread', 'ir.needaction_mixin']
+    _description = "Means of transport"
+    _order = 'name desc'
+
+    name = fields.Char(
+        string='Serial Number',
+        help='Prime key to allow the computer to link various information.'
+             'If a record is deleted, the number is deleted and cannot be used again.'
+             'This prevents different records from ever having the same serial number.'
+             '(E.G. there will never be two records in the register with serial number 5)',
+        size=10,
+        readonly=True
+    )
+
+    active = fields.Boolean(
+        default=True,
+        track_visibility='onchange',
+        help="Set active to false to hide the case without removing it."
+    )
+
+    mode_of_transport = fields.Selection(
+        [
+            ("Ship", "Ship"),
+            ("Aircraft", "Aircraft"),
+            ("Road vehicle", "Road vehicle"),
+            ("Train", "Train"),
+            ("Other", "Other"),
+        ], string="Mode of transport", required=True)
+
+    registration_number = fields.Char(
+        string="Registration Number",
+        track_visibility='onchange',
+    )
+
+    country_of_registration = fields.Many2one(
+        "res.country",
+        string="Country of registration",
+        track_visibility='onchange',
+    )
+
+    port_of_registration = fields.Char(
+        string="Port of registration (ships only)",
+        track_visibility='onchange',
+    )
+
+    description = fields.Text(
+        string="Detailed description",
+        track_visibility='onchange',
+        help="Type of ship/ aircraft/ road vehicle; body type; model; "
+             "year of manufacture; colour; identifying marks; etc",
+    )
+
+    # activity_location = fields.Char(
+    #     string="Location of activity",
+    #     track_visibility='onchange',
+    # )
+    # flight_number = fields.Char(
+    #     string="Flight Number",
+    #     track_visibility='onchange',
+    # )
+    # travel_dates_from = fields.Date(
+    #     string="Travel date (from)",
+    #     track_visibility='onchange',
+    # )
+    # travel_dates_to = fields.Date(
+    #     string="Travel date (to)",
+    #     track_visibility='onchange',
+    # )
+    # associates = fields.Char(
+    #     string="Associates",
+    #     track_visibility='onchange',
+    # )
+    # vessel_name = fields.Char(
+    #     string="Vessel name",
+    #     track_visibility='onchange',
+    # )
+    # vessel_port_of_registration = fields.Char(
+    #     string="Vessel port of registration",
+    #     track_visibility='onchange',
+    # )
+    # vessel_owners = fields.Char(
+    #     string="Vessel owners",
+    #     track_visibility='onchange',
+    # )
+    # vessel_type = fields.Char(
+    #     string="Vessel type",
+    #     track_visibility='onchange',
+    # )
+    # aircraft_registration = fields.Char(
+    #     string="Aircraft (General Aviation) registration",
+    #     track_visibility='onchange',
+    # )
+    # aircraft_type = fields.Char(
+    #     string="Aircraft type",
+    #     track_visibility='onchange',
+    # )
+
+    intelligence_ids = fields.Many2many(
+        'sando.intelligence',
+        string="Intelligence reports",
+    )
+
+    expiry_date = fields.Datetime(
+        string="Report expiry date",
+        track_visibility='onchange',
+        default=datetime.datetime.now() + datetime.timedelta(days=DEFAULT_EXPIRATION_DAYS)
+    )
+
+    @api.model
+    def create(self, vals):
+        vals['name'] = self.env['ir.sequence'].next_by_code('sando.means_of_transport')
+        return super(means_of_transport, self).create(vals)
+
+    @api.multi
+    def unlink(self):
+        from openerp.exceptions import AccessError
+        raise AccessError(_("You are can not delete this record"))
+
+
+class person(models.Model):
+    _name = 'sando.person'
+    _inherit = ['mail.thread', 'ir.needaction_mixin']
+    _description = "Person"
+    _order = 'name desc'
+
+    name = fields.Char(
+        string='Serial Number',
+        help='Prime key to allow the computer to link various information.'
+             'If a record is deleted, the number is deleted and cannot be used again.'
+             'This prevents different records from ever having the same serial number.'
+             '(E.G. there will never be two records in the register with serial number 5)',
+        size=10,
+        readonly=True
+    )
+
+    active = fields.Boolean(
+        default=True,
+        track_visibility='onchange',
+        help="Set active to false to hide the case without removing it."
+    )
+
+    last_name = fields.Char(
+        string="Last name",
+        track_visibility='onchange',
+    )
+
+    first_name = fields.Char(
+        string="First name(s)",
+        track_visibility='onchange',
+    )
+
+    alias = fields.Char(
+        string="Pen name/ nickname/ alias ",
+        track_visibility='onchange',
+    )
+
+    passport_number = fields.Char(
+        string="Passport number ",
+        track_visibility='onchange',
+    )
+
+    passport_issue_date = fields.Date(
+        string="Passport issue date ",
+        track_visibility='onchange',
+    )
+
+    passport_expiry_date = fields.Date(
+        string="Passport expiry date",
+        track_visibility='onchange',
+    )
+
+    passport_issuing_country = fields.Many2one(
+        "res.country",
+        string="Passport issuing country",
+        track_visibility='onchange',
+    )
+
+    passport_issuing_location = fields.Char(
+        string="Passport issuing location",
+        track_visibility='onchange',
+    )
+
+    date_of_birth = fields.Date(
+        string="Date of birth ",
+        track_visibility='onchange',
+    )
+
+    birth_place = fields.Char(
+        string="Birth place ",
+        track_visibility='onchange',
+    )
+
+    citizenship = fields.Many2one(
+        "res.country",
+        string="Citizenship",
+        track_visibility='onchange',
+    )
+
+    nationality = fields.Many2one(
+        "res.country",
+        string="Nationality ",
+        track_visibility='onchange',
+    )
+
+    address = fields.Text(
+        string="Address ",
+        track_visibility='onchange',
+    )
+
+    phone = fields.Char(
+        string="Phone/fax",
+        track_visibility='onchange',
+    )
+
+    email = fields.Char(
+        string="E-Mail ",
+        track_visibility='onchange',
+    )
+
+    occupation = fields.Char(
+        string="Occupation ",
+        track_visibility='onchange',
+    )
+
+    civil_status = fields.Selection(
+        string="Civil status",
+        selection=[
+            ('single', 'Single'),
+            ('married', 'Married'),
+            ('widower', 'Widower'),
+            ('divorced', 'Divorced')
+        ],
+        track_visibility='onchange',
+    )
+
+    gender = fields.Selection(
+        string="Gender",
+        selection=[
+            ('male', 'Male'),
+            ('female', 'Female'),
+            ('other', 'Other')
+        ]
+    )
+
+    description = fields.Text(
+        string="Description",
+        help="Description of person (appearance; height; distinctive features; etc)",
+        track_visibility='onchange',
+    )
+
+    expiry_date = fields.Datetime(
+        string="Report expiry date",
+        track_visibility='onchange',
+        default=datetime.datetime.now() + datetime.timedelta(days=DEFAULT_EXPIRATION_DAYS)
+    )
+
+    intelligence_ids = fields.Many2many(
+        'sando.intelligence',
+        string="Intelligence reports",
+    )
+
+    @api.model
+    def create(self, vals):
+        vals['name'] = self.env['ir.sequence'].next_by_code('sando.person')
+        return super(person, self).create(vals)
+
+    @api.multi
+    def unlink(self):
+        from openerp.exceptions import AccessError
+        raise AccessError(_("You are can not delete this record"))
+
+
+class organisation(models.Model):
+    _name = 'sando.organisation'
+    _inherit = ['mail.thread', 'ir.needaction_mixin']
+    _description = "Organisation"
+    _order = 'name desc'
+
+    name = fields.Char(
+        string='Serial Number',
+        help='Prime key to allow the computer to link various information.'
+             'If a record is deleted, the number is deleted and cannot be used again.'
+             'This prevents different records from ever having the same serial number.'
+             '(E.G. there will never be two records in the register with serial number 5)',
+        size=10,
+        readonly=True
+    )
+
+    active = fields.Boolean(
+        default=True,
+        track_visibility='onchange',
+        help="Set active to false to hide the case without removing it."
+    )
+
+    organisation_name = fields.Char(
+        string="Organisation name",
+        track_visibility='onchange',
+    )
+
+    tin = fields.Char(
+        string="TIN",
+        track_visibility='onchange',
+    )
+
+    address = fields.Text(
+        string="Address ",
+        track_visibility='onchange',
+    )
+
+    phone = fields.Char(
+        string="Phone/fax",
+        track_visibility='onchange',
+    )
+
+    email = fields.Char(
+        string="E-Mail ",
+        track_visibility='onchange',
+    )
+
+    website = fields.Char(
+        string="Web-site",
+        track_visibility='onchange',
+    )
+
+    description = fields.Text(
+        string="Description",
+        help="Description of organisation",
+        track_visibility='onchange',
+    )
+
+    expiry_date = fields.Datetime(
+        string="Report expiry date",
+        track_visibility='onchange',
+        default=datetime.datetime.now() + datetime.timedelta(days=DEFAULT_EXPIRATION_DAYS)
+    )
+
+    intelligence_ids = fields.Many2many(
+        'sando.intelligence',
+        string="Intelligence reports",
+    )
+
+    @api.model
+    def create(self, vals):
+        vals['name'] = self.env['ir.sequence'].next_by_code('sando.organisation')
+        return super(organisation, self).create(vals)
+
+    @api.multi
+    def unlink(self):
+        from openerp.exceptions import AccessError
+        raise AccessError(_("You are can not delete this record"))
+
+
+class source(models.Model):
+    _name = 'sando.source'
+    _inherit = ['mail.thread', 'ir.needaction_mixin']
+    _description = "Source"
+    _order = 'name desc'
+
+    name = fields.Char(
+        string='Serial Number',
+        help='Prime key to allow the computer to link various information.'
+             'If a record is deleted, the number is deleted and cannot be used again.'
+             'This prevents different records from ever having the same serial number.'
+             '(E.G. there will never be two records in the register with serial number 5)',
+        size=10,
+        readonly=True
+    )
+
+    active = fields.Boolean(
+        default=True,
+        track_visibility='onchange',
+        help="Set active to false to hide the case without removing it."
+    )
+
+    officer_receiving_information = fields.Char(
+        string="Officer receiving information",
+        track_visibility='onchange',
+    )
+
+    officer_evaluating_information = fields.Char(
+        string="Officer evaluating information ",
+        track_visibility='onchange',
+    )
+
+    officer_managing_source = fields.Char(
+        string="Officer managing source ",
+        track_visibility='onchange',
+    )
+
+    evaluation = fields.Selection(
+        string='Evaluation source',
+        selection=[
+            (
+                'A', 'No doubt regarding authenticity, trustworthiness, '
+                     'integrity, competence, or, a history of complete reliability'
+            ),
+            (
+                'B', 'Source from whom information received has in most instances proved to be reliable'
+            ),
+            (
+                'C', 'Source from whom information received has in most instances proved to be unreliable'
+            ),
+            (
+                'X', 'Reliability cannot be judged'
+            ),
+
+        ]
+    )
+
+    evaluation_value = fields.Char(string="Evaluation",
+                             compute='_set_evaluation_value', store=True, read_only=True,
+                             track_visibility='onchange')
+
+
+    last_name = fields.Char(
+        string="Last name",
+        track_visibility='onchange',
+    )
+
+    first_name = fields.Char(
+        string="First name(s)",
+        track_visibility='onchange',
+    )
+
+    alias = fields.Char(
+        string="Pen name/ nickname/ alias ",
+        track_visibility='onchange',
+    )
+
+    address = fields.Text(
+        string="Address ",
+        track_visibility='onchange',
+    )
+
+    organisation_name = fields.Char(
+        string="Organisation name",
+        track_visibility='onchange',
+    )
+
+    phone = fields.Char(
+        string="Phone/fax",
+        track_visibility='onchange',
+    )
+
+    email = fields.Char(
+        string="E-Mail ",
+        track_visibility='onchange',
+    )
+
+
+
+    description = fields.Text(
+        string="Description",
+        help="Description of person (appearance; height; distinctive features; etc)",
+        track_visibility='onchange',
+    )
+
+    possible_offender = fields.Boolean(
+        string="Possible offender",
+        track_visibility='onchange',
+    )
+
+    sando_ids = fields.Many2many(
+        'sando.sando',
+        ondelete='restrict',
+        string="Related offence records",
+        track_visibility='onchange',
+    )
+
+    rules = fields.Char(
+        string="Rules for handling the source ",
+        track_visibility='onchange',
+    )
+
+    rules_approval = fields.Char(
+        string="Approval of rules by manager ",
+        track_visibility='onchange',
+    )
+
+    intelligence_ids = fields.Many2many(
+        'sando.intelligence',
+        string="Intelligence reports",
+    )
+
+    @api.depends("evaluation")
+    def _set_evaluation_value(self):
+        self.evaluation_value = (self.evaluation or ' ')
+
+
+    @api.model
+    def create(self, vals):
+        vals['name'] = self.env['ir.sequence'].next_by_code('sando.source')
+        return super(source, self).create(vals)
 
     @api.multi
     def unlink(self):

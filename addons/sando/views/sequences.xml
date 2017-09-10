@@ -14,7 +14,39 @@
             <field name="name">O&amp;S Intelligence Code</field>
             <field name="code">sando.intelligence</field>
             <field name="prefix">OSI</field>
-            <field name="padding">6</field>
+            <field name="padding">7</field>
+            <field eval="1" name="number_increment"/>
+        </record>
+
+        <record id="seq_sando_means_of_transport" model="ir.sequence">
+            <field name="name">O&amp;S Means of Transport Code</field>
+            <field name="code">sando.means_of_transport</field>
+            <field name="prefix">OST</field>
+            <field name="padding">7</field>
+            <field eval="1" name="number_increment"/>
+        </record>
+
+        <record id="seq_sando_person" model="ir.sequence">
+            <field name="name">O&amp;S Person Code</field>
+            <field name="code">sando.person</field>
+            <field name="prefix">OSP</field>
+            <field name="padding">7</field>
+            <field eval="1" name="number_increment"/>
+        </record>
+
+        <record id="seq_sando_organisation" model="ir.sequence">
+            <field name="name">O&amp;S Organisation Code</field>
+            <field name="code">sando.organisation</field>
+            <field name="prefix">OSO</field>
+            <field name="padding">7</field>
+            <field eval="1" name="number_increment"/>
+        </record>
+
+        <record id="seq_sando_source" model="ir.sequence">
+            <field name="name">O&amp;S Source Code</field>
+            <field name="code">sando.source</field>
+            <field name="prefix">OSS</field>
+            <field name="padding">7</field>
             <field eval="1" name="number_increment"/>
         </record>
 
