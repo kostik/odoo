@@ -105,6 +105,7 @@
                                 <hr/>
                                 <newline/>
 
+                                <field name="registration_number"/>
                                 <field name="vehicle_type"/>
                                 <field name="vehicle_make_and_model"/>
 
@@ -209,6 +210,7 @@
                     <field name="driver_email"/>
 
                     <field name="vehicle_make_and_model"/>
+                    <field name="registration_number"/>
 
                     <field name="inspection_result"/>
 
@@ -345,8 +347,7 @@
                                    context="{'default_intelligence_id': context.get('active_id')}">
                                 <tree>
                                     <field name="name"/>
-                                    <field name="first_name"/>
-                                    <field name="last_name"/>
+                                    <field name="person_name"/>
                                 </tree>
                             </field>
 
@@ -403,6 +404,9 @@
             <field name="arch" type="xml">
                 <tree>
                     <field name="name"/>
+                    <field name="mode_of_transport"/>
+                    <field name="registration_number"/>
+                    <field name="country_of_registration"/>
                     <field name="intelligence_ids"/>
                 </tree>
             </field>
@@ -433,12 +437,11 @@
                                 <field name="port_of_registration"/>
                                 <field name="description"/>
 
-                                <!--todo: correct field in search-->
                                 <button string="Find offences" name="%(sando.action_window)d"
-                                        context="{'search_default_transporter_id_number': registration_number}"
-                                        style="background-color:red"
+                                        context="{'search_default_registration_number': registration_number}"
                                         type="action" class="oe_highlight" icon="fa-search"
                                         attrs="{'invisible':[('registration_number', '==', False)]}"/>
+                                        <!--style="background-color:red"-->
 
                             </group>
                         </group>
@@ -474,8 +477,7 @@
             <field name="arch" type="xml">
                 <tree>
                     <field name="name"/>
-                    <field name="last_name"/>
-                    <field name="first_name"/>
+                    <field name="person_name"/>
                     <field name="intelligence_ids"/>
                 </tree>
             </field>
@@ -499,8 +501,8 @@
                         </div>
                         <group col="1">
                             <group>
-                                <field name="last_name"/>
-                                <field name="first_name"/>
+                                <field name="person_name"/>
+
                                 <field name="alias"/>
 
                                 <field name="passport_number"/>
@@ -539,12 +541,11 @@
 
                                 <field name="intelligence_ids"/>
 
-                                <!--todo: correct field in search-->
-                                <!--<button string="Find offences" name="%(sando.action_window)d"-->
-                                <!--context="{'search_default_transporter_id_number': registration_number}"-->
-                                <!--style="background-color:red"-->
-                                <!--type="action" class="oe_highlight" icon="fa-search"-->
-                                <!--attrs="{'invisible':[('registration_number', '==', False)]}"/>-->
+                                <button string="Find offences" name="%(sando.action_window)d"
+                                        context="{'search_default_offender_name': person_name}"
+                                        style="background-color:red"
+                                        type="action" class="oe_highlight" icon="fa-search"
+                                        attrs="{'invisible':[('person_name', '==', False)]}"/>
 
                             </group>
                         </group>
@@ -623,12 +624,11 @@
 
                                 <field name="intelligence_ids"/>
 
-                                <!--todo: correct field in search-->
-                                <!--<button string="Find offences" name="%(sando.action_window)d"-->
-                                <!--context="{'search_default_transporter_id_number': registration_number}"-->
-                                <!--style="background-color:red"-->
-                                <!--type="action" class="oe_highlight" icon="fa-search"-->
-                                <!--attrs="{'invisible':[('registration_number', '==', False)]}"/>-->
+                                <button string="Find offences" name="%(sando.action_window)d"
+                                        context="{'search_default_offender_name': organisation_name}"
+                                        style="background-color:red"
+                                        type="action" class="oe_highlight" icon="fa-search"
+                                        attrs="{'invisible':[('organisation_name', '==', False)]}"/>
 
                             </group>
                         </group>
@@ -665,7 +665,7 @@
                 <tree>
                     <field name="name"/>
                     <field name="alias"/>
-                     <field name="evaluation_value"/>
+                    <field name="evaluation_value"/>
                     <field name="intelligence_ids"/>
                 </tree>
             </field>
@@ -692,10 +692,9 @@
                                 <field name="officer_receiving_information"/>
                                 <field name="officer_evaluating_information"/>
                                 <field name="officer_managing_source"/>
-                                <field name="evaluation"  class="oe_edit_only"/>
+                                <field name="evaluation" class="oe_edit_only"/>
                                 <field name="evaluation_value"/>
-                                <field name="last_name"/>
-                                <field name="first_name"/>
+                                <field name="person_name"/>
                                 <field name="alias"/>
                                 <field name="address"/>
                                 <field name="organisation_name"/>
@@ -707,12 +706,12 @@
                                 <field name="rules"/>
                                 <field name="rules_approval"/>
                                 <field name="intelligence_ids"/>
-                                <!--todo: correct field in search-->
-                                <!--<button string="Find offences" name="%(sando.action_window)d"-->
-                                <!--context="{'search_default_transporter_id_number': registration_number}"-->
-                                <!--style="background-color:red"-->
-                                <!--type="action" class="oe_highlight" icon="fa-search"-->
-                                <!--attrs="{'invisible':[('registration_number', '==', False)]}"/>-->
+
+                                <button string="Find offences" name="%(sando.action_window)d"
+                                        context="{'search_default_offender_name': person_name}"
+                                        style="background-color:red"
+                                        type="action" class="oe_highlight" icon="fa-search"
+                                        attrs="{'invisible':[('person_name', '==', False)]}"/>
 
                             </group>
                         </group>

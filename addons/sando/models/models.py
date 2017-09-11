@@ -377,6 +377,13 @@ class sando(models.Model):
              "of vehicles/aircraft/containers",
     )
 
+    registration_number = fields.Char(
+        string="Vehicle name or registration number",
+        help="Vehicle registration number, name, aircraft (General Aviation) registration, "
+             "flight number, etc",
+        track_visibility='onchange',
+    )
+
     harmonised_system_code = fields.Char(
         string="Harmonised System of Classification Code/Tariff Trade Code etc.",
         track_visibility='onchange',
@@ -844,7 +851,7 @@ class means_of_transport(models.Model):
     )
 
     expiry_date = fields.Datetime(
-        string="Report expiry date",
+        string="Expiry date",
         track_visibility='onchange',
         default=datetime.datetime.now() + datetime.timedelta(days=DEFAULT_EXPIRATION_DAYS)
     )
@@ -882,13 +889,8 @@ class person(models.Model):
         help="Set active to false to hide the case without removing it."
     )
 
-    last_name = fields.Char(
-        string="Last name",
-        track_visibility='onchange',
-    )
-
-    first_name = fields.Char(
-        string="First name(s)",
+    person_name = fields.Char(
+        string="Person name(s)",
         track_visibility='onchange',
     )
 
@@ -992,7 +994,7 @@ class person(models.Model):
     )
 
     expiry_date = fields.Datetime(
-        string="Report expiry date",
+        string="Expiry date",
         track_visibility='onchange',
         default=datetime.datetime.now() + datetime.timedelta(days=DEFAULT_EXPIRATION_DAYS)
     )
@@ -1151,17 +1153,11 @@ class source(models.Model):
     )
 
     evaluation_value = fields.Char(string="Evaluation",
-                             compute='_set_evaluation_value', store=True, read_only=True,
-                             track_visibility='onchange')
+                                   compute='_set_evaluation_value', store=True, read_only=True,
+                                   track_visibility='onchange')
 
-
-    last_name = fields.Char(
-        string="Last name",
-        track_visibility='onchange',
-    )
-
-    first_name = fields.Char(
-        string="First name(s)",
+    person_name = fields.Char(
+        string="Person name(s)",
         track_visibility='onchange',
     )
 
@@ -1189,8 +1185,6 @@ class source(models.Model):
         string="E-Mail ",
         track_visibility='onchange',
     )
-
-
 
     description = fields.Text(
         string="Description",
@@ -1228,7 +1222,6 @@ class source(models.Model):
     @api.depends("evaluation")
     def _set_evaluation_value(self):
         self.evaluation_value = (self.evaluation or ' ')
-
 
     @api.model
     def create(self, vals):
