@@ -1,6 +1,19 @@
 <?xml version="1.0" encoding="utf-8"?>
 <openerp>
     <data>
+        <record model="ir.ui.view" id="hr_kanban_view_employees_inherit">
+            <field name="priority" eval="1"/>
+            <field name="name">hr.kanban.view.employees.inherit</field>
+            <field name="model">hr.employee</field>
+            <field name="inherit_id" ref="hr.hr_kanban_view_employees"/>
+            <field name="arch" type="xml">
+                <field name="name" position="before">
+                    <field name="personal_number"/>
+                    <span> - </span>
+                </field>
+            </field>
+        </record>
+
 
         <record id="hr_employee_view_search" model="ir.ui.view">
             <field name="name">hr.employee.search.inherit</field>
@@ -277,7 +290,8 @@
                                         <field name="distinctive_marks"/>
                                         <field name="hair"/>
                                         <field name="eyes"/>
-                                        <field name="height" placeholder="176 for 176 cm OR 6 2.5 for 6 feet 2.5 inches" widget="imperial_length"/>
+                                        <field name="height" placeholder="176 for 176 cm OR 6 2.5 for 6 feet 2.5 inches"
+                                               widget="imperial_length"/>
                                         <field name="weight" placeholder="lbs"/>
                                         <field name="address_home_id"
                                                context="{'show_address': 1}"
@@ -333,10 +347,10 @@
                                 <group>
                                     <field name="relative_ids"
                                            context="{'default_employee_id': context.get('active_id')}">
-                                            <tree>
-                                                <field name="name"/>
-                                                <field name="relative_name"/>
-                                            </tree>
+                                        <tree>
+                                            <field name="name"/>
+                                            <field name="relative_name"/>
+                                        </tree>
                                     </field>
 
                                     <field name="political_activity"/>
