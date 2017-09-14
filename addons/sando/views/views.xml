@@ -441,7 +441,7 @@
                                         context="{'search_default_registration_number': registration_number}"
                                         type="action" class="oe_highlight" icon="fa-search"
                                         attrs="{'invisible':[('registration_number', '==', False)]}"/>
-                                        <!--style="background-color:red"-->
+                                <!--style="background-color:red"-->
 
                             </group>
                         </group>
@@ -743,36 +743,42 @@
         <!-- Top menu item -->
 
         <!--todo: visibility! -->
-        <menuitem name="O&amp;S" id="sando.menu_root"/>
-
+        <menuitem name="O&amp;S" id="sando.menu_root"
+                  groups="group_sando_user"/>
 
         <!--todo: visibility! -->
         <menuitem name="Offence records" id="sando.menu_1_list" parent="sando.menu_root"
-                  action="sando.action_window"/>
+                  action="sando.action_window"
+                  groups="group_sando_user"/>
 
         <!--todo: visibility! -->
-        <menuitem id="sando.menu_intelligence" name="Intelligence" parent="sando.menu_root"
-                  sequence="100"/>
+        <menuitem id="sando.menu_intelligence" name="Intelligence" parent="sando.menu_root" sequence="100"
+                  groups="group_sando_user"/>
 
         <!--todo: visibility! -->
         <menuitem name="Intelligence reports" id="sando.menu_2_list" parent="sando.menu_intelligence"
-                  action="sando.i_action_window"/>
+                  action="sando.i_action_window"
+                  groups="group_sando_user"/>
 
         <!--todo: visibility! -->
         <menuitem name="Mean of transport" id="sando.menu_means_of_transport_list" parent="sando.menu_intelligence"
-                  action="sando.means_of_transport_action_window"/>
+                  action="sando.means_of_transport_action_window"
+                  groups="group_sando_user"/>
 
         <!--todo: visibility! -->
         <menuitem name="Persons of interest" id="sando.menu_person_list" parent="sando.menu_intelligence"
-                  action="sando.person_action_window"/>
+                  action="sando.person_action_window"
+                  groups="group_sando_user"/>
 
         <!--todo: visibility! -->
         <menuitem name="Organisations" id="sando.menu_organisation_list" parent="sando.menu_intelligence"
-                  action="sando.organisation_action_window"/>
+                  action="sando.organisation_action_window"
+                  groups="group_sando_user"/>
 
         <!--todo: visibility! -->
         <menuitem name="Sources" id="sando.menu_source_list" parent="sando.menu_intelligence"
-                  action="sando.source_action_window"/>
+                  action="sando.source_action_window"
+                  groups="group_sando_user"/>
 
         <menuitem id="sando_menu_config" name="Configuration" parent="sando.menu_root"
                   sequence="200" groups="base.group_configuration"/>

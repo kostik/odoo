@@ -1,2 +1,11 @@
 id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
-access_sando_sando,sando.sando,model_sando_sando,,1,0,0,0
+access_sando_sando,access.sando.sando,model_sando_sando,group_sando_user,1,1,1,1
+access_sando_customs_house,access.sando.customs.house,model_sando_customs_house,group_sando_user,1,1,1,1
+access_sando_customs_regime_code,access.sando.customs.regime.code,model_sando_customs_regime_code,group_sando_user,1,1,1,1
+access_sando_vehicle_type,access.sando.vehicle.type,model_sando_vehicle_type,group_sando_user,1,1,1,1
+access_sando_offence_code,access.sando.offence.code,model_sando_offence_code,group_sando_user,1,1,1,1
+access_intelligence,access.intelligence,model_sando_intelligence,group_sando_user,1,1,1,1
+access_means_of_transport,access.means.of.transport,model_sando_means_of_transport,group_sando_user,1,1,1,1
+access_person,access.person,model_sando_person,group_sando_user,1,1,1,1
+access_organisation,access.organisation,model_sando_organisation,group_sando_user,1,1,1,1
+access_source,access.source,model_sando_source,group_sando_user,1,1,1,1
