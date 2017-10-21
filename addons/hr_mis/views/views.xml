@@ -9,7 +9,7 @@
             <field name="arch" type="xml">
                 <field name="name" position="before">
                     <field name="personal_number"/>
-                    <span> - </span>
+                    <span>-</span>
                 </field>
             </field>
         </record>
@@ -233,6 +233,31 @@
                             <group name="group_right">
                                 <field name="image_filename" invisible="1"/>
                                 <field widget="binary" name="image" filename="image_filename"/>
+                            </group>
+                        </group>
+                    </sheet>
+                </form>
+            </field>
+        </record>
+
+
+        <record id="view_form_hr_form_exam" model="ir.ui.view">
+            <field name="name">hr.form_exam.form</field>
+            <field name="model">hr.form_exam</field>
+            <field name="arch" type="xml">
+                <form>
+                    <sheet>
+                        <group name="group_top">
+                            <group name="group_left">
+                                <field name="employee_id"/>
+                            </group>
+                            <group name="group_right">
+                                <field name="date"/>
+                                <field name="place"/>
+                                <field name="subject"/>
+                                <field name="score"/>
+                                <field name="passed"/>
+                                <field name="notes"/>
                             </group>
                         </group>
                     </sheet>
@@ -474,6 +499,24 @@
                                         <tree>
                                             <field name="name"/>
                                             <field widget="binary" name="image" filename="image_filename"/>
+                                        </tree>
+                                    </field>
+                                </group>
+                            </page>
+
+
+                            <page string="Exams" groups="base.group_hr_user">
+                                <group string="Examination results">
+                                    <field name="form_exam_id"
+                                           context="{'default_employee_id': context.get('active_id')}"
+                                           nolabel="1">
+                                        <tree>
+                                            <field name="date"/>
+                                            <field name="place"/>
+                                            <field name="subject"/>
+                                            <field name="score"/>
+                                            <field name="passed"/>
+                                            <field name="notes"/>
                                         </tree>
                                     </field>
                                 </group>

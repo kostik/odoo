@@ -1,6 +1,6 @@
 # -*- coding: utf-8 -*-
 from openerp import api
-from openerp import models, fields, _
+from openerp import models, fields
 
 RACE_CHOICES = [
     (1, "Kachin"),
@@ -59,9 +59,8 @@ class hr_mis(models.Model):
     position_name_at_start = fields.Char("Position started", help="Position started as civil staff")
     date_started = fields.Date("Date started", help="Date started as civil staff")
 
-
     recommender_id = fields.Many2one('hr.recommender',
-                                       string="Recommender") # Supporter for the jobs http://redmine.kostik.net/redmine/issues/417
+                                     string="Recommender")  # Supporter for the jobs http://redmine.kostik.net/redmine/issues/417
 
     previous_position_and_place = fields.Char("Previous position and place")
     military_record_ids = fields.One2many('hr.military_record', 'employee_id', string="Military records")
@@ -78,7 +77,8 @@ class hr_mis(models.Model):
                                        string="Recommenders")  # Supporter Name (Headmaster, Administrator,Police Officer,Military Officer’s Name, Address (Full) http://redmine.kostik.net/redmine/issues/420
     hobby_ids = fields.Many2many('hr.hobby')
     military_colleague_ids = fields.Many2many(
-        'hr.military_colleague', help="Friends list who is in the Military, Police:  their names, positions, addresses")  # Friends list who working in Military,Police and Political and their Name, Position,Address
+        'hr.military_colleague',
+        help="Friends list who is in the Military, Police:  their names, positions, addresses")  # Friends list who working in Military,Police and Political and their Name, Position,Address
 
     club_record_ids = fields.One2many('hr.club_record', 'employee_id', string="Club and Organizations")
 
@@ -89,6 +89,7 @@ class hr_mis(models.Model):
     form6_id = fields.One2many('hr.form6', 'employee_id', string="Form 6")
     form7_id = fields.One2many('hr.form7', 'employee_id', string="Form 7")
     form8_id = fields.One2many('hr.form8', 'employee_id', string="Form 8")
+    form_exam_id = fields.One2many('hr.form_exam', 'employee_id', string="Examination results")
 
 
 class hr_birth_place(models.Model):
@@ -247,9 +248,9 @@ class hr_form2(models.Model):
     employee_id = fields.Many2one('hr.employee', ondelete='cascade', string="Employee")
     salary_rate_id = fields.Many2one("hr.salary_rate", "Salary rate")
 
-
     image = fields.Binary('Attachment')
     image_filename = fields.Char("Attachment filename")
+
 
 class hr_form3(models.Model):
     """
@@ -274,7 +275,7 @@ class hr_form4(models.Model):
     _name = "hr.form4"
     name = fields.Char("Training")
     local = fields.Selection([("Local", "Local"), ("Foreign", "Foreign")], string="Place",
-                            default=None)
+                             default=None)
     duration = fields.Char("Duration")
     qualification = fields.Char("Qualification")
     employee_id = fields.Many2one('hr.employee', ondelete='cascade', string="Employee")
@@ -326,7 +327,8 @@ class hr_form5(models.Model):
     date_from = fields.Date("From")
     date_to = fields.Date("To")
     employee_id = fields.Many2one('hr.employee', ondelete='cascade', string="Employee", requied=True)
-    educational_institution_id = fields.Many2one("hr.educational_institution", string="Educational institution", requied=True)
+    educational_institution_id = fields.Many2one("hr.educational_institution", string="Educational institution",
+                                                 requied=True)
 
 
 class hr_form6(models.Model):
@@ -356,7 +358,6 @@ class hr_form7(models.Model):
     employee_id = fields.Many2one('hr.employee', ondelete='cascade', string="Employee", requied=True)
     country_id = fields.Many2one("res.country", requied=True)
 
-
     image = fields.Binary('Attachment')
     image_filename = fields.Char("Attachment filename")
 
@@ -373,4 +374,15 @@ class hr_form8(models.Model):
     image_filename = fields.Char("Attachment filename")
 
 
-#class hr_inernationa_workgroup
+class hr_form_exam(models.Model):
+    """
+    http://redmine.kostik.net/redmine/issues/692
+    """
+    _name = "hr.form_exam"
+    employee_id = fields.Many2one('hr.employee', ondelete='cascade', string="Employee", requied=True)
+    date = fields.Date("Date")
+    place = fields.Char("Place")
+    subject = fields.Char("Subject")
+    score = fields.Integer("Score")
+    passed = fields.Boolean("Passed")
+    notes = fields.Text("Notes")
