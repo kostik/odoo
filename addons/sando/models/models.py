@@ -90,12 +90,11 @@ class sando(models.Model):
     offence_datetime = fields.Datetime(
         string="Offence date and time",
         track_visibility='onchange',
-        help="This will enable analysis of exactly when offences take place and when used in conjunction with other "
-             "fields may allow the analyst to identify “weak points” in coverage at each Customs office "
-             "and border crossing. For example, importers may try to clear goods at the end of a shift when "
-             "officers are fatigued or alternatively may time their clearance with exceptionally busy times at "
-             "particular offices. If such trends are discovered then additional resources can be assigned.",
-
+        help="This enables analysis of exactly when offences take place. When used in conjunction with other fields, "
+             "this may allow the analyst to identify “weak points” in control at each Customs office and border "
+             "crossing. For example, importers may try to clear goods at the end of a shift when officers are tired "
+             "or alternatively may time their clearance to coincide with exceptionally busy times at particular "
+             "offices. If such trends are discovered then additional resources can be assigned",
     )
 
     offence_code = fields.Many2one(
@@ -107,17 +106,17 @@ class sando(models.Model):
     profile = fields.Char(
         string="Risk Profile #",
         track_visibility='onchange',
-        help="Profile # identifying the type of risk it was set up to counter."
-             "Using the profile # will allow interrogation of the database to identify those profiles that "
-             "are performing well and conversely, those that are failing to work. It will allow "
-             "a performance measurement to be made and from that, "
-             "non performing profiles can be amended or deleted appropriately.",
+        help="Profile # identifying the type of risk it was set up to counter. Using the profile # will allow "
+             "interrogation of the database to identify those profiles that are performing well, and, conversely, "
+             "those that are failing to work. It allows a performance measurement to be made and, from that, "
+             "non-performing profiles can be amended or deleted appropriately",
     )
 
     description_of_goods = fields.Text(
         string="Description of goods",
         track_visibility='onchange',
-        help="Description of the goods as detailed as space allows. If possible should include Brand/Model numbers etc.",
+        help="Description of the goods in as much detail as space allows. "
+             "If possible, this should include Brand/Model, identifying numbers, etc.",
     )
 
     customs_house = fields.Many2one(
@@ -125,30 +124,30 @@ class sando(models.Model):
         string="Custom House Code",
         track_visibility='onchange',
         help="This information can be used by the analysts, in conjunction with other fields, to identify what types "
-             "of offences are being detected at the various clearance offices and to create trend analysis"
-             "and management reports. ",
+             "of offences are being detected at the various Customs offices, and to create trend analysis "
+             "and management reports",
     )
 
     case_officer = fields.Char(
         string="Case Officer",
         track_visibility='onchange',
-        help="The full name of the officer that discovered the offence or gave the information.",
+        help="The full name of the officer that discovered the offence or provided the information",
     )
 
     legal_act = fields.Char(
         string="Legal Act",
         track_visibility='onchange',
-        help="Insert the Article, or regulation number under which the irregularity or offence "
-             "was committed. Information such as this will help to identify the most common "
-             "offences and may assist in identifying gaps or weaknesses in current legislation",
+        help="Insert the legal act (Act, Section No), or regulation (date, no) under which the irregularity "
+             "or offence was committed. This information will help to identify the most common offences, "
+             "and may assist in identifying gaps or weaknesses in current legislation, "
+             "or in the understanding of legal provisions",
     )
 
     case_description = fields.Text(
         string="Case Description",
         track_visibility='onchange',
-        help="A brief description of the case should be entered. "
-             "Type of goods, type of offence, etc. "
-             "Sometimes having just a code to describe an event is insufficient.",
+        help="A brief description of the case should be entered. Type of goods, persons involved, nature of offence, "
+             "etc. Sufficient detail to summarise what took place",
     )
 
     route = fields.Char(
@@ -156,7 +155,7 @@ class sando(models.Model):
         track_visibility='onchange',
         help="This is the route taken by the goods/means of transport from when the goods "
              "were dispatched to arrival in the Customs territory. It should include the country "
-             "of origin/dispatch/transit countries.",
+             "of origin/dispatch, and also any transit countries.",
     )
 
     offender_name = fields.Char(
@@ -168,23 +167,24 @@ class sando(models.Model):
     offender_id_number = fields.Char(
         string="Offender’s TIN/passport/ID number",
         track_visibility='onchange',
-        help="If the trader does not have a TIN then the passport or ID card number should be recorded",
+        help="If the offender (importer, exporter, transit operator) does not have a unique TIN "
+             "(trader identification number) then their passport or ID card number should be recorded",
     )
 
     offender_address = fields.Text(
         string="Offender’s address",
         track_visibility='onchange',
-        help="Can be used to search if the offenders name is not known",
+        help="Can be used to search if the offender's name is not known",
     )
 
     offender_phone = fields.Char(
         string="Offender’s telephone number",
         track_visibility='onchange',
-        help="If an offender is using multiple identities to disguise his importations, "
-             "using a name may not highlight previous importations. "
-             "It is less likely that mobile phone numbers are changed and so recording "
-             "this information may highlight duplicates where the same phone number "
-             "is used by multiple identities",
+        help="If an offender is using multiple identities to disguise his/ her importations, exportations, "
+             "etc using a name may not highlight previous importations/ exportations. "
+             "It is less likely that mobile phone numbers are changed, "
+             "and so recording this information may highlight ‘duplicates’ "
+             "where the same phone number is used by multiple identities",
     )
 
     offender_email = fields.Char(
@@ -202,7 +202,7 @@ class sando(models.Model):
     importer_or_exporter_id_number = fields.Char(
         string="Importer's or Exporter’s TIN/Passport/ID number",
         track_visibility='onchange',
-        help="If the trader does not have a TIN then the passport or ID card number should be recorded",
+        help="If the offender does not have a TIN then their passport or ID card number should be recorded",
     )
     importer_or_exporter_address = fields.Text(
         string="Importer's or Exporter’s address",
@@ -213,11 +213,10 @@ class sando(models.Model):
     importer_or_exporter_phone = fields.Char(
         string="Importer's or Exporter’s telephone number",
         track_visibility='onchange',
-        help="If an offender is using multiple identities to disguise his importations, "
-             "using a name may not highlight previous importations. "
-             "It is less likely that mobile phone numbers are changed and so recording "
-             "this information may highlight duplicates where the same phone number "
-             "is used by multiple identities",
+        help="If an offender is using multiple identities to disguise his/ her importations, exportations, etc, "
+             "using a name may not highlight previous importations/ exportations. "
+             "It is less likely that mobile phone numbers are changed and so recording this information may highlight "
+             "‘duplicates’ where the same phone number is used by multiple identities",
     )
 
     importer_or_exporter_email = fields.Char(
@@ -228,18 +227,18 @@ class sando(models.Model):
     name_of_customs_broker = fields.Char(
         string="Name of Customs Broker",
         track_visibility='onchange',
-        help="Can be used to search for brokers that are regularly inputting incorrect "
-             "declarations either by error or in collusion with importers",
+        help="Can be used to search for brokers that are regularly submitting incorrect "
+             "declarations either by error or in collusion with importers, exporters, etc",
     )
 
     broker_id_number = fields.Char(
         string="Broker’s TIN/Passport/ID Number",
         track_visibility='onchange',
-        help="Customs Brokers often work in coordination with importers to evade controls and revenue. "
-             "Using this field will enable analysis to be made of customs brokers that are involved "
-             "in a higher number of infractions or offences than would be considered normal. "
-             "It would also identify other traders that may represent a greater risk because "
-             "of their association with non-compliant brokers",
+        help="Customs Brokers often work in coordination with importers/exporters to evade customs controls "
+             "and to avoid payment of revenue. Using this field will enable analysis to be made of customs brokers "
+             "that are involved in a higher number of infractions or offences than would be considered normal. "
+             "It will also identify other traders that may represent a greater risk because of their association "
+             "with non-compliant brokers",
     )
     broker_address = fields.Text(
         string="Broker’s address",
@@ -270,24 +269,23 @@ class sando(models.Model):
         help="The name of the foreign exporter or supplier of the goods."
              "They may work in collusion with the importer in order to facilitate under valuation, "
              "misdescription, falsification of origin, or general underdeclaration. "
-             "Search using this field will highlight all importations made where an irregularity has been found",
+             "Searches using this field will highlight all importations made where an irregularity has been found",
     )
 
     supplier_address = fields.Text(
         string="Supplier’s Address",
         track_visibility='onchange',
-        help="Interrogation of the database using this assist to verify the identity "
-             "and country of origin of suppliers that are/may be involved in certain types "
-             "of offences such as undervaluation, misdescription. Queries using this field "
-             "in conjunction with others will also reveal such things as which importers "
-             "they deal with, what types of goods, etc. ",
+        help="Interrogation of the database using this field assists in verifying the identity and country "
+             "of origin of suppliers that are/may be involved in certain types of offences such as under-valuation, "
+             "mis-description, etc. Queries using this field, in conjunction with others, "
+             "will also reveal such things as which importers they deal with, what types of goods, etc",
     )
 
     transporter_or_haulier_name = fields.Char(
         string="Transporter or haulier’s name",
         track_visibility='onchange',
         help="Transport companies may pose a risk either because they assist the trade "
-             "in smuggling goods or often because they undertake smuggling operations "
+             "in smuggling goods or because they undertake smuggling operations "
              "in their own right. Querying this field together with others may highlight "
              "associations with suppliers or importers who are known to be non- compliant "
              "and also those companies that use routes which pose a higher risk, "
@@ -310,10 +308,10 @@ class sando(models.Model):
     transporter_phone = fields.Char(
         string="Transporter’s telephone number",
         track_visibility='onchange',
-        help="Assists to search for associates of non compliant traders and those "
-             "that use multiple names. Whereas many traders will change names "
-             "on each declaration to mislead Customs, few will go to the trouble "
-             "of changing cell and/or land line numbers as they will not expectCustoms to have the means to check",
+        help="Assists in searching for associates of non-compliant traders and those that use multiple names. "
+             "Whereas some traders will change names on each declaration to mislead Customs, "
+             "few will go to the trouble of changing cell and/or landline phone numbers "
+             "as they will not expect Customs to have the means to check these",
     )
 
     transporter_email = fields.Char(
@@ -324,32 +322,32 @@ class sando(models.Model):
     vehicle_driver_name = fields.Char(
         string="Vehicle driver’s name",
         track_visibility='onchange',
-        help="This is required as drivers are often either involved in irregularities as accomplices to traders "
-             "or are directly involved in carrying contraband in the vehicles whether or not the owner of the goods "
-             "is involved in non-compliance.",
+        help="This is required as drivers can be either involved in irregularities as accomplices of traders, "
+             "or are directly involved in carrying contraband in the vehicles, "
+             "whether or not the actual owner of the goods is involved in non-compliance",
     )
 
     driver_id_number = fields.Char(
         string="Driver’s TIN/Passport/ID Number",
         track_visibility='onchange',
         help="Assists in the identification of persons that are regularly involved in non-compliance, "
-             "smuggling or irregularities",
+             "smuggling or any other irregularities",
     )
     driver_address = fields.Text(
         string="Driver’s address",
         track_visibility='onchange',
         help="Can be used to help track persons of interest who change their identity. "
-             "Often they retain their address. By using this field in a query, "
-             "the database will display everyone that utilise this address",
+             "In such cases, they will often retain their address. By using this field in a query, "
+             "the database will display everyone that utilises this address",
     )
 
     driver_phone = fields.Char(
         string="Driver’s telephone number",
         track_visibility='onchange',
-        help="Assists to search for associates of non compliant traders and those "
-             "that use multiple names. Whereas many traders will change names "
-             "on each declaration to mislead Customs, few will go to the trouble "
-             "of changing cell and/or land line numbers as they will not expectCustoms to have the means to check",
+        help="Assists in searching for associates of non-compliant traders and those that use multiple names. "
+             "Whereas some traders will change names on each declaration to mislead Customs, "
+             "few will go to the trouble of changing cell and/or land line phone numbers "
+             "as they will not expect Customs to have the means to check these",
     )
 
     driver_email = fields.Char(
@@ -361,12 +359,11 @@ class sando(models.Model):
         "sando.vehicle_type",
         string="Vehicle type",
         track_visibility='onchange',
-        help="Drop down menu that will give options categorizing what means of transport has been used "
-             "covering vehicle "
-             "(Freight, private, public transport vehicle), train (Freight or Passenger), "
-             "Air (private, passenger, freight) or Other (enter details in Notes box). "
-             "This will enable searches to be made that will show trends – certain "
-             "types of goods smuggled using particular means of transport, etc.)",
+        help="Drop down menu that will give options categorising what means of transport has been used; "
+             "covering Road vehicles (freight, private, public transport vehicles, etc), "
+             "Trains (freight or passenger), Aircraft (private, passenger, freight, etc) "
+             "or Other (enter details in Notes box). This will enable searches to be made that will show trends – "
+             "certain types of goods smuggled using particular means of transport, etc.)",
         required=False,
     )
 
@@ -418,8 +415,8 @@ class sando(models.Model):
 
     weight_actual = fields.Float(
         string="Actual weight of the goods (net) in Kgs",
-        help="Enter the actual weight found if the offence includes "
-             "underdeclaring the actual weight of the goods",
+        help="Enter the actual weight found if the offence includes an under-declaration "
+             "of the actual weight of the goods",
         track_visibility='onchange',
 
     )
@@ -451,7 +448,7 @@ class sando(models.Model):
 
     value_actual = fields.Monetary(
         currency_field="currency_id",
-        string="Actual Statistical Value if different from Declared Statistical value",
+        string="Actual Statistical Value, if different from declared statistical value",
         help="Allows comparison to be made between how much was declared and how much the goods were actually worth",
         track_visibility='onchange',
     )
@@ -460,7 +457,7 @@ class sando(models.Model):
         currency_field="currency_id",
         string="Additional duties resulting from offence",
         help="This is the total of all penalties imposed in relation to the specific offence. It indicates the "
-             "magnitude of the problem and is useful in assessing the risk for future importations/exportations "
+             "size of the problem, and is useful in assessing the risk for future importations/exportations "
              "that will be made by the same principals. Enter any additional duties or taxes that have been levied "
              "on the offender as a result of the irregularity that was found.",
         track_visibility='onchange',
@@ -494,10 +491,10 @@ class sando(models.Model):
         string="Inspection Result",
         track_visibility='onchange',
         help="This is an unlimited text box that can be used to describe what was found during the examination. "
-             "For example, it could include specific cases that were examined, particular concealments "
-             "or characteristics specific to smuggled goods. Should add basis for discovery of offence"
-             "e.g Red Channel exam/Random exam/full exam/MACCS profile /x ray/ info received/voluntary declaration, "
-             "etc",
+             "For example, it could include specific containers, boxes, packages, etc that were examined, "
+             "particular concealments, or characteristics specific to smuggled goods. "
+             "The basis for the discovery of the offence should be added "
+             "e.g Red Channel exam/random exam/full exam/MACCS profile/x-ray/info received/voluntary declaration, etc",
     )
 
     @staticmethod
