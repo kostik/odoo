@@ -360,17 +360,6 @@
                                 </tree>
                             </field>
 
-                            <!--todo: visibility-->
-                            <field name="source_ids"  groups="sando.group_sando_source"
-                                   context="{'default_intelligence_id': context.get('active_id')}">
-                                <tree>
-                                    <field name="name"/>
-                                    <field name="evaluation"/>
-                                    <field name="alias"/>
-                                </tree>
-                            </field>
-
-
                             <field name="sando_ids" colspan="2"/>
                         </group>
                     </sheet>
