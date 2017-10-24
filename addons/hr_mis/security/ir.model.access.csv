@@ -7,6 +7,7 @@ access_hr_form5,hr_form5 user,model_hr_form5,base.group_hr_user,1,1,1,1
 access_hr_form6,hr_form6 user,model_hr_form6,base.group_hr_user,1,1,1,1
 access_hr_form7,hr_form7 user,model_hr_form7,base.group_hr_user,1,1,1,1
 access_hr_form8,hr_form8 user,model_hr_form8,base.group_hr_user,1,1,1,1
+access_hr_form_exam,hr_form_exam user,model_hr_form_exam,base.group_hr_user,1,1,1,1
 access_hr_club_record,hr_club_record user,model_hr_club_record,base.group_hr_user,1,1,1,1
 access_hr_military_record,hr_military_record user,model_hr_military_record,base.group_hr_user,1,1,1,1
 access_hr_military_colleague,hr_military_colleague user,model_hr_military_colleague,base.group_hr_user,1,1,1,1
