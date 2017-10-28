@@ -299,7 +299,7 @@
                         <field name="category_ids" widget="many2many_tags" placeholder="e.g. Part Time"
                                groups="base.group_hr_user"/>
                         <notebook>
-                            <page name="public" string="Form 1">
+                            <page name="public" string="ပုံစံ (၁)">
                                 <group>
                                     <group>
                                         <field name="race"/>
@@ -321,12 +321,10 @@
                                         <field name="address_home_id"
                                                context="{'show_address': 1}"
                                                options='{"always_reload": True, "highlight_first_line": True}'
-                                               string="Permanent Address"
                                         />
                                         <field name="address_id" on_change="onchange_address_id(address_id)"
                                                context="{'show_address': 1}"
                                                options='{"always_reload": True, "highlight_first_line": True}'
-                                               string="Current Address"
                                         />
                                     </group>
                                     <group>
@@ -402,7 +400,7 @@
 
                                 <field name="notes" placeholder="Other Information ..." colspan="4"/>
                             </page>
-                            <page string="Form 2" groups="base.group_hr_user">
+                            <page string="ပုံစံ (၂)" groups="base.group_hr_user">
                                 <group string="Civil service">
                                     <field name="form2_id" context="{'default_employee_id': context.get('active_id')}"
                                            nolabel="1">
@@ -417,7 +415,7 @@
                                     </field>
                                 </group>
                             </page>
-                            <page string="Form 3" groups="base.group_hr_user">
+                            <page string="ပုံစံ (၃)" groups="base.group_hr_user">
                                 <group string="Disciplinary Records">
                                     <field name="form3_id" context="{'default_employee_id': context.get('active_id')}"
                                            nolabel="1">
@@ -431,7 +429,7 @@
                                     </field>
                                 </group>
                             </page>
-                            <page string="Form 4" groups="base.group_hr_user">
+                            <page string="ပုံစံ (၄)" groups="base.group_hr_user">
                                 <group string="Training records">
                                     <field name="form4_id" context="{'default_employee_id': context.get('active_id')}"
                                            nolabel="1">
@@ -448,7 +446,7 @@
                                 </group>
                             </page>
 
-                            <page string="Form 5" groups="base.group_hr_user">
+                            <page string="ပုံစံ (၅)" groups="base.group_hr_user">
                                 <group string="Education records">
                                     <field name="form5_id" context="{'default_employee_id': context.get('active_id')}"
                                            nolabel="1">
@@ -462,7 +460,7 @@
                                 </group>
                             </page>
 
-                            <page string="Form 6" groups="base.group_hr_user">
+                            <page string="ပုံစံ (၆)" groups="base.group_hr_user">
                                 <group string="Employment history">
                                     <field name="form6_id" context="{'default_employee_id': context.get('active_id')}"
                                            nolabel="1">
@@ -477,7 +475,7 @@
                                 </group>
                             </page>
 
-                            <page string="Form 7" groups="base.group_hr_user">
+                            <page string="ပုံစံ (၇)" groups="base.group_hr_user">
                                 <group string="Foreign trips">
                                     <field name="form7_id" context="{'default_employee_id': context.get('active_id')}"
                                            nolabel="1">
@@ -492,7 +490,7 @@
                                 </group>
                             </page>
 
-                            <page string="Form 8" groups="base.group_hr_user">
+                            <page string="ပုံစံ (၈)" groups="base.group_hr_user">
                                 <group string="Activity">
                                     <field name="form8_id" context="{'default_employee_id': context.get('active_id')}"
                                            nolabel="1">
@@ -523,7 +521,7 @@
                             </page>
 
 
-                            <page string="HR Settings" groups="base.group_hr_user">
+                            <page string="HR ပြင်ဆင်ရန်" groups="base.group_hr_user">
                                 <group>
                                     <group string='Status' name="active_group">
                                         <field name="company_id" groups="base.group_multi_company"
