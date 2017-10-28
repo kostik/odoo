@@ -1,0 +1,139 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+#	* aeo
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 9.0c\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2017-10-28 00:11+0000\n"
+"PO-Revision-Date: 2017-10-28 00:11+0000\n"
+"Last-Translator: <>\n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: \n"
+
+#. module: aeo
+#: model:ir.ui.menu,name:aeo.menu_config_address_book
+#: model:ir.ui.view,arch_db:aeo.view_partner_form_hide_sales
+msgid "AEO"
+msgstr "AEO"
+
+#. module: aeo
+#: model:ir.ui.view,arch_db:aeo.view_partner_form_hide_sales
+msgid "AEO ID"
+msgstr "AEO ID"
+
+#. module: aeo
+#: model:ir.actions.act_window,name:aeo.action_partner_category_form
+msgid "AEO Tags"
+msgstr "AEO Tags"
+
+#. module: aeo
+#: model:ir.model.fields,field_description:aeo.field_res_partner_aeo_status
+#: model:ir.ui.view,arch_db:aeo.view_partner_form_hide_sales
+msgid "AEO status"
+msgstr "AEO status"
+
+#. module: aeo
+#: model:res.groups,name:aeo.aeo_group
+msgid "AEO unit"
+msgstr "AEO unit"
+
+#. module: aeo
+#: model:res.groups,comment:aeo.aeo_group
+msgid "AEO unit member"
+msgstr "AEO unit member"
+
+#. module: aeo
+#: model:ir.actions.act_window,name:aeo.action_partner_form
+#: model:ir.ui.menu,name:aeo.menu_aeo
+#: model:ir.ui.menu,name:aeo.menu_partner_form
+#: model:ir.ui.view,arch_db:aeo.view_res_partner_filter
+msgid "AEOs"
+msgstr "AEOs"
+
+#. module: aeo
+#: model:ir.ui.view,arch_db:aeo.view_res_partner_filter
+msgid "Archived"
+msgstr "ပယ်ဖျက်မည်"
+
+#. module: aeo
+#: model:ir.actions.act_window,help:aeo.action_partner_form
+msgid "Click to add an AEO."
+msgstr "Click to add an AEO."
+
+#. module: aeo
+#: model:ir.actions.act_window,help:aeo.action_partner_category_form
+msgid "Click to create a new AEO tag."
+msgstr "Click to create a new AEO tag."
+
+#. module: aeo
+#: model:ir.ui.view,arch_db:aeo.view_res_partner_filter
+msgid "Companies"
+msgstr "ကုမ္ပဏီများ"
+
+#. module: aeo
+#: model:ir.ui.view,arch_db:aeo.view_res_partner_filter
+msgid "Company"
+msgstr "အဖွဲ့အစည်း"
+
+#. module: aeo
+#: model:ir.ui.menu,name:aeo.menu_aeo_config
+msgid "Configuration"
+msgstr "ပြင်ဆင်မည်"
+
+#. module: aeo
+#: model:ir.ui.menu,name:aeo.menu_partner_category_form
+msgid "Contact Tags"
+msgstr "Contact Tags"
+
+#. module: aeo
+#: model:ir.ui.view,arch_db:aeo.view_res_partner_filter
+msgid "Country"
+msgstr "နိုင်ငံ"
+
+#. module: aeo
+#: model:ir.ui.view,arch_db:aeo.view_res_partner_filter
+msgid "Group By"
+msgstr "အုပ်စုဖွဲ့မည်"
+
+#. module: aeo
+#: model:ir.actions.act_window,help:aeo.action_partner_category_form
+msgid "Manage AEO tags to better classify them for tracking and analysis purposes.\n"
+"                    An AEO may have several categories."
+msgstr "Manage AEO tags to better classify them for tracking and analysis purposes.\n"
+"                    An AEO may have several categories."
+
+#. module: aeo
+#: model:ir.ui.view,arch_db:aeo.view_res_partner_filter
+msgid "My Partners"
+msgstr "ကျွန်ုပ်၏ပါတနာများ"
+
+#. module: aeo
+#: model:ir.model,name:aeo.model_res_partner
+msgid "Partner"
+msgstr "ပါတနာ"
+
+#. module: aeo
+#: model:ir.ui.view,arch_db:aeo.view_res_partner_filter
+msgid "Persons"
+msgstr "လူတစ်ဦး"
+
+#. module: aeo
+#: model:ir.ui.view,arch_db:aeo.view_res_partner_filter
+msgid "Salesperson"
+msgstr "Salesperson"
+
+#. module: aeo
+#: model:ir.ui.view,arch_db:aeo.view_res_partner_filter
+msgid "Search Partner"
+msgstr "Search Partner"
+
+#. module: aeo
+#: model:ir.ui.view,arch_db:aeo.view_res_partner_filter
+msgid "Tag"
+msgstr "Tag"
+

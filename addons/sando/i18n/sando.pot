@@ -1,0 +1,1466 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+#	* sando
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 9.0c\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2017-10-28 00:12+0000\n"
+"PO-Revision-Date: 2017-10-28 00:12+0000\n"
+"Last-Translator: <>\n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: \n"
+
+#. module: sando
+#: model:ir.model.fields,help:sando.field_sando_sando_case_description
+msgid "A brief description of the case should be entered. Type of goods, persons involved, nature of offence, etc. Sufficient detail to summarise what took place"
+msgstr ""
+
+#. module: sando
+#: model:ir.model.fields,field_description:sando.field_sando_intelligence_message_needaction
+#: model:ir.model.fields,field_description:sando.field_sando_means_of_transport_message_needaction
+#: model:ir.model.fields,field_description:sando.field_sando_organisation_message_needaction
+#: model:ir.model.fields,field_description:sando.field_sando_person_message_needaction
+#: model:ir.model.fields,field_description:sando.field_sando_sando_message_needaction
+#: model:ir.model.fields,field_description:sando.field_sando_source_message_needaction
+msgid "Action Needed"
+msgstr ""
+
+#. module: sando
+#: model:ir.model.fields,field_description:sando.field_sando_category_active
+#: model:ir.model.fields,field_description:sando.field_sando_intelligence_active
+#: model:ir.model.fields,field_description:sando.field_sando_means_of_transport_active
+#: model:ir.model.fields,field_description:sando.field_sando_organisation_active
+#: model:ir.model.fields,field_description:sando.field_sando_person_active
+#: model:ir.model.fields,field_description:sando.field_sando_sando_active
+#: model:ir.model.fields,field_description:sando.field_sando_source_active
+msgid "Active"
+msgstr ""
+
+#. module: sando
+#: model:ir.model.fields,field_description:sando.field_sando_sando_number_of_packages_actual
+msgid "Actual Number of Packages"
+msgstr ""
+
+#. module: sando
+#: model:ir.model.fields,field_description:sando.field_sando_sando_value_actual
+msgid "Actual Statistical Value, if different from declared statistical value"
+msgstr ""
+
+#. module: sando
+#: model:ir.model.fields,field_description:sando.field_sando_sando_weight_actual
+msgid "Actual weight of the goods (net) in Kgs"
+msgstr ""
+
+#. module: sando
+#: model:ir.model.fields,field_description:sando.field_sando_sando_additional_duties
+msgid "Additional duties resulting from offence"
+msgstr ""
+
+#. module: sando
+#: model:ir.model.fields,field_description:sando.field_sando_organisation_address
+#: model:ir.model.fields,field_description:sando.field_sando_person_address
+#: model:ir.model.fields,field_description:sando.field_sando_source_address
+msgid "Address "
+msgstr ""
+
+#. module: sando
+#: selection:sando.means_of_transport,mode_of_transport:0
+msgid "Aircraft"
+msgstr ""
+
+#. module: sando
+#: model:ir.model.fields,help:sando.field_sando_sando_value_actual
+#: model:ir.model.fields,help:sando.field_sando_sando_value_declared
+msgid "Allows comparison to be made between how much was declared and how much the goods were actually worth"
+msgstr ""
+
+#. module: sando
+#: model:ir.model.fields,field_description:sando.field_sando_source_rules_approval
+msgid "Approval of rules by manager "
+msgstr ""
+
+#. module: sando
+#: model:ir.ui.view,arch_db:sando.view_sando_sando_filter
+msgid "Archived"
+msgstr ""
+
+#. module: sando
+#: model:ir.model.fields,help:sando.field_sando_sando_driver_phone
+msgid "Assists in searching for associates of non-compliant traders and those that use multiple names. Whereas some traders will change names on each declaration to mislead Customs, few will go to the trouble of changing cell and/or land line phone numbers as they will not expect Customs to have the means to check these"
+msgstr ""
+
+#. module: sando
+#: model:ir.model.fields,help:sando.field_sando_sando_transporter_phone
+msgid "Assists in searching for associates of non-compliant traders and those that use multiple names. Whereas some traders will change names on each declaration to mislead Customs, few will go to the trouble of changing cell and/or landline phone numbers as they will not expect Customs to have the means to check these"
+msgstr ""
+
+#. module: sando
+#: model:ir.model.fields,help:sando.field_sando_sando_driver_id_number
+msgid "Assists in the identification of persons that are regularly involved in non-compliance, smuggling or any other irregularities"
+msgstr ""
+
+#. module: sando
+#: model:ir.model.fields,field_description:sando.field_sando_person_birth_place
+msgid "Birth place "
+msgstr ""
+
+#. module: sando
+#: model:ir.model.fields,field_description:sando.field_sando_sando_broker_id_number
+msgid "Broker’s TIN/Passport/ID Number"
+msgstr ""
+
+#. module: sando
+#: model:ir.model.fields,field_description:sando.field_sando_sando_broker_address
+msgid "Broker’s address"
+msgstr ""
+
+#. module: sando
+#: model:ir.model.fields,field_description:sando.field_sando_sando_broker_email
+msgid "Broker’s email"
+msgstr ""
+
+#. module: sando
+#: model:ir.model.fields,field_description:sando.field_sando_sando_broker_phone
+msgid "Broker’s telephone number"
+msgstr ""
+
+#. module: sando
+#: model:ir.model.fields,help:sando.field_sando_sando_importer_or_exporter_name
+msgid "Can be searched to identify how many times specific individuals have been non-compliant. This is a useful tool for risk analysis"
+msgstr ""
+
+#. module: sando
+#: model:ir.model.fields,help:sando.field_sando_sando_driver_address
+msgid "Can be used to help track persons of interest who change their identity. In such cases, they will often retain their address. By using this field in a query, the database will display everyone that utilises this address"
+msgstr ""
+
+#. module: sando
+#: model:ir.model.fields,help:sando.field_sando_sando_transporter_address
+msgid "Can be used to help track traders who change their identity. Often they retain their address. By using this field in a query, the database will display all traders that utilise this address"
+msgstr ""
+
+#. module: sando
+#: model:ir.model.fields,help:sando.field_sando_sando_broker_address
+msgid "Can be used to help track traders who change their identity. Often they retain their address. By using this field in a query, the database will display all traders that utilise this address."
+msgstr ""
+
+#. module: sando
+#: model:ir.model.fields,help:sando.field_sando_sando_name_of_customs_broker
+msgid "Can be used to search for brokers that are regularly submitting incorrect declarations either by error or in collusion with importers, exporters, etc"
+msgstr ""
+
+#. module: sando
+#: model:ir.model.fields,help:sando.field_sando_sando_offender_address
+msgid "Can be used to search if the offender's name is not known"
+msgstr ""
+
+#. module: sando
+#: model:ir.model.fields,help:sando.field_sando_sando_importer_or_exporter_address
+msgid "Can be used to search if the offenders name is not known"
+msgstr ""
+
+#. module: sando
+#: model:ir.model.fields,help:sando.field_sando_sando_vehicle_make_and_model
+msgid "Can potentially be used to identify particular methods of concealment on particular makes of vehicles/aircraft/containers"
+msgstr ""
+
+#. module: sando
+#: model:ir.model.fields,field_description:sando.field_sando_sando_case_description
+msgid "Case Description"
+msgstr ""
+
+#. module: sando
+#: model:ir.model.fields,field_description:sando.field_sando_sando_case_officer
+msgid "Case Officer"
+msgstr ""
+
+#. module: sando
+#: model:ir.model.fields,field_description:sando.field_sando_category_name
+msgid "Category Name"
+msgstr ""
+
+#. module: sando
+#: model:ir.model.fields,field_description:sando.field_sando_category_child_ids
+msgid "Child Tag"
+msgstr ""
+
+#. module: sando
+#: model:ir.model.fields,field_description:sando.field_sando_person_citizenship
+msgid "Citizenship"
+msgstr ""
+
+#. module: sando
+#: model:ir.model.fields,field_description:sando.field_sando_person_civil_status
+msgid "Civil status"
+msgstr ""
+
+#. module: sando
+#: model:ir.actions.act_window,help:sando.action_window
+#: model:ir.actions.act_window,help:sando.i_action_window
+#: model:ir.actions.act_window,help:sando.means_of_transport_action_window
+#: model:ir.actions.act_window,help:sando.organisation_action_window
+#: model:ir.actions.act_window,help:sando.person_action_window
+#: model:ir.actions.act_window,help:sando.source_action_window
+msgid "Click to add a record"
+msgstr ""
+
+#. module: sando
+#: model:ir.actions.act_window,help:sando.action_sando_category_form
+msgid "Click to create a new O&amp;S tag."
+msgstr ""
+
+#. module: sando
+#: model:ir.model.fields,field_description:sando.field_sando_category_color
+msgid "Color Index"
+msgstr ""
+
+#. module: sando
+#: model:ir.ui.menu,name:sando.sando_menu_config
+msgid "Configuration"
+msgstr ""
+
+#. module: sando
+#: model:ir.model.fields,field_description:sando.field_sando_sando_country_of_departure
+msgid "Country of Departure"
+msgstr ""
+
+#. module: sando
+#: model:ir.model.fields,field_description:sando.field_sando_sando_country_of_destination
+msgid "Country of Destination"
+msgstr ""
+
+#. module: sando
+#: model:ir.model.fields,field_description:sando.field_sando_sando_country_of_origin
+msgid "Country of Origin"
+msgstr ""
+
+#. module: sando
+#: model:ir.model.fields,field_description:sando.field_sando_means_of_transport_country_of_registration
+msgid "Country of registration"
+msgstr ""
+
+#. module: sando
+#: model:ir.model.fields,field_description:sando.field_sando_category_create_uid
+#: model:ir.model.fields,field_description:sando.field_sando_customs_house_create_uid
+#: model:ir.model.fields,field_description:sando.field_sando_customs_regime_code_create_uid
+#: model:ir.model.fields,field_description:sando.field_sando_intelligence_create_uid
+#: model:ir.model.fields,field_description:sando.field_sando_means_of_transport_create_uid
+#: model:ir.model.fields,field_description:sando.field_sando_offence_code_create_uid
+#: model:ir.model.fields,field_description:sando.field_sando_organisation_create_uid
+#: model:ir.model.fields,field_description:sando.field_sando_person_create_uid
+#: model:ir.model.fields,field_description:sando.field_sando_sando_create_uid
+#: model:ir.model.fields,field_description:sando.field_sando_source_create_uid
+#: model:ir.model.fields,field_description:sando.field_sando_vehicle_type_create_uid
+msgid "Created by"
+msgstr ""
+
+#. module: sando
+#: model:ir.model.fields,field_description:sando.field_sando_category_create_date
+#: model:ir.model.fields,field_description:sando.field_sando_customs_house_create_date
+#: model:ir.model.fields,field_description:sando.field_sando_customs_regime_code_create_date
+#: model:ir.model.fields,field_description:sando.field_sando_intelligence_create_date
+#: model:ir.model.fields,field_description:sando.field_sando_means_of_transport_create_date
+#: model:ir.model.fields,field_description:sando.field_sando_offence_code_create_date
+#: model:ir.model.fields,field_description:sando.field_sando_organisation_create_date
+#: model:ir.model.fields,field_description:sando.field_sando_person_create_date
+#: model:ir.model.fields,field_description:sando.field_sando_sando_create_date
+#: model:ir.model.fields,field_description:sando.field_sando_source_create_date
+#: model:ir.model.fields,field_description:sando.field_sando_vehicle_type_create_date
+msgid "Created on"
+msgstr ""
+
+#. module: sando
+#: model:ir.model.fields,field_description:sando.field_sando_sando_currency_id
+msgid "Currency"
+msgstr ""
+
+#. module: sando
+#: model:ir.model.fields,field_description:sando.field_sando_sando_customs_house
+msgid "Custom House Code"
+msgstr ""
+
+#. module: sando
+#: model:ir.model.fields,help:sando.field_sando_sando_broker_id_number
+msgid "Customs Brokers often work in coordination with importers/exporters to evade customs controls and to avoid payment of revenue. Using this field will enable analysis to be made of customs brokers that are involved in a higher number of infractions or offences than would be considered normal. It will also identify other traders that may represent a greater risk because of their association with non-compliant brokers"
+msgstr ""
+
+#. module: sando
+#: model:ir.model.fields,field_description:sando.field_sando_customs_house_name
+msgid "Customs House/Clearance station name/code"
+msgstr ""
+
+#. module: sando
+#: model:ir.model.fields,field_description:sando.field_sando_customs_regime_code_name
+#: model:ir.model.fields,field_description:sando.field_sando_sando_customs_regime_code
+msgid "Customs regime code"
+msgstr ""
+
+#. module: sando
+#: model:ir.model.fields,field_description:sando.field_sando_person_date_of_birth
+msgid "Date of birth "
+msgstr ""
+
+#. module: sando
+#: model:ir.model.fields,help:sando.field_sando_intelligence_message_last_post
+#: model:ir.model.fields,help:sando.field_sando_means_of_transport_message_last_post
+#: model:ir.model.fields,help:sando.field_sando_organisation_message_last_post
+#: model:ir.model.fields,help:sando.field_sando_person_message_last_post
+#: model:ir.model.fields,help:sando.field_sando_sando_message_last_post
+#: model:ir.model.fields,help:sando.field_sando_source_message_last_post
+msgid "Date of the last message posted on the record."
+msgstr ""
+
+#. module: sando
+#: model:ir.model.fields,field_description:sando.field_sando_sando_declaration_number
+msgid "Declaration Number"
+msgstr ""
+
+#. module: sando
+#: model:ir.model.fields,field_description:sando.field_sando_sando_value_declared
+msgid "Declared Statistical Value"
+msgstr ""
+
+#. module: sando
+#: model:ir.model.fields,field_description:sando.field_sando_sando_weight_declared
+msgid "Declared weight of the goods (Net) in kgs"
+msgstr ""
+
+#. module: sando
+#: model:ir.model.fields,field_description:sando.field_sando_organisation_description
+#: model:ir.model.fields,field_description:sando.field_sando_person_description
+#: model:ir.model.fields,field_description:sando.field_sando_source_description
+msgid "Description"
+msgstr ""
+
+#. module: sando
+#: model:ir.model.fields,field_description:sando.field_sando_sando_description_of_goods
+msgid "Description of goods"
+msgstr ""
+
+#. module: sando
+#: model:ir.model.fields,help:sando.field_sando_organisation_description
+msgid "Description of organisation"
+msgstr ""
+
+#. module: sando
+#: model:ir.model.fields,help:sando.field_sando_person_description
+#: model:ir.model.fields,help:sando.field_sando_source_description
+msgid "Description of person (appearance; height; distinctive features; etc)"
+msgstr ""
+
+#. module: sando
+#: model:ir.model.fields,help:sando.field_sando_sando_description_of_goods
+msgid "Description of the goods in as much detail as space allows. If possible, this should include Brand/Model, identifying numbers, etc."
+msgstr ""
+
+#. module: sando
+#: model:ir.model.fields,field_description:sando.field_sando_means_of_transport_description
+msgid "Detailed description"
+msgstr ""
+
+#. module: sando
+#: model:ir.model.fields,field_description:sando.field_sando_category_display_name
+#: model:ir.model.fields,field_description:sando.field_sando_customs_house_display_name
+#: model:ir.model.fields,field_description:sando.field_sando_customs_regime_code_display_name
+#: model:ir.model.fields,field_description:sando.field_sando_intelligence_display_name
+#: model:ir.model.fields,field_description:sando.field_sando_means_of_transport_display_name
+#: model:ir.model.fields,field_description:sando.field_sando_offence_code_display_name
+#: model:ir.model.fields,field_description:sando.field_sando_organisation_display_name
+#: model:ir.model.fields,field_description:sando.field_sando_person_display_name
+#: model:ir.model.fields,field_description:sando.field_sando_sando_display_name
+#: model:ir.model.fields,field_description:sando.field_sando_source_display_name
+#: model:ir.model.fields,field_description:sando.field_sando_vehicle_type_display_name
+msgid "Display Name"
+msgstr ""
+
+#. module: sando
+#: selection:sando.person,civil_status:0
+msgid "Divorced"
+msgstr ""
+
+#. module: sando
+#: model:ir.model.fields,field_description:sando.field_sando_sando_driver_id_number
+msgid "Driver’s TIN/Passport/ID Number"
+msgstr ""
+
+#. module: sando
+#: model:ir.model.fields,field_description:sando.field_sando_sando_driver_address
+msgid "Driver’s address"
+msgstr ""
+
+#. module: sando
+#: model:ir.model.fields,field_description:sando.field_sando_sando_driver_email
+msgid "Driver’s email"
+msgstr ""
+
+#. module: sando
+#: model:ir.model.fields,field_description:sando.field_sando_sando_driver_phone
+msgid "Driver’s telephone number"
+msgstr ""
+
+#. module: sando
+#: model:ir.model.fields,help:sando.field_sando_sando_vehicle_type
+msgid "Drop down menu that will give options categorising what means of transport has been used; covering Road vehicles (freight, private, public transport vehicles, etc), Trains (freight or passenger), Aircraft (private, passenger, freight, etc) or Other (enter details in Notes box). This will enable searches to be made that will show trends – certain types of goods smuggled using particular means of transport, etc.)"
+msgstr ""
+
+#. module: sando
+#: model:ir.model.fields,field_description:sando.field_sando_organisation_email
+#: model:ir.model.fields,field_description:sando.field_sando_person_email
+#: model:ir.model.fields,field_description:sando.field_sando_source_email
+msgid "E-Mail "
+msgstr ""
+
+#. module: sando
+#: model:ir.model.fields,help:sando.field_sando_sando_number_of_packages_declaration
+msgid "Enables a judgement to be made concerning the significance of any potential offence in cases where underdeclaration of the number of packages is an issue"
+msgstr ""
+
+#. module: sando
+#: model:ir.model.fields,help:sando.field_sando_sando_declaration_number
+msgid "Enables the system to identify the declaration in order to extract further data"
+msgstr ""
+
+#. module: sando
+#: model:ir.model.fields,help:sando.field_sando_sando_number_of_packages_actual
+msgid "Enter the actual number of packages found during inspection if different from declared number"
+msgstr ""
+
+#. module: sando
+#: model:ir.model.fields,help:sando.field_sando_sando_weight_actual
+msgid "Enter the actual weight found if the offence includes an under-declaration of the actual weight of the goods"
+msgstr ""
+
+#. module: sando
+#: model:ir.model.fields,help:sando.field_sando_sando_country_of_origin
+msgid "Enter the country of origin of the goods subject to the offence from the drop down menu. This may or may not be the country of supply! "
+msgstr ""
+
+#. module: sando
+#: model:ir.model.fields,help:sando.field_sando_sando_offender_name
+msgid "Enter the full name(s) of the offender(s)"
+msgstr ""
+
+#. module: sando
+#: model:ir.model.fields,help:sando.field_sando_sando_weight_declared
+msgid "Enter the net weight of the goods in Kgs as declared"
+msgstr ""
+
+#. module: sando
+#: constraint:sando.category:0
+msgid "Error ! You can not create recursive tags."
+msgstr ""
+
+#. module: sando
+#: model:ir.model.fields,field_description:sando.field_sando_source_evaluation_value
+msgid "Evaluation"
+msgstr ""
+
+#. module: sando
+#: model:ir.model.fields,field_description:sando.field_sando_intelligence_evaluation
+msgid "Evaluation 4x4"
+msgstr ""
+
+#. module: sando
+#: model:ir.model.fields,field_description:sando.field_sando_intelligence_evaluation_intelligence
+msgid "Evaluation intelligence"
+msgstr ""
+
+#. module: sando
+#: model:ir.model.fields,field_description:sando.field_sando_intelligence_evaluation_source
+#: model:ir.model.fields,field_description:sando.field_sando_source_evaluation
+msgid "Evaluation source"
+msgstr ""
+
+#. module: sando
+#: model:ir.model.fields,field_description:sando.field_sando_means_of_transport_expiry_date
+#: model:ir.model.fields,field_description:sando.field_sando_person_expiry_date
+msgid "Expiry date"
+msgstr ""
+
+#. module: sando
+#: model:ir.model.fields,field_description:sando.field_sando_sando_exporter_or_supplier_name
+msgid "Exporter’s or Supplier’s name"
+msgstr ""
+
+#. module: sando
+#: selection:sando.person,gender:0
+msgid "Female"
+msgstr ""
+
+#. module: sando
+#: model:ir.ui.view,arch_db:sando.means_of_transport_form
+#: model:ir.ui.view,arch_db:sando.organisation_form
+#: model:ir.ui.view,arch_db:sando.person_form
+#: model:ir.ui.view,arch_db:sando.source_form
+msgid "Find offences"
+msgstr ""
+
+#. module: sando
+#: model:ir.model.fields,field_description:sando.field_sando_intelligence_message_follower_ids
+#: model:ir.model.fields,field_description:sando.field_sando_means_of_transport_message_follower_ids
+#: model:ir.model.fields,field_description:sando.field_sando_organisation_message_follower_ids
+#: model:ir.model.fields,field_description:sando.field_sando_person_message_follower_ids
+#: model:ir.model.fields,field_description:sando.field_sando_sando_message_follower_ids
+#: model:ir.model.fields,field_description:sando.field_sando_source_message_follower_ids
+msgid "Followers"
+msgstr ""
+
+#. module: sando
+#: model:ir.model.fields,field_description:sando.field_sando_intelligence_message_channel_ids
+#: model:ir.model.fields,field_description:sando.field_sando_means_of_transport_message_channel_ids
+#: model:ir.model.fields,field_description:sando.field_sando_organisation_message_channel_ids
+#: model:ir.model.fields,field_description:sando.field_sando_person_message_channel_ids
+#: model:ir.model.fields,field_description:sando.field_sando_sando_message_channel_ids
+#: model:ir.model.fields,field_description:sando.field_sando_source_message_channel_ids
+msgid "Followers (Channels)"
+msgstr ""
+
+#. module: sando
+#: model:ir.model.fields,field_description:sando.field_sando_intelligence_message_partner_ids
+#: model:ir.model.fields,field_description:sando.field_sando_means_of_transport_message_partner_ids
+#: model:ir.model.fields,field_description:sando.field_sando_organisation_message_partner_ids
+#: model:ir.model.fields,field_description:sando.field_sando_person_message_partner_ids
+#: model:ir.model.fields,field_description:sando.field_sando_sando_message_partner_ids
+#: model:ir.model.fields,field_description:sando.field_sando_source_message_partner_ids
+msgid "Followers (Partners)"
+msgstr ""
+
+#. module: sando
+#: model:ir.model.fields,field_description:sando.field_sando_category_complete_name
+msgid "Full Name"
+msgstr ""
+
+#. module: sando
+#: model:ir.model.fields,field_description:sando.field_sando_person_gender
+msgid "Gender"
+msgstr ""
+
+#. module: sando
+#: model:ir.model.fields,field_description:sando.field_sando_intelligence_goods
+msgid "Goods description"
+msgstr ""
+
+#. module: sando
+#: model:ir.model.fields,field_description:sando.field_sando_sando_harmonised_system_code
+msgid "Harmonised System of Classification Code/Tariff Trade Code etc."
+msgstr ""
+
+#. module: sando
+#: model:ir.model.fields,field_description:sando.field_sando_category_id
+#: model:ir.model.fields,field_description:sando.field_sando_customs_house_id
+#: model:ir.model.fields,field_description:sando.field_sando_customs_regime_code_id
+#: model:ir.model.fields,field_description:sando.field_sando_intelligence_id
+#: model:ir.model.fields,field_description:sando.field_sando_means_of_transport_id
+#: model:ir.model.fields,field_description:sando.field_sando_offence_code_id
+#: model:ir.model.fields,field_description:sando.field_sando_organisation_id
+#: model:ir.model.fields,field_description:sando.field_sando_person_id
+#: model:ir.model.fields,field_description:sando.field_sando_sando_id
+#: model:ir.model.fields,field_description:sando.field_sando_source_id
+#: model:ir.model.fields,field_description:sando.field_sando_vehicle_type_id
+msgid "ID"
+msgstr ""
+
+#. module: sando
+#: model:ir.model.fields,help:sando.field_sando_sando_offender_phone
+msgid "If an offender is using multiple identities to disguise his/ her importations, exportations, etc using a name may not highlight previous importations/ exportations. It is less likely that mobile phone numbers are changed, and so recording this information may highlight ‘duplicates’ where the same phone number is used by multiple identities"
+msgstr ""
+
+#. module: sando
+#: model:ir.model.fields,help:sando.field_sando_sando_importer_or_exporter_phone
+msgid "If an offender is using multiple identities to disguise his/ her importations, exportations, etc, using a name may not highlight previous importations/ exportations. It is less likely that mobile phone numbers are changed and so recording this information may highlight ‘duplicates’ where the same phone number is used by multiple identities"
+msgstr ""
+
+#. module: sando
+#: model:ir.model.fields,help:sando.field_sando_intelligence_message_unread
+#: model:ir.model.fields,help:sando.field_sando_means_of_transport_message_unread
+#: model:ir.model.fields,help:sando.field_sando_organisation_message_unread
+#: model:ir.model.fields,help:sando.field_sando_person_message_unread
+#: model:ir.model.fields,help:sando.field_sando_sando_message_unread
+#: model:ir.model.fields,help:sando.field_sando_source_message_unread
+msgid "If checked new messages require your attention."
+msgstr ""
+
+#. module: sando
+#: model:ir.model.fields,help:sando.field_sando_intelligence_message_needaction
+#: model:ir.model.fields,help:sando.field_sando_means_of_transport_message_needaction
+#: model:ir.model.fields,help:sando.field_sando_organisation_message_needaction
+#: model:ir.model.fields,help:sando.field_sando_person_message_needaction
+#: model:ir.model.fields,help:sando.field_sando_sando_message_needaction
+#: model:ir.model.fields,help:sando.field_sando_source_message_needaction
+msgid "If checked, new messages require your attention."
+msgstr ""
+
+#. module: sando
+#: model:ir.model.fields,help:sando.field_sando_sando_offender_id_number
+msgid "If the offender (importer, exporter, transit operator) does not have a unique TIN (trader identification number) then their passport or ID card number should be recorded"
+msgstr ""
+
+#. module: sando
+#: model:ir.model.fields,help:sando.field_sando_sando_importer_or_exporter_id_number
+msgid "If the offender does not have a TIN then their passport or ID card number should be recorded"
+msgstr ""
+
+#. module: sando
+#: model:ir.model.fields,field_description:sando.field_sando_sando_importer_or_exporter_name
+msgid "Importer or Exporter Name"
+msgstr ""
+
+#. module: sando
+#: model:ir.model.fields,field_description:sando.field_sando_sando_importer_or_exporter_id_number
+msgid "Importer's or Exporter’s TIN/Passport/ID number"
+msgstr ""
+
+#. module: sando
+#: model:ir.model.fields,field_description:sando.field_sando_sando_importer_or_exporter_address
+msgid "Importer's or Exporter’s address"
+msgstr ""
+
+#. module: sando
+#: model:ir.model.fields,field_description:sando.field_sando_sando_importer_or_exporter_email
+msgid "Importer's or Exporter’s email"
+msgstr ""
+
+#. module: sando
+#: model:ir.model.fields,field_description:sando.field_sando_sando_importer_or_exporter_phone
+msgid "Importer's or Exporter’s telephone number"
+msgstr ""
+
+#. module: sando
+#: selection:sando.intelligence,evaluation_intelligence:0
+msgid "Information known personally to the source but not known personally to the official who is passing it on"
+msgstr ""
+
+#. module: sando
+#: selection:sando.intelligence,evaluation_intelligence:0
+msgid "Information not known personally to the source but corroborated by other information already recorded"
+msgstr ""
+
+#. module: sando
+#: selection:sando.intelligence,evaluation_intelligence:0
+msgid "Information which is not known personally to the source and cannot be independently corroborated"
+msgstr ""
+
+#. module: sando
+#: model:ir.model.fields,help:sando.field_sando_sando_legal_act
+msgid "Insert the legal act (Act, Section No), or regulation (date, no) under which the irregularity or offence was committed. This information will help to identify the most common offences, and may assist in identifying gaps or weaknesses in current legislation, or in the understanding of legal provisions"
+msgstr ""
+
+#. module: sando
+#: model:ir.model.fields,field_description:sando.field_sando_sando_inspection_result
+msgid "Inspection Result"
+msgstr ""
+
+#. module: sando
+#: model:ir.ui.menu,name:sando.menu_intelligence
+msgid "Intelligence"
+msgstr ""
+
+#. module: sando
+#: model:ir.model,name:sando.model_sando_intelligence
+msgid "Intelligence record"
+msgstr ""
+
+#. module: sando
+#: model:ir.model.fields,field_description:sando.field_sando_means_of_transport_intelligence_ids
+#: model:ir.model.fields,field_description:sando.field_sando_organisation_intelligence_ids
+#: model:ir.model.fields,field_description:sando.field_sando_person_intelligence_ids
+#: model:ir.model.fields,field_description:sando.field_sando_source_intelligence_ids
+#: model:ir.ui.menu,name:sando.menu_2_list
+msgid "Intelligence reports"
+msgstr ""
+
+#. module: sando
+#: model:ir.model.fields,help:sando.field_sando_sando_supplier_address
+msgid "Interrogation of the database using this field assists in verifying the identity and country of origin of suppliers that are/may be involved in certain types of offences such as under-valuation, mis-description, etc. Queries using this field, in conjunction with others, will also reveal such things as which importers they deal with, what types of goods, etc"
+msgstr ""
+
+#. module: sando
+#: model:ir.model.fields,field_description:sando.field_sando_intelligence_message_is_follower
+#: model:ir.model.fields,field_description:sando.field_sando_means_of_transport_message_is_follower
+#: model:ir.model.fields,field_description:sando.field_sando_organisation_message_is_follower
+#: model:ir.model.fields,field_description:sando.field_sando_person_message_is_follower
+#: model:ir.model.fields,field_description:sando.field_sando_sando_message_is_follower
+#: model:ir.model.fields,field_description:sando.field_sando_source_message_is_follower
+msgid "Is Follower"
+msgstr ""
+
+#. module: sando
+#: model:ir.model.fields,field_description:sando.field_sando_intelligence_message_last_post
+#: model:ir.model.fields,field_description:sando.field_sando_means_of_transport_message_last_post
+#: model:ir.model.fields,field_description:sando.field_sando_organisation_message_last_post
+#: model:ir.model.fields,field_description:sando.field_sando_person_message_last_post
+#: model:ir.model.fields,field_description:sando.field_sando_sando_message_last_post
+#: model:ir.model.fields,field_description:sando.field_sando_source_message_last_post
+msgid "Last Message Date"
+msgstr ""
+
+#. module: sando
+#: model:ir.model.fields,field_description:sando.field_sando_category___last_update
+#: model:ir.model.fields,field_description:sando.field_sando_customs_house___last_update
+#: model:ir.model.fields,field_description:sando.field_sando_customs_regime_code___last_update
+#: model:ir.model.fields,field_description:sando.field_sando_intelligence___last_update
+#: model:ir.model.fields,field_description:sando.field_sando_means_of_transport___last_update
+#: model:ir.model.fields,field_description:sando.field_sando_offence_code___last_update
+#: model:ir.model.fields,field_description:sando.field_sando_organisation___last_update
+#: model:ir.model.fields,field_description:sando.field_sando_person___last_update
+#: model:ir.model.fields,field_description:sando.field_sando_sando___last_update
+#: model:ir.model.fields,field_description:sando.field_sando_source___last_update
+#: model:ir.model.fields,field_description:sando.field_sando_vehicle_type___last_update
+msgid "Last Modified on"
+msgstr ""
+
+#. module: sando
+#: model:ir.model.fields,field_description:sando.field_sando_category_write_uid
+#: model:ir.model.fields,field_description:sando.field_sando_customs_house_write_uid
+#: model:ir.model.fields,field_description:sando.field_sando_customs_regime_code_write_uid
+#: model:ir.model.fields,field_description:sando.field_sando_intelligence_write_uid
+#: model:ir.model.fields,field_description:sando.field_sando_means_of_transport_write_uid
+#: model:ir.model.fields,field_description:sando.field_sando_offence_code_write_uid
+#: model:ir.model.fields,field_description:sando.field_sando_organisation_write_uid
+#: model:ir.model.fields,field_description:sando.field_sando_person_write_uid
+#: model:ir.model.fields,field_description:sando.field_sando_sando_write_uid
+#: model:ir.model.fields,field_description:sando.field_sando_source_write_uid
+#: model:ir.model.fields,field_description:sando.field_sando_vehicle_type_write_uid
+msgid "Last Updated by"
+msgstr ""
+
+#. module: sando
+#: model:ir.model.fields,field_description:sando.field_sando_category_write_date
+#: model:ir.model.fields,field_description:sando.field_sando_customs_house_write_date
+#: model:ir.model.fields,field_description:sando.field_sando_customs_regime_code_write_date
+#: model:ir.model.fields,field_description:sando.field_sando_intelligence_write_date
+#: model:ir.model.fields,field_description:sando.field_sando_means_of_transport_write_date
+#: model:ir.model.fields,field_description:sando.field_sando_offence_code_write_date
+#: model:ir.model.fields,field_description:sando.field_sando_organisation_write_date
+#: model:ir.model.fields,field_description:sando.field_sando_person_write_date
+#: model:ir.model.fields,field_description:sando.field_sando_sando_write_date
+#: model:ir.model.fields,field_description:sando.field_sando_source_write_date
+#: model:ir.model.fields,field_description:sando.field_sando_vehicle_type_write_date
+msgid "Last Updated on"
+msgstr ""
+
+#. module: sando
+#: model:ir.model.fields,field_description:sando.field_sando_category_parent_left
+msgid "Left parent"
+msgstr ""
+
+#. module: sando
+#: model:ir.model.fields,field_description:sando.field_sando_sando_legal_act
+msgid "Legal Act"
+msgstr ""
+
+#. module: sando
+#: model:ir.model.fields,field_description:sando.field_sando_sando_case_number
+msgid "Local file reference number"
+msgstr ""
+
+#. module: sando
+#: model:ir.model.fields,field_description:sando.field_sando_sando_vehicle_make_and_model
+msgid "Make or brand name of vehicle or means of transport"
+msgstr ""
+
+#. module: sando
+#: selection:sando.person,gender:0
+msgid "Male"
+msgstr ""
+
+#. module: sando
+#: model:ir.actions.act_window,help:sando.action_sando_category_form
+msgid "Manage O&amp;S tags to better classify them for tracking and analysis purposes.\n"
+"                    An O&amp;S record may have several categories."
+msgstr ""
+
+#. module: sando
+#: selection:sando.person,civil_status:0
+msgid "Married"
+msgstr ""
+
+#. module: sando
+#: model:ir.ui.menu,name:sando.menu_means_of_transport_list
+msgid "Mean of transport"
+msgstr ""
+
+#. module: sando
+#: model:ir.actions.act_window,name:sando.means_of_transport_action_window
+#: model:ir.model,name:sando.model_sando_means_of_transport
+#: model:ir.model.fields,field_description:sando.field_sando_intelligence_means_of_transport_ids
+msgid "Means of transport"
+msgstr ""
+
+#. module: sando
+#: model:ir.model.fields,field_description:sando.field_sando_intelligence_message_ids
+#: model:ir.model.fields,field_description:sando.field_sando_means_of_transport_message_ids
+#: model:ir.model.fields,field_description:sando.field_sando_organisation_message_ids
+#: model:ir.model.fields,field_description:sando.field_sando_person_message_ids
+#: model:ir.model.fields,field_description:sando.field_sando_sando_message_ids
+#: model:ir.model.fields,field_description:sando.field_sando_source_message_ids
+msgid "Messages"
+msgstr ""
+
+#. module: sando
+#: model:ir.model.fields,field_description:sando.field_sando_means_of_transport_mode_of_transport
+msgid "Mode of transport"
+msgstr ""
+
+#. module: sando
+#: model:ir.ui.view,arch_db:sando.view_sando_sando_filter
+msgid "My records"
+msgstr ""
+
+#. module: sando
+#: model:ir.model.fields,field_description:sando.field_sando_sando_name_of_customs_broker
+msgid "Name of Customs Broker"
+msgstr ""
+
+#. module: sando
+#: model:ir.model.fields,field_description:sando.field_sando_person_nationality
+msgid "Nationality "
+msgstr ""
+
+#. module: sando
+#: selection:sando.intelligence,evaluation_intelligence:0
+msgid "No doubt about accuracy"
+msgstr ""
+
+#. module: sando
+#: selection:sando.intelligence,evaluation_source:0
+#: selection:sando.source,evaluation:0
+msgid "No doubt regarding authenticity, trustworthiness, integrity, competence, or, a history of complete reliability"
+msgstr ""
+
+#. module: sando
+#: model:ir.model.fields,field_description:sando.field_sando_intelligence_message_needaction_counter
+#: model:ir.model.fields,field_description:sando.field_sando_means_of_transport_message_needaction_counter
+#: model:ir.model.fields,field_description:sando.field_sando_organisation_message_needaction_counter
+#: model:ir.model.fields,field_description:sando.field_sando_person_message_needaction_counter
+#: model:ir.model.fields,field_description:sando.field_sando_sando_message_needaction_counter
+#: model:ir.model.fields,field_description:sando.field_sando_source_message_needaction_counter
+msgid "Number of Actions"
+msgstr ""
+
+#. module: sando
+#: model:ir.model.fields,help:sando.field_sando_intelligence_message_needaction_counter
+#: model:ir.model.fields,help:sando.field_sando_means_of_transport_message_needaction_counter
+#: model:ir.model.fields,help:sando.field_sando_organisation_message_needaction_counter
+#: model:ir.model.fields,help:sando.field_sando_person_message_needaction_counter
+#: model:ir.model.fields,help:sando.field_sando_sando_message_needaction_counter
+#: model:ir.model.fields,help:sando.field_sando_source_message_needaction_counter
+msgid "Number of messages which requires an action"
+msgstr ""
+
+#. module: sando
+#: model:ir.model.fields,field_description:sando.field_sando_sando_number_of_packages_declaration
+msgid "Number of packages entered on the declaration"
+msgstr ""
+
+#. module: sando
+#: model:ir.model.fields,help:sando.field_sando_intelligence_message_unread_counter
+#: model:ir.model.fields,help:sando.field_sando_means_of_transport_message_unread_counter
+#: model:ir.model.fields,help:sando.field_sando_organisation_message_unread_counter
+#: model:ir.model.fields,help:sando.field_sando_person_message_unread_counter
+#: model:ir.model.fields,help:sando.field_sando_sando_message_unread_counter
+#: model:ir.model.fields,help:sando.field_sando_source_message_unread_counter
+msgid "Number of unread messages"
+msgstr ""
+
+#. module: sando
+#: model:ir.ui.menu,name:sando.menu_root
+msgid "O&S"
+msgstr ""
+
+#. module: sando
+#: model:res.groups,name:sando.group_sando_user
+msgid "O&S Database User"
+msgstr ""
+
+#. module: sando
+#: model:res.groups,name:sando.group_sando_intelligence
+msgid "O&S Intelligence User"
+msgstr ""
+
+#. module: sando
+#: model:ir.ui.menu,name:sando.menu_sando_category_form
+msgid "O&S Records Tags"
+msgstr ""
+
+#. module: sando
+#: model:res.groups,name:sando.group_sando_source
+msgid "O&S Source User"
+msgstr ""
+
+#. module: sando
+#: model:ir.ui.view,arch_db:sando.view_sando_category_form
+msgid "O&S Tag"
+msgstr ""
+
+#. module: sando
+#: model:ir.actions.act_window,name:sando.action_sando_category_form
+msgid "O&S Tags"
+msgstr ""
+
+#. module: sando
+#: model:ir.actions.act_window,name:sando.i_action_window
+msgid "O&S intelligence reports"
+msgstr ""
+
+#. module: sando
+#: model:ir.actions.act_window,name:sando.action_window
+msgid "O&S records"
+msgstr ""
+
+#. module: sando
+#: model:ir.model,name:sando.model_sando_category
+msgid "O&amp;S Tags"
+msgstr ""
+
+#. module: sando
+#: model:ir.model.fields,field_description:sando.field_sando_person_occupation
+msgid "Occupation "
+msgstr ""
+
+#. module: sando
+#: model:ir.model.fields,field_description:sando.field_sando_offence_code_name
+#: model:ir.model.fields,field_description:sando.field_sando_sando_offence_code
+msgid "Offence Code"
+msgstr ""
+
+#. module: sando
+#: model:ir.model.fields,field_description:sando.field_sando_sando_offence_datetime
+msgid "Offence date and time"
+msgstr ""
+
+#. module: sando
+#: model:ir.ui.menu,name:sando.menu_1_list
+msgid "Offence records"
+msgstr ""
+
+#. module: sando
+#: model:ir.model.fields,field_description:sando.field_sando_sando_offender_name
+msgid "Offender’s Name"
+msgstr ""
+
+#. module: sando
+#: model:ir.model.fields,field_description:sando.field_sando_sando_offender_id_number
+msgid "Offender’s TIN/passport/ID number"
+msgstr ""
+
+#. module: sando
+#: model:ir.model.fields,field_description:sando.field_sando_sando_offender_address
+msgid "Offender’s address"
+msgstr ""
+
+#. module: sando
+#: model:ir.model.fields,field_description:sando.field_sando_sando_offender_email
+msgid "Offender’s email"
+msgstr ""
+
+#. module: sando
+#: model:ir.model.fields,field_description:sando.field_sando_sando_offender_phone
+msgid "Offender’s telephone number"
+msgstr ""
+
+#. module: sando
+#: model:ir.model.fields,field_description:sando.field_sando_intelligence_officer_evaluating
+#: model:ir.model.fields,field_description:sando.field_sando_source_officer_evaluating_information
+msgid "Officer evaluating information "
+msgstr ""
+
+#. module: sando
+#: model:ir.model.fields,field_description:sando.field_sando_source_officer_managing_source
+msgid "Officer managing source "
+msgstr ""
+
+#. module: sando
+#: model:ir.model.fields,field_description:sando.field_sando_source_officer_receiving_information
+msgid "Officer receiving information"
+msgstr ""
+
+#. module: sando
+#: model:ir.model.fields,field_description:sando.field_sando_intelligence_officer_reporting
+msgid "Officer receiving information "
+msgstr ""
+
+#. module: sando
+#: model:ir.actions.act_window,name:sando.organisation_action_window
+#: model:ir.model,name:sando.model_sando_organisation
+#: model:ir.model.fields,field_description:sando.field_sando_intelligence_organisation_ids
+msgid "Organisation"
+msgstr ""
+
+#. module: sando
+#: model:ir.model.fields,field_description:sando.field_sando_organisation_organisation_name
+#: model:ir.model.fields,field_description:sando.field_sando_source_organisation_name
+msgid "Organisation name"
+msgstr ""
+
+#. module: sando
+#: model:ir.ui.menu,name:sando.menu_organisation_list
+msgid "Organisations"
+msgstr ""
+
+#. module: sando
+#: selection:sando.means_of_transport,mode_of_transport:0
+#: selection:sando.person,gender:0
+msgid "Other"
+msgstr ""
+
+#. module: sando
+#: model:ir.model.fields,field_description:sando.field_sando_category_parent_id
+msgid "Parent Tag"
+msgstr ""
+
+#. module: sando
+#: model:ir.model.fields,field_description:sando.field_sando_category_partner_ids
+msgid "Partners"
+msgstr ""
+
+#. module: sando
+#: model:ir.model.fields,field_description:sando.field_sando_person_passport_expiry_date
+msgid "Passport expiry date"
+msgstr ""
+
+#. module: sando
+#: model:ir.model.fields,field_description:sando.field_sando_person_passport_issue_date
+msgid "Passport issue date "
+msgstr ""
+
+#. module: sando
+#: model:ir.model.fields,field_description:sando.field_sando_person_passport_issuing_country
+msgid "Passport issuing country"
+msgstr ""
+
+#. module: sando
+#: model:ir.model.fields,field_description:sando.field_sando_person_passport_issuing_location
+msgid "Passport issuing location"
+msgstr ""
+
+#. module: sando
+#: model:ir.model.fields,field_description:sando.field_sando_person_passport_number
+msgid "Passport number "
+msgstr ""
+
+#. module: sando
+#: model:ir.model.fields,field_description:sando.field_sando_person_alias
+#: model:ir.model.fields,field_description:sando.field_sando_source_alias
+msgid "Pen name/ nickname/ alias "
+msgstr ""
+
+#. module: sando
+#: model:ir.model.fields,field_description:sando.field_sando_sando_penalty_imposed
+msgid "Penalty Imposed"
+msgstr ""
+
+#. module: sando
+#: model:ir.model,name:sando.model_sando_person
+#: model:ir.model.fields,field_description:sando.field_sando_intelligence_person_ids
+msgid "Person"
+msgstr ""
+
+#. module: sando
+#: model:ir.model.fields,field_description:sando.field_sando_person_person_name
+#: model:ir.model.fields,field_description:sando.field_sando_source_person_name
+msgid "Person name(s)"
+msgstr ""
+
+#. module: sando
+#: model:ir.actions.act_window,name:sando.person_action_window
+#: model:ir.ui.menu,name:sando.menu_person_list
+msgid "Persons of interest"
+msgstr ""
+
+#. module: sando
+#: model:ir.model.fields,field_description:sando.field_sando_organisation_phone
+#: model:ir.model.fields,field_description:sando.field_sando_person_phone
+#: model:ir.model.fields,field_description:sando.field_sando_source_phone
+msgid "Phone/fax"
+msgstr ""
+
+#. module: sando
+#: model:ir.model.fields,field_description:sando.field_sando_means_of_transport_port_of_registration
+msgid "Port of registration (ships only)"
+msgstr ""
+
+#. module: sando
+#: model:ir.model.fields,field_description:sando.field_sando_source_possible_offender
+msgid "Possible offender"
+msgstr ""
+
+#. module: sando
+#: model:ir.model.fields,help:sando.field_sando_intelligence_name
+#: model:ir.model.fields,help:sando.field_sando_means_of_transport_name
+#: model:ir.model.fields,help:sando.field_sando_organisation_name
+#: model:ir.model.fields,help:sando.field_sando_person_name
+#: model:ir.model.fields,help:sando.field_sando_sando_name
+#: model:ir.model.fields,help:sando.field_sando_source_name
+msgid "Prime key to allow the computer to link various information.If a record is deleted, the number is deleted and cannot be used again.This prevents different records from ever having the same serial number.(E.G. there will never be two records in the register with serial number 5)"
+msgstr ""
+
+#. module: sando
+#: model:ir.model.fields,help:sando.field_sando_sando_profile
+msgid "Profile # identifying the type of risk it was set up to counter. Using the profile # will allow interrogation of the database to identify those profiles that are performing well, and, conversely, those that are failing to work. It allows a performance measurement to be made and, from that, non-performing profiles can be amended or deleted appropriately"
+msgstr ""
+
+#. module: sando
+#: model:ir.model.fields,field_description:sando.field_sando_intelligence_reasons_for_suspicion
+msgid "Reasons for suspicion"
+msgstr ""
+
+#. module: sando
+#: model:ir.model.fields,field_description:sando.field_sando_means_of_transport_registration_number
+msgid "Registration Number"
+msgstr ""
+
+#. module: sando
+#: model:ir.model.fields,field_description:sando.field_sando_intelligence_sando_ids
+#: model:ir.model.fields,field_description:sando.field_sando_source_sando_ids
+msgid "Related offence records"
+msgstr ""
+
+#. module: sando
+#: selection:sando.intelligence,evaluation_source:0
+#: selection:sando.source,evaluation:0
+msgid "Reliability cannot be judged"
+msgstr ""
+
+#. module: sando
+#: model:ir.model.fields,field_description:sando.field_sando_intelligence_report_datetime
+msgid "Report date and time"
+msgstr ""
+
+#. module: sando
+#: model:ir.model.fields,field_description:sando.field_sando_intelligence_report_expiry_date
+#: model:ir.model.fields,field_description:sando.field_sando_organisation_expiry_date
+msgid "Report expiry date"
+msgstr ""
+
+#. module: sando
+#: model:ir.model.fields,field_description:sando.field_sando_category_parent_right
+msgid "Right parent"
+msgstr ""
+
+#. module: sando
+#: model:ir.model.fields,field_description:sando.field_sando_sando_profile
+msgid "Risk Profile #"
+msgstr ""
+
+#. module: sando
+#: model:ir.model,name:sando.model_sando_sando
+msgid "Risk record"
+msgstr ""
+
+#. module: sando
+#: selection:sando.means_of_transport,mode_of_transport:0
+msgid "Road vehicle"
+msgstr ""
+
+#. module: sando
+#: model:ir.model.fields,field_description:sando.field_sando_sando_route
+msgid "Route"
+msgstr ""
+
+#. module: sando
+#: model:ir.model.fields,field_description:sando.field_sando_source_rules
+msgid "Rules for handling the source "
+msgstr ""
+
+#. module: sando
+#: model:ir.ui.view,arch_db:sando.view_sando_category_list
+msgid "Samp;O Tags"
+msgstr ""
+
+#. module: sando
+#: model:ir.ui.view,arch_db:sando.view_sando_sando_filter
+msgid "Search O&S"
+msgstr ""
+
+#. module: sando
+#: model:ir.model.fields,field_description:sando.field_sando_sando_seized_goods
+msgid "Seized Goods"
+msgstr ""
+
+#. module: sando
+#: model:ir.model.fields,help:sando.field_sando_sando_customs_regime_code
+msgid "Select the correct regime code (home use, warehousing, export, etc) from the drop down menu"
+msgstr ""
+
+#. module: sando
+#: model:ir.model.fields,field_description:sando.field_sando_intelligence_name
+#: model:ir.model.fields,field_description:sando.field_sando_means_of_transport_name
+#: model:ir.model.fields,field_description:sando.field_sando_organisation_name
+#: model:ir.model.fields,field_description:sando.field_sando_person_name
+#: model:ir.model.fields,field_description:sando.field_sando_sando_name
+#: model:ir.model.fields,field_description:sando.field_sando_source_name
+msgid "Serial Number"
+msgstr ""
+
+#. module: sando
+#: model:ir.model.fields,help:sando.field_sando_intelligence_active
+#: model:ir.model.fields,help:sando.field_sando_means_of_transport_active
+#: model:ir.model.fields,help:sando.field_sando_organisation_active
+#: model:ir.model.fields,help:sando.field_sando_person_active
+#: model:ir.model.fields,help:sando.field_sando_sando_active
+#: model:ir.model.fields,help:sando.field_sando_source_active
+msgid "Set active to false to hide the case without removing it."
+msgstr ""
+
+#. module: sando
+#: selection:sando.means_of_transport,mode_of_transport:0
+msgid "Ship"
+msgstr ""
+
+#. module: sando
+#: selection:sando.person,civil_status:0
+msgid "Single"
+msgstr ""
+
+#. module: sando
+#: model:ir.actions.act_window,name:sando.source_action_window
+#: model:ir.model,name:sando.model_sando_source
+#: model:ir.model.fields,field_description:sando.field_sando_intelligence_source_ids
+msgid "Source"
+msgstr ""
+
+#. module: sando
+#: selection:sando.intelligence,evaluation_source:0
+#: selection:sando.source,evaluation:0
+msgid "Source from whom information received has in most instances proved to be reliable"
+msgstr ""
+
+#. module: sando
+#: selection:sando.intelligence,evaluation_source:0
+#: selection:sando.source,evaluation:0
+msgid "Source from whom information received has in most instances proved to be unreliable"
+msgstr ""
+
+#. module: sando
+#: model:ir.ui.menu,name:sando.menu_source_list
+msgid "Sources"
+msgstr ""
+
+#. module: sando
+#: model:ir.model.fields,field_description:sando.field_sando_sando_supplier_address
+msgid "Supplier’s Address"
+msgstr ""
+
+#. module: sando
+#: model:ir.model.fields,field_description:sando.field_sando_intelligence_activity_suspected
+msgid "Suspected activity - details of information received"
+msgstr ""
+
+#. module: sando
+#: model:ir.model.fields,field_description:sando.field_sando_organisation_tin
+msgid "TIN"
+msgstr ""
+
+#. module: sando
+#: model:ir.ui.view,arch_db:sando.view_sando_sando_filter
+msgid "Tag"
+msgstr ""
+
+#. module: sando
+#: model:ir.model.fields,field_description:sando.field_sando_sando_category_id
+msgid "Tags"
+msgstr ""
+
+#. module: sando
+#: model:ir.ui.view,arch_db:sando.sando_form
+msgid "Tags..."
+msgstr ""
+
+#. module: sando
+#: model:ir.model.fields,help:sando.field_sando_category_active
+msgid "The active field allows you to hide the category without removing it."
+msgstr ""
+
+#. module: sando
+#: model:ir.model.fields,help:sando.field_sando_sando_country_of_departure
+msgid "The country from which the goods are consigned. (Select from drop down menu)"
+msgstr ""
+
+#. module: sando
+#: model:ir.model.fields,help:sando.field_sando_sando_country_of_destination
+msgid "The final destination of the goods. Select from drop down menu)"
+msgstr ""
+
+#. module: sando
+#: model:ir.model.fields,help:sando.field_sando_sando_case_officer
+msgid "The full name of the officer that discovered the offence or provided the information"
+msgstr ""
+
+#. module: sando
+#: model:ir.model.fields,help:sando.field_sando_sando_exporter_or_supplier_name
+msgid "The name of the foreign exporter or supplier of the goods.They may work in collusion with the importer in order to facilitate under valuation, misdescription, falsification of origin, or general underdeclaration. Searches using this field will highlight all importations made where an irregularity has been found"
+msgstr ""
+
+#. module: sando
+#: model:ir.model.fields,help:sando.field_sando_sando_offence_datetime
+msgid "This enables analysis of exactly when offences take place. When used in conjunction with other fields, this may allow the analyst to identify “weak points” in control at each Customs office and border crossing. For example, importers may try to clear goods at the end of a shift when officers are tired or alternatively may time their clearance to coincide with exceptionally busy times at particular offices. If such trends are discovered then additional resources can be assigned"
+msgstr ""
+
+#. module: sando
+#: model:ir.model.fields,help:sando.field_sando_sando_broker_phone
+msgid "This field can be utilised to find traders that are itinerant (briefcase traders) and change their names and or addresses in order to deceive Customs when making declarations. It is more inconvenient to change phone numbers and therefore traders often retain the same number even though they utilise false names. Entering this field in a query will give a list of all traders using this phone number"
+msgstr ""
+
+#. module: sando
+#: model:ir.model.fields,help:sando.field_sando_sando_customs_house
+msgid "This information can be used by the analysts, in conjunction with other fields, to identify what types of offences are being detected at the various Customs offices, and to create trend analysis and management reports"
+msgstr ""
+
+#. module: sando
+#: model:ir.model.fields,help:sando.field_sando_sando_case_number
+msgid "This is a free text field and can be used to include a Customs case number into the register"
+msgstr ""
+
+#. module: sando
+#: model:ir.model.fields,help:sando.field_sando_sando_inspection_result
+msgid "This is an unlimited text box that can be used to describe what was found during the examination. For example, it could include specific containers, boxes, packages, etc that were examined, particular concealments, or characteristics specific to smuggled goods. The basis for the discovery of the offence should be added e.g Red Channel exam/random exam/full exam/MACCS profile/x-ray/info received/voluntary declaration, etc"
+msgstr ""
+
+#. module: sando
+#: model:ir.model.fields,help:sando.field_sando_sando_vehicle_driver_name
+msgid "This is required as drivers can be either involved in irregularities as accomplices of traders, or are directly involved in carrying contraband in the vehicles, whether or not the actual owner of the goods is involved in non-compliance"
+msgstr ""
+
+#. module: sando
+#: model:ir.model.fields,help:sando.field_sando_sando_route
+msgid "This is the route taken by the goods/means of transport from when the goods were dispatched to arrival in the Customs territory. It should include the country of origin/dispatch, and also any transit countries."
+msgstr ""
+
+#. module: sando
+#: model:ir.model.fields,help:sando.field_sando_sando_additional_duties
+msgid "This is the total of all penalties imposed in relation to the specific offence. It indicates the size of the problem, and is useful in assessing the risk for future importations/exportations that will be made by the same principals. Enter any additional duties or taxes that have been levied on the offender as a result of the irregularity that was found."
+msgstr ""
+
+#. module: sando
+#: model:ir.model.fields,help:sando.field_sando_sando_seized_goods
+msgid "Tick box indicating whether goods have been confiscated by Customs or not"
+msgstr ""
+
+#. module: sando
+#: selection:sando.means_of_transport,mode_of_transport:0
+msgid "Train"
+msgstr ""
+
+#. module: sando
+#: model:ir.model.fields,help:sando.field_sando_sando_transporter_or_haulier_name
+msgid "Transport companies may pose a risk either because they assist the trade in smuggling goods or because they undertake smuggling operations in their own right. Querying this field together with others may highlight associations with suppliers or importers who are known to be non- compliant and also those companies that use routes which pose a higher risk, for example through drug source countries"
+msgstr ""
+
+#. module: sando
+#: model:ir.model.fields,field_description:sando.field_sando_sando_transporter_or_haulier_name
+msgid "Transporter or haulier’s name"
+msgstr ""
+
+#. module: sando
+#: model:ir.model.fields,field_description:sando.field_sando_sando_transporter_id_number
+msgid "Transporter’s TIN/Passport/ID Number"
+msgstr ""
+
+#. module: sando
+#: model:ir.model.fields,field_description:sando.field_sando_sando_transporter_address
+msgid "Transporter’s address"
+msgstr ""
+
+#. module: sando
+#: model:ir.model.fields,field_description:sando.field_sando_sando_transporter_email
+msgid "Transporter’s email"
+msgstr ""
+
+#. module: sando
+#: model:ir.model.fields,field_description:sando.field_sando_sando_transporter_phone
+msgid "Transporter’s telephone number"
+msgstr ""
+
+#. module: sando
+#: model:ir.model.fields,help:sando.field_sando_means_of_transport_description
+msgid "Type of ship/ aircraft/ road vehicle; body type; model; year of manufacture; colour; identifying marks; etc"
+msgstr ""
+
+#. module: sando
+#: model:ir.model.fields,field_description:sando.field_sando_intelligence_message_unread
+#: model:ir.model.fields,field_description:sando.field_sando_means_of_transport_message_unread
+#: model:ir.model.fields,field_description:sando.field_sando_organisation_message_unread
+#: model:ir.model.fields,field_description:sando.field_sando_person_message_unread
+#: model:ir.model.fields,field_description:sando.field_sando_sando_message_unread
+#: model:ir.model.fields,field_description:sando.field_sando_source_message_unread
+msgid "Unread Messages"
+msgstr ""
+
+#. module: sando
+#: model:ir.model.fields,field_description:sando.field_sando_intelligence_message_unread_counter
+#: model:ir.model.fields,field_description:sando.field_sando_means_of_transport_message_unread_counter
+#: model:ir.model.fields,field_description:sando.field_sando_organisation_message_unread_counter
+#: model:ir.model.fields,field_description:sando.field_sando_person_message_unread_counter
+#: model:ir.model.fields,field_description:sando.field_sando_sando_message_unread_counter
+#: model:ir.model.fields,field_description:sando.field_sando_source_message_unread_counter
+msgid "Unread Messages Counter"
+msgstr ""
+
+#. module: sando
+#: model:ir.model.fields,field_description:sando.field_sando_sando_vehicle_driver_name
+msgid "Vehicle driver’s name"
+msgstr ""
+
+#. module: sando
+#: model:ir.model.fields,field_description:sando.field_sando_sando_registration_number
+msgid "Vehicle name or registration number"
+msgstr ""
+
+#. module: sando
+#: model:ir.model.fields,help:sando.field_sando_sando_registration_number
+msgid "Vehicle registration number, name, aircraft (General Aviation) registration, flight number, etc"
+msgstr ""
+
+#. module: sando
+#: model:ir.model.fields,field_description:sando.field_sando_sando_vehicle_type
+#: model:ir.model.fields,field_description:sando.field_sando_vehicle_type_name
+msgid "Vehicle type"
+msgstr ""
+
+#. module: sando
+#: model:ir.model.fields,field_description:sando.field_sando_organisation_website
+msgid "Web-site"
+msgstr ""
+
+#. module: sando
+#: selection:sando.person,civil_status:0
+msgid "Widower"
+msgstr ""
+
+#. module: sando
+#: code:addons/sando/models/models.py:545
+#: code:addons/sando/models/models.py:743
+#: code:addons/sando/models/models.py:864
+#: code:addons/sando/models/models.py:1012
+#: code:addons/sando/models/models.py:1092
+#: code:addons/sando/models/models.py:1231
+#, python-format
+msgid "You are can not delete this record"
+msgstr ""
+
+#. module: sando
+#: model:ir.model,name:sando.model_sando_customs_house
+msgid "sando.customs_house"
+msgstr ""
+
+#. module: sando
+#: model:ir.model,name:sando.model_sando_customs_regime_code
+msgid "sando.customs_regime_code"
+msgstr ""
+
+#. module: sando
+#: model:ir.model,name:sando.model_sando_offence_code
+msgid "sando.offence_code"
+msgstr ""
+
+#. module: sando
+#: model:ir.model,name:sando.model_sando_vehicle_type
+msgid "sando.vehicle_type"
+msgstr ""
+
