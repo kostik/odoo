@@ -1,19 +1,21 @@
 # Translation of Odoo Server.
 # This file contains the translation of the following modules:
-#	* aeo
+# 	* aeo
 #
 msgid ""
 msgstr ""
 "Project-Id-Version: Odoo Server 9.0c\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2017-10-28 00:11+0000\n"
-"PO-Revision-Date: 2017-10-28 00:11+0000\n"
+"PO-Revision-Date: 2017-11-06 20:14+0630\n"
 "Last-Translator: <>\n"
 "Language-Team: \n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
-"Content-Transfer-Encoding: \n"
+"Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: \n"
+"Language: my\n"
+"X-Generator: Poedit 2.0.4\n"
 
 #. module: aeo
 #: model:ir.ui.menu,name:aeo.menu_config_address_book
@@ -24,7 +26,7 @@ msgstr "AEO"
 #. module: aeo
 #: model:ir.ui.view,arch_db:aeo.view_partner_form_hide_sales
 msgid "AEO ID"
-msgstr "AEO ID"
+msgstr "AEO အိုင်ဒီ"
 
 #. module: aeo
 #: model:ir.actions.act_window,name:aeo.action_partner_category_form
@@ -35,17 +37,17 @@ msgstr "AEO Tags"
 #: model:ir.model.fields,field_description:aeo.field_res_partner_aeo_status
 #: model:ir.ui.view,arch_db:aeo.view_partner_form_hide_sales
 msgid "AEO status"
-msgstr "AEO status"
+msgstr "AEO မ​ော်ဂျူး"
 
 #. module: aeo
 #: model:res.groups,name:aeo.aeo_group
 msgid "AEO unit"
-msgstr "AEO unit"
+msgstr "AEO အဖွဲ့"
 
 #. module: aeo
 #: model:res.groups,comment:aeo.aeo_group
 msgid "AEO unit member"
-msgstr "AEO unit member"
+msgstr "AEO အဖွဲ့ဝင်"
 
 #. module: aeo
 #: model:ir.actions.act_window,name:aeo.action_partner_form
@@ -63,7 +65,7 @@ msgstr "ပယ်ဖျက်မည်"
 #. module: aeo
 #: model:ir.actions.act_window,help:aeo.action_partner_form
 msgid "Click to add an AEO."
-msgstr "Click to add an AEO."
+msgstr "AEO ကုမ္ပဏီတစ်ခုပေါင်းထည့်ပါ"
 
 #. module: aeo
 #: model:ir.actions.act_window,help:aeo.action_partner_category_form
@@ -102,9 +104,11 @@ msgstr "အုပ်စုဖွဲ့မည်"
 
 #. module: aeo
 #: model:ir.actions.act_window,help:aeo.action_partner_category_form
-msgid "Manage AEO tags to better classify them for tracking and analysis purposes.\n"
+msgid ""
+"Manage AEO tags to better classify them for tracking and analysis purposes.\n"
 "                    An AEO may have several categories."
-msgstr "Manage AEO tags to better classify them for tracking and analysis purposes.\n"
+msgstr ""
+"Manage AEO tags to better classify them for tracking and analysis purposes.\n"
 "                    An AEO may have several categories."
 
 #. module: aeo
@@ -136,4 +140,3 @@ msgstr "Search Partner"
 #: model:ir.ui.view,arch_db:aeo.view_res_partner_filter
 msgid "Tag"
 msgstr "Tag"
-
